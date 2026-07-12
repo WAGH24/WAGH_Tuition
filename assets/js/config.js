@@ -1,6 +1,6 @@
 window.WTC_CONFIG = {
   APP_NAME: 'WAGH Tuition Classes',
-  API_URL: 'https://script.google.com/macros/s/AKfycbxVRRmp3rw9kPWlBNmS0px0Tce2HCEnU_epWJjnghooNJlxu5vdqJnKVuyKsRIDOEN0/exec',
+  API_URL: 'https://script.google.com/macros/s/AKfycby1iIH0B7BAkO8O8cgN8ma6p_nNv0KFI-hjL5JZs_wgwZJUOeH6tOM0_-OzbEVaD_dM/exec',
   STORAGE_KEY: 'wtcUser',
   DEVICE_KEY: 'wtcDeviceId',
   FALLBACK_CONTENT_URL: 'assets/data/fallback-content.json',
