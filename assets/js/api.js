@@ -40,3 +40,5 @@ const WTC_API = (() => {
     logAccess: (data) => raw({ action:'logAccess', ...data, deviceId:WTC_AUTH.deviceId() })
   };
 })();
+// expose api client for static feature pages
+window.WTC_API = WTC_API;
