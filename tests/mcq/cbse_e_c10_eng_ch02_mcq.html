@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="CBSE Class 10 English Chapter 2 MCQ practice for Nelson Mandela: Long Walk to Freedom and A Tiger in the Zoo."
+  />
+  <title>Chapter 2 MCQ | CBSE Class 10 English</title>
+  <link rel="stylesheet" href="../../assets/css/static-mcq-engine.css" />
+</head>
+<body>
+  <div class="wtc-mcq-app">
+    <header class="hero-card">
+      <div class="hero-left">
+        <p class="eyebrow">WAGH Tuition Classes • Static MCQ Engine v1.1</p>
+        <h1 id="testTitle">MCQ Practice</h1>
+        <p id="testMeta" class="meta"></p>
+      </div>
+
+      <div class="hero-score">
+        <div class="ring" id="progressRing">
+          <span id="answeredCount">0</span>
+        </div>
+        <small>Answered</small>
+      </div>
+    </header>
+
+    <section class="sticky-dashboard">
+      <div class="dash-item">
+        <span>Student</span>
+        <b id="studentName">Checking login...</b>
+      </div>
+      <div class="dash-item">
+        <span>Time</span>
+        <b id="timer">00:00</b>
+      </div>
+      <div class="dash-item">
+        <span>Questions</span>
+        <b id="questionCount">0</b>
+      </div>
+      <button id="themeBtn" class="ghost-btn" type="button">🌙</button>
+      <button id="reviewBtn" class="ghost-btn" type="button">Review</button>
+    </section>
+
+    <section class="notice-card">
+      Select one option for each question. After submit, correct answers and
+      explanations will open. Your result will be saved for progress report.
+    </section>
+
+    <main class="layout-grid">
+      <aside class="question-palette" aria-label="Question palette">
+        <h3>Question Palette</h3>
+        <div id="paletteGrid" class="palette-grid"></div>
+      </aside>
+
+      <section id="questionList" class="question-list"></section>
+    </main>
+
+    <section id="resultBox" class="result-box hidden"></section>
+
+    <div class="bottom-action-bar">
+      <button id="submitBtn" class="primary-btn" type="button">
+        Submit Test
+      </button>
+      <button id="retryBtn" class="secondary-btn hidden" type="button">
+        Choose Another Test
+      </button>
+      <button id="topBtn" class="secondary-btn" type="button">Top</button>
+    </div>
+  </div>
+
+  <!-- Keep this exact loading order. -->
+  <script src="../../assets/js/config.js"></script>
+  <script src="../../assets/js/auth.js"></script>
+  <script src="../../assets/js/api.js"></script>
+
+  <script>
+    window.WTC_STATIC_MCQ = {
+  "pageTitle": "Chapter 2: Nelson Mandela: Long Walk to Freedom - MCQ Practice",
+  "selectorDescription": "Choose a topic-wise test or a full-length chapter test covering Nelson Mandela: Long Walk to Freedom and A Tiger in the Zoo.",
+  "board": "CBSE",
+  "className": "Class 10",
+  "medium": "English Medium",
+  "subjectId": "ENG10",
+  "subjectName": "English",
+  "chapterId": "ENG10CH02",
+  "chapterName": "Nelson Mandela: Long Walk to Freedom",
+  "instructions": "Select one option for each question. After submit, correct answers and explanations will open. Progress saves automatically.",
+  "questionBank": [
+    {
+      "id": "ENG10CH02-Q001",
+      "topic": "Inauguration and Democratic Government",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "On which date did Nelson Mandela’s inauguration take place?",
+      "options": {
+        "A": "26 January 1994",
+        "B": "10 May 1994",
+        "C": "15 August 1994",
+        "D": "11 February 1990"
+      },
+      "correct": "B",
+      "explanation": "Mandela describes the bright and clear morning of 10 May, the day of the inauguration."
+    },
+    {
+      "id": "ENG10CH02-Q002",
+      "topic": "Inauguration and Democratic Government",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Why had Mandela been “pleasantly besieged” before the inauguration?",
+      "options": {
+        "A": "Journalists were asking about his prison life",
+        "B": "Dignitaries and world leaders were coming to pay their respects",
+        "C": "Citizens were demanding new elections",
+        "D": "Military officers were questioning him"
+      },
+      "correct": "B",
+      "explanation": "For several days, dignitaries and world leaders had surrounded him as they arrived for the inauguration."
+    },
+    {
+      "id": "ENG10CH02-Q003",
+      "topic": "Inauguration and Democratic Government",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Where did the inauguration ceremonies take place?",
+      "options": {
+        "A": "The Parliament House in Cape Town",
+        "B": "The Union Buildings’ sandstone amphitheatre in Pretoria",
+        "C": "A stadium in Johannesburg",
+        "D": "Robben Island prison"
+      },
+      "correct": "B",
+      "explanation": "The ceremonies were held in the lovely sandstone amphitheatre formed by the Union Buildings in Pretoria."
+    },
+    {
+      "id": "ENG10CH02-Q004",
+      "topic": "Inauguration and Democratic Government",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Who accompanied Mandela on the day of the inauguration?",
+      "options": {
+        "A": "His wife Winnie",
+        "B": "His son Makgatho",
+        "C": "His daughter Zenani",
+        "D": "Walter Sisulu"
+      },
+      "correct": "C",
+      "explanation": "Mandela states that he was accompanied by his daughter Zenani."
+    },
+    {
+      "id": "ENG10CH02-Q005",
+      "topic": "Inauguration and Democratic Government",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Who was sworn in as the second deputy president?",
+      "options": {
+        "A": "Thabo Mbeki",
+        "B": "Mr de Klerk",
+        "C": "Oliver Tambo",
+        "D": "Chief Luthuli"
+      },
+      "correct": "B",
+      "explanation": "Mr de Klerk was first sworn in as second deputy president."
+    },
+    {
+      "id": "ENG10CH02-Q006",
+      "topic": "Inauguration and Democratic Government",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Who was sworn in as the first deputy president?",
+      "options": {
+        "A": "Thabo Mbeki",
+        "B": "Mr de Klerk",
+        "C": "Yusuf Dadoo",
+        "D": "Bram Fischer"
+      },
+      "correct": "A",
+      "explanation": "After Mr de Klerk, Thabo Mbeki was sworn in as first deputy president."
+    },
+    {
+      "id": "ENG10CH02-Q007",
+      "topic": "Inauguration and Democratic Government",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What did Mandela pledge when he took the oath?",
+      "options": {
+        "A": "To dissolve the Constitution",
+        "B": "To obey and uphold the Constitution and serve the Republic and its people",
+        "C": "To continue white minority rule",
+        "D": "To remove all international visitors"
+      },
+      "correct": "B",
+      "explanation": "Mandela pledged to obey and uphold the Constitution and devote himself to the well-being of the Republic and its people."
+    },
+    {
+      "id": "ENG10CH02-Q008",
+      "topic": "Inauguration and Democratic Government",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Mandela described the achievement celebrated at the inauguration as a common victory for:",
+      "options": {
+        "A": "Wealth, military power and expansion",
+        "B": "Justice, peace and human dignity",
+        "C": "One race, one language and one religion",
+        "D": "Political revenge and punishment"
+      },
+      "correct": "B",
+      "explanation": "He called it a common victory for justice, peace and human dignity."
+    },
+    {
+      "id": "ENG10CH02-Q009",
+      "topic": "History, Symbols and Apartheid",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What did the display of jets, helicopters and troop carriers chiefly demonstrate?",
+      "options": {
+        "A": "South Africa’s plan to begin a war",
+        "B": "The military’s loyalty to democracy and the newly elected government",
+        "C": "The superiority of one race",
+        "D": "The return of the old government"
+      },
+      "correct": "B",
+      "explanation": "The air display demonstrated that the military was loyal to democracy and to the freely and fairly elected government."
+    },
+    {
+      "id": "ENG10CH02-Q010",
+      "topic": "History, Symbols and Apartheid",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What contrast did Mandela notice when the highest generals saluted him?",
+      "options": {
+        "A": "They had once been his schoolteachers",
+        "B": "Only a few years earlier, they would have arrested rather than saluted him",
+        "C": "They had never worn medals before",
+        "D": "They refused to pledge loyalty"
+      },
+      "correct": "B",
+      "explanation": "Mandela was aware that not many years earlier the same authorities would have arrested him instead of saluting him."
+    },
+    {
+      "id": "ENG10CH02-Q011",
+      "topic": "History, Symbols and Apartheid",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which colours appeared in the smoke trail left by the Impala jets?",
+      "options": {
+        "A": "Black, red, green, blue and gold",
+        "B": "Red, white and blue",
+        "C": "Green, white and orange",
+        "D": "Black, white and silver"
+      },
+      "correct": "A",
+      "explanation": "The jets left a smoke trail in the black, red, green, blue and gold colours of the new South African flag."
+    },
+    {
+      "id": "ENG10CH02-Q012",
+      "topic": "History, Symbols and Apartheid",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "What was symbolised by whites and blacks singing one another’s national anthems?",
+      "options": {
+        "A": "A competition between two groups",
+        "B": "Reconciliation and the beginning of a united non-racial nation",
+        "C": "The rejection of both anthems",
+        "D": "The continuation of apartheid"
+      },
+      "correct": "B",
+      "explanation": "The two anthems and the groups singing each other’s songs symbolised reconciliation, mutual acceptance and national unity."
+    },
+    {
+      "id": "ENG10CH02-Q013",
+      "topic": "History, Symbols and Apartheid",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What system was established in South Africa in the first decade of the twentieth century?",
+      "options": {
+        "A": "A non-racial democracy",
+        "B": "A system of racial domination by white-skinned people",
+        "C": "A monarchy based on tribal customs",
+        "D": "A government led by the African National Congress"
+      },
+      "correct": "B",
+      "explanation": "White-skinned people patched up their differences and erected a harsh system of racial domination against dark-skinned people."
+    },
+    {
+      "id": "ENG10CH02-Q014",
+      "topic": "History, Symbols and Apartheid",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What had replaced the system of racial domination by the final decade of the twentieth century?",
+      "options": {
+        "A": "A system recognising the rights and freedoms of all people",
+        "B": "A stronger form of apartheid",
+        "C": "Rule by foreign dignitaries",
+        "D": "Military government"
+      },
+      "correct": "A",
+      "explanation": "The old system was overturned and replaced by one that recognised the rights and freedoms of all people regardless of skin colour."
+    },
+    {
+      "id": "ENG10CH02-Q015",
+      "topic": "History, Symbols and Apartheid",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "What did Mandela mean when he said he was “simply the sum” of the African patriots before him?",
+      "options": {
+        "A": "His success rested on the sacrifices and courage of earlier freedom fighters",
+        "B": "He had memorised their names",
+        "C": "He had defeated them in elections",
+        "D": "He had worked alone without their influence"
+      },
+      "correct": "A",
+      "explanation": "Mandela viewed his achievement as the continuation and result of the sacrifices made by generations of African patriots."
+    },
+    {
+      "id": "ENG10CH02-Q016",
+      "topic": "History, Symbols and Apartheid",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Why was Mandela pained on the day of the inauguration?",
+      "options": {
+        "A": "The ceremony was delayed",
+        "B": "He could not thank the patriots who had died or let them see what their sacrifices achieved",
+        "C": "The military refused to attend",
+        "D": "Only one national anthem was played"
+      },
+      "correct": "B",
+      "explanation": "He regretted that many patriots were no longer alive to be thanked or to witness the result of their sacrifices."
+    },
+    {
+      "id": "ENG10CH02-Q017",
+      "topic": "Courage, Love and Human Goodness",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "According to Mandela, what unintended effect did decades of oppression and brutality produce?",
+      "options": {
+        "A": "They ended all resistance",
+        "B": "They produced leaders of extraordinary courage, wisdom and generosity",
+        "C": "They made people accept apartheid",
+        "D": "They destroyed every form of human goodness"
+      },
+      "correct": "B",
+      "explanation": "Mandela says oppression produced outstanding patriots such as Oliver Tambo, Walter Sisulu and others."
+    },
+    {
+      "id": "ENG10CH02-Q018",
+      "topic": "Courage, Love and Human Goodness",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "What did Mandela consider his country’s greatest wealth?",
+      "options": {
+        "A": "Its diamonds",
+        "B": "Its gold mines",
+        "C": "Its people",
+        "D": "Its military aircraft"
+      },
+      "correct": "C",
+      "explanation": "Although South Africa is rich in minerals and gems, Mandela says its greatest wealth is its people."
+    },
+    {
+      "id": "ENG10CH02-Q019",
+      "topic": "Courage, Love and Human Goodness",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "What is courage according to Mandela?",
+      "options": {
+        "A": "The complete absence of fear",
+        "B": "The triumph over fear",
+        "C": "The power to frighten others",
+        "D": "The refusal to face danger"
+      },
+      "correct": "B",
+      "explanation": "Mandela learned that courage is not the absence of fear, but the triumph over it."
+    },
+    {
+      "id": "ENG10CH02-Q020",
+      "topic": "Courage, Love and Human Goodness",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Who is a brave person in Mandela’s view?",
+      "options": {
+        "A": "One who never experiences fear",
+        "B": "One who conquers fear",
+        "C": "One who hides from every risk",
+        "D": "One who uses force against the weak"
+      },
+      "correct": "B",
+      "explanation": "The brave person is not someone who feels no fear, but someone who conquers it."
+    },
+    {
+      "id": "ENG10CH02-Q021",
+      "topic": "Courage, Love and Human Goodness",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What does Mandela say about hatred and love?",
+      "options": {
+        "A": "People are born hating and cannot change",
+        "B": "Hatred is natural, while love must be forced",
+        "C": "People learn to hate and can therefore be taught to love",
+        "D": "Both are unrelated to human behaviour"
+      },
+      "correct": "C",
+      "explanation": "Mandela argues that no one is born hating; because hatred is learned, love can also be taught."
+    },
+    {
+      "id": "ENG10CH02-Q022",
+      "topic": "Courage, Love and Human Goodness",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "How did a brief “glimmer of humanity” in a prison guard affect Mandela?",
+      "options": {
+        "A": "It made him abandon the struggle",
+        "B": "It reassured him and helped him continue in hope",
+        "C": "It convinced him that apartheid was fair",
+        "D": "It made him distrust every human being"
+      },
+      "correct": "B",
+      "explanation": "Even a momentary sign of kindness in a guard reassured Mandela and kept him going during the grimmest times."
+    },
+    {
+      "id": "ENG10CH02-Q023",
+      "topic": "Courage, Love and Human Goodness",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What is suggested by the statement, “Man’s goodness is a flame that can be hidden but never extinguished”?",
+      "options": {
+        "A": "Human goodness may be suppressed, but it cannot be completely destroyed",
+        "B": "Goodness exists only in free societies",
+        "C": "Goodness is a sign of weakness",
+        "D": "Human beings naturally reject kindness"
+      },
+      "correct": "A",
+      "explanation": "The metaphor means that goodness can become difficult to see in cruel conditions, yet it continues to exist."
+    },
+    {
+      "id": "ENG10CH02-Q024",
+      "topic": "Courage, Love and Human Goodness",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "What idea is conveyed by “depths of oppression” creating “heights of character”?",
+      "options": {
+        "A": "Severe oppression can bring forth people of exceptional courage and moral strength",
+        "B": "Oppression always improves society immediately",
+        "C": "Only wealthy people can become leaders",
+        "D": "Character develops without struggle or sacrifice"
+      },
+      "correct": "A",
+      "explanation": "Mandela observes that extreme injustice gave rise to extraordinary leaders whose courage and generosity resisted it."
+    },
+    {
+      "id": "ENG10CH02-Q025",
+      "topic": "Freedom and Human Obligations",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "What are the “twin obligations” mentioned by Mandela?",
+      "options": {
+        "A": "Obligations to wealth and power",
+        "B": "Obligations to family and to one’s people, community and country",
+        "C": "Obligations to school and sport",
+        "D": "Obligations to law and punishment"
+      },
+      "correct": "B",
+      "explanation": "Every person has duties towards family and also towards the larger community and country."
+    },
+    {
+      "id": "ENG10CH02-Q026",
+      "topic": "Freedom and Human Obligations",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Why was it almost impossible for a black South African to fulfil both obligations under apartheid?",
+      "options": {
+        "A": "Family life was legally forbidden for everyone",
+        "B": "Serving one’s people led to punishment, isolation and separation from family",
+        "C": "People were required to leave South Africa permanently",
+        "D": "The country had no communities"
+      },
+      "correct": "B",
+      "explanation": "A person of colour who served his people was punished and forced into secrecy, often being separated from home and family."
+    },
+    {
+      "id": "ENG10CH02-Q027",
+      "topic": "Freedom and Human Obligations",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which activity did Mandela mention as part of the freedom he enjoyed in childhood?",
+      "options": {
+        "A": "Flying military aircraft",
+        "B": "Swimming in the clear stream near his village",
+        "C": "Attending international meetings",
+        "D": "Travelling freely across the world"
+      },
+      "correct": "B",
+      "explanation": "As a boy, he felt free to run in the fields, swim in the village stream, roast mealies and ride bulls."
+    },
+    {
+      "id": "ENG10CH02-Q028",
+      "topic": "Freedom and Human Obligations",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "When did Mandela begin to hunger for freedom?",
+      "options": {
+        "A": "When he became President",
+        "B": "When he realised that his boyhood freedom was an illusion and his real freedom had been taken away",
+        "C": "When he first saw the Union Buildings",
+        "D": "When he learned the national anthem"
+      },
+      "correct": "B",
+      "explanation": "His hunger for freedom began when he discovered that the apparent freedom of childhood did not protect him from unjust laws."
+    },
+    {
+      "id": "ENG10CH02-Q029",
+      "topic": "Freedom and Human Obligations",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What did Mandela call the freedoms he wanted as a student?",
+      "options": {
+        "A": "Permanent political freedoms",
+        "B": "Transitory freedoms such as staying out, reading and going where he chose",
+        "C": "Freedom to govern the country",
+        "D": "Freedom to command the military"
+      },
+      "correct": "B",
+      "explanation": "As a student, he desired temporary personal freedoms such as staying out at night, reading what he pleased and going where he chose."
+    },
+    {
+      "id": "ENG10CH02-Q030",
+      "topic": "Freedom and Human Obligations",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "What were the “basic and honourable freedoms” Mandela desired as a young man in Johannesburg?",
+      "options": {
+        "A": "The freedom to avoid all responsibility",
+        "B": "The freedom to achieve his potential, earn a living, marry and have a family",
+        "C": "The freedom to rule over others",
+        "D": "The freedom to live outside the law"
+      },
+      "correct": "B",
+      "explanation": "He wanted a lawful life in which he could develop his abilities, earn his keep, marry and raise a family."
+    },
+    {
+      "id": "ENG10CH02-Q031",
+      "topic": "Freedom and Human Obligations",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "What changed Mandela’s hunger for personal freedom into a hunger for the freedom of his people?",
+      "options": {
+        "A": "He was offered a government post",
+        "B": "He realised that the freedom of everyone who looked like him was curtailed",
+        "C": "He wished to become famous",
+        "D": "He wanted to leave his family permanently"
+      },
+      "correct": "B",
+      "explanation": "When he saw that all black South Africans were unfree, his personal desire expanded into a struggle for the freedom of his people."
+    },
+    {
+      "id": "ENG10CH02-Q032",
+      "topic": "Freedom and Human Obligations",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Why does Mandela say that the oppressor is also not free?",
+      "options": {
+        "A": "The oppressor has no legal rights",
+        "B": "The oppressor is imprisoned by hatred, prejudice and narrow-mindedness",
+        "C": "The oppressor must live in a physical prison",
+        "D": "The oppressor is always poor"
+      },
+      "correct": "B",
+      "explanation": "A person who takes away another’s freedom becomes a prisoner of hatred and prejudice, and therefore loses part of his own humanity."
+    },
+    {
+      "id": "ENG10CH02-Q033",
+      "topic": "A Tiger in the Zoo",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Who wrote the poem “A Tiger in the Zoo”?",
+      "options": {
+        "A": "Robert Frost",
+        "B": "Leslie Norris",
+        "C": "John Berryman",
+        "D": "Carl Sandburg"
+      },
+      "correct": "B",
+      "explanation": "“A Tiger in the Zoo” was written by Leslie Norris."
+    },
+    {
+      "id": "ENG10CH02-Q034",
+      "topic": "A Tiger in the Zoo",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What central contrast structures the poem?",
+      "options": {
+        "A": "Day and night in a city",
+        "B": "A tiger’s captivity in a zoo and its natural life in the jungle",
+        "C": "A tiger and a hunter inside a forest",
+        "D": "Young and old animals in a zoo"
+      },
+      "correct": "B",
+      "explanation": "The poem repeatedly contrasts the confined tiger in the zoo with the free tiger that should live in its natural habitat."
+    },
+    {
+      "id": "ENG10CH02-Q035",
+      "topic": "A Tiger in the Zoo",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What does the phrase “On pads of velvet quiet” suggest about the tiger’s movement?",
+      "options": {
+        "A": "It moves softly and silently on padded paws",
+        "B": "It runs noisily across stones",
+        "C": "It sleeps on a velvet cloth",
+        "D": "It has injured feet"
+      },
+      "correct": "A",
+      "explanation": "The tiger’s paws are compared to velvet to suggest soft, smooth and almost silent movement."
+    },
+    {
+      "id": "ENG10CH02-Q036",
+      "topic": "A Tiger in the Zoo",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "What is conveyed by the expression “quiet rage”?",
+      "options": {
+        "A": "The tiger is calm and contented",
+        "B": "The tiger’s anger is intense but suppressed by captivity",
+        "C": "The tiger is afraid of visitors",
+        "D": "The tiger is too weak to feel anger"
+      },
+      "correct": "B",
+      "explanation": "The tiger cannot act freely, so its powerful anger remains silent and controlled within the cage."
+    },
+    {
+      "id": "ENG10CH02-Q037",
+      "topic": "A Tiger in the Zoo",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Where should the tiger be lurking and sliding in its natural habitat?",
+      "options": {
+        "A": "Among city buildings",
+        "B": "In shadow and long grass near a water hole",
+        "C": "On a mountain peak",
+        "D": "Beside the zoo entrance"
+      },
+      "correct": "B",
+      "explanation": "The poet imagines the tiger lurking in shadow and sliding through long grass near the water hole."
+    },
+    {
+      "id": "ENG10CH02-Q038",
+      "topic": "A Tiger in the Zoo",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "What prey does the poet imagine passing near the water hole?",
+      "options": {
+        "A": "Wild buffaloes",
+        "B": "Plump deer",
+        "C": "Mountain goats",
+        "D": "Small birds"
+      },
+      "correct": "B",
+      "explanation": "The poem says that plump deer pass near the water hole."
+    },
+    {
+      "id": "ENG10CH02-Q039",
+      "topic": "A Tiger in the Zoo",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "How does the caged tiger react to the visitors?",
+      "options": {
+        "A": "It performs tricks for them",
+        "B": "It ignores them while stalking the length of its cage",
+        "C": "It hides behind the trees",
+        "D": "It roars continuously at them"
+      },
+      "correct": "B",
+      "explanation": "Locked in a concrete cell with its strength behind bars, the tiger stalks its cage and ignores visitors."
+    },
+    {
+      "id": "ENG10CH02-Q040",
+      "topic": "A Tiger in the Zoo",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "What does the tiger do after hearing the last voice and the patrolling cars at night?",
+      "options": {
+        "A": "It sleeps immediately",
+        "B": "It stares with brilliant eyes at the brilliant stars",
+        "C": "It escapes into the jungle",
+        "D": "It begins playing with visitors"
+      },
+      "correct": "B",
+      "explanation": "At night, the tiger hears the final human sounds and looks beyond its cage towards the brilliant stars."
+    }
+  ],
+  "tests": [
+    {
+      "testId": "ENG10CH02-T01",
+      "testTitle": "Topic Test 1",
+      "testType": "TOPIC_TEST",
+      "topic": "Inauguration and Democratic Government",
+      "questionLabel": "Related questions: Q1-Q8",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "ENG10CH02-Q001",
+        "ENG10CH02-Q002",
+        "ENG10CH02-Q003",
+        "ENG10CH02-Q004",
+        "ENG10CH02-Q005",
+        "ENG10CH02-Q006",
+        "ENG10CH02-Q007",
+        "ENG10CH02-Q008"
+      ]
+    },
+    {
+      "testId": "ENG10CH02-T02",
+      "testTitle": "Topic Test 2",
+      "testType": "TOPIC_TEST",
+      "topic": "History, Symbols and Apartheid",
+      "questionLabel": "Related questions: Q9-Q16",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "ENG10CH02-Q009",
+        "ENG10CH02-Q010",
+        "ENG10CH02-Q011",
+        "ENG10CH02-Q012",
+        "ENG10CH02-Q013",
+        "ENG10CH02-Q014",
+        "ENG10CH02-Q015",
+        "ENG10CH02-Q016"
+      ]
+    },
+    {
+      "testId": "ENG10CH02-T03",
+      "testTitle": "Topic Test 3",
+      "testType": "TOPIC_TEST",
+      "topic": "Courage, Love and Human Goodness",
+      "questionLabel": "Related questions: Q17-Q24",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "ENG10CH02-Q017",
+        "ENG10CH02-Q018",
+        "ENG10CH02-Q019",
+        "ENG10CH02-Q020",
+        "ENG10CH02-Q021",
+        "ENG10CH02-Q022",
+        "ENG10CH02-Q023",
+        "ENG10CH02-Q024"
+      ]
+    },
+    {
+      "testId": "ENG10CH02-T04",
+      "testTitle": "Topic Test 4",
+      "testType": "TOPIC_TEST",
+      "topic": "Freedom and Human Obligations",
+      "questionLabel": "Related questions: Q25-Q32",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "ENG10CH02-Q025",
+        "ENG10CH02-Q026",
+        "ENG10CH02-Q027",
+        "ENG10CH02-Q028",
+        "ENG10CH02-Q029",
+        "ENG10CH02-Q030",
+        "ENG10CH02-Q031",
+        "ENG10CH02-Q032"
+      ]
+    },
+    {
+      "testId": "ENG10CH02-T05",
+      "testTitle": "Topic Test 5",
+      "testType": "TOPIC_TEST",
+      "topic": "A Tiger in the Zoo",
+      "questionLabel": "Related questions: Q33-Q40",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "ENG10CH02-Q033",
+        "ENG10CH02-Q034",
+        "ENG10CH02-Q035",
+        "ENG10CH02-Q036",
+        "ENG10CH02-Q037",
+        "ENG10CH02-Q038",
+        "ENG10CH02-Q039",
+        "ENG10CH02-Q040"
+      ]
+    },
+    {
+      "testId": "ENG10CH02-FLT01",
+      "testTitle": "Full-Length Test 1",
+      "testType": "FULL_LENGTH",
+      "topic": "Complete Chapter — Set A",
+      "questionLabel": "20 balanced questions from both Chapter 2 texts",
+      "instructions": "20 questions • 1 mark each • Full chapter assessment • Progress saves automatically after submit.",
+      "questionIds": [
+        "ENG10CH02-Q001",
+        "ENG10CH02-Q003",
+        "ENG10CH02-Q005",
+        "ENG10CH02-Q007",
+        "ENG10CH02-Q009",
+        "ENG10CH02-Q011",
+        "ENG10CH02-Q013",
+        "ENG10CH02-Q015",
+        "ENG10CH02-Q017",
+        "ENG10CH02-Q019",
+        "ENG10CH02-Q021",
+        "ENG10CH02-Q023",
+        "ENG10CH02-Q025",
+        "ENG10CH02-Q027",
+        "ENG10CH02-Q029",
+        "ENG10CH02-Q031",
+        "ENG10CH02-Q033",
+        "ENG10CH02-Q035",
+        "ENG10CH02-Q037",
+        "ENG10CH02-Q039"
+      ]
+    },
+    {
+      "testId": "ENG10CH02-FLT02",
+      "testTitle": "Full-Length Test 2",
+      "testType": "FULL_LENGTH",
+      "topic": "Complete Chapter — Set B",
+      "questionLabel": "20 balanced questions from both Chapter 2 texts",
+      "instructions": "20 questions • 1 mark each • Full chapter assessment • Progress saves automatically after submit.",
+      "questionIds": [
+        "ENG10CH02-Q002",
+        "ENG10CH02-Q004",
+        "ENG10CH02-Q006",
+        "ENG10CH02-Q008",
+        "ENG10CH02-Q010",
+        "ENG10CH02-Q012",
+        "ENG10CH02-Q014",
+        "ENG10CH02-Q016",
+        "ENG10CH02-Q018",
+        "ENG10CH02-Q020",
+        "ENG10CH02-Q022",
+        "ENG10CH02-Q024",
+        "ENG10CH02-Q026",
+        "ENG10CH02-Q028",
+        "ENG10CH02-Q030",
+        "ENG10CH02-Q032",
+        "ENG10CH02-Q034",
+        "ENG10CH02-Q036",
+        "ENG10CH02-Q038",
+        "ENG10CH02-Q040"
+      ]
+    }
+  ]
+};
+  </script>
+
+  <script src="../../assets/js/static-mcq-engine.js"></script>
+</body>
+</html>
