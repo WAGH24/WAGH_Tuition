@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',()=>{const u=WTC_AUTH.requireRole('Teacher');if(!u)return;document.querySelectorAll('[data-user-name]').forEach(e=>e.textContent=u.name||'Teacher');document.querySelectorAll('[data-user-avatar]').forEach(e=>e.textContent=WTC_UI.initials(u.name));});
