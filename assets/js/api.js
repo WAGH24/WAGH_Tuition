@@ -41,4 +41,4 @@ const WTC_API = (() => {
   };
 })();
 // expose api client for static feature pages
-window.WTC_API = WTC_API;
+
