@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MCQ Practice | WAGH Tuition Classes</title>
+  <link rel="stylesheet" href="../../assets/css/static-mcq-engine.css" />
+</head>
+<body>
+  <div class="wtc-mcq-app">
+    <header class="hero-card">
+      <div class="hero-left">
+        <p class="eyebrow">WAGH Tuition Classes • Static MCQ Engine v1.0</p>
+        <h1 id="testTitle">MCQ Practice.</h1>
+        <p id="testMeta" class="meta"></p>
+      </div>
+      <div class="hero-score">
+        <div class="ring" id="progressRing"><span id="answeredCount">0</span></div>
+        <small>Answered</small>
+      </div>
+    </header>
+
+    <section class="sticky-dashboard">
+      <div class="dash-item"><span>Student</span><b id="studentName">Checking login...</b></div>
+      <div class="dash-item"><span>Time</span><b id="timer">00:00</b></div>
+      <div class="dash-item"><span>Questions</span><b id="questionCount">0</b></div>
+      <button id="themeBtn" class="ghost-btn" type="button">🌙</button>
+      <button id="reviewBtn" class="ghost-btn" type="button">Review</button>
+    </section>
+
+    <section class="notice-card">
+      Select one option for each question. After submit, correct answers and explanations will open. Your result will be saved for progress report.
+    </section>
+
+    <main class="layout-grid">
+      <aside class="question-palette" aria-label="Question palette">
+        <h3>Question Palette</h3>
+        <div id="paletteGrid" class="palette-grid"></div>
+      </aside>
+      <section id="questionList" class="question-list"></section>
+    </main>
+
+    <section id="resultBox" class="result-box hidden"></section>
+
+    <div class="bottom-action-bar">
+      <button id="submitBtn" class="primary-btn" type="button">Submit Test</button>
+      <button id="retryBtn" class="secondary-btn hidden" type="button">Retry Test</button>
+      <button id="topBtn" class="secondary-btn" type="button">Top</button>
+    </div>
+  </div>
+
+  <script src="../../assets/js/config.js"></script>
+  <script src="../../assets/js/auth.js"></script>
+  <script src="../../assets/js/api.js"></script>
+
+  <script>
+    window.WTC_STATIC_MCQ = {
+      testId: "MCQ-SCI10CH1-001",
+      testTitle: "Chemical Reactions and Equations - MCQ Practice",
+      board: "CBSE",
+      className: "Class 10",
+      medium: "English Medium",
+      subjectId: "SCI10",
+      subjectName: "Science",
+      chapterId: "SCI10CH1",
+      chapterName: "Chemical Reactions and Equations",
+      testType: "Static MCQ Practice",
+      instructions: "Chapter 1 concept practice",
+      questions: [
+        {
+          id: "SCI10CH1-Q001",
+          topic: "Chemical Reaction",
+          difficulty: "Easy",
+          marks: 1,
+          question: "Which of the following is a chemical change?",
+          options: {
+            A: "Melting of ice",
+            B: "Burning of magnesium ribbon",
+            C: "Boiling of water",
+            D: "Breaking of glass"
+          },
+          correct: "B",
+          explanation: "Burning of magnesium ribbon forms a new substance, magnesium oxide. Therefore, it is a chemical change."
+        },
+        {
+          id: "SCI10CH1-Q002",
+          topic: "Balanced Equation",
+          difficulty: "Easy",
+          marks: 1,
+          question: "A balanced chemical equation follows which law?",
+          options: {
+            A: "Law of conservation of mass",
+            B: "Law of reflection",
+            C: "Law of gravitation",
+            D: "Ohm's law"
+          },
+          correct: "A",
+          explanation: "In a balanced chemical equation, the number of atoms of each element remains equal on both sides, so mass is conserved."
+        },
+        {
+          id: "SCI10CH1-Q003",
+          topic: "Reaction Type",
+          difficulty: "Medium",
+          marks: 1,
+          question: "The reaction CaO + H₂O → Ca(OH)₂ is an example of which reaction?",
+          options: {
+            A: "Decomposition reaction",
+            B: "Displacement reaction",
+            C: "Combination reaction",
+            D: "Double displacement reaction"
+          },
+          correct: "C",
+          explanation: "Two reactants combine to form a single product. Therefore, it is a combination reaction."
+        },
+        {
+          id: "SCI10CH1-Q004",
+          topic: "Oxidation",
+          difficulty: "Medium",
+          marks: 1,
+          question: "Which change represents oxidation?",
+          options: {
+            A: "Gain of hydrogen",
+            B: "Loss of oxygen",
+            C: "Gain of oxygen",
+            D: "No change in oxygen or hydrogen"
+          },
+          correct: "C",
+          explanation: "Oxidation means gain of oxygen or loss of hydrogen."
+        },
+        {
+          id: "SCI10CH1-Q005",
+          topic: "Decomposition Reaction",
+          difficulty: "Easy",
+          marks: 1,
+          question: "When calcium carbonate is heated, it decomposes to form calcium oxide and which gas?",
+          options: {
+            A: "Oxygen",
+            B: "Hydrogen",
+            C: "Carbon dioxide",
+            D: "Nitrogen"
+          },
+          correct: "C",
+          explanation: "Calcium carbonate decomposes on heating to form calcium oxide and carbon dioxide gas."
+        }
+      ]
+    };
+  </script>
+  <script src="../../assets/js/static-mcq-engine.js"></script>
+</body>
+</html>
