@@ -1,0 +1,94 @@
+:root{--bg:#f7fbfc;--card:#fff;--ink:#1d2b35;--muted:#5f7180;--primary:#19758a;--primary-dark:#11586c;--gold:#e3a924;--soft:#eaf6f8;--border:#d9e7eb;--shadow:0 12px 32px rgba(20,73,91,.12);--radius:18px;--danger:#dc2626;--success:#16a34a;--blue:#2563eb;--orange:#f97316;--purple:#7c3aed}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink)}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}.container{max-width:1120px;margin:auto;padding:0 18px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:12px;background:var(--primary);color:white;padding:12px 18px;font-weight:800;cursor:pointer;box-shadow:var(--shadow)}.btn:hover{background:var(--primary-dark)}.btn.outline{background:white;color:var(--primary);border:1px solid var(--border);box-shadow:none}.btn.danger{background:var(--danger)}.btn.success{background:var(--success)}.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}.grid{display:grid;gap:18px}.grid-2{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(3,1fr)}.grid-4{grid-template-columns:repeat(4,1fr)}.muted{color:var(--muted)}.pill{display:inline-flex;align-items:center;gap:7px;border-radius:999px;background:#fff2c7;color:#75520a;padding:7px 11px;font-weight:900;font-size:12px}.field{display:grid;gap:6px;margin-bottom:12px}.field label{font-weight:800;font-size:13px;color:#334155}.field input,.field select,.field textarea{width:100%;padding:13px;border:1px solid #cbd5e1;border-radius:12px;background:white}.topbar{position:sticky;top:0;z-index:30;background:rgba(247,251,252,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}.topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 18px;max-width:1180px;margin:auto}.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:19px}.brand img{height:44px;width:auto;display:block}.top-actions{display:flex;align-items:center;gap:10px}.avatar{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--primary),#0f4c5c);color:white;display:grid;place-items:center;font-weight:900}.app-shell{display:grid;grid-template-columns:250px 1fr;min-height:calc(100vh - 69px)}.sidebar{background:#0f172a;color:white;padding:18px;position:sticky;top:69px;height:calc(100vh - 69px)}.side-title{display:flex;align-items:center;gap:10px;font-size:18px;font-weight:900;margin-bottom:20px}.side-title img{width:42px;height:42px;object-fit:contain}.side-nav{display:grid;gap:7px}.side-nav button{border:0;background:transparent;color:#cbd5e1;text-align:left;padding:12px;border-radius:12px;font-weight:800;cursor:pointer}.side-nav button.active,.side-nav button:hover{background:#1e293b;color:white}.main-area{padding:22px;overflow:hidden}.page-section{display:none}.page-section.active{display:block}.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:15px;margin-bottom:18px}.section-head h1,.section-head h2{margin:0}.hero-card{background:linear-gradient(135deg,#eaf6f8,#fff8e8);border:1px solid var(--border);border-radius:26px;padding:28px;box-shadow:var(--shadow)}.hero-card h1{font-size:clamp(28px,4vw,44px);margin:0 0 8px;line-height:1.06}.progress-track{height:12px;background:#e5e7eb;border-radius:999px;overflow:hidden}.progress-fill{height:100%;background:linear-gradient(90deg,var(--primary),var(--gold));border-radius:inherit}.subject-card,.chapter-card,.action-card{cursor:pointer;transition:.2s}.subject-card:hover,.chapter-card:hover,.action-card:hover{transform:translateY(-3px);border-color:var(--primary)}.subject-icon{font-size:34px;margin-bottom:8px}.bottom-nav{display:none}.toast-box{position:fixed;right:18px;bottom:18px;display:grid;gap:10px;z-index:99999}.toast{padding:12px 14px;border-radius:14px;color:white;font-weight:800;box-shadow:var(--shadow);background:var(--primary)}.toast.error{background:var(--danger)}.toast.success{background:var(--success)}.table-wrap{overflow:auto;border:1px solid var(--border);border-radius:16px;background:white}table{width:100%;border-collapse:collapse;min-width:720px}th,td{padding:12px;border-bottom:1px solid #e5e7eb;text-align:left;font-size:14px}th{background:#0f172a;color:white}@media(max-width:900px){.app-shell{display:block}.sidebar{display:none}.main-area{padding:14px 14px 86px}.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}.top-actions .hide-mobile{display:none}.bottom-nav{position:fixed;left:10px;right:10px;bottom:10px;display:grid;grid-template-columns:repeat(4,1fr);gap:5px;background:#0f172a;color:white;border-radius:18px;padding:8px;z-index:50;box-shadow:0 10px 30px rgba(0,0,0,.25)}.bottom-nav button{border:0;background:transparent;color:#cbd5e1;border-radius:13px;padding:9px 5px;font-size:12px;font-weight:800}.bottom-nav button.active{background:#1e293b;color:white}.brand span{display:none}.brand img{height:40px}}@media(max-width:520px){.topbar-inner{padding:10px 12px}.hero-card{padding:20px}.card{padding:18px}.toast-box{left:12px;right:12px}.toast{text-align:center}}
+
+/* WTC logo/navbar safety patch */
+.brand,.landing-brand{display:flex;align-items:center;gap:12px;min-width:0;max-width:100%;font-weight:900;}
+.brand img,.landing-brand img{width:auto;height:52px;max-width:64px;object-fit:contain;border-radius:10px;flex-shrink:0;display:block;}
+.brand span,.landing-brand span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.15;}
+.btn.small{padding:8px 12px;border-radius:10px;font-size:13px;box-shadow:none;}
+.empty-card{background:#fff;border:1px dashed var(--border);border-radius:var(--radius);padding:22px;color:var(--muted);font-weight:800;text-align:center;}
+@media(max-width:900px){.brand img,.landing-brand img{height:42px;max-width:48px}.brand span,.landing-brand span{display:inline;white-space:normal;font-size:14px;line-height:1.15}.topbar-inner{gap:8px}.top-actions{gap:6px}.top-actions .hide-mobile{display:none}.btn.small{padding:7px 9px;font-size:12px}}
+@media(max-width:420px){.brand span,.landing-brand span{max-width:86px}.brand img,.landing-brand img{height:38px;max-width:42px}}
+/* ==========================================
+   WTC Full Access Popup
+========================================== */
+
+.wtc-access-overlay{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.55);
+backdrop-filter:blur(6px);
+display:flex;
+align-items:center;
+justify-content:center;
+padding:20px;
+z-index:999999;
+animation:wtcFade .25s ease;
+}
+
+.wtc-access-box{
+width:100%;
+max-width:420px;
+background:#fff;
+border-radius:22px;
+padding:28px;
+text-align:center;
+box-shadow:0 20px 60px rgba(0,0,0,.25);
+animation:wtcScale .25s ease;
+}
+
+.wtc-access-box h2{
+margin:0 0 12px;
+font-size:26px;
+color:#0f172a;
+}
+
+.wtc-access-box p{
+margin:0 0 22px;
+line-height:1.7;
+color:#475569;
+}
+
+.wtc-whatsapp-btn{
+display:block;
+background:#25D366;
+color:#fff;
+padding:14px;
+border-radius:14px;
+font-weight:700;
+text-decoration:none;
+margin-bottom:14px;
+transition:.25s;
+}
+
+.wtc-whatsapp-btn:hover{
+transform:translateY(-2px);
+filter:brightness(1.05);
+}
+
+.wtc-close-btn{
+width:100%;
+padding:12px;
+border:none;
+border-radius:14px;
+cursor:pointer;
+background:#0f172a;
+color:#fff;
+font-weight:700;
+}
+
+@keyframes wtcFade{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+@keyframes wtcScale{
+from{
+opacity:0;
+transform:scale(.92);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}

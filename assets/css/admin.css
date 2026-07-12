@@ -1,0 +1,12 @@
+@import url('portal.css');
+.admin-actions{display:flex;gap:8px;flex-wrap:wrap}.act{border:0;border-radius:10px;padding:8px 10px;color:white;font-weight:900;cursor:pointer}.act.block{background:var(--orange)}.act.unblock{background:var(--success)}.act.delete{background:var(--danger)}
+/* ===== Content Panels ===== */
+
+.panel{
+    display:none;
+    margin-top:20px;
+}
+
+.panel.active{
+    display:block;
+}
