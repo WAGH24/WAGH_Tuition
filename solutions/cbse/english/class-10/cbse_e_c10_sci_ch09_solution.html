@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Wagh Tuition Classes - Chapter 9: Light - Reflection and Refraction</title>
+<style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e67e22;
+            --bg-color: #f4f6f7;
+            --text-color: #333;
+            --success-color: #27ae60;
+            --whatsapp-color: #25d366;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            padding-bottom: 60px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2.5rem 1rem;
+            border-bottom: 4px solid var(--accent-color);
+        }
+
+        header .brand-name {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin: 0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        header .tagline {
+            font-size: 1.2rem;
+            color: #f1c40f;
+            font-weight: 600;
+            margin: 0.5rem 0 1rem 0;
+            font-style: italic;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .tabs-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 0.5rem;
+        }
+
+        .tab-btn {
+            background: #ddd;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 5px 5px 0 0;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn:hover {
+            background: #ccc;
+        }
+
+        .tab-btn.active {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+            background: white;
+            padding: 2rem;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .pdf-download-box {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            border-radius: 4px;
+        }
+
+        .pdf-btn {
+            background-color: var(--success-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .pdf-btn:hover {
+            background-color: #219653;
+        }
+
+        .test-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            .test-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .test-box {
+            border: 1px solid #ddd;
+            padding: 1.5rem;
+            border-radius: 6px;
+            background: #fafafa;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .test-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        .test-meta {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        #quiz-interface {
+            display: none;
+            background: #fdfdfd;
+            border: 2px solid var(--primary-color);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+        }
+
+        .quiz-q-block {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px dashed #ddd;
+        }
+
+        .quiz-options label {
+            display: block;
+            background: #f1f1f1;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .quiz-options label:hover {
+            background: #e5e5e5;
+        }
+
+        #quiz-result-box {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: #d4edda;
+            color: #155724;
+            border-radius: 4px;
+            font-weight: bold;
+            display: none;
+        }
+
+        .qa-block {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1.5rem;
+        }
+
+        .qa-block h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .formula-box {
+            background: #f8f9fa;
+            border: 1px dashed #2c3e50;
+            padding: 1.5rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            margin: 1.5rem 0;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            overflow-x: auto;
+            color: #2c3e50;
+        }
+
+        .formula-box h4 {
+            margin-top: 0;
+            color: #e67e22;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        .formula-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            border-bottom: 1px dotted #ddd;
+            padding-bottom: 5px;
+        }
+
+        .activity-section {
+            margin-bottom: 2.5rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 2rem;
+        }
+
+        .activity-section h3 {
+            color: var(--primary-color);
+            border-left: 4px solid var(--accent-color);
+            padding-left: 10px;
+        }
+
+        .activity-img-container {
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        .activity-svg {
+            max-width: 100%;
+            height: auto;
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--whatsapp-color);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 9999;
+            transition: transform 0.3s ease, background-color 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #1ebd56;
+            transform: scale(1.05);
+        }
+
+        .whatsapp-icon {
+            font-size: 1.3rem;
+        }
+        
+        .section-divider {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.25rem;
+            margin: 2.5rem 0 1.5rem 0;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            letter-spacing: 0.5px;
+        }
+
+        sub, sup {
+            font-size: 0.75em;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline;
+        }
+        sub { bottom: -0.25em; }
+        sup { top: -0.5em; }
+    
+
+/* Solution_Engine v1.2 accordion + floating fixes */
+.chapter-meta{margin:1.2rem auto 0;max-width:850px;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.6rem;background:rgba(255,255,255,.12);padding:1rem;border-radius:18px;text-align:left}.chapter-meta div{background:rgba(255,255,255,.12);padding:.55rem .75rem;border-radius:12px}.solution-card,.math-solution,.mcq-card{overflow:hidden;border-radius:18px;box-shadow:0 12px 35px rgba(0,0,0,.08);transition:all .25s ease;margin:1rem 0}.accordion-title{cursor:pointer;user-select:none;margin:0!important;padding:1rem 1.1rem!important;display:flex;align-items:center;justify-content:space-between;gap:1rem;background:linear-gradient(135deg,#fff,#f7fbff);border-bottom:1px solid rgba(0,0,0,.06);touch-action:manipulation}.tap-indicator{font-size:.82rem;color:#e67e22;font-weight:800;white-space:nowrap}.solution-body{max-height:0;opacity:0;overflow:hidden;padding:0 1rem;transition:max-height .38s ease,opacity .25s ease,padding .25s ease}.accordion-open .solution-body{max-height:5000px;opacity:1;padding:1rem}.accordion-open .tap-indicator{color:#27ae60}.whatsapp-float,.lang-switcher,.pdf-float{z-index:9999}.whatsapp-float{bottom:24px!important;right:22px!important}.lang-switcher{bottom:92px!important;right:22px!important}.pdf-float{bottom:160px!important;right:22px!important}.pdf-download-box a[href^="javascript"]{text-decoration:none}@media(max-width:600px){.accordion-title{align-items:flex-start;flex-direction:column}.tap-indicator{font-size:.78rem}.container{padding-bottom:210px}.chapter-meta{grid-template-columns:1fr}}
+
+.pdf-float{position:fixed;width:56px;height:56px;border-radius:50%;background:#27ae60;color:white;display:flex;align-items:center;justify-content:center;font-size:25px;text-decoration:none;box-shadow:0 10px 25px rgba(0,0,0,.25)}
+</style>
+<script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><style>
+/* WTC Premium Solution Template v1.0 */
+.translation-toolbar{position:sticky;top:0;z-index:999;background:#fff;border:1px solid #ddd;border-left:5px solid var(--accent-color);border-radius:8px;padding:12px 14px;margin:0 0 18px 0;box-shadow:0 4px 12px rgba(0,0,0,.08);display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.translation-toolbar strong{color:var(--primary-color)}
+.translate-toggle{background:var(--accent-color);color:white;border:none;border-radius:30px;padding:10px 18px;font-weight:800;cursor:pointer;box-shadow:0 3px 8px rgba(0,0,0,.16)}
+.gu-line{display:none;margin-top:8px;padding:10px 12px;background:#fff8e8;border-left:4px solid #e67e22;border-radius:6px;color:#4a2b05;font-family:'Noto Sans Gujarati','Shruti','Nirmala UI','Segoe UI',sans-serif;line-height:1.75;font-size:.98rem}
+body.show-gu .gu-line{display:block}
+.gu-label{font-weight:800;color:#c05a00;margin-right:6px}
+.solution-card,.math-solution,.mcq-card{background:#fff;border:1px solid #e8edf2;border-radius:14px;padding:18px;margin:20px 0 28px;box-shadow:0 6px 18px rgba(44,62,80,.08)}
+.solution-card h4,.math-solution h4,.mcq-card h4{font-size:1.13rem;color:var(--primary-color);line-height:1.55;margin:0 0 14px}
+.answer-card,.key-card,.info-card,.formula-card2,.step-card,.final-card,.tip-card,.explain-box,.why-not{border-radius:12px;padding:14px 16px;margin:12px 0}
+.answer-card{background:#f8fbff;border-left:5px solid #3498db}
+.key-card{background:#f8f9fa;border-left:5px solid #7f8c8d}
+.info-card{background:#eef7ff;border-left:5px solid #3498db}
+.formula-card2{background:#fff8e8;border-left:5px solid #f39c12}
+.step-card{background:#f8f9fa;border-left:5px solid #7f8c8d}
+.final-card{background:#eafaf1;border-left:5px solid #27ae60;font-weight:600}
+.tip-card{background:#f4ecff;border-left:5px solid #8e44ad}
+.card-title{font-weight:800;color:#2c3e50;margin-bottom:8px}
+.math-line{display:block;background:white;border:1px solid #e4e7eb;border-radius:9px;padding:10px 12px;margin:8px 0;overflow-x:auto;font-size:1.04rem}
+.result-table{width:100%;border-collapse:collapse;margin-top:10px;overflow:hidden;border-radius:10px}
+.result-table th,.result-table td{border:1px solid #dce3ea;padding:10px;text-align:left;vertical-align:top}
+.result-table th{background:#2c3e50;color:white}
+.option-list{display:grid;grid-template-columns:1fr;gap:8px;margin:10px 0}
+.option{padding:10px 12px;background:#f7f8fa;border:1px solid #e4e7eb;border-radius:9px}
+.option.correct{background:#eafaf1;border-color:#27ae60;font-weight:800;color:#145a32}
+.option.wrong{background:#fff5f5;border-color:#f1c0c0}
+.explain-box{background:#fff8e8;border-left:5px solid #f39c12}
+.why-not{background:#f8f9fa;border-left:5px solid #95a5a6}
+</style><style>
+.gu-floating-btn{position:fixed;right:18px;bottom:90px;z-index:9999;background:#25D366;color:#fff;border:none;border-radius:999px;padding:14px 18px;font-weight:700;box-shadow:0 8px 22px rgba(0,0,0,.25);cursor:pointer}
+@media(max-width:768px){.gu-floating-btn{right:14px;bottom:82px;padding:13px 16px;font-size:14px}}
+</style><style>
+/* Floating Expandable Language Switcher */
+.lang-switcher{
+  position:fixed;
+  right:18px;
+  bottom:90px;
+  z-index:10000;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:10px;
+}
+.lang-main-btn{
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  border:none;
+  background:#25D366;
+  color:white;
+  font-size:25px;
+  font-weight:800;
+  box-shadow:0 8px 22px rgba(0,0,0,.28);
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.lang-main-btn:hover{
+  transform:scale(1.06);
+  box-shadow:0 10px 26px rgba(0,0,0,.32);
+}
+.lang-menu{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  opacity:0;
+  transform:translateY(12px) scale(.96);
+  pointer-events:none;
+  transition:all .25s ease;
+}
+.lang-switcher.open .lang-menu{
+  opacity:1;
+  transform:translateY(0) scale(1);
+  pointer-events:auto;
+}
+.lang-option{
+  border:none;
+  border-radius:999px;
+  padding:11px 15px;
+  font-weight:800;
+  font-size:14px;
+  cursor:pointer;
+  color:#1f2937;
+  background:#ffffff;
+  box-shadow:0 6px 18px rgba(0,0,0,.18);
+  min-width:128px;
+  text-align:left;
+  transition:transform .2s ease, background .2s ease;
+}
+.lang-option:hover{
+  transform:translateX(-3px);
+  background:#f8fafc;
+}
+.lang-option.active{
+  background:#eafaf1;
+  color:#145a32;
+  border:1px solid #25D366;
+}
+@media(max-width:768px){
+  .lang-switcher{
+    right:14px;
+    bottom:82px;
+  }
+  .lang-main-btn{
+    width:54px;
+    height:54px;
+    font-size:23px;
+  }
+  .lang-option{
+    font-size:13px;
+    padding:10px 14px;
+    min-width:118px;
+  }
+}
+</style></head>
+<body>
+<header>
+<div class="brand-name">WAGH Tuition Classes</div>
+<div class="tagline">Mastering Science with Wagh Sir</div>
+<h1>CBSE Class 10 Science | English Medium</h1>
+<h2 style="margin:0; font-size: 1.2rem; font-weight: 300;">Chapter 9: Light – Reflection and Refraction</h2>
+<div class="chapter-meta"><div><b>Board:</b> CBSE</div><div><b>Class:</b> 10</div><div><b>Subject:</b> Science</div><div><b>Medium:</b> English</div><div><b>Chapter Name:</b> Light – Reflection and Refraction</div></div></header>
+<div class="container">
+<div class="tabs-nav"><button class="tab-btn active">4. NCERT Solutions</button></div>
+<div class="tab-content" id="concepts" style="display:none;">
+<div class="pdf-download-box">
+<span>Get the complete, print-ready Definitions &amp; Formula PDF on your device.</span>
+<a class="pdf-btn" href="javascript:downloadPDF()">✅ Download PDF</a>
+</div>
+<h2>Important Formulas (Master Sheet)</h2>
+<div class="formula-box">
+<h4>Reflection &amp; Spherical Mirrors</h4>
+<div class="formula-row"><span>Radius &amp; Focal Length:</span> <span>R = 2f</span></div>
+<div class="formula-row"><span>Mirror Formula:</span> <span>1/v + 1/u = 1/f</span></div>
+<div class="formula-row"><span>Magnification (Mirror):</span> <span>m = h'/h = -v/u</span></div>
+<h4 style="margin-top: 15px;">Refraction &amp; Spherical Lenses</h4>
+<div class="formula-row"><span>Snell's Law:</span> <span>sin(i) / sin(r) = constant</span></div>
+<div class="formula-row"><span>Absolute Refractive Index:</span> <span>n<sub>m</sub> = c / v</span></div>
+<div class="formula-row"><span>Relative Refractive Index:</span> <span>n<sub>21</sub> = v<sub>1</sub> / v<sub>2</sub></span></div>
+<div class="formula-row"><span>Lens Formula:</span> <span>1/v - 1/u = 1/f</span></div>
+<div class="formula-row"><span>Magnification (Lens):</span> <span>m = h'/h = v/u</span></div>
+<div class="formula-row"><span>Power of a Lens:</span> <span>P = 1/f (in meters)</span></div>
+</div>
+<h2>Core Concepts and Key Words</h2>
+<h3>1. Reflection of Light</h3>
+<ul>
+<li><strong>Laws of Reflection:</strong> The angle of incidence is equal to the angle of reflection ($i = r$). The incident ray, normal, and reflected ray all lie in the same plane.</li>
+<li><strong>Spherical Mirrors:</strong> A <strong>concave mirror</strong> has its reflecting surface curved inwards. A <strong>convex mirror</strong> has its reflecting surface curved outwards.</li>
+<li><strong>Principal Focus (F):</strong> The point on the principal axis where light rays parallel to the principal axis converge (concave) or appear to diverge from (convex).</li>
+</ul>
+<h3>2. Refraction of Light</h3>
+<ul>
+<li><strong>Refraction:</strong> The bending of light as it passes from one transparent medium to another due to a change in the speed of light.</li>
+<li><strong>Refractive Index (n):</strong> The ratio of the speed of light in a vacuum (c) to the speed of light in the medium (v).</li>
+<li><strong>Optical Density:</strong> A medium with a higher refractive index is optically denser, slowing down light more than a rarer medium.</li>
+</ul>
+<h3>3. Spherical Lenses</h3>
+<ul>
+<li><strong>Convex Lens:</strong> Thicker at the middle; converges light rays.</li>
+<li><strong>Concave Lens:</strong> Thicker at the edges; diverges light rays.</li>
+<li><strong>Power of a Lens (P):</strong> The degree of convergence or divergence. Measured in Dioptres (D).</li>
+</ul>
+</div>
+<div class="tab-content" id="summary" style="display:none;">
+<div class="pdf-download-box">
+<span>Download the Complete Activities Manual &amp; Diagram Blueprint Chart PDF.</span>
+<a class="pdf-btn" href="javascript:downloadPDF()">✅ Download PDF</a>
+</div>
+<h2>Detailed Analysis of Chapter Activities (9.1 to 9.13)</h2>
+<div class="activity-section">
+<h3>Activity 9.1: Reflecting Surfaces of a Spoon</h3>
+<p><strong>Procedure:</strong> View your face in the curved surface of a large shining spoon. Move it away and observe. Reverse the spoon and repeat.</p>
+<p><strong>Observation &amp; Conclusion:</strong> The inner curve acts as a <strong>concave mirror</strong> (image gets inverted when moved away). The outer curve acts as a <strong>convex mirror</strong> (image remains erect, virtual, and diminished).</p>
+</div>
+<div class="activity-section">
+<h3>Activity 9.2: Finding Focal Length of a Concave Mirror</h3>
+<p><strong>Procedure:</strong> Direct a concave mirror towards the Sun. Focus the reflected light onto a sheet of paper until a sharp bright spot forms.</p>
+<div class="activity-img-container">
+<svg class="activity-svg" height="250" viewbox="0 0 550 250" width="550">
+<rect fill="#fcfcfc" height="100%" width="100%"></rect>
+<text fill="#2c3e50" font-family="sans-serif" font-size="14" font-weight="bold" x="20" y="30">Fig 9.2: Focusing Sunlight with a Concave Mirror</text>
+<path d="M 400,50 Q 450,125 400,200" fill="none" stroke="#34495e" stroke-width="6"></path>
+<line stroke="#f1c40f" stroke-width="2" x1="50" x2="415" y1="80" y2="80"></line>
+<line stroke="#f1c40f" stroke-width="2" x1="50" x2="415" y1="170" y2="170"></line>
+<line stroke="#e67e22" stroke-width="2" x1="415" x2="250" y1="80" y2="125"></line>
+<line stroke="#e67e22" stroke-width="2" x1="415" x2="250" y1="170" y2="125"></line>
+<rect fill="#ecf0f1" height="90" stroke="#7f8c8d" width="10" x="240" y="80"></rect>
+<circle cx="245" cy="125" fill="#e74c3c" r="6"></circle>
+<text fill="#c0392b" font-family="sans-serif" font-size="11" x="180" y="160">Bright spot (Focus)</text>
+</svg>
+</div>
+<p><strong>Observation &amp; Conclusion:</strong> The focused sunlight produces immense heat, igniting the paper. The distance between the mirror and the sharp spot gives the approximate <strong>focal length</strong> of the concave mirror.</p>
+</div>
+<div class="activity-section">
+<h3>Activity 9.3: Image Formation by Concave Mirror</h3>
+<p><strong>Procedure:</strong> Mount a concave mirror on a stand. Place a lighted candle on an optical bench at various positions (Beyond C, At C, Between C &amp; F, At F, Between P &amp; F) and try to catch the image on a screen.</p>
+<p><strong>Observation &amp; Conclusion:</strong> As the object moves closer to the mirror from infinity to F, the real, inverted image moves further away and enlarges. When placed between P and F, the image cannot be caught on a screen as it becomes <strong>virtual, erect, and magnified</strong> behind the mirror.</p>
+</div>
+<div class="activity-section">
+<h3>Activity 9.4: Ray Diagrams for Concave Mirror</h3>
+<p><strong>Procedure:</strong> Draw neat ray diagrams for the image formation positions observed in Activity 9.3.</p>
+<p><strong>Conclusion:</strong> Tracing at least two standard incident rays (one parallel to the principal axis, and one passing through the focus or centre of curvature) accurately predicts the size, position, and nature of the image formed.</p>
+</div>
+<div class="activity-section">
+<h3>Activity 9.5: Image Formation by a Convex Mirror</h3>
+<p><strong>Procedure:</strong> Hold a convex mirror and observe the image of an upright pencil. Move the pencil away slowly and observe the changes in the image.</p>
+<p><strong>Observation &amp; Conclusion:</strong> The image is always <strong>erect, virtual, and diminished</strong>. As the object recedes, the image becomes smaller and shifts closer to the principal focus behind the mirror.</p>
+</div>
+<div class="activity-section">
+<h3>Activity 9.6: Field of View of Mirrors</h3>
+<p><strong>Procedure:</strong> Try viewing the full-length image of a distant tall building or tree in a plane mirror, a concave mirror, and a convex mirror.</p>
+<p><strong>Observation &amp; Conclusion:</strong> A plane mirror and a concave mirror fail to show the full height. Only the <strong>convex mirror</strong> provides a wide enough field of view to see the full-length image, explaining its use as a rear-view mirror in vehicles.</p>
+</div>
+<div class="activity-section">
+<h3>Activity 9.7: Refraction - The Disappearing Coin</h3>
+<p><strong>Procedure:</strong> Place a coin at the bottom of an empty bowl. Move back just until the coin disappears from your line of sight. Ask a friend to gently pour water into the bowl.</p>
+<p><strong>Observation &amp; Conclusion:</strong> The coin becomes visible again. This happens because of <strong>refraction</strong>; light travelling from denser water to rarer air bends away from the normal, making the coin appear raised.</p>
+</div>
+<div class="activity-section">
+<h3>Activity 9.8: Refraction - Glass Slab over Text</h3>
+<p><strong>Procedure:</strong> Place a thick glass slab over a printed page or draw a thick straight ink line and place the glass slab over it.</p>
+<p><strong>Observation &amp; Conclusion:</strong> The letters or line appear <strong>raised</strong> when viewed through the slab. This is a direct consequence of the refraction of light through the glass.</p>
+</div>
+<div class="activity-section">
+<h3>Activity 9.9: Refraction through a Rectangular Glass Slab</h3>
+<p><strong>Procedure:</strong> Draw the outline of a glass slab on paper. Use drawing pins to trace an incident ray. Look through the opposite side to align more pins with the emergent ray.</p>
+<div class="activity-img-container">
+<svg class="activity-svg" height="250" viewbox="0 0 550 250" width="550">
+<rect fill="#fcfcfc" height="100%" width="100%"></rect>
+<text fill="#2c3e50" font-family="sans-serif" font-size="14" font-weight="bold" x="20" y="30">Fig 9.3: Refraction through a Glass Slab</text>
+<rect fill="#eef7fa" height="110" stroke="#34495e" stroke-width="3" width="180" x="180" y="70"></rect>
+<line stroke="#e67e22" stroke-width="2" x1="80" x2="180" y1="20" y2="70"></line> <line stroke="#e67e22" stroke-width="2" x1="180" x2="360" y1="70" y2="120"></line> <line stroke="#e67e22" stroke-width="2" x1="360" x2="460" y1="120" y2="170"></line> <line stroke="#7f8c8d" stroke-dasharray="4,4" x1="180" x2="280" y1="70" y2="120"></line> <line stroke="#95a5a6" stroke-dasharray="2,2" x1="180" x2="180" y1="40" y2="100"></line> <line stroke="#95a5a6" stroke-dasharray="2,2" x1="360" x2="360" y1="90" y2="150"></line> <text fill="#c0392b" font-family="sans-serif" font-size="11" x="370" y="150">Lateral Displacement</text>
+</svg>
+</div>
+<p><strong>Observation &amp; Conclusion:</strong> The emergent ray is parallel to the incident ray but is laterally displaced. Light bends towards the normal upon entering the denser glass and away from the normal upon exiting into the rarer air.</p>
+</div>
+<div class="activity-section">
+<h3>Activity 9.10: Finding Focal Length of a Convex Lens</h3>
+<p><strong>Procedure:</strong> Hold a convex lens facing the Sun. Focus the transmitted light onto a sheet of paper until a sharp bright spot appears.</p>
+<p><strong>Observation &amp; Conclusion:</strong> The lens converges sunlight to a point on the other side (principal focus). The distance from the optical centre of the lens to the paper is its approximate <strong>focal length</strong>.</p>
+</div>
+<div class="activity-section">
+<h3>Activity 9.11: Image Formation by a Convex Lens</h3>
+<p><strong>Procedure:</strong> Mount a convex lens on an optical bench. Place a lighted candle at various distances (Beyond 2F, At 2F, Between F &amp; 2F, At F, Between F &amp; O) and try to catch the image on a screen on the opposite side.</p>
+<p><strong>Observation &amp; Conclusion:</strong> As the object approaches the lens up to F, the real, inverted image moves further away and becomes enlarged. When placed between F and the optical centre, no real image is formed; instead, a virtual, erect, and magnified image can be seen by looking into the lens.</p>
+</div>
+<div class="activity-section">
+<h3>Activity 9.12: Image Formation by a Concave Lens</h3>
+<p><strong>Procedure:</strong> Replace the convex lens with a concave lens on the optical bench. Move the candle to various positions and observe the image.</p>
+<p><strong>Observation &amp; Conclusion:</strong> A concave lens will <strong>always</strong> form a virtual, erect, and diminished image, irrespective of the object's position. The image always lies between the optical centre and the principal focus on the same side as the object.</p>
+</div>
+<div class="activity-section">
+<h3>Activity 9.13: Identifying Lenses and Mirrors</h3>
+<p><strong>Procedure:</strong> Analyze various lenses and mirrors given to you by touching their surfaces and observing the nature of the image (magnification) when placed close to an object (like printed text).</p>
+<p><strong>Observation &amp; Conclusion:</strong>
+<br/>• Bulging outwards / Magnifies text when close: <strong>Convex Lens / Concave Mirror</strong>
+<br/>• Curved inwards / Shrinks text: <strong>Concave Lens / Convex Mirror</strong>
+<br/>This confirms the functional optical properties tied to the physical shape of the elements.
+            </p>
+</div>
+</div>
+<div class="tab-content" id="mcq" style="display:none;">
+<div class="pdf-download-box">
+<span>Get all MCQ Assessment Sheets with detailed paper copies offline.</span>
+<a class="pdf-btn" href="javascript:downloadPDF()">✅ Download PDF</a>
+</div>
+<h2>Online Live Mock Assessment Portal</h2>
+<div class="test-grid" id="test-selection-screen">
+<div class="test-box">
+<div>
+<p class="test-title">Test 1: Laws of Reflection &amp; Plane Mirrors</p>
+<p class="test-meta">Weightage: 10 Marks | Time: 15 Mins</p>
+</div>
+<button class="tab-btn" onclick="loadQuiz(1)" style="background: var(--primary-color); color: white; border-radius:4px;">Start Test 1</button>
+</div>
+<div class="test-box">
+<div>
+<p class="test-title">Test 2: Spherical Mirrors - Concave</p>
+<p class="test-meta">Weightage: 10 Marks | Time: 15 Mins</p>
+</div>
+<button class="tab-btn" onclick="loadQuiz(2)" style="background: var(--primary-color); color: white; border-radius:4px;">Start Test 2</button>
+</div>
+<div class="test-box">
+<div>
+<p class="test-title">Test 3: Spherical Mirrors - Convex</p>
+<p class="test-meta">Weightage: 10 Marks | Time: 15 Mins</p>
+</div>
+<button class="tab-btn" onclick="loadQuiz(3)" style="background: var(--primary-color); color: white; border-radius:4px;">Start Test 3</button>
+</div>
+<div class="test-box">
+<div>
+<p class="test-title">Test 4: Refraction &amp; Refractive Index</p>
+<p class="test-meta">Weightage: 10 Marks | Time: 15 Mins</p>
+</div>
+<button class="tab-btn" onclick="loadQuiz(4)" style="background: var(--primary-color); color: white; border-radius:4px;">Start Test 4</button>
+</div>
+<div class="test-box">
+<div>
+<p class="test-title">Test 5: Spherical Lenses &amp; Power</p>
+<p class="test-meta">Weightage: 10 Marks | Time: 15 Mins</p>
+</div>
+<button class="tab-btn" onclick="loadQuiz(5)" style="background: var(--primary-color); color: white; border-radius:4px;">Start Test 5</button>
+</div>
+<div class="test-box" style="border: 2px solid var(--accent-color); background: #fffcf9;">
+<div>
+<p class="test-title" style="color: var(--accent-color);">✨ Full Length Mock Paper 1</p>
+<p class="test-meta"><strong>Weightage: 20 Marks</strong> | Time: 30 Mins</p>
+</div>
+<button class="tab-btn" onclick="loadQuiz(6)" style="background: var(--accent-color); color: white; border-radius:4px;">Start Full Test 1</button>
+</div>
+<div class="test-box" style="border: 2px solid var(--accent-color); background: #fffcf9;">
+<div>
+<p class="test-title" style="color: var(--accent-color);">✨ Full Length Mock Paper 2</p>
+<p class="test-meta"><strong>Weightage: 20 Marks</strong> | Time: 30 Mins</p>
+</div>
+<button class="tab-btn" onclick="loadQuiz(7)" style="background: var(--accent-color); color: white; border-radius:4px;">Start Full Test 2</button>
+</div>
+<div class="test-box" style="border: 2px solid var(--accent-color); background: #fffcf9;">
+<div>
+<p class="test-title" style="color: var(--accent-color);">✨ Full Length Mock Paper 3</p>
+<p class="test-meta"><strong>Weightage: 20 Marks</strong> | Time: 30 Mins</p>
+</div>
+<button class="tab-btn" onclick="loadQuiz(8)" style="background: var(--accent-color); color: white; border-radius:4px;">Start Full Test 3</button>
+</div>
+</div>
+<div id="quiz-interface">
+<button class="tab-btn" onclick="closeQuiz()" style="background: #e74c3c; color:white; margin-bottom: 1rem; border-radius:4px;">← Exit Assessment</button>
+<h3 id="quiz-panel-title">Active Test Terminal</h3>
+<form id="quiz-form">
+<div id="quiz-questions-container"></div>
+<button class="pdf-btn" onclick="evaluateQuiz()" style="width: 100%; margin-top:1rem;" type="button">Submit Answer Script</button>
+</form>
+<div id="quiz-result-box"></div>
+</div>
+</div>
+<div class="tab-content active" id="solutions" style="display:block;">
+<div class="pdf-download-box">
+<span>Download step-by-step NCERT textbook solutions PDF.</span>
+<a class="pdf-btn" href="javascript:downloadPDF()">✅ Download PDF</a>
+</div>
+<h2>Complete Chapter Textbook Solutions</h2>
+<div class="gu-line"><span class="gu-label">ગુજરાતી:</span> પ્રકરણના સંપૂર્ણ પાઠ્યપુસ્તક ઉકેલો</div>
+<div class="section-divider">PART I: IN-TEXT QUESTIONS (Inside Chapter)</div>
+<div class="gu-line"><span class="gu-label">ગુજરાતી:</span> ભાગ 1: પ્રકરણની અંદરના પ્રશ્નો</div>
+<h3>Set 1</h3>
+<div class="solution-card" data-accordion="true"><h4 class="accordion-title">Q1. Define the principal focus of a concave mirror.<span class="tap-indicator">▼ Tap to View Solution</span></h4><div class="solution-body"><div class="answer-card"><div class="card-title">✅ Answer</div>Light rays parallel to the principal axis of a concave mirror converge at a fixed point on the principal axis after reflection. This point is called the <strong>principal focus</strong>.</div><div class="gu-line"><span class="gu-label">ગુજરાતી:</span> અવતલ દર્પણના મુખ્ય અક્ષને સમાંતર આવતા પ્રકાશ કિરણો પરાવર્તન પછી મુખ્ય અક્ષ પરના એક ચોક્કસ બિંદુએ ભેગા થાય છે. આ બિંદુને મુખ્ય ફોકસ કહે છે.</div></div></div>
+<div class="math-solution" data-accordion="true"><h4 class="accordion-title">Q2. The radius of curvature of a spherical mirror is 20 cm. What is its focal length?<span class="tap-indicator">▼ Tap to View Solution</span></h4><div class="solution-body"><div class="info-card"><div class="card-title">📋 Given</div><span class="math-line">\(R = 20\ \text{cm}\)</span></div><div class="formula-card2"><div class="card-title">📘 Formula Used</div><span class="math-line">\(f=\dfrac{R}{2}\)</span></div><div class="step-card"><div class="card-title">✏️ Solution</div><span class="math-line">\(f=\dfrac{20}{2}=10\ \text{cm}\)</span></div><div class="final-card">✅ Focal length = <strong>10 cm</strong>.</div><div class="gu-line"><span class="gu-label">ગુજરાતી:</span> આપેલ છે R = 20 cm. f = R/2 = 20/2 = 10 cm.</div></div></div>
+<div class="solution-card" data-accordion="true"><h4 class="accordion-title">Q3. Name a mirror that can give an erect and enlarged image of an object.<span class="tap-indicator">▼ Tap to View Solution</span></h4><div class="solution-body"><div class="answer-card"><div class="card-title">✅ Answer</div>A <strong>concave mirror</strong> can give an erect and enlarged image when the object is placed between the pole and principal focus.</div><div class="gu-line"><span class="gu-label">ગુજરાતી:</span> વસ્તુ ધ્રુવ અને મુખ્ય ફોકસ વચ્ચે હોય ત્યારે અવતલ દર્પણ સીધું અને મોટું પ્રતિબિંબ આપે છે.</div></div></div>
+<div class="solution-card" data-accordion="true"><h4 class="accordion-title">Q4. Why do we prefer a convex mirror as a rear-view mirror in vehicles?<span class="tap-indicator">▼ Tap to View Solution</span></h4><div class="solution-body"><div class="answer-card"><div class="card-title">✅ Answer</div>Convex mirrors always form erect and diminished images. They also provide a wider field of view, so the driver can see a larger area behind the vehicle.</div><div class="gu-line"><span class="gu-label">ગુજરાતી:</span> બહિર્ગોળ દર્પણ હંમેશાં સીધું અને નાનું પ્રતિબિંબ આપે છે. તે વિશાળ દૃશ્યક્ષેત્ર આપે છે, તેથી વાહન પાછળનો મોટો વિસ્તાર જોઈ શકાય છે.</div></div></div>
+<h3>Set 2</h3>
+<div class="math-solution" data-accordion="true"><h4 class="accordion-title">Q1. Find the focal length of a convex mirror whose radius of curvature is 32 cm.<span class="tap-indicator">▼ Tap to View Solution</span></h4><div class="solution-body"><div class="info-card"><div class="card-title">📋 Given</div><span class="math-line">\(R=+32\ \text{cm}\)</span></div><div class="formula-card2"><div class="card-title">📘 Formula Used</div><span class="math-line">\(f=\dfrac{R}{2}\)</span></div><div class="step-card"><div class="card-title">✏️ Solution</div><span class="math-line">\(f=\dfrac{32}{2}=+16\ \text{cm}\)</span></div><div class="final-card">✅ Focal length = <strong>+16 cm</strong>.</div><div class="gu-line"><span class="gu-label">ગુજરાતી:</span> R = +32 cm. f = R/2 = 32/2 = +16 cm.</div></div></div>
+<div class="math-solution" data-accordion="true"><h4 class="accordion-title">Q2. A concave mirror produces three times magnified real image of an object placed at 10 cm in front of it. Where is the image located?<span class="tap-indicator">▼ Tap to View Solution</span></h4><div class="solution-body"><div class="info-card"><div class="card-title">📋 Given</div><span class="math-line">\(m=-3,\quad u=-10\ \text{cm}\)</span></div><div class="formula-card2"><div class="card-title">📘 Formula Used</div><span class="math-line">\(m=-\dfrac{v}{u}\)</span></div><div class="step-card"><div class="card-title">✏️ Solution</div><span class="math-line">\(-3=-\dfrac{v}{-10}\)</span><span class="math-line">\(-3=\dfrac{v}{10}\)</span><span class="math-line">\(v=-30\ \text{cm}\)</span></div><div class="final-card">✅ The image is located <strong>30 cm in front of the mirror</strong>.</div><div class="gu-line"><span class="gu-label">ગુજરાતી:</span> m = -3 અને u = -10 cm. m = -v/u પ્રમાણે v = -30 cm. એટલે પ્રતિબિંબ દર્પણની આગળ 30 cm પર બને છે.</div></div></div>
+<h3>Set 3</h3>
+<div class="solution-card" data-accordion="true"><h4 class="accordion-title">Q1. A ray of light travelling in air enters obliquely into water. Does the ray bend towards the normal or away from the normal? Why?<span class="tap-indicator">▼ Tap to View Solution</span></h4><div class="solution-body"><div class="answer-card"><div class="card-title">✅ Answer</div>The ray bends <strong>towards the normal</strong> because water is optically denser than air. When light enters a denser medium, its speed decreases and it bends towards the normal.</div><div class="gu-line"><span class="gu-label">ગુજરાતી:</span> કિરણ અભિલંબ તરફ વળે છે, કારણ કે પાણી હવા કરતાં પ્રકાશીય રીતે વધુ ઘન છે.</div></div></div>
+<div class="math-solution" data-accordion="true"><h4 class="accordion-title">Q2. Light enters from air to glass having refractive index 1.50. What is the speed of light in glass? Speed of light in vacuum is \(3\times10^8\ \text{m/s}\).<span class="tap-indicator">▼ Tap to View Solution</span></h4><div class="solution-body"><div class="info-card"><div class="card-title">📋 Given</div><span class="math-line">\(n=1.50,\quad c=3\times10^8\ \text{m/s}\)</span></div><div class="formula-card2"><div class="card-title">📘 Formula Used</div><span class="math-line">\(n=\dfrac{c}{v}\quad \Rightarrow \quad v=\dfrac{c}{n}\)</span></div><div class="step-card"><div class="card-title">✏️ Solution</div><span class="math-line">\(v=\dfrac{3\times10^8}{1.50}=2\times10^8\ \text{m/s}\)</span></div><div class="final-card">✅ Speed of light in glass = <strong>\(2\times10^8\ \text{m/s}\)</strong>.</div><div class="gu-line"><span class="gu-label">ગુજરાતી:</span> n = c/v એટલે v = c/n = (3 × 10⁸)/1.50 = 2 × 10⁸ m/s.</div></div></div>
+<div class="solution-card" data-accordion="true"><h4 class="accordion-title">Q3. Find out, from the table, the medium having highest optical density. Also find the medium with lowest optical density.<span class="tap-indicator">▼ Tap to View Solution</span></h4><div class="solution-body"><div class="answer-card"><div class="card-title">✅ Answer</div>Highest optical density: <strong>Diamond</strong> (refractive index 2.42).<br/>Lowest optical density: <strong>Air</strong> (refractive index 1.0003).</div><div class="gu-line"><span class="gu-label">ગુજરાતી:</span> સૌથી વધુ પ્રકાશીય ઘનતા: હીરો. સૌથી ઓછી પ્રકાશીય ઘનતા: હવા.</div></div></div>
+<div class="solution-card" data-accordion="true"><h4 class="accordion-title">Q4. You are given kerosene, turpentine and water. In which of these does light travel fastest?<span class="tap-indicator">▼ Tap to View Solution</span></h4><div class="solution-body"><div class="answer-card"><div class="card-title">✅ Answer</div>Light travels fastest in the medium having the lowest refractive index. Among water, kerosene and turpentine, water has the lowest refractive index. Therefore, light travels fastest in <strong>water</strong>.</div><div class="gu-line"><span class="gu-label">ગુજરાતી:</span> પ્રકાશ સૌથી ઓછા વક્રીભવનાંકવાળા માધ્યમમાં સૌથી ઝડપી ચાલે છે. તેથી પ્રકાશ પાણીમાં સૌથી ઝડપી ચાલે છે.</div></div></div>
+<div class="solution-card" data-accordion="true"><h4 class="accordion-title">Q5. The refractive index of diamond is 2.42. What is the meaning of this statement?<span class="tap-indicator">▼ Tap to View Solution</span></h4><div class="solution-body"><div class="answer-card"><div class="card-title">✅ Answer</div>It means that the speed of light in diamond is \(1/2.42\) times the speed of light in vacuum. In other words, light travels 2.42 times slower in diamond than in vacuum.</div><div class="gu-line"><span class="gu-label">ગુજરાતી:</span> તેનો અર્થ એ છે કે હીરામાં પ્રકાશની ઝડપ નિર્વાતમાં પ્રકાશની ઝડપની 1/2.42 ગણી છે.</div></div></div>
+<h3>Set 4</h3>
+<div class="solution-card" data-accordion="true"><h4 class="accordion-title">Q1. Define 1 dioptre of power of a lens.<span class="tap-indicator">▼ Tap to View Solution</span></h4><div class="solution-body"><div class="answer-card"><div class="card-title">✅ Answer</div>One dioptre is the power of a lens whose focal length is 1 metre.</div><div class="formula-card2"><span class="math-line">\(1\ \text{D}=1\ \text{m}^{-1}\)</span></div><div class="gu-line"><span class="gu-label">ગુજરાતી:</span> 1 ડાયોપ્ટર એ એવા લેન્સની શક્તિ છે જેની ફોકલ લંબાઈ 1 મીટર હોય છે.</div></div></div>
+<div class="math-solution" data-accordion="true"><h4 class="accordion-title">Q2. A convex lens forms a real and inverted image of a needle at a distance of 50 cm from it. Where is the needle placed if the image is equal to the size of the object? Also find the power of the lens.<span class="tap-indicator">▼ Tap to View Solution</span></h4><div class="solution-body"><div class="info-card"><div class="card-title">📋 Given</div><span class="math-line">\(v=+50\ \text{cm},\quad m=-1\)</span></div><div class="step-card"><div class="card-title">✏️ Find object distance</div><span class="math-line">\(m=\dfrac{v}{u}\)</span><span class="math-line">\(-1=\dfrac{50}{u}\)</span><span class="math-line">\(u=-50\ \text{cm}\)</span></div><div class="step-card"><div class="card-title">✏️ Find focal length</div><span class="math-line">\(\dfrac{1}{f}=\dfrac{1}{v}-\dfrac{1}{u}\)</span><span class="math-line">\(\dfrac{1}{f}=\dfrac{1}{50}-\dfrac{1}{-50}=\dfrac{2}{50}=\dfrac{1}{25}\)</span><span class="math-line">\(f=+25\ \text{cm}=+0.25\ \text{m}\)</span></div><div class="step-card"><div class="card-title">✏️ Find power</div><span class="math-line">\(P=\dfrac{1}{f}=\dfrac{1}{0.25}=+4.0\ \text{D}\)</span></div><div class="final-card">✅ Needle is placed <strong>50 cm in front of the lens</strong>. Power = <strong>+4.0 D</strong>.</div><div class="gu-line"><span class="gu-label">ગુજરાતી:</span> u = -50 cm. f = +25 cm = +0.25 m. P = +4.0 D.</div></div></div>
+<div class="math-solution" data-accordion="true"><h4 class="accordion-title">Q3. Find the power of a concave lens of focal length 2 m.<span class="tap-indicator">▼ Tap to View Solution</span></h4><div class="solution-body"><div class="info-card"><div class="card-title">📋 Given</div><span class="math-line">\(f=-2\ \text{m}\)</span></div><div class="formula-card2"><div class="card-title">📘 Formula Used</div><span class="math-line">\(P=\dfrac{1}{f}\)</span></div><div class="step-card"><div class="card-title">✏️ Solution</div><span class="math-line">\(P=\dfrac{1}{-2}=-0.5\ \text{D}\)</span></div><div class="final-card">✅ Power = <strong>−0.5 D</strong>.</div><div class="gu-line"><span class="gu-label">ગુજરાતી:</span> અવતલ લેન્સ માટે f = -2 m. P = 1/f = -0.5 D.</div></div></div>
+<div class="section-divider">PART II: CHAPTER END EXERCISES</div>
+<div class="gu-line"><span class="gu-label">ગુજરાતી:</span> ભાગ 2: પ્રકરણના અંતે આપેલા પ્રશ્નો</div>
+<div class="mcq-card" data-accordion="true"><h4 class="accordion-title">Q1. Which one of the following materials cannot be used to make a lens?<span class="tap-indicator">▼ Tap to View Solution</span></h4><div class="solution-body"><div class="option-list"><div class="option">(a) Water</div><div class="option">(b) Glass</div><div class="option">(c) Plastic</div><div class="option correct">✅ (d) Clay</div></div><div class="explain-box"><strong>Why?</strong> A lens must be transparent so that light can pass through and refract. Clay is opaque.</div><div class="why-not"><strong>Why other options are incorrect:</strong> Water, glass and plastic can be transparent, so they can be used to make lenses.</div><div class="gu-line"><span class="gu-label">ગુજરાતી:</span> માટી અપારદર્શક હોવાથી તેમાંથી લેન્સ બનાવી શકાતો નથી.</div></div></div>
+<div class="mcq-card" data-accordion="true"><h4 class="accordion-title">Q2. The image formed by a concave mirror is virtual, erect and larger than the object. Where is the object placed?<span class="tap-indicator">▼ Tap to View Solution</span></h4><div class="solution-body"><div class="option-list"><div class="option">(a) At the principal focus</div><div class="option">(b) At the centre of curvature</div><div class="option">(c) Beyond the centre of curvature</div><div class="option correct">✅ (d) Between the pole and its principal focus</div></div><div class="explain-box"><strong>Why?</strong> A concave mirror forms a virtual, erect and enlarged image only when the object lies between P and F.</div><div class="gu-line"><span class="gu-label">ગુજરાતી:</span> અવતલ દર્પણમાં વસ્તુ P અને F વચ્ચે હોય ત્યારે પ્રતિબિંબ આભાસી, સીધું અને મોટું બને છે.</div></div></div>
+<div class="mcq-card" data-accordion="true"><h4 class="accordion-title">Q3. Where should an object be placed in front of a convex lens to get a real image of the size of the object?<span class="tap-indicator">▼ Tap to View Solution</span></h4><div class="solution-body"><div class="option-list"><div class="option">(a) At the principal focus</div><div class="option correct">✅ (b) At twice the focal length</div><div class="option">(c) At infinity</div><div class="option">(d) Between the optical centre and principal focus</div></div><div class="explain-box"><strong>Why?</strong> For a convex lens, an object placed at \(2F_1\) forms a real, inverted image of the same size at \(2F_2\).</div><div class="gu-line"><span class="gu-label">ગુજરાતી:</span> બહિર્ગોળ લેન્સમાં વસ્તુ 2F પર રાખવાથી વસ્તુ જેટલા જ કદનું વાસ્તવિક પ્રતિબિંબ મળે છે.</div></div></div>
+<div class="mcq-card" data-accordion="true"><h4 class="accordion-title">Q4. A spherical mirror and a thin spherical lens have each a focal length of −15 cm. The mirror and the lens are likely to be:<span class="tap-indicator">▼ Tap to View Solution</span></h4><div class="solution-body"><div class="option-list"><div class="option correct">✅ (a) Both concave</div><div class="option">(b) Both convex</div><div class="option">(c) Mirror concave and lens convex</div><div class="option">(d) Mirror convex and lens concave</div></div><div class="explain-box"><strong>Why?</strong> Negative focal length represents a concave mirror and a concave lens by the sign convention.</div><div class="gu-line"><span class="gu-label">ગુજરાતી:</span> નકારાત્મક ફોકલ લંબાઈ અવતલ દર્પણ અને અવતલ લેન્સ દર્શાવે છે.</div></div></div>
+<div class="mcq-card" data-accordion="true"><h4 class="accordion-title">Q5. No matter how far you stand from a mirror, your image appears erect. The mirror is likely to be:<span class="tap-indicator">▼ Tap to View Solution</span></h4><div class="solution-body"><div class="option-list"><div class="option">(a) Plane</div><div class="option">(b) Concave</div><div class="option">(c) Convex</div><div class="option correct">✅ (d) Either plane or convex</div></div><div class="explain-box"><strong>Why?</strong> Plane and convex mirrors always form erect images for all positions of the object.</div><div class="why-not"><strong>Why not concave?</strong> A concave mirror forms an erect image only when the object is between P and F.</div><div class="gu-line"><span class="gu-label">ગુજરાતી:</span> સમતલ અને બહિર્ગોળ દર્પણ હંમેશાં સીધું પ્રતિબિંબ આપે છે.</div></div></div>
+<div class="mcq-card" data-accordion="true"><h4 class="accordion-title">Q6. Which lens would you prefer to use while reading small letters found in a dictionary?<span class="tap-indicator">▼ Tap to View Solution</span></h4><div class="solution-body"><div class="option-list"><div class="option">(a) Convex lens of focal length 50 cm</div><div class="option">(b) Concave lens of focal length 50 cm</div><div class="option correct">✅ (c) Convex lens of focal length 5 cm</div><div class="option">(d) Concave lens of focal length 5 cm</div></div><div class="explain-box"><strong>Why?</strong> A convex lens of short focal length has high power and works as a magnifying glass.</div><div class="gu-line"><span class="gu-label">ગુજરાતી:</span> નાના અક્ષરો વાંચવા ઓછા ફોકલ અંતરવાળો બહિર્ગોળ લેન્સ ઉત્તમ છે.</div></div></div>
+<div class="mcq-card" data-accordion="true"><h4 class="accordion-title">Q7. We wish to obtain an erect image of an object using a concave mirror of focal length 15 cm. What should be the range of distance of the object from the mirror?<span class="tap-indicator">▼ Tap to View Solution</span></h4><div class="solution-body"><div class="answer-card"><div class="card-title">✅ Answer</div>The object should be placed between the pole and principal focus of the concave mirror.</div><div class="formula-card2"><span class="math-line">\(0\ \text{cm} &lt; u &lt; 15\ \text{cm}\)</span></div><div class="explain-box"><strong>Why?</strong> A concave mirror gives a virtual, erect and enlarged image only when the object is placed within the focal length.</div><div class="gu-line"><span class="gu-label">ગુજરાતી:</span> વસ્તુ ધ્રુવ અને ફોકસ વચ્ચે એટલે 0 થી 15 cm વચ્ચે રાખવી જોઈએ.</div></div></div>
+<div class="solution-card" data-accordion="true"><h4 class="accordion-title">Q8. Name the type of mirror used in the following situations: (a) Headlights of a car (b) Side/rear-view mirror of a vehicle (c) Solar furnace<span class="tap-indicator">▼ Tap to View Solution</span></h4><div class="solution-body"><div class="answer-card"><div class="card-title">✅ Answer</div>(a) <strong>Concave mirror</strong> — to obtain powerful parallel beams of light.<br/>(b) <strong>Convex mirror</strong> — to obtain a wider field of view and erect image.<br/>(c) <strong>Concave mirror</strong> — to concentrate sunlight at focus and produce heat.</div><div class="gu-line"><span class="gu-label">ગુજરાતી:</span> (a) અવતલ દર્પણ (b) બહિર્ગોળ દર્પણ (c) અવતલ દર્પણ.</div></div></div>
+<div class="solution-card" data-accordion="true"><h4 class="accordion-title">Q9. One-half of a convex lens is covered with a black paper. Will this lens produce a complete image of the object? Explain.<span class="tap-indicator">▼ Tap to View Solution</span></h4><div class="solution-body"><div class="answer-card"><div class="card-title">✅ Answer</div>Yes, it will produce a complete image. Rays from every point of the object can still pass through the uncovered part of the lens and form the image. However, the image will be less bright because less light reaches the screen.</div><div class="gu-line"><span class="gu-label">ગુજરાતી:</span> હા, સંપૂર્ણ પ્રતિબિંબ બનશે, પરંતુ તેની તેજસ્વિતા ઓછી થશે કારણ કે પ્રકાશ ઓછો પહોંચે છે.</div></div></div>
+<div class="math-solution" data-accordion="true"><h4 class="accordion-title">Q10. An object 5 cm in length is held 25 cm away from a converging lens of focal length 10 cm. Find the position, size and nature of the image.<span class="tap-indicator">▼ Tap to View Solution</span></h4><div class="solution-body"><div class="info-card"><div class="card-title">📋 Given</div><span class="math-line">\(h=+5\ \text{cm},\quad u=-25\ \text{cm},\quad f=+10\ \text{cm}\)</span></div><div class="formula-card2"><div class="card-title">📘 Formula Used</div><span class="math-line">\(\dfrac{1}{v}-\dfrac{1}{u}=\dfrac{1}{f}\)</span></div><div class="step-card"><div class="card-title">✏️ Find image distance</div><span class="math-line">\(\dfrac{1}{v}-\dfrac{1}{-25}=\dfrac{1}{10}\)</span><span class="math-line">\(\dfrac{1}{v}+\dfrac{1}{25}=\dfrac{1}{10}\)</span><span class="math-line">\(\dfrac{1}{v}=\dfrac{1}{10}-\dfrac{1}{25}=\dfrac{5-2}{50}=\dfrac{3}{50}\)</span><span class="math-line">\(v=\dfrac{50}{3}=+16.67\ \text{cm}\)</span></div><div class="step-card"><div class="card-title">✏️ Find image height</div><span class="math-line">\(m=\dfrac{v}{u}=\dfrac{50/3}{-25}=-\dfrac{2}{3}\)</span><span class="math-line">\(h'=m\times h=-\dfrac{2}{3}\times5=-3.33\ \text{cm}\)</span></div><div class="final-card"><div class="card-title">✅ Final Answer</div><table class="result-table"><tr><th>Quantity</th><th>Answer</th></tr><tr><td>Position</td><td>16.67 cm behind the lens</td></tr><tr><td>Size</td><td>3.33 cm</td></tr><tr><td>Nature</td><td>Real, inverted and diminished</td></tr></table></div><div class="gu-line"><span class="gu-label">ગુજરાતી:</span> પ્રતિબિંબ લેન્સની પાછળ 16.67 cm પર બને છે. h′ નકારાત્મક હોવાથી પ્રતિબિંબ ઊલટું છે. તેથી પ્રતિબિંબ વાસ્તવિક, ઊલટું અને નાનું છે.</div></div></div>
+<div class="math-solution" data-accordion="true"><h4 class="accordion-title">Q11. A concave lens of focal length 15 cm forms an image 10 cm from the lens. How far is the object placed from the lens?<span class="tap-indicator">▼ Tap to View Solution</span></h4><div class="solution-body"><div class="info-card"><div class="card-title">📋 Given</div><span class="math-line">\(f=-15\ \text{cm},\quad v=-10\ \text{cm}\)</span></div><div class="formula-card2"><span class="math-line">\(\dfrac{1}{v}-\dfrac{1}{u}=\dfrac{1}{f}\)</span></div><div class="step-card"><div class="card-title">✏️ Solution</div><span class="math-line">\(\dfrac{1}{-10}-\dfrac{1}{u}=\dfrac{1}{-15}\)</span><span class="math-line">\(\dfrac{1}{u}=-\dfrac{1}{10}+\dfrac{1}{15}=-\dfrac{1}{30}\)</span><span class="math-line">\(u=-30\ \text{cm}\)</span></div><div class="final-card">✅ The object is placed <strong>30 cm in front of the lens</strong>.</div><div class="gu-line"><span class="gu-label">ગુજરાતી:</span> u = -30 cm એટલે વસ્તુ લેન્સની આગળ 30 cm અંતરે છે.</div></div></div>
+<div class="math-solution" data-accordion="true"><h4 class="accordion-title">Q12. An object is placed at a distance of 10 cm from a convex mirror of focal length 15 cm. Find the position and nature of the image.<span class="tap-indicator">▼ Tap to View Solution</span></h4><div class="solution-body"><div class="info-card"><div class="card-title">📋 Given</div><span class="math-line">\(u=-10\ \text{cm},\quad f=+15\ \text{cm}\)</span></div><div class="formula-card2"><span class="math-line">\(\dfrac{1}{v}+\dfrac{1}{u}=\dfrac{1}{f}\)</span></div><div class="step-card"><div class="card-title">✏️ Solution</div><span class="math-line">\(\dfrac{1}{v}=\dfrac{1}{f}-\dfrac{1}{u}\)</span><span class="math-line">\(\dfrac{1}{v}=\dfrac{1}{15}-\dfrac{1}{-10}=\dfrac{1}{15}+\dfrac{1}{10}=\dfrac{1}{6}\)</span><span class="math-line">\(v=+6\ \text{cm}\)</span></div><div class="final-card">✅ Image is formed <strong>6 cm behind the mirror</strong>. Nature: <strong>virtual and erect</strong>.</div><div class="gu-line"><span class="gu-label">ગુજરાતી:</span> પ્રતિબિંબ દર્પણની પાછળ 6 cm પર આભાસી અને સીધું બને છે.</div></div></div>
+<div class="solution-card" data-accordion="true"><h4 class="accordion-title">Q13. The magnification produced by a plane mirror is +1. What does this mean?<span class="tap-indicator">▼ Tap to View Solution</span></h4><div class="solution-body"><div class="answer-card"><div class="card-title">✅ Answer</div>Magnification \(+1\) means the image is the same size as the object. The positive sign shows that the image is virtual and erect.</div><div class="gu-line"><span class="gu-label">ગુજરાતી:</span> વર્ધન +1નો અર્થ પ્રતિબિંબ વસ્તુ જેટલા જ કદનું છે અને તે આભાસી તથા સીધું છે.</div></div></div>
+<div class="math-solution" data-accordion="true"><h4 class="accordion-title">Q14. An object 5.0 cm in length is placed 20 cm in front of a convex mirror of radius of curvature 30 cm. Find the position, nature and size of the image.<span class="tap-indicator">▼ Tap to View Solution</span></h4><div class="solution-body"><div class="info-card"><div class="card-title">📋 Given</div><span class="math-line">\(h=+5.0\ \text{cm},\quad u=-20\ \text{cm},\quad R=+30\ \text{cm}\)</span></div><div class="formula-card2"><span class="math-line">\(f=\dfrac{R}{2}=+15\ \text{cm}\)</span></div><div class="step-card"><div class="card-title">✏️ Find image distance</div><span class="math-line">\(\dfrac{1}{v}=\dfrac{1}{15}-\dfrac{1}{-20}=\dfrac{1}{15}+\dfrac{1}{20}=\dfrac{7}{60}\)</span><span class="math-line">\(v=\dfrac{60}{7}=+8.57\ \text{cm}\)</span></div><div class="step-card"><div class="card-title">✏️ Find image height</div><span class="math-line">\(m=-\dfrac{v}{u}=-\dfrac{60/7}{-20}=\dfrac{3}{7}\)</span><span class="math-line">\(h'=m\times h=\dfrac{3}{7}\times5=+2.14\ \text{cm}\)</span></div><div class="final-card"><table class="result-table"><tr><th>Quantity</th><th>Answer</th></tr><tr><td>Position</td><td>8.57 cm behind the mirror</td></tr><tr><td>Size</td><td>2.14 cm</td></tr><tr><td>Nature</td><td>Virtual, erect and diminished</td></tr></table></div><div class="gu-line"><span class="gu-label">ગુજરાતી:</span> પ્રતિબિંબ 8.57 cm પાછળ બને છે, કદ 2.14 cm છે અને તે આભાસી, સીધું તથા નાનું છે.</div></div></div>
+<div class="math-solution" data-accordion="true"><h4 class="accordion-title">Q15. An object of size 7.0 cm is placed at 27 cm in front of a concave mirror of focal length 18 cm. At what distance should a screen be placed? Find the size and nature of the image.<span class="tap-indicator">▼ Tap to View Solution</span></h4><div class="solution-body"><div class="info-card"><div class="card-title">📋 Given</div><span class="math-line">\(h=+7.0\ \text{cm},\quad u=-27\ \text{cm},\quad f=-18\ \text{cm}\)</span></div><div class="step-card"><div class="card-title">✏️ Find image distance</div><span class="math-line">\(\dfrac{1}{v}=\dfrac{1}{f}-\dfrac{1}{u}\)</span><span class="math-line">\(\dfrac{1}{v}=\dfrac{1}{-18}-\dfrac{1}{-27}=-\dfrac{1}{18}+\dfrac{1}{27}=-\dfrac{1}{54}\)</span><span class="math-line">\(v=-54\ \text{cm}\)</span></div><div class="step-card"><div class="card-title">✏️ Find image height</div><span class="math-line">\(m=-\dfrac{v}{u}=-\dfrac{-54}{-27}=-2\)</span><span class="math-line">\(h'=m\times h=-2\times7=-14\ \text{cm}\)</span></div><div class="final-card">✅ Screen should be placed <strong>54 cm in front of the mirror</strong>. Image size = <strong>14 cm</strong>. Nature: <strong>real, inverted and enlarged</strong>.</div><div class="gu-line"><span class="gu-label">ગુજરાતી:</span> પડદો દર્પણની આગળ 54 cm પર મૂકવો. પ્રતિબિંબ 14 cmનું, વાસ્તવિક, ઊલટું અને મોટું છે.</div></div></div>
+<div class="math-solution" data-accordion="true"><h4 class="accordion-title">Q16. Find the focal length of a lens of power −2.0 D. What type of lens is this?<span class="tap-indicator">▼ Tap to View Solution</span></h4><div class="solution-body"><div class="info-card"><div class="card-title">📋 Given</div><span class="math-line">\(P=-2.0\ \text{D}\)</span></div><div class="formula-card2"><span class="math-line">\(P=\dfrac{1}{f}\quad \Rightarrow \quad f=\dfrac{1}{P}\)</span></div><div class="step-card"><span class="math-line">\(f=\dfrac{1}{-2.0}=-0.5\ \text{m}=-50\ \text{cm}\)</span></div><div class="final-card">✅ Focal length = <strong>−50 cm</strong>. It is a <strong>concave lens</strong>.</div><div class="gu-line"><span class="gu-label">ગુજરાતી:</span> f = -50 cm. આ અવતલ લેન્સ છે.</div></div></div>
+<div class="math-solution" data-accordion="true"><h4 class="accordion-title">Q17. A doctor has prescribed a corrective lens of power +1.5 D. Find the focal length. Is the prescribed lens diverging or converging?<span class="tap-indicator">▼ Tap to View Solution</span></h4><div class="solution-body"><div class="info-card"><div class="card-title">📋 Given</div><span class="math-line">\(P=+1.5\ \text{D}\)</span></div><div class="formula-card2"><span class="math-line">\(f=\dfrac{1}{P}\)</span></div><div class="step-card"><span class="math-line">\(f=\dfrac{1}{1.5}=+0.67\ \text{m}=+67\ \text{cm}\)</span></div><div class="final-card">✅ Focal length = <strong>+67 cm</strong>. It is a <strong>converging convex lens</strong>.</div><div class="gu-line"><span class="gu-label">ગુજરાતી:</span> f = +67 cm. આ અભિસારી એટલે બહિર્ગોળ લેન્સ છે.</div></div></div>
+</div>
+</div>
+<a class="whatsapp-float" href="https://wa.me/919537036383?text=Hello%20WAGH%20Tuition%20Classes,%20I%20want%20Chapter%209%20Science%20solution." target="_blank">
+<span class="whatsapp-icon">💬</span> Chat with us on WhatsApp
+</a>
+<script>
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tab-content");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+        tabcontent[i].classList.remove("active");
+    }
+    tablinks = document.getElementsByClassName("tab-btn");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.classList.add("active");
+}
+
+const quizBank = {
+    1: {
+        title: "Test 1: Laws of Reflection & Plane Mirrors (10 Marks)",
+        questions: [
+            { q: "The angle of incidence is always equal to:", o: ["Angle of refraction", "Angle of reflection", "Critical angle", "Normal angle"], a: 1 },
+            { q: "Image formed by a plane mirror is always:", o: ["Real and erect", "Virtual and erect", "Real and inverted", "Virtual and inverted"], a: 1 },
+            { q: "Magnification produced by a plane mirror is:", o: ["-1", "+1", "0", "Infinity"], a: 1 },
+            { q: "If the angle of incidence is 30 degrees, what is the angle of reflection?", o: ["60 degrees", "90 degrees", "30 degrees", "45 degrees"], a: 2 },
+            { q: "The property where the left side of the object appears as the right side of the image is called:", o: ["Magnification", "Refraction", "Lateral inversion", "Dispersion"], a: 2 },
+            { q: "A plane mirror is approaching you at a speed of 10 cm/s. You can see your image approaching at:", o: ["10 cm/s", "5 cm/s", "20 cm/s", "15 cm/s"], a: 2 },
+            { q: "The focal length of a plane mirror is:", o: ["0", "Infinity", "Negative", "Depends on size"], a: 1 },
+            { q: "The radius of curvature of a plane mirror is:", o: ["Zero", "Infinity", "Negative", "Positive"], a: 1 },
+            { q: "To see his full image, a person requires a mirror of at least:", o: ["His full height", "Half his height", "One-third his height", "Double his height"], a: 1 },
+            { q: "Virtual images produced by plane mirrors can be caught on a screen.", o: ["True", "False", "Sometimes", "Only in dark"], a: 1 }
+        ]
+    },
+    2: {
+        title: "Test 2: Spherical Mirrors - Concave (10 Marks)",
+        questions: [
+            { q: "A spherical mirror with its reflecting surface curved inwards is called:", o: ["Convex mirror", "Concave mirror", "Plane mirror", "Bifocal mirror"], a: 1 },
+            { q: "The centre of the reflecting surface of a spherical mirror is called:", o: ["Pole", "Centre of curvature", "Principal focus", "Aperture"], a: 0 },
+            { q: "If the radius of curvature is 20 cm, the focal length is:", o: ["20 cm", "10 cm", "40 cm", "5 cm"], a: 1 },
+            { q: "To get an erect and magnified image in a concave mirror, the object must be placed:", o: ["At C", "Between F and C", "Beyond C", "Between P and F"], a: 3 },
+            { q: "Which mirror is used by dentists to see large images of teeth?", o: ["Convex mirror", "Concave mirror", "Plane mirror", "Parabolic mirror"], a: 1 },
+            { q: "When an object is at infinity, a concave mirror forms an image at:", o: ["Infinity", "Centre of curvature", "Focus", "Pole"], a: 2 },
+            { q: "When an object is placed at C in front of a concave mirror, the image is formed at:", o: ["Infinity", "Focus", "C", "Beyond C"], a: 2 },
+            { q: "The mirror used in solar furnaces is:", o: ["Plane", "Convex", "Concave", "Cylindrical"], a: 2 },
+            { q: "Real images formed by concave mirrors are always:", o: ["Erect", "Inverted", "Magnified", "Diminished"], a: 1 },
+            { q: "If magnification is -2, the image is:", o: ["Virtual, enlarged", "Real, enlarged", "Real, diminished", "Virtual, diminished"], a: 1 }
+        ]
+    },
+    3: {
+        title: "Test 3: Spherical Mirrors - Convex (10 Marks)",
+        questions: [
+            { q: "Which mirror always forms a virtual, erect, and diminished image?", o: ["Concave", "Convex", "Plane", "All of the above"], a: 1 },
+            { q: "Convex mirrors are used as rear-view mirrors because they:", o: ["Provide real images", "Give a wider field of view", "Invert the image", "Magnify the image"], a: 1 },
+            { q: "The focus of a convex mirror lies:", o: ["In front of the mirror", "Behind the mirror", "At the pole", "At infinity"], a: 1 },
+            { q: "The mirror formula is given by:", o: ["1/v - 1/u = 1/f", "1/v + 1/u = 1/f", "v + u = f", "1/u - 1/v = 1/f"], a: 1 },
+            { q: "Magnification (m) for spherical mirrors is:", o: ["v/u", "-v/u", "u/v", "-u/v"], a: 1 },
+            { q: "The focal length of a convex mirror is always:", o: ["Positive", "Negative", "Zero", "Infinity"], a: 0 },
+            { q: "For a convex mirror, the image distance (v) is always:", o: ["Positive", "Negative", "Depends on u", "Zero"], a: 0 },
+            { q: "If R = +30 cm, then f is:", o: ["+15 cm", "-15 cm", "+60 cm", "-60 cm"], a: 0 },
+            { q: "An object is at 10cm from a convex mirror. Its image is formed:", o: ["In front", "Behind", "At infinity", "At C"], a: 1 },
+            { q: "Convex mirrors are commonly used in:", o: ["Torches", "Headlights", "Shaving mirrors", "Blind turns on roads"], a: 3 }
+        ]
+    },
+    4: {
+        title: "Test 4: Refraction & Refractive Index (10 Marks)",
+        questions: [
+            { q: "The bending of light when it passes from one medium to another is called:", o: ["Reflection", "Refraction", "Dispersion", "Scattering"], a: 1 },
+            { q: "Snell's Law states that:", o: ["sin i / sin r = constant", "sin i * sin r = constant", "sin r / sin i = constant", "i = r"], a: 0 },
+            { q: "Refractive index of a medium is defined as:", o: ["Speed in vacuum / Speed in medium", "Speed in medium / Speed in vacuum", "Angle i / Angle r", "Focal length / Radius"], a: 0 },
+            { q: "Light travels fastest in:", o: ["Glass", "Water", "Vacuum", "Diamond"], a: 2 },
+            { q: "When light travels from an optically rarer to a denser medium, it bends:", o: ["Away from normal", "Towards normal", "Parallel to normal", "Does not bend"], a: 1 },
+            { q: "The refractive index of water is:", o: ["1.00", "1.33", "1.52", "2.42"], a: 1 },
+            { q: "The highest optical density among the following belongs to:", o: ["Ice", "Water", "Crown Glass", "Diamond"], a: 3 },
+            { q: "If light goes from glass (n=1.5) to water (n=1.33), it bends:", o: ["Towards normal", "Away from normal", "Reflects back", "No change"], a: 1 },
+            { q: "The apparent shift in the position of a coin underwater is due to:", o: ["Reflection", "Refraction", "Total internal reflection", "Dispersion"], a: 1 },
+            { q: "A ray incident along the normal on a glass slab undergoes a deviation of:", o: ["90 degrees", "45 degrees", "0 degrees", "180 degrees"], a: 2 }
+        ]
+    },
+    5: {
+        title: "Test 5: Spherical Lenses & Power (10 Marks)",
+        questions: [
+            { q: "A lens thicker at the middle than at the edges is a:", o: ["Concave lens", "Convex lens", "Bifocal lens", "Plano-concave lens"], a: 1 },
+            { q: "The lens formula is:", o: ["1/v + 1/u = 1/f", "1/v - 1/u = 1/f", "1/u - 1/v = 1/f", "v + u = f"], a: 1 },
+            { q: "The SI unit of power of a lens is:", o: ["Meter", "Centimeter", "Dioptre", "Watt"], a: 2 },
+            { q: "The power of a convex lens is:", o: ["Positive", "Negative", "Zero", "Infinity"], a: 0 },
+            { q: "If a lens has a power of -2.0 D, its focal length is:", o: ["+50 cm", "-50 cm", "-20 cm", "+20 cm"], a: 1 },
+            { q: "A concave lens always forms an image that is:", o: ["Real and erect", "Real and inverted", "Virtual and erect", "Virtual and inverted"], a: 2 },
+            { q: "Power of a combination of lenses P1 and P2 is:", o: ["P1 * P2", "P1 / P2", "P1 + P2", "P1 - P2"], a: 2 },
+            { q: "Where should an object be placed for a convex lens to form a real image of the same size?", o: ["F", "2F", "Infinity", "Between F and 2F"], a: 1 },
+            { q: "The central point of a lens is called its:", o: ["Pole", "Centre of curvature", "Optical centre", "Principal focus"], a: 2 },
+            { q: "For a real object, a concave lens produces magnification 'm' which is:", o: ["m > 1", "m < 1", "m = 1", "m = 0"], a: 1 }
+        ]
+    },
+    6: {
+        title: "✨ Full Length Mock Paper 1 (20 Marks)",
+        questions: [
+            { q: "The laws of reflection hold good for:", o: ["Plane mirrors only", "Concave mirrors only", "Convex mirrors only", "All reflecting surfaces"], a: 3 },
+            { q: "A full-length image of a distant tall building can definitely be seen using:", o: ["Concave mirror", "Convex mirror", "Plane mirror", "None of these"], a: 1 },
+            { q: "In torches and headlights, the bulb is placed:", o: ["Between pole and focus", "Very near to the focus", "Between focus and centre of curvature", "At centre of curvature"], a: 1 },
+            { q: "Magnification produced by a rear-view mirror is:", o: ["Less than 1", "More than 1", "Equal to 1", "Can be more or less than 1"], a: 0 },
+            { q: "Rays from the Sun converge at a point 15 cm in front of a concave mirror. Where should an object be placed to get an image of exactly the same size?", o: ["15 cm", "30 cm", "Between 15 cm and 30 cm", "More than 30 cm"], a: 1 },
+            { q: "Which of the following does not change when light travels from one medium to another?", o: ["Velocity", "Wavelength", "Frequency", "Amplitude"], a: 2 },
+            { q: "The refractive index of glass is 1.5. Speed of light in glass is:", o: ["2 x 10^8 m/s", "3 x 10^8 m/s", "1.5 x 10^8 m/s", "4.5 x 10^8 m/s"], a: 0 },
+            { q: "An object is placed at 2f in front of a convex lens. The image is formed at:", o: ["f", "2f", "Infinity", "Optical centre"], a: 1 },
+            { q: "Power of a lens is defined as:", o: ["1/f (in cm)", "1/f (in meters)", "f (in meters)", "v/u"], a: 1 },
+            { q: "If the magnification is -1, the image is:", o: ["Real, inverted, same size", "Virtual, erect, same size", "Real, erect, diminished", "Virtual, inverted, magnified"], a: 0 },
+            { q: "A convex mirror of focal length f forms an image 1/n times the object. The distance of the object is:", o: ["(n-1)f", "(n+1)f", "n/f", "f/n"], a: 0 },
+            { q: "To get a virtual image with a convex lens, the object should be placed:", o: ["At F", "Between F and 2F", "Between optical centre and F", "At infinity"], a: 2 },
+            { q: "The refractive index of diamond is 2.42. This means light in diamond travels:", o: ["Faster than in vacuum", "Slower than in vacuum by a factor of 2.42", "At the same speed", "It cannot travel in diamond"], a: 1 },
+            { q: "Lateral displacement of a ray passing through a glass slab depends on:", o: ["Thickness of slab", "Angle of incidence", "Refractive index", "All of the above"], a: 3 },
+            { q: "The focal length of a spherical mirror of radius 40 cm is:", o: ["40 cm", "20 cm", "80 cm", "10 cm"], a: 1 },
+            { q: "A lens of power +2.0 D has a focal length of:", o: ["50 cm", "-50 cm", "20 cm", "-20 cm"], a: 0 },
+            { q: "When light goes from denser to rarer medium, the angle of refraction is:", o: ["Greater than angle of incidence", "Less than angle of incidence", "Equal to angle of incidence", "Zero"], a: 0 },
+            { q: "A concave lens has focal length of 15 cm. If image is at 10 cm, object is at:", o: ["-30 cm", "30 cm", "-15 cm", "15 cm"], a: 0 },
+            { q: "An object 5 cm high is 20 cm from convex mirror of f=15 cm. Image height is:", o: ["2.14 cm", "5 cm", "-2.14 cm", "10 cm"], a: 0 },
+            { q: "Absolute refractive index of any medium is always:", o: ["< 1", "> 1", "= 1", "0"], a: 1 }
+        ]
+    },
+    7: {
+        title: "✨ Full Length Mock Paper 2 (20 Marks)",
+        questions: [
+            { q: "When an object is kept within the focus of a concave mirror, an enlarged image is formed behind the mirror. The image is:", o: ["Real", "Inverted", "Virtual and erect", "Virtual and inverted"], a: 2 },
+            { q: "A diverging lens has a focal length of 0.10 m. Its power is:", o: ["+10.0 D", "-10.0 D", "+1.0 D", "-1.0 D"], a: 1 },
+            { q: "Which of the following can make a parallel beam of light when light from a point source is incident on it?", o: ["Concave mirror and convex lens", "Convex mirror and concave lens", "Two plane mirrors placed at 90 degrees", "Concave mirror and concave lens"], a: 0 },
+            { q: "The focal length of a plane mirror is:", o: ["Zero", "Negative", "Positive", "Infinity"], a: 3 },
+            { q: "An image formed by a convex mirror is always:", o: ["Virtual, erect, diminished", "Virtual, inverted, diminished", "Real, erect, enlarged", "Real, inverted, enlarged"], a: 0 },
+            { q: "Light enters from air to glass having refractive index 1.50. Speed in glass is:", o: ["2 x 10^8 m/s", "1.5 x 10^8 m/s", "3 x 10^8 m/s", "4.5 x 10^8 m/s"], a: 0 },
+            { q: "In a convex lens, if object is at focus, image is at:", o: ["Focus", "2F", "Infinity", "Optical Centre"], a: 2 },
+            { q: "The ability of a lens to converge or diverge light is its:", o: ["Aperture", "Magnification", "Power", "Focal length"], a: 2 },
+            { q: "If two lenses of power +2D and -1D are placed in contact, the net power is:", o: ["+3D", "-3D", "+1D", "-1D"], a: 2 },
+            { q: "Which mirror is used in a solar furnace?", o: ["Convex", "Concave", "Plane", "Parabolic"], a: 1 },
+            { q: "The relation between u, v, f for a lens is:", o: ["1/f = 1/v + 1/u", "1/f = 1/v - 1/u", "1/f = 1/u - 1/v", "f = v/u"], a: 1 },
+            { q: "Which lens is used to correct myopia?", o: ["Convex", "Concave", "Bifocal", "Cylindrical"], a: 1 },
+            { q: "Refractive index of water is 4/3 and glass is 3/2. Refractive index of glass wrt water is:", o: ["9/8", "8/9", "2", "1/2"], a: 0 },
+            { q: "For a concave mirror, if u = -20 cm and f = -10 cm, v is:", o: ["-20 cm", "20 cm", "-10 cm", "10 cm"], a: 0 },
+            { q: "In optics, all distances are measured from the:", o: ["Focus", "Centre of curvature", "Pole/Optical Centre", "Infinity"], a: 2 },
+            { q: "A concave lens is also known as:", o: ["Converging lens", "Diverging lens", "Biconvex lens", "Plano-convex lens"], a: 1 },
+            { q: "Magnification of a lens is v/u. For a real image, m is:", o: ["Positive", "Negative", "Zero", "Infinity"], a: 1 },
+            { q: "If power is +2.5D, focal length is:", o: ["40 cm", "25 cm", "-40 cm", "2.5 cm"], a: 0 },
+            { q: "Angle of incidence is 45 and refraction is 30. Refractive index is:", o: ["1.414", "1.5", "1.33", "2.0"], a: 0 },
+            { q: "Linear magnification produced by convex mirror is always:", o: ["< 1", "> 1", "= 1", "0"], a: 0 }
+        ]
+    },
+    8: {
+        title: "✨ Full Length Mock Paper 3 (20 Marks)",
+        questions: [
+            { q: "The radius of curvature of a plane mirror is:", o: ["Zero", "Infinity", "Depends on size", "100 cm"], a: 1 },
+            { q: "A concave lens always produces an image that is:", o: ["Real and erect", "Virtual and inverted", "Virtual, erect and diminished", "Real, erect and magnified"], a: 2 },
+            { q: "Which material cannot be used to make a lens?", o: ["Water", "Glass", "Plastic", "Clay"], a: 3 },
+            { q: "Where should an object be placed in front of a convex lens to get a real image of the size of the object?", o: ["At focus", "At 2F", "At infinity", "Between optical centre and focus"], a: 1 },
+            { q: "A spherical mirror and a thin lens have each a focal length of -15 cm. They are:", o: ["Both concave", "Both convex", "Mirror concave, lens convex", "Mirror convex, lens concave"], a: 0 },
+            { q: "No matter how far you stand from a mirror, your image appears erect. The mirror is likely to be:", o: ["Plane", "Concave", "Convex", "Either plane or convex"], a: 3 },
+            { q: "Which of the following lenses would you prefer to use while reading small letters in a dictionary?", o: ["Convex lens of f = 50 cm", "Concave lens of f = 50 cm", "Convex lens of f = 5 cm", "Concave lens of f = 5 cm"], a: 2 },
+            { q: "Twinkling of stars is due to atmospheric:", o: ["Reflection", "Refraction", "Dispersion", "Scattering"], a: 1 },
+            { q: "In which of the following, the image of an object placed at infinity will be highly diminished and point sized?", o: ["Concave mirror only", "Convex mirror only", "Convex lens only", "Concave/Convex mirror and lens"], a: 3 },
+            { q: "The refractive index of water is 1.33 and glass is 1.5. If light travels from water to glass, it bends:", o: ["Towards the normal", "Away from the normal", "Goes straight", "Reflects back"], a: 0 },
+            { q: "The unit of refractive index is:", o: ["Meter", "Dioptre", "Degree", "No unit"], a: 3 },
+            { q: "In a concave mirror, when object is between P and F, image is:", o: ["Real", "Virtual and enlarged", "Virtual and diminished", "Real and diminished"], a: 1 },
+            { q: "Light obeys the law of reflection on:", o: ["Smooth surfaces", "Rough surfaces", "Both smooth and rough", "Only mirrors"], a: 2 },
+            { q: "A point object is placed at a distance of 20cm from a convex mirror of f=20cm. Image is at:", o: ["10cm", "20cm", "Infinity", "Focus"], a: 0 },
+            { q: "The speed of light in vacuum is:", o: ["3x10^5 m/s", "3x10^8 m/s", "3x10^8 km/s", "3x10^10 m/s"], a: 1 },
+            { q: "Which color of light deviates maximum in a glass prism?", o: ["Red", "Violet", "Green", "Yellow"], a: 1 },
+            { q: "To obtain a magnification of -0.5 with convex lens, object should be placed:", o: ["Beyond 2F", "At 2F", "Between F and 2F", "At F"], a: 0 },
+            { q: "Power of a plane mirror is:", o: ["Zero", "Infinity", "One", "Negative"], a: 0 },
+            { q: "Which part of a lens allows light to pass undeviated?", o: ["Focus", "Optical Centre", "Aperture", "Centre of curvature"], a: 1 },
+            { q: "Lateral displacement is directly proportional to:", o: ["Thickness of glass slab", "Angle of incidence", "Both a and b", "None of the above"], a: 2 }
+        ]
+    }
+};
+
+let currentActiveQuiz = null;
+
+function loadQuiz(id) {
+    currentActiveQuiz = id;
+    const targetData = quizBank[id];
+    document.getElementById("test-selection-screen").style.display = "none";
+    document.getElementById("quiz-interface").style.display = "block";
+    document.getElementById("quiz-panel-title").innerText = targetData.title;
+    document.getElementById("quiz-result-box").style.display = "none";
+
+    let htmlTemplate = "";
+    targetData.questions.forEach((item, index) => {
+        htmlTemplate += `
+            <div class="quiz-q-block">
+                <p><strong>Q${index + 1}: ${item.q}</strong></p>
+                <div class="quiz-options">
+                    ${item.o.map((opt, oIdx) => `
+                        <label>
+                            <input type="radio" name="q_${index}" value="${oIdx}" required> ${opt}
+                        </label>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+    });
+    document.getElementById("quiz-questions-container").innerHTML = htmlTemplate;
+}
+
+function closeQuiz() {
+    document.getElementById("quiz-interface").style.display = "none";
+    document.getElementById("test-selection-screen").style.display = "grid";
+}
+
+function evaluateQuiz() {
+    const targetData = quizBank[currentActiveQuiz];
+    let studentScore = 0;
+    let validated = true;
+
+    targetData.questions.forEach((item, index) => {
+        const selector = document.querySelector(`input[name="q_${index}"]:checked`);
+        if (!selector) {
+            validated = false;
+        } else {
+            if (parseInt(selector.value) === item.a) {
+                studentScore++;
+            }
+        }
+    });
+
+    if (!validated) {
+        alert("Please complete all questions before submitting the assessment.");
+        return;
+    }
+
+    const totalMarks = targetData.questions.length;
+    const resultBox = document.getElementById("quiz-result-box");
+    resultBox.style.display = "block";
+    resultBox.innerHTML = `Assessment Complete! Final Score: ${studentScore} / ${totalMarks} Marks (${Math.round((studentScore/totalMarks)*100)}%)`;
+    window.scrollTo({ top: resultBox.offsetTop, behavior: 'smooth' });
+}
+</script>
+<div class="lang-switcher" id="langSwitcher">
+<div class="lang-menu" id="langMenu">
+<button class="lang-option active" id="langEnglishBtn" onclick="setLanguageMode('en')">🇬🇧 English</button>
+<button class="lang-option" id="langGujaratiBtn" onclick="setLanguageMode('gu')">🇮🇳 ગુજરાતી</button>
+</div>
+<button aria-label="Language Switcher" class="lang-main-btn" id="langMainBtn" onclick="toggleLangMenu()">🌐</button>
+</div>
+<script>
+function toggleLangMenu(){
+  const box = document.getElementById('langSwitcher');
+  if(box){ box.classList.toggle('open'); }
+}
+function setLanguageMode(mode){
+  const showGujarati = mode === 'gu';
+  document.body.classList.toggle('show-gu', showGujarati);
+
+  const enBtn = document.getElementById('langEnglishBtn');
+  const guBtn = document.getElementById('langGujaratiBtn');
+  const mainBtn = document.getElementById('langMainBtn');
+  const box = document.getElementById('langSwitcher');
+
+  if(enBtn){ enBtn.classList.toggle('active', !showGujarati); }
+  if(guBtn){ guBtn.classList.toggle('active', showGujarati); }
+  if(mainBtn){ mainBtn.innerHTML = showGujarati ? '🇮🇳' : '🌐'; }
+  if(box){ box.classList.remove('open'); }
+
+  if(window.MathJax && MathJax.typesetPromise){ MathJax.typesetPromise(); }
+}
+function toggleGujarati(){
+  const currentlyGujarati = document.body.classList.contains('show-gu');
+  setLanguageMode(currentlyGujarati ? 'en' : 'gu');
+}
+document.addEventListener('click', function(e){
+  const box = document.getElementById('langSwitcher');
+  if(box && !box.contains(e.target)){ box.classList.remove('open'); }
+});
+</script><a aria-label="Download PDF" class="pdf-float" href="javascript:downloadPDF()" title="Download PDF">⬇️</a><script>
+(function(){
+  function initAccordions(){
+    document.querySelectorAll('[data-accordion="true"] .accordion-title').forEach(function(title){
+      title.addEventListener('click', function(){
+        const card = title.closest('[data-accordion="true"]');
+        const wasOpen = card.classList.contains('accordion-open');
+        document.querySelectorAll('[data-accordion="true"].accordion-open').forEach(function(openCard){
+          openCard.classList.remove('accordion-open');
+          const ind=openCard.querySelector('.tap-indicator'); if(ind) ind.textContent='▼ Tap to View Solution';
+        });
+        if(!wasOpen){
+          card.classList.add('accordion-open');
+          const ind=card.querySelector('.tap-indicator'); if(ind) ind.textContent='▲ Hide Solution';
+          setTimeout(function(){ if(window.MathJax && MathJax.typesetPromise){ MathJax.typesetPromise([card]); } }, 50);
+        }
+      });
+    });
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded', initAccordions);}else{initAccordions();}
+})();
+function downloadPDF(){
+  window.print();
+}
+</script></body>
+</html>ript&gt;
+
+
+
