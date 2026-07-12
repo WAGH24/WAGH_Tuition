@@ -3,33 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MCQ Practice | WAGH Tuition Classes</title>
+  <meta
+    name="description"
+    content="CBSE Class 10 Science Chapter 1 MCQ practice for Chemical Reactions and Equations."
+  />
+  <title>Chapter 1 MCQ | CBSE Class 10 Science</title>
   <link rel="stylesheet" href="../../assets/css/static-mcq-engine.css" />
 </head>
 <body>
   <div class="wtc-mcq-app">
     <header class="hero-card">
       <div class="hero-left">
-        <p class="eyebrow">WAGH Tuition Classes • Static MCQ Engine v1.0</p>
-        <h1 id="testTitle">MCQ Practice.</h1>
+        <p class="eyebrow">WAGH Tuition Classes • Static MCQ Engine v1.1</p>
+        <h1 id="testTitle">MCQ Practice</h1>
         <p id="testMeta" class="meta"></p>
       </div>
+
       <div class="hero-score">
-        <div class="ring" id="progressRing"><span id="answeredCount">0</span></div>
+        <div class="ring" id="progressRing">
+          <span id="answeredCount">0</span>
+        </div>
         <small>Answered</small>
       </div>
     </header>
 
     <section class="sticky-dashboard">
-      <div class="dash-item"><span>Student</span><b id="studentName">Checking login...</b></div>
-      <div class="dash-item"><span>Time</span><b id="timer">00:00</b></div>
-      <div class="dash-item"><span>Questions</span><b id="questionCount">0</b></div>
+      <div class="dash-item">
+        <span>Student</span>
+        <b id="studentName">Checking login...</b>
+      </div>
+      <div class="dash-item">
+        <span>Time</span>
+        <b id="timer">00:00</b>
+      </div>
+      <div class="dash-item">
+        <span>Questions</span>
+        <b id="questionCount">0</b>
+      </div>
       <button id="themeBtn" class="ghost-btn" type="button">🌙</button>
       <button id="reviewBtn" class="ghost-btn" type="button">Review</button>
     </section>
 
     <section class="notice-card">
-      Select one option for each question. After submit, correct answers and explanations will open. Your result will be saved for progress report.
+      Select one option for each question. After submit, correct answers and
+      explanations will open. Your result will be saved for progress report.
     </section>
 
     <main class="layout-grid">
@@ -37,114 +54,797 @@
         <h3>Question Palette</h3>
         <div id="paletteGrid" class="palette-grid"></div>
       </aside>
+
       <section id="questionList" class="question-list"></section>
     </main>
 
     <section id="resultBox" class="result-box hidden"></section>
 
     <div class="bottom-action-bar">
-      <button id="submitBtn" class="primary-btn" type="button">Submit Test</button>
-      <button id="retryBtn" class="secondary-btn hidden" type="button">Retry Test</button>
+      <button id="submitBtn" class="primary-btn" type="button">
+        Submit Test
+      </button>
+      <button id="retryBtn" class="secondary-btn hidden" type="button">
+        Choose Another Test
+      </button>
       <button id="topBtn" class="secondary-btn" type="button">Top</button>
     </div>
   </div>
 
+  <!-- Keep this exact loading order. -->
   <script src="../../assets/js/config.js"></script>
   <script src="../../assets/js/auth.js"></script>
   <script src="../../assets/js/api.js"></script>
 
   <script>
     window.WTC_STATIC_MCQ = {
-      testId: "MCQ-SCI10CH1-001",
-      testTitle: "Chemical Reactions and Equations - MCQ Practice",
-      board: "CBSE",
-      className: "Class 10",
-      medium: "English Medium",
-      subjectId: "SCI10",
-      subjectName: "Science",
-      chapterId: "SCI10CH1",
-      chapterName: "Chemical Reactions and Equations",
-      testType: "Static MCQ Practice",
-      instructions: "Chapter 1 concept practice",
-      questions: [
-        {
-          id: "SCI10CH1-Q001",
-          topic: "Chemical Reaction",
-          difficulty: "Easy",
-          marks: 1,
-          question: "Which of the following is a chemical change?",
-          options: {
-            A: "Melting of ice",
-            B: "Burning of magnesium ribbon",
-            C: "Boiling of water",
-            D: "Breaking of glass"
-          },
-          correct: "B",
-          explanation: "Burning of magnesium ribbon forms a new substance, magnesium oxide. Therefore, it is a chemical change."
-        },
-        {
-          id: "SCI10CH1-Q002",
-          topic: "Balanced Equation",
-          difficulty: "Easy",
-          marks: 1,
-          question: "A balanced chemical equation follows which law?",
-          options: {
-            A: "Law of conservation of mass",
-            B: "Law of reflection",
-            C: "Law of gravitation",
-            D: "Ohm's law"
-          },
-          correct: "A",
-          explanation: "In a balanced chemical equation, the number of atoms of each element remains equal on both sides, so mass is conserved."
-        },
-        {
-          id: "SCI10CH1-Q003",
-          topic: "Reaction Type",
-          difficulty: "Medium",
-          marks: 1,
-          question: "The reaction CaO + H₂O → Ca(OH)₂ is an example of which reaction?",
-          options: {
-            A: "Decomposition reaction",
-            B: "Displacement reaction",
-            C: "Combination reaction",
-            D: "Double displacement reaction"
-          },
-          correct: "C",
-          explanation: "Two reactants combine to form a single product. Therefore, it is a combination reaction."
-        },
-        {
-          id: "SCI10CH1-Q004",
-          topic: "Oxidation",
-          difficulty: "Medium",
-          marks: 1,
-          question: "Which change represents oxidation?",
-          options: {
-            A: "Gain of hydrogen",
-            B: "Loss of oxygen",
-            C: "Gain of oxygen",
-            D: "No change in oxygen or hydrogen"
-          },
-          correct: "C",
-          explanation: "Oxidation means gain of oxygen or loss of hydrogen."
-        },
-        {
-          id: "SCI10CH1-Q005",
-          topic: "Decomposition Reaction",
-          difficulty: "Easy",
-          marks: 1,
-          question: "When calcium carbonate is heated, it decomposes to form calcium oxide and which gas?",
-          options: {
-            A: "Oxygen",
-            B: "Hydrogen",
-            C: "Carbon dioxide",
-            D: "Nitrogen"
-          },
-          correct: "C",
-          explanation: "Calcium carbonate decomposes on heating to form calcium oxide and carbon dioxide gas."
-        }
+  "pageTitle": "Chapter 1: Chemical Reactions and Equations - MCQ Practice",
+  "selectorDescription": "Choose a topic-wise test or a full-length chapter test covering Chemical Reactions and Equations.",
+  "board": "CBSE",
+  "className": "Class 10",
+  "medium": "English Medium",
+  "subjectId": "SCI10",
+  "subjectName": "Science",
+  "chapterId": "SCI10CH01",
+  "chapterName": "Chemical Reactions and Equations",
+  "instructions": "Select one option for each question. After submit, correct answers and explanations will open. Progress saves automatically.",
+  "questionBank": [
+    {
+      "id": "SCI10CH01-Q001",
+      "topic": "Chemical Reactions and Observations",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which observation is most directly associated with burning a magnesium ribbon in air?",
+      "options": {
+        "A": "A dazzling white flame and white ash",
+        "B": "A green gas and black residue",
+        "C": "A blue solution and brown deposit",
+        "D": "No visible change"
+      },
+      "correct": "A",
+      "explanation": "Magnesium burns with a dazzling white flame and forms a white powder of magnesium oxide."
+    },
+    {
+      "id": "SCI10CH01-Q002",
+      "topic": "Chemical Reactions and Observations",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Why is a magnesium ribbon cleaned with sandpaper before it is burnt?",
+      "options": {
+        "A": "To make it colder",
+        "B": "To remove the magnesium oxide layer",
+        "C": "To increase its mass",
+        "D": "To convert it into a powder"
+      },
+      "correct": "B",
+      "explanation": "The oxide layer on magnesium prevents it from burning readily, so it is removed by rubbing with sandpaper."
+    },
+    {
+      "id": "SCI10CH01-Q003",
+      "topic": "Chemical Reactions and Observations",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which of the following can indicate that a chemical reaction has taken place?",
+      "options": {
+        "A": "Change in colour",
+        "B": "Evolution of a gas",
+        "C": "Change in temperature",
+        "D": "All of these"
+      },
+      "correct": "D",
+      "explanation": "A change in colour, evolution of gas, change in state, or change in temperature can indicate a chemical reaction."
+    },
+    {
+      "id": "SCI10CH01-Q004",
+      "topic": "Chemical Reactions and Observations",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "When lead nitrate solution is mixed with potassium iodide solution, the yellow substance formed is:",
+      "options": {
+        "A": "Lead iodide",
+        "B": "Potassium nitrate",
+        "C": "Lead oxide",
+        "D": "Potassium oxide"
+      },
+      "correct": "A",
+      "explanation": "Lead nitrate and potassium iodide react to form a yellow precipitate of lead iodide."
+    },
+    {
+      "id": "SCI10CH01-Q005",
+      "topic": "Chemical Reactions and Observations",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "In a word equation, reactants are generally written on the:",
+      "options": {
+        "A": "Right-hand side",
+        "B": "Left-hand side",
+        "C": "Top of the arrow",
+        "D": "Bottom of the arrow"
+      },
+      "correct": "B",
+      "explanation": "Reactants are written on the left-hand side, while products are written on the right-hand side."
+    },
+    {
+      "id": "SCI10CH01-Q006",
+      "topic": "Chemical Reactions and Observations",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What is produced when zinc reacts with dilute sulphuric acid?",
+      "options": {
+        "A": "Zinc oxide and water",
+        "B": "Zinc sulphate and hydrogen",
+        "C": "Zinc chloride and oxygen",
+        "D": "Zinc hydroxide and sulphur dioxide"
+      },
+      "correct": "B",
+      "explanation": "The reaction is Zn + H₂SO₄ → ZnSO₄ + H₂."
+    },
+    {
+      "id": "SCI10CH01-Q007",
+      "topic": "Chemical Reactions and Observations",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The arrow in a chemical equation points towards the:",
+      "options": {
+        "A": "Reactants",
+        "B": "Catalyst",
+        "C": "Products",
+        "D": "Reaction vessel"
+      },
+      "correct": "C",
+      "explanation": "The arrow shows the direction of the reaction from reactants to products."
+    },
+    {
+      "id": "SCI10CH01-Q008",
+      "topic": "Chemical Reactions and Observations",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Which change is a chemical change?",
+      "options": {
+        "A": "Melting of ice",
+        "B": "Boiling of water",
+        "C": "Burning of coal",
+        "D": "Dissolving sugar in water"
+      },
+      "correct": "C",
+      "explanation": "Burning coal forms new substances such as carbon dioxide, so it is a chemical change."
+    },
+    {
+      "id": "SCI10CH01-Q009",
+      "topic": "Chemical Equations and Balancing",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "A chemical equation in which the number of atoms of each element is equal on both sides is called:",
+      "options": {
+        "A": "A word equation",
+        "B": "A skeletal equation",
+        "C": "A balanced equation",
+        "D": "An ionic equation"
+      },
+      "correct": "C",
+      "explanation": "A balanced equation has the same number of atoms of every element on the reactant and product sides."
+    },
+    {
+      "id": "SCI10CH01-Q010",
+      "topic": "Chemical Equations and Balancing",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Balancing a chemical equation is based on the law of:",
+      "options": {
+        "A": "Conservation of mass",
+        "B": "Constant proportions",
+        "C": "Gravitation",
+        "D": "Reflection"
+      },
+      "correct": "A",
+      "explanation": "Mass is neither created nor destroyed, so the number of atoms must remain the same before and after a reaction."
+    },
+    {
+      "id": "SCI10CH01-Q011",
+      "topic": "Chemical Equations and Balancing",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which is the correctly balanced equation for the formation of magnesium oxide?",
+      "options": {
+        "A": "Mg + O₂ → MgO",
+        "B": "2Mg + O₂ → 2MgO",
+        "C": "Mg₂ + O₂ → 2MgO",
+        "D": "Mg + 2O → MgO₂"
+      },
+      "correct": "B",
+      "explanation": "Two magnesium atoms react with one oxygen molecule to form two units of magnesium oxide."
+    },
+    {
+      "id": "SCI10CH01-Q012",
+      "topic": "Chemical Equations and Balancing",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which coefficient completes the balanced equation: Fe + 4H₂O → Fe₃O₄ + 4H₂?",
+      "options": {
+        "A": "1 before Fe",
+        "B": "2 before Fe",
+        "C": "3 before Fe",
+        "D": "4 before Fe"
+      },
+      "correct": "C",
+      "explanation": "The balanced equation is 3Fe + 4H₂O → Fe₃O₄ + 4H₂."
+    },
+    {
+      "id": "SCI10CH01-Q013",
+      "topic": "Chemical Equations and Balancing",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which symbol represents an aqueous solution in a chemical equation?",
+      "options": {
+        "A": "(s)",
+        "B": "(l)",
+        "C": "(g)",
+        "D": "(aq)"
+      },
+      "correct": "D",
+      "explanation": "The symbol (aq) indicates that the substance is dissolved in water."
+    },
+    {
+      "id": "SCI10CH01-Q014",
+      "topic": "Chemical Equations and Balancing",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "During balancing of an equation, which part may be changed?",
+      "options": {
+        "A": "Subscripts in chemical formulae",
+        "B": "Chemical symbols of elements",
+        "C": "Coefficients before formulae",
+        "D": "Formulae of compounds"
+      },
+      "correct": "C",
+      "explanation": "Only coefficients may be changed; changing subscripts would change the identity of the substances."
+    },
+    {
+      "id": "SCI10CH01-Q015",
+      "topic": "Chemical Equations and Balancing",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which balanced equation represents hydrogen combining with chlorine to form hydrogen chloride?",
+      "options": {
+        "A": "H₂ + Cl₂ → 2HCl",
+        "B": "H + Cl → HCl",
+        "C": "2H₂ + Cl₂ → 2HCl",
+        "D": "H₂ + 2Cl₂ → 2HCl"
+      },
+      "correct": "A",
+      "explanation": "The equation H₂ + Cl₂ → 2HCl has two hydrogen and two chlorine atoms on each side."
+    },
+    {
+      "id": "SCI10CH01-Q016",
+      "topic": "Chemical Equations and Balancing",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Which statement about the balanced equation 3Fe(s) + 4H₂O(g) → Fe₃O₄(s) + 4H₂(g) is correct?",
+      "options": {
+        "A": "Liquid water is used",
+        "B": "Steam reacts with solid iron",
+        "C": "Iron oxide is gaseous",
+        "D": "Hydrogen is aqueous"
+      },
+      "correct": "B",
+      "explanation": "The state symbols show solid iron reacting with water vapour or steam to form solid Fe₃O₄ and hydrogen gas."
+    },
+    {
+      "id": "SCI10CH01-Q017",
+      "topic": "Combination, Decomposition and Energy Changes",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "A reaction in which two or more substances combine to form a single product is called a:",
+      "options": {
+        "A": "Combination reaction",
+        "B": "Decomposition reaction",
+        "C": "Displacement reaction",
+        "D": "Double displacement reaction"
+      },
+      "correct": "A",
+      "explanation": "In a combination reaction, two or more reactants form one product."
+    },
+    {
+      "id": "SCI10CH01-Q018",
+      "topic": "Combination, Decomposition and Energy Changes",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The reaction CaO(s) + H₂O(l) → Ca(OH)₂(aq) + heat is:",
+      "options": {
+        "A": "Only a decomposition reaction",
+        "B": "A combination and exothermic reaction",
+        "C": "A displacement and endothermic reaction",
+        "D": "A double displacement reaction"
+      },
+      "correct": "B",
+      "explanation": "Two reactants form one product and heat is released, so it is both combination and exothermic."
+    },
+    {
+      "id": "SCI10CH01-Q019",
+      "topic": "Combination, Decomposition and Energy Changes",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which process is an exothermic reaction?",
+      "options": {
+        "A": "Respiration",
+        "B": "Electrolysis of water",
+        "C": "Decomposition of silver chloride by sunlight",
+        "D": "Thermal decomposition of calcium carbonate"
+      },
+      "correct": "A",
+      "explanation": "Respiration releases energy when glucose reacts with oxygen."
+    },
+    {
+      "id": "SCI10CH01-Q020",
+      "topic": "Combination, Decomposition and Energy Changes",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What type of reaction is CaCO₃(s) —heat→ CaO(s) + CO₂(g)?",
+      "options": {
+        "A": "Thermal decomposition",
+        "B": "Photochemical decomposition",
+        "C": "Displacement",
+        "D": "Combination"
+      },
+      "correct": "A",
+      "explanation": "Calcium carbonate breaks down on heating, so it is a thermal decomposition reaction."
+    },
+    {
+      "id": "SCI10CH01-Q021",
+      "topic": "Combination, Decomposition and Energy Changes",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The brown fumes evolved when lead nitrate is heated are mainly:",
+      "options": {
+        "A": "Hydrogen",
+        "B": "Nitrogen dioxide",
+        "C": "Sulphur dioxide",
+        "D": "Chlorine"
+      },
+      "correct": "B",
+      "explanation": "Heating lead nitrate produces lead oxide, nitrogen dioxide, and oxygen; NO₂ appears as brown fumes."
+    },
+    {
+      "id": "SCI10CH01-Q022",
+      "topic": "Combination, Decomposition and Energy Changes",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "White silver chloride turns grey in sunlight because it:",
+      "options": {
+        "A": "Combines with oxygen",
+        "B": "Decomposes to silver and chlorine",
+        "C": "Melts in sunlight",
+        "D": "Forms silver oxide only"
+      },
+      "correct": "B",
+      "explanation": "Light decomposes AgCl into silver metal and chlorine gas, and the silver makes it appear grey."
+    },
+    {
+      "id": "SCI10CH01-Q023",
+      "topic": "Combination, Decomposition and Energy Changes",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "During electrolysis of water, the volume of hydrogen collected is approximately:",
+      "options": {
+        "A": "Half the volume of oxygen",
+        "B": "Equal to the volume of oxygen",
+        "C": "Twice the volume of oxygen",
+        "D": "Four times the volume of oxygen"
+      },
+      "correct": "C",
+      "explanation": "Water decomposes in the ratio 2H₂O → 2H₂ + O₂, so hydrogen is collected in twice the volume of oxygen."
+    },
+    {
+      "id": "SCI10CH01-Q024",
+      "topic": "Combination, Decomposition and Energy Changes",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Which pair correctly matches the energy source with decomposition?",
+      "options": {
+        "A": "Heat—AgCl; light—CaCO₃",
+        "B": "Electricity—water; light—AgCl",
+        "C": "Light—water; electricity—CaCO₃",
+        "D": "Heat—AgBr; electricity—lead nitrate"
+      },
+      "correct": "B",
+      "explanation": "Water decomposes by electricity, while silver chloride decomposes in sunlight."
+    },
+    {
+      "id": "SCI10CH01-Q025",
+      "topic": "Displacement and Double Displacement Reactions",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "In Fe + CuSO₄ → FeSO₄ + Cu, iron displaces:",
+      "options": {
+        "A": "Sulphur",
+        "B": "Oxygen",
+        "C": "Copper",
+        "D": "Sulphate"
+      },
+      "correct": "C",
+      "explanation": "Iron is more reactive than copper and displaces copper from copper sulphate solution."
+    },
+    {
+      "id": "SCI10CH01-Q026",
+      "topic": "Displacement and Double Displacement Reactions",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What visible change occurs when iron nails are placed in copper sulphate solution?",
+      "options": {
+        "A": "The nails become brownish and the blue colour fades",
+        "B": "The nails become white and the solution turns red",
+        "C": "The solution becomes colourless with no deposit",
+        "D": "A green gas is released"
+      },
+      "correct": "A",
+      "explanation": "Copper deposits on the iron nails as a brown coating, and blue CuSO₄ changes to pale green FeSO₄."
+    },
+    {
+      "id": "SCI10CH01-Q027",
+      "topic": "Displacement and Double Displacement Reactions",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which metal can displace copper from copper sulphate solution?",
+      "options": {
+        "A": "Silver",
+        "B": "Gold",
+        "C": "Zinc",
+        "D": "Platinum"
+      },
+      "correct": "C",
+      "explanation": "Zinc is more reactive than copper and displaces it from copper sulphate solution."
+    },
+    {
+      "id": "SCI10CH01-Q028",
+      "topic": "Displacement and Double Displacement Reactions",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "A reaction in which two compounds exchange ions is called a:",
+      "options": {
+        "A": "Combination reaction",
+        "B": "Double displacement reaction",
+        "C": "Decomposition reaction",
+        "D": "Oxidation reaction only"
+      },
+      "correct": "B",
+      "explanation": "In a double displacement reaction, ions or groups of atoms exchange between two compounds."
+    },
+    {
+      "id": "SCI10CH01-Q029",
+      "topic": "Displacement and Double Displacement Reactions",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which insoluble product forms when sodium sulphate solution is mixed with barium chloride solution?",
+      "options": {
+        "A": "Sodium chloride",
+        "B": "Barium sulphate",
+        "C": "Barium oxide",
+        "D": "Sodium sulphide"
+      },
+      "correct": "B",
+      "explanation": "BaSO₄ is an insoluble white precipitate formed in the reaction."
+    },
+    {
+      "id": "SCI10CH01-Q030",
+      "topic": "Displacement and Double Displacement Reactions",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The reaction Na₂SO₄(aq) + BaCl₂(aq) → BaSO₄(s) + 2NaCl(aq) is also called a:",
+      "options": {
+        "A": "Precipitation reaction",
+        "B": "Combustion reaction",
+        "C": "Photochemical reaction",
+        "D": "Neutralisation only"
+      },
+      "correct": "A",
+      "explanation": "It produces insoluble barium sulphate, so it is a precipitation reaction."
+    },
+    {
+      "id": "SCI10CH01-Q031",
+      "topic": "Displacement and Double Displacement Reactions",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Which equation represents a displacement reaction?",
+      "options": {
+        "A": "CaO + H₂O → Ca(OH)₂",
+        "B": "2AgCl → 2Ag + Cl₂",
+        "C": "Zn + 2AgNO₃ → Zn(NO₃)₂ + 2Ag",
+        "D": "Na₂SO₄ + BaCl₂ → BaSO₄ + 2NaCl"
+      },
+      "correct": "C",
+      "explanation": "Zinc displaces silver from silver nitrate, so this is a displacement reaction."
+    },
+    {
+      "id": "SCI10CH01-Q032",
+      "topic": "Displacement and Double Displacement Reactions",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Which statement correctly distinguishes displacement from double displacement reactions?",
+      "options": {
+        "A": "Displacement has one product; double displacement has no products",
+        "B": "Displacement involves one element replacing another; double displacement involves exchange of ions",
+        "C": "Both always require sunlight",
+        "D": "Both always produce gases"
+      },
+      "correct": "B",
+      "explanation": "In displacement, a more reactive element replaces a less reactive one; in double displacement, ions are exchanged between compounds."
+    },
+    {
+      "id": "SCI10CH01-Q033",
+      "topic": "Oxidation, Reduction, Corrosion and Rancidity",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Oxidation may be defined as:",
+      "options": {
+        "A": "Gain of oxygen or loss of hydrogen",
+        "B": "Loss of oxygen or gain of hydrogen",
+        "C": "Gain of nitrogen only",
+        "D": "Loss of electrons only at this level"
+      },
+      "correct": "A",
+      "explanation": "In this chapter, oxidation is described as gain of oxygen or loss of hydrogen."
+    },
+    {
+      "id": "SCI10CH01-Q034",
+      "topic": "Oxidation, Reduction, Corrosion and Rancidity",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Reduction may be defined as:",
+      "options": {
+        "A": "Gain of oxygen",
+        "B": "Loss of hydrogen",
+        "C": "Loss of oxygen or gain of hydrogen",
+        "D": "Gain of carbon dioxide"
+      },
+      "correct": "C",
+      "explanation": "Reduction is the loss of oxygen or gain of hydrogen."
+    },
+    {
+      "id": "SCI10CH01-Q035",
+      "topic": "Oxidation, Reduction, Corrosion and Rancidity",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "When copper powder is heated in air, the black compound formed is:",
+      "options": {
+        "A": "Copper sulphate",
+        "B": "Copper oxide",
+        "C": "Copper nitrate",
+        "D": "Copper chloride"
+      },
+      "correct": "B",
+      "explanation": "Copper gains oxygen on heating and forms black copper(II) oxide."
+    },
+    {
+      "id": "SCI10CH01-Q036",
+      "topic": "Oxidation, Reduction, Corrosion and Rancidity",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "In CuO + H₂ → Cu + H₂O, which substance is reduced?",
+      "options": {
+        "A": "Hydrogen",
+        "B": "Copper oxide",
+        "C": "Water",
+        "D": "Copper"
+      },
+      "correct": "B",
+      "explanation": "Copper oxide loses oxygen to form copper, so CuO is reduced."
+    },
+    {
+      "id": "SCI10CH01-Q037",
+      "topic": "Oxidation, Reduction, Corrosion and Rancidity",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "In the reaction 2PbO + C → 2Pb + CO₂, which statement is correct?",
+      "options": {
+        "A": "Lead is oxidised and carbon is reduced",
+        "B": "Lead oxide is reduced and carbon is oxidised",
+        "C": "Both lead oxide and carbon are reduced",
+        "D": "No redox change occurs"
+      },
+      "correct": "B",
+      "explanation": "PbO loses oxygen and is reduced to Pb, while carbon gains oxygen and is oxidised to CO₂."
+    },
+    {
+      "id": "SCI10CH01-Q038",
+      "topic": "Oxidation, Reduction, Corrosion and Rancidity",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Why is paint applied to iron articles?",
+      "options": {
+        "A": "To increase their density",
+        "B": "To prevent contact with air and moisture",
+        "C": "To make iron more reactive",
+        "D": "To convert iron into steel"
+      },
+      "correct": "B",
+      "explanation": "Paint forms a protective layer that prevents air and moisture from reaching iron and causing corrosion."
+    },
+    {
+      "id": "SCI10CH01-Q039",
+      "topic": "Oxidation, Reduction, Corrosion and Rancidity",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Rancidity is mainly caused by the:",
+      "options": {
+        "A": "Reduction of fats and oils",
+        "B": "Oxidation of fats and oils",
+        "C": "Freezing of fats and oils",
+        "D": "Evaporation of water from food"
+      },
+      "correct": "B",
+      "explanation": "Rancidity occurs when fats and oils are oxidised, producing unpleasant smell and taste."
+    },
+    {
+      "id": "SCI10CH01-Q040",
+      "topic": "Oxidation, Reduction, Corrosion and Rancidity",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Why are packets of oily food often flushed with nitrogen?",
+      "options": {
+        "A": "To increase the food's mass",
+        "B": "To prevent oxidation and rancidity",
+        "C": "To make the packet colder",
+        "D": "To produce a stronger smell"
+      },
+      "correct": "B",
+      "explanation": "Nitrogen is relatively unreactive and reduces contact with oxygen, slowing rancidity."
+    }
+  ],
+  "tests": [
+    {
+      "testId": "SCI10CH01-T01",
+      "testTitle": "Topic Test 1",
+      "testType": "TOPIC_TEST",
+      "topic": "Chemical Reactions and Observations",
+      "questionLabel": "Related questions: Q1-Q8",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH01-Q001",
+        "SCI10CH01-Q002",
+        "SCI10CH01-Q003",
+        "SCI10CH01-Q004",
+        "SCI10CH01-Q005",
+        "SCI10CH01-Q006",
+        "SCI10CH01-Q007",
+        "SCI10CH01-Q008"
       ]
-    };
+    },
+    {
+      "testId": "SCI10CH01-T02",
+      "testTitle": "Topic Test 2",
+      "testType": "TOPIC_TEST",
+      "topic": "Chemical Equations and Balancing",
+      "questionLabel": "Related questions: Q9-Q16",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH01-Q009",
+        "SCI10CH01-Q010",
+        "SCI10CH01-Q011",
+        "SCI10CH01-Q012",
+        "SCI10CH01-Q013",
+        "SCI10CH01-Q014",
+        "SCI10CH01-Q015",
+        "SCI10CH01-Q016"
+      ]
+    },
+    {
+      "testId": "SCI10CH01-T03",
+      "testTitle": "Topic Test 3",
+      "testType": "TOPIC_TEST",
+      "topic": "Combination, Decomposition and Energy Changes",
+      "questionLabel": "Related questions: Q17-Q24",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH01-Q017",
+        "SCI10CH01-Q018",
+        "SCI10CH01-Q019",
+        "SCI10CH01-Q020",
+        "SCI10CH01-Q021",
+        "SCI10CH01-Q022",
+        "SCI10CH01-Q023",
+        "SCI10CH01-Q024"
+      ]
+    },
+    {
+      "testId": "SCI10CH01-T04",
+      "testTitle": "Topic Test 4",
+      "testType": "TOPIC_TEST",
+      "topic": "Displacement and Double Displacement Reactions",
+      "questionLabel": "Related questions: Q25-Q32",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH01-Q025",
+        "SCI10CH01-Q026",
+        "SCI10CH01-Q027",
+        "SCI10CH01-Q028",
+        "SCI10CH01-Q029",
+        "SCI10CH01-Q030",
+        "SCI10CH01-Q031",
+        "SCI10CH01-Q032"
+      ]
+    },
+    {
+      "testId": "SCI10CH01-T05",
+      "testTitle": "Topic Test 5",
+      "testType": "TOPIC_TEST",
+      "topic": "Oxidation, Reduction, Corrosion and Rancidity",
+      "questionLabel": "Related questions: Q33-Q40",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH01-Q033",
+        "SCI10CH01-Q034",
+        "SCI10CH01-Q035",
+        "SCI10CH01-Q036",
+        "SCI10CH01-Q037",
+        "SCI10CH01-Q038",
+        "SCI10CH01-Q039",
+        "SCI10CH01-Q040"
+      ]
+    },
+    {
+      "testId": "SCI10CH01-FLT01",
+      "testTitle": "Full-Length Test 1",
+      "testType": "FULL_LENGTH",
+      "topic": "Complete Chapter — Set A",
+      "questionLabel": "20 balanced questions from all five chapter topics",
+      "instructions": "20 questions • 1 mark each • Full chapter assessment • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH01-Q001",
+        "SCI10CH01-Q003",
+        "SCI10CH01-Q005",
+        "SCI10CH01-Q007",
+        "SCI10CH01-Q009",
+        "SCI10CH01-Q011",
+        "SCI10CH01-Q013",
+        "SCI10CH01-Q015",
+        "SCI10CH01-Q017",
+        "SCI10CH01-Q019",
+        "SCI10CH01-Q021",
+        "SCI10CH01-Q023",
+        "SCI10CH01-Q025",
+        "SCI10CH01-Q027",
+        "SCI10CH01-Q029",
+        "SCI10CH01-Q031",
+        "SCI10CH01-Q033",
+        "SCI10CH01-Q035",
+        "SCI10CH01-Q037",
+        "SCI10CH01-Q039"
+      ]
+    },
+    {
+      "testId": "SCI10CH01-FLT02",
+      "testTitle": "Full-Length Test 2",
+      "testType": "FULL_LENGTH",
+      "topic": "Complete Chapter — Set B",
+      "questionLabel": "20 balanced questions from all five chapter topics",
+      "instructions": "20 questions • 1 mark each • Full chapter assessment • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH01-Q002",
+        "SCI10CH01-Q004",
+        "SCI10CH01-Q006",
+        "SCI10CH01-Q008",
+        "SCI10CH01-Q010",
+        "SCI10CH01-Q012",
+        "SCI10CH01-Q014",
+        "SCI10CH01-Q016",
+        "SCI10CH01-Q018",
+        "SCI10CH01-Q020",
+        "SCI10CH01-Q022",
+        "SCI10CH01-Q024",
+        "SCI10CH01-Q026",
+        "SCI10CH01-Q028",
+        "SCI10CH01-Q030",
+        "SCI10CH01-Q032",
+        "SCI10CH01-Q034",
+        "SCI10CH01-Q036",
+        "SCI10CH01-Q038",
+        "SCI10CH01-Q040"
+      ]
+    }
+  ]
+};
   </script>
+
   <script src="../../assets/js/static-mcq-engine.js"></script>
 </body>
 </html>
