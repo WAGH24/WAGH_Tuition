@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | WAGH Tuition Classes</title>
+  <link rel="icon" href="assets/images/favicon.png">
+  <link rel="stylesheet" href="assets/css/admin.css">
+  <link rel="stylesheet" href="assets/css/admin-ai.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="admin.html">
+      <img src="assets/images/logo.png" alt="WTC">
+      <span>Admin Dashboard</span>
+    </a>
+    <div class="top-actions">
+      <span data-user-name>Admin</span>
+      <span class="avatar" data-user-avatar>A</span>
+      <button class="btn danger small" onclick="WTC_AUTH.logout()">Logout</button>
+    </div>
+  </div>
+</header>
+
+<main class="main-area">
+  <section class="hero-card">
+    <h1>Admin Dashboard</h1>
+    <p class="muted">Manage platform data from WTC_CONTENT_ENGINE and AI content from WTC_AI_CONTENT_ENGINE.</p>
+  </section>
+
+  <br>
+
+  <section class="grid grid-3">
+    <div class="card"><h3>Students</h3><p id="studentTotal">Loading...</p></div>
+    <div class="card"><h3>Teachers</h3><p id="teacherTotal">Loading...</p></div>
+    <div class="card"><h3>Logs</h3><p id="logTotal">Loading...</p></div>
+  </section>
+
+  <br>
+
+  <div class="card">
+    <h2>📚 Content Manager</h2>
+    <p class="muted">Manage subjects, chapters and feature URLs.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:15px;">
+      <button class="btn" onclick="showPanel('contentManagerPanel',this)">📚 Open Content Manager</button>
+    </div>
+  </div>
+
+  <section id="contentManagerPanel" class="panel">
+    <div class="card">
+      <h2>📚 Content Manager</h2>
+      <p class="muted">This section will manage SUBJECT_MASTER, CHAPTER_MASTER and CHAPTER_LIST.</p>
+
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:15px;">
+        <button class="btn small">Subjects</button>
+        <button class="btn small">Chapters</button>
+        <button class="btn small">Feature URLs</button>
+      </div>
+
+      <div style="margin-top:18px;padding:15px;border-radius:14px;background:#f8fafc;">
+        <h3>Subject Manager</h3>
+        <form id="subjectManagerForm" style="display:grid;gap:10px;margin-top:12px;">
+          <input name="subjectId" placeholder="Subject ID e.g. SCI10" required>
+          <input name="subjectName" placeholder="Subject Name e.g. Science" required>
+          <input name="icon" placeholder="Icon e.g. 🔬">
+          <select name="board">
+            <option>CBSE</option>
+            <option>GSEB</option>
+          </select>
+          <select name="className">
+            <option>Class 5</option>
+            <option>Class 6</option>
+            <option>Class 7</option>
+            <option>Class 8</option>
+            <option>Class 9</option>
+            <option>Class 10</option>
+          </select>
+          <select name="medium">
+            <option>English Medium</option>
+            <option>Gujarati Medium</option>
+          </select>
+          <input name="description" placeholder="Description">
+          <select name="status">
+            <option>Active</option>
+            <option>Inactive</option>
+          </select>
+          <input name="sortOrder" type="number" placeholder="Sort Order">
+          <button class="btn" type="submit">💾 Save Subject</button>
+        </form>
+
+        <br>
+        <button class="btn small outline" onclick="AdminApp.loadSubjectsManager()">🔄 Refresh Subjects</button>
+        <div id="subjectManagerList" style="margin-top:15px;">Subjects will appear here.</div>
+      </div>
+
+      <!-- chapter update by admin -->
+
+      <div style="margin-top:18px;padding:15px;border-radius:14px;background:#f8fafc;">
+  <h3>Chapter Manager</h3>
+
+  <form id="chapterManagerForm" style="display:grid;gap:10px;margin-top:12px;">
+    <input name="chapterId" placeholder="Chapter ID e.g. SCI10CH9" required>
+    <input name="subjectId" placeholder="Subject ID e.g. SCI10" required>
+    <input name="chapterNo" placeholder="Chapter No e.g. 9">
+    <input name="chapterName" placeholder="Chapter Name e.g. Heredity and Evolution" required>
+
+    <select name="board">
+      <option>CBSE</option>
+      <option>GSEB</option>
+    </select>
+
+    <select name="className">
+      <option>Class 5</option>
+      <option>Class 6</option>
+      <option>Class 7</option>
+      <option>Class 8</option>
+      <option>Class 9</option>
+      <option>Class 10</option>
+    </select>
+
+    <select name="medium">
+      <option>English Medium</option>
+      <option>Gujarati Medium</option>
+    </select>
+
+    <input name="description" placeholder="Description e.g. Class 10 Science Chapter 9">
+
+    <select name="status">
+      <option>Active</option>
+      <option>Inactive</option>
+    </select>
+
+    <input name="sortOrder" type="number" placeholder="Sort Order e.g. 9">
+
+    <button class="btn" type="submit">💾 Save Chapter</button>
+  </form>
+
+  <br>
+
+  <button class="btn small outline" onclick="AdminApp.loadChaptersManager()">🔄 Refresh Chapters</button>
+
+  <div id="chapterManagerList" style="margin-top:15px;">
+    Chapters will appear here.
+  </div>
+
+        <!-- features of chapter form for update to excel by admin -->
+
+    <div style="margin-top:18px;padding:15px;border-radius:14px;background:#f8fafc;">
+  <h3>Feature URL Manager</h3>
+
+  <form id="featureUrlManagerForm" style="display:grid;gap:10px;margin-top:12px;">
+    <input name="chapterId" placeholder="Chapter ID e.g. SCI10CH9" required>
+
+    <button class="btn small outline" type="button" onclick="AdminApp.loadChapterFeaturesManager()">
+      🔍 Load Feature URLs
+    </button>
+
+    <input name="lessonUrl" placeholder="Lesson URL">
+    <input name="notesUrl" placeholder="Notes URL">
+    <input name="mcqUrl" placeholder="MCQ Test URL">
+    <input name="worksheetUrl" placeholder="Worksheet URL">
+    <input name="answerWritingUrl" placeholder="Answer Writing URL">
+    <input name="videoUrl" placeholder="Video URL">
+    <input name="revisionUrl" placeholder="Revision URL">
+    <input name="solutionUrl" placeholder="Solution URL e.g. solutions/cbse/english/class-10/cbse_e_c10_sci_ch09_solution.html">
+
+    <select name="status">
+      <option>Active</option>
+      <option>Inactive</option>
+    </select>
+
+    <button class="btn" type="submit">💾 Save Feature URLs</button>
+  </form>
+
+  <div id="featureUrlManagerStatus" style="margin-top:15px;">
+    Enter Chapter ID and load or save feature URLs.
+  </div>
+</div>
+      </div>
+    </div>
+  </section>
+
+  <br>
+
+  <div class="card">
+    <h2>🤖 AI Content Engine</h2>
+    <p class="muted">Upload chapter PDF, image or text and let AI generate learning content automatically.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:15px;">
+      <button class="btn" onclick="showPanel('aiContentEnginePanel',this)">🤖 Open AI Engine</button>
+    </div>
+  </div>
+
+  <section id="aiContentEnginePanel" class="panel">
+    <div class="ai-engine-panel">
+      <div class="ai-hero">
+        <h2>🤖 AI Chapter Extraction Engine</h2>
+        <p>Upload PDF/image or paste chapter text. The system extracts OCR text, detects chapter structure, separates inside-chapter and end-exercise questions, then generates Lesson, MCQ, Worksheet and Solutions.</p>
+      </div>
+
+      <div class="ai-card">
+        <h3>1. Upload / Paste Chapter Source</h3>
+        <div class="ai-grid">
+          <div><label>Source Type</label><select id="aiSourceType"><option value="text">Pasted Text</option><option value="pdf">PDF</option><option value="image">Image / Scan</option></select></div>
+          <div><label>Board</label><select id="aiBoard"><option>CBSE</option><option>GSEB</option></select></div>
+          <div><label>Class</label><select id="aiClassName"><option>Class 5</option><option>Class 6</option><option>Class 7</option><option>Class 8</option><option>Class 9</option><option>Class 10</option></select></div>
+          <div><label>Medium</label><select id="aiMedium"><option>English Medium</option><option>Gujarati Medium</option></select></div>
+          <div><label>Subject ID</label><input id="aiSubjectId" placeholder="SCI10 / MATH9"></div>
+          <div><label>Chapter ID</label><input id="aiChapterId" placeholder="SCI10CH1"></div>
+        </div>
+        <label>Upload PDF / Image / Scan</label>
+        <input id="aiFileInput" type="file" accept=".pdf,image/*">
+        <div id="aiFileName" class="ai-file-name">No file selected</div>
+        <label>Or Paste Extracted Chapter Text</label>
+        <textarea id="aiRawContent" placeholder="Paste chapter text here..."></textarea>
+        <input id="currentUploadId" type="hidden">
+        <div class="ai-action-row">
+          <button class="ai-btn" onclick="WTC_AI_CONTENT_ADMIN.submitInput()">Save to AI Queue</button>
+          <button class="ai-btn secondary" onclick="WTC_AI_CONTENT_ADMIN.runOCR()">Run OCR / Text Extraction</button>
+          <button class="ai-btn warning" onclick="WTC_AI_CONTENT_ADMIN.parseChapter()">Analyze Chapter</button>
+          <button class="ai-btn outline" onclick="WTC_AI_CONTENT_ADMIN.detectQuestions()">Detect Questions</button>
+          <button class="ai-btn success" onclick="WTC_AI_CONTENT_ADMIN.generateContent()">Generate Content</button>
+          <button class="ai-btn success" onclick="WTC_AI_CONTENT_ADMIN.fullPipeline()">Run Full Pipeline</button>
+        </div>
+      </div>
+
+      <div id="aiStatus" class="ai-status info">Ready.</div>
+
+      <div class="ai-card">
+        <h3>2. AI Queue</h3>
+        <button class="ai-btn outline" onclick="WTC_AI_CONTENT_ADMIN.refreshQueue()">Refresh Queue</button>
+        <div id="aiQueueTable" class="ai-table-wrap" style="margin-top:12px"></div>
+      </div>
+
+      <div id="aiPreview" class="ai-preview"><h3>Preview</h3><pre>OCR / metadata / generation result will appear here.</pre></div>
+    </div>
+  </section>
+
+  <br>
+</main>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/auth.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/assessment-config.js"></script>
+<script src="assets/js/assessment-api.js"></script>
+<script src="assets/js/ai-content.js"></script>
+<script src="assets/js/admin.js"></script>
+</body>
+</html>

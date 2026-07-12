@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portal | WAGH Tuition Classes</title>
+  <link rel="icon" href="assets/images/favicon.png">
+  <link rel="stylesheet" href="assets/css/student.css">
+  <link rel="stylesheet" href="assets/css/student-content.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="student.html"><img src="assets/images/logo.png" alt="WAGH Tuition Classes"><span>Student Portal</span></a>
+    <div class="top-actions">
+      <span class="hide-mobile" data-user-name>Student</span>
+      <span class="avatar" data-user-avatar>U</span>
+      <button class="btn danger small" onclick="WTC_AUTH.logout()">Logout</button>
+    </div>
+  </div>
+</header>
+
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="side-title"><img src="assets/images/logo.png" alt="WTC"><span>WTC Portal</span></div>
+    <nav class="side-nav">
+      <button class="active" data-nav="homeSection" onclick="StudentApp.show('homeSection')">🏠 Home</button>
+      <button data-nav="subjectsSection" onclick="StudentApp.show('subjectsSection')">📚 Subjects</button>
+      <button data-nav="progressSection" onclick="StudentApp.show('progressSection')">📈 Progress</button>
+      <button data-nav="profileSection" onclick="StudentApp.show('profileSection')">👤 Profile</button>
+    </nav>
+  </aside>
+
+  <main class="main-area">
+    <section id="homeSection" class="page-section active">
+      <div class="hero-card">
+        <span class="pill">Welcome back</span>
+        <h1>Hello, <span data-user-name>Student</span> 👋</h1>
+        <p id="studentMeta">Loading profile...</p>
+        <button class="btn" onclick="StudentApp.show('subjectsSection')">Continue Learning →</button>
+      </div>
+
+      <div class="stats-grid">
+        <div class="card stat-card"><small>Progress</small><b id="progressPercent">0%</b></div>
+        <div class="card stat-card"><small>Subjects</small><b id="subjectCount">0</b></div>
+        <div class="card stat-card"><small>Chapters</small><b id="chapterCount">0</b></div>
+        <div class="card stat-card"><small>Pending</small><b>3</b></div>
+      </div>
+
+      <div class="grid grid-2" style="margin-top:18px">
+        <div class="card">
+          <h3>Pending Tasks</h3>
+          <div class="task-list">
+            <div class="task-item"><span>Complete today’s MCQ</span><b>📝</b></div>
+            <div class="task-item"><span>Revise current chapter</span><b>📚</b></div>
+            <div class="task-item"><span>Practice answer writing</span><b>✍️</b></div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Today’s Progress</h3>
+          <div class="progress-track"><div id="progressFill" class="progress-fill" style="width:0%"></div></div>
+          <p class="muted">Progress will load from PROGRESS_TRACKER.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="subjectsSection" class="page-section">
+      <div class="section-head">
+        <div><h2>My Subjects</h2><p class="muted">Loaded according to your board, class and medium.</p></div>
+        <button class="btn outline" onclick="StudentApp.loadSubjects()">Refresh</button>
+      </div>
+      <div id="subjectGrid" class="grid grid-3"></div>
+    </section>
+
+    <section id="chaptersSection" class="page-section">
+      <div class="section-head">
+        <div><h2 id="chapterSubjectTitle">Subject</h2><p class="muted">Select a chapter.</p></div>
+        <button class="btn outline" onclick="StudentApp.backToSubjects()">← Subjects</button> <!-- back button to subject -->
+      </div>
+      <div id="chapterGrid" class="grid grid-3"></div>
+    </section>
+
+    <section id="featuresSection" class="page-section">
+      <div class="section-head">
+        <div><h2 id="featureChapterTitle">Chapter</h2><p class="muted">Open lesson, test, notes or answer writing.</p></div>
+        <button class="btn outline" onclick="StudentApp.backToChapters()">← Chapters</button> <!-- back button to go chapter -->
+      </div>
+      <div id="featureGrid" class="feature-grid"></div>
+    </section>
+
+    <section id="progressSection" class="page-section">
+      <h2>Progress</h2>
+      <div class="card">
+        <h3>Learning Progress</h3>
+        <div class="progress-track"><div id="progressFill2" class="progress-fill" style="width:0%"></div></div>
+        <p id="progressText" class="muted">Loading progress...</p>
+      </div>
+    </section>
+
+    <section id="profileSection" class="page-section">
+      <h2>Profile</h2>
+      <div class="card">
+        <form id="profileForm">
+          <div class="profile-grid">
+            <div class="field"><label>Name</label><input name="name"></div>
+            <div class="field"><label>Mobile</label><input name="mobile" inputmode="numeric"></div>
+            <div class="field"><label>Board</label><select name="board"><option>CBSE</option><option>GSEB</option></select></div>
+            <div class="field"><label>Class</label><select name="className"><option>Class 5</option><option>Class 6</option><option>Class 7</option><option>Class 8</option><option>Class 9</option><option>Class 10</option></select></div>
+            <div class="field"><label>Medium</label><select name="medium"><option>English Medium</option><option>Gujarati Medium</option></select></div>
+            <div class="field"><label>New Password</label><input name="password" type="password" placeholder="Optional"></div>
+          </div>
+          <br>
+          <button class="btn success" type="submit">Save & Improve Profile</button>
+        </form>
+      </div>
+    </section>
+  </main>
+</div>
+
+<nav class="bottom-nav">
+  <button class="active" data-nav="homeSection" onclick="StudentApp.show('homeSection')">🏠<br>Home</button>
+  <button data-nav="subjectsSection" onclick="StudentApp.show('subjectsSection')">📚<br>Subjects</button>
+  <button data-nav="progressSection" onclick="StudentApp.show('progressSection')">📈<br>Progress</button>
+  <button data-nav="profileSection" onclick="StudentApp.show('profileSection')">👤<br>Profile</button>
+</nav>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/auth.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/assessment-config.js"></script>
+<script src="assets/js/assessment-api.js"></script>
+<script src="assets/js/student-dynamic-content.js"></script>
+<!-- Feature Engine must load before student.js -->
+<script src="assets/js/feature-engine.js"></script>
+<script src="assets/js/student.js"></script>
+</body>
+</html>
