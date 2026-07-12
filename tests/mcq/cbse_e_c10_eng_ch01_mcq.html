@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="CBSE Class 10 English Chapter 1 MCQ practice for A Letter to God, Dust of Snow, and Fire and Ice."
+  />
+  <title>Chapter 1 MCQ | CBSE Class 10 English</title>
+  <link rel="stylesheet" href="../../assets/css/static-mcq-engine.css" />
+</head>
+<body>
+  <div class="wtc-mcq-app">
+    <header class="hero-card">
+      <div class="hero-left">
+        <p class="eyebrow">WAGH Tuition Classes • Static MCQ Engine v1.1</p>
+        <h1 id="testTitle">MCQ Practice</h1>
+        <p id="testMeta" class="meta"></p>
+      </div>
+
+      <div class="hero-score">
+        <div class="ring" id="progressRing">
+          <span id="answeredCount">0</span>
+        </div>
+        <small>Answered</small>
+      </div>
+    </header>
+
+    <section class="sticky-dashboard">
+      <div class="dash-item">
+        <span>Student</span>
+        <b id="studentName">Checking login...</b>
+      </div>
+      <div class="dash-item">
+        <span>Time</span>
+        <b id="timer">00:00</b>
+      </div>
+      <div class="dash-item">
+        <span>Questions</span>
+        <b id="questionCount">0</b>
+      </div>
+      <button id="themeBtn" class="ghost-btn" type="button">🌙</button>
+      <button id="reviewBtn" class="ghost-btn" type="button">Review</button>
+    </section>
+
+    <section class="notice-card">
+      Select one option for each question. After submit, correct answers and
+      explanations will open. Your result will be saved for progress report.
+    </section>
+
+    <main class="layout-grid">
+      <aside class="question-palette" aria-label="Question palette">
+        <h3>Question Palette</h3>
+        <div id="paletteGrid" class="palette-grid"></div>
+      </aside>
+
+      <section id="questionList" class="question-list"></section>
+    </main>
+
+    <section id="resultBox" class="result-box hidden"></section>
+
+    <div class="bottom-action-bar">
+      <button id="submitBtn" class="primary-btn" type="button">
+        Submit Test
+      </button>
+      <button id="retryBtn" class="secondary-btn hidden" type="button">
+        Choose Another Test
+      </button>
+      <button id="topBtn" class="secondary-btn" type="button">Top</button>
+    </div>
+  </div>
+
+  <!-- Keep this exact loading order. -->
+  <script src="../../assets/js/config.js"></script>
+  <script src="../../assets/js/auth.js"></script>
+  <script src="../../assets/js/api.js"></script>
+
+  <script>
+    window.WTC_STATIC_MCQ = {
+  "pageTitle": "Chapter 1: A Letter to God - MCQ Practice",
+  "selectorDescription": "Choose a topic-wise test or a full-length chapter test covering A Letter to God, Dust of Snow, and Fire and Ice.",
+  "board": "CBSE",
+  "className": "Class 10",
+  "medium": "English Medium",
+  "subjectId": "ENG10",
+  "subjectName": "English",
+  "chapterId": "ENG10CH01",
+  "chapterName": "A Letter to God",
+  "instructions": "Select one option for each question. After submit, correct answers and explanations will open. Progress saves automatically.",
+  "questionBank": [
+    {
+      "id": "ENG10CH01-Q001",
+      "topic": "A Letter to God — Setting and Storm",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Where was Lencho’s house situated?",
+      "options": {
+        "A": "Beside a busy road",
+        "B": "On the crest of a low hill",
+        "C": "Inside a crowded town",
+        "D": "Near the post office"
+      },
+      "correct": "B",
+      "explanation": "The house, the only one in the valley, stood on the crest of a low hill."
+    },
+    {
+      "id": "ENG10CH01-Q002",
+      "topic": "A Letter to God — Setting and Storm",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "What did the field of ripe corn need for a good harvest?",
+      "options": {
+        "A": "A downpour or at least a shower",
+        "B": "A strong wind",
+        "C": "A hailstorm",
+        "D": "A layer of snow"
+      },
+      "correct": "A",
+      "explanation": "The earth needed a downpour or at least a shower."
+    },
+    {
+      "id": "ENG10CH01-Q003",
+      "topic": "A Letter to God — Setting and Storm",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "From which direction did the huge mountains of clouds approach?",
+      "options": {
+        "A": "South-west",
+        "B": "North-west",
+        "C": "North-east",
+        "D": "South-east"
+      },
+      "correct": "C",
+      "explanation": "Lencho watched the sky towards the north-east, where the clouds appeared."
+    },
+    {
+      "id": "ENG10CH01-Q004",
+      "topic": "A Letter to God — Setting and Storm",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "What did Lencho call the large raindrops?",
+      "options": {
+        "A": "Silver pearls",
+        "B": "Ten-cent pieces",
+        "C": "Five-cent pieces",
+        "D": "Golden seeds"
+      },
+      "correct": "B",
+      "explanation": "Lencho compared the big drops to ten-cent pieces."
+    },
+    {
+      "id": "ENG10CH01-Q005",
+      "topic": "A Letter to God — Setting and Storm",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "What did Lencho call the smaller raindrops?",
+      "options": {
+        "A": "Five-cent pieces",
+        "B": "Ten-cent pieces",
+        "C": "Frozen pearls",
+        "D": "White salt"
+      },
+      "correct": "A",
+      "explanation": "He said the little drops were five-cent pieces."
+    },
+    {
+      "id": "ENG10CH01-Q006",
+      "topic": "A Letter to God — Setting and Storm",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "For approximately how long did the hail fall?",
+      "options": {
+        "A": "Ten minutes",
+        "B": "Half an hour",
+        "C": "One hour",
+        "D": "The whole night"
+      },
+      "correct": "C",
+      "explanation": "The hail rained on the whole valley for an hour."
+    },
+    {
+      "id": "ENG10CH01-Q007",
+      "topic": "A Letter to God — Setting and Storm",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "After the hailstorm, the field looked as if it were covered with:",
+      "options": {
+        "A": "Cotton",
+        "B": "Flour",
+        "C": "Salt",
+        "D": "Sand"
+      },
+      "correct": "C",
+      "explanation": "The field was white, as if it had been covered with salt."
+    },
+    {
+      "id": "ENG10CH01-Q008",
+      "topic": "A Letter to God — Setting and Storm",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "According to Lencho, what would have left more of the crop than the hailstorm did?",
+      "options": {
+        "A": "A flood",
+        "B": "A plague of locusts",
+        "C": "A drought",
+        "D": "A fire"
+      },
+      "correct": "B",
+      "explanation": "Lencho said that a plague of locusts would have left more than the hail had."
+    },
+    {
+      "id": "ENG10CH01-Q009",
+      "topic": "A Letter to God — Faith and the Letter",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "What was the family’s single hope after the crop was destroyed?",
+      "options": {
+        "A": "Help from neighbours",
+        "B": "A bank loan",
+        "C": "Help from God",
+        "D": "Another immediate rainfall"
+      },
+      "correct": "C",
+      "explanation": "The family’s only hope was help from God."
+    },
+    {
+      "id": "ENG10CH01-Q010",
+      "topic": "A Letter to God — Faith and the Letter",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Why is Lencho described as “an ox of a man”?",
+      "options": {
+        "A": "He owned many oxen",
+        "B": "He was strong and worked very hard",
+        "C": "He was unable to write",
+        "D": "He was easily frightened"
+      },
+      "correct": "B",
+      "explanation": "The phrase highlights Lencho’s physical strength and tireless work in the fields."
+    },
+    {
+      "id": "ENG10CH01-Q011",
+      "topic": "A Letter to God — Faith and the Letter",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "When did Lencho begin writing his first letter to God?",
+      "options": {
+        "A": "Saturday night",
+        "B": "Sunday at daybreak",
+        "C": "Monday afternoon",
+        "D": "During the storm"
+      },
+      "correct": "B",
+      "explanation": "The following Sunday, at daybreak, Lencho began writing the letter."
+    },
+    {
+      "id": "ENG10CH01-Q012",
+      "topic": "A Letter to God — Faith and the Letter",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "How much money did Lencho ask God to send?",
+      "options": {
+        "A": "Thirty pesos",
+        "B": "Seventy pesos",
+        "C": "One hundred pesos",
+        "D": "One hundred and seventy pesos"
+      },
+      "correct": "C",
+      "explanation": "Lencho asked for one hundred pesos."
+    },
+    {
+      "id": "ENG10CH01-Q013",
+      "topic": "A Letter to God — Faith and the Letter",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Why did Lencho need the money?",
+      "options": {
+        "A": "To buy a new house",
+        "B": "To sow his field again and live until the next crop",
+        "C": "To repay the postmaster",
+        "D": "To send his children to town"
+      },
+      "correct": "B",
+      "explanation": "He needed the money to sow the field again and support his family until the next crop."
+    },
+    {
+      "id": "ENG10CH01-Q014",
+      "topic": "A Letter to God — Faith and the Letter",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "What address did Lencho write on the envelope?",
+      "options": {
+        "A": "To the Postmaster",
+        "B": "To the Mayor",
+        "C": "To God",
+        "D": "To the Village Priest"
+      },
+      "correct": "C",
+      "explanation": "Lencho simply addressed the envelope “To God”."
+    },
+    {
+      "id": "ENG10CH01-Q015",
+      "topic": "A Letter to God — Faith and the Letter",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Who first showed Lencho’s unusual letter to the postmaster?",
+      "options": {
+        "A": "Lencho’s wife",
+        "B": "A postman",
+        "C": "The mayor",
+        "D": "One of Lencho’s sons"
+      },
+      "correct": "B",
+      "explanation": "A postman who also helped at the post office showed the letter to his boss."
+    },
+    {
+      "id": "ENG10CH01-Q016",
+      "topic": "A Letter to God — Faith and the Letter",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Why was Lencho not surprised to receive money in a letter?",
+      "options": {
+        "A": "He had seen the postmaster collect it",
+        "B": "He had complete faith that God would help him",
+        "C": "His wife had warned him",
+        "D": "He thought it was a bank payment"
+      },
+      "correct": "B",
+      "explanation": "His complete faith in God made the arrival of the money seem natural to him."
+    },
+    {
+      "id": "ENG10CH01-Q017",
+      "topic": "A Letter to God — Kindness, Character and Irony",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "How did the postmaster react when he first saw the letter addressed to God?",
+      "options": {
+        "A": "He became angry",
+        "B": "He laughed, then became serious",
+        "C": "He threw it away",
+        "D": "He immediately returned it"
+      },
+      "correct": "B",
+      "explanation": "The postmaster laughed at first, but soon became serious and admired Lencho’s faith."
+    },
+    {
+      "id": "ENG10CH01-Q018",
+      "topic": "A Letter to God — Kindness, Character and Irony",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Why did the postmaster decide to answer Lencho’s letter?",
+      "options": {
+        "A": "To prove that the post office was efficient",
+        "B": "To preserve Lencho’s faith in God",
+        "C": "To punish the postman",
+        "D": "To collect postage charges"
+      },
+      "correct": "B",
+      "explanation": "He wanted Lencho’s faith in God to remain unshaken."
+    },
+    {
+      "id": "ENG10CH01-Q019",
+      "topic": "A Letter to God — Kindness, Character and Irony",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "How much money could the postmaster and his helpers collect?",
+      "options": {
+        "A": "Thirty pesos",
+        "B": "Fifty pesos",
+        "C": "Seventy pesos",
+        "D": "One hundred pesos"
+      },
+      "correct": "C",
+      "explanation": "They managed to collect seventy pesos."
+    },
+    {
+      "id": "ENG10CH01-Q020",
+      "topic": "A Letter to God — Kindness, Character and Irony",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "How was the letter containing the money signed?",
+      "options": {
+        "A": "The Postmaster",
+        "B": "A Friend",
+        "C": "God",
+        "D": "The Post Office"
+      },
+      "correct": "C",
+      "explanation": "The postmaster signed it with the single word “God”."
+    },
+    {
+      "id": "ENG10CH01-Q021",
+      "topic": "A Letter to God — Kindness, Character and Irony",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What made Lencho angry after he opened the envelope?",
+      "options": {
+        "A": "The letter had no signature",
+        "B": "Only seventy pesos were inside",
+        "C": "The envelope was torn",
+        "D": "The money arrived late"
+      },
+      "correct": "B",
+      "explanation": "He had asked for one hundred pesos but received only seventy."
+    },
+    {
+      "id": "ENG10CH01-Q022",
+      "topic": "A Letter to God — Kindness, Character and Irony",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Whom did Lencho suspect of taking the missing money?",
+      "options": {
+        "A": "His neighbours",
+        "B": "His sons",
+        "C": "The post office employees",
+        "D": "The postmaster’s friends"
+      },
+      "correct": "C",
+      "explanation": "Lencho believed the post office employees had taken the remaining thirty pesos."
+    },
+    {
+      "id": "ENG10CH01-Q023",
+      "topic": "A Letter to God — Kindness, Character and Irony",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "What is the central irony at the end of “A Letter to God”?",
+      "options": {
+        "A": "Lencho receives more money than he requested",
+        "B": "Lencho calls the very people who helped him “crooks”",
+        "C": "The postmaster refuses to read the second letter",
+        "D": "The hailstorm improves the harvest"
+      },
+      "correct": "B",
+      "explanation": "The helpers who sacrificed money for Lencho are wrongly accused by him of stealing it."
+    },
+    {
+      "id": "ENG10CH01-Q024",
+      "topic": "A Letter to God — Kindness, Character and Irony",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The word “amiable” used for the postmaster means:",
+      "options": {
+        "A": "Friendly and pleasant",
+        "B": "Strict and impatient",
+        "C": "Weak and fearful",
+        "D": "Silent and secretive"
+      },
+      "correct": "A",
+      "explanation": "“Amiable” means friendly, pleasant and good-natured."
+    },
+    {
+      "id": "ENG10CH01-Q025",
+      "topic": "Dust of Snow",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Who wrote the poem “Dust of Snow”?",
+      "options": {
+        "A": "G. L. Fuentes",
+        "B": "Robert Frost",
+        "C": "William Blake",
+        "D": "John Keats"
+      },
+      "correct": "B",
+      "explanation": "“Dust of Snow” was written by Robert Frost."
+    },
+    {
+      "id": "ENG10CH01-Q026",
+      "topic": "Dust of Snow",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which bird shook the dust of snow onto the poet?",
+      "options": {
+        "A": "Sparrow",
+        "B": "Crow",
+        "C": "Robin",
+        "D": "Eagle"
+      },
+      "correct": "B",
+      "explanation": "A crow shook the snow down on the poet."
+    },
+    {
+      "id": "ENG10CH01-Q027",
+      "topic": "Dust of Snow",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "From which tree did the snow fall?",
+      "options": {
+        "A": "Oak tree",
+        "B": "Pine tree",
+        "C": "Hemlock tree",
+        "D": "Maple tree"
+      },
+      "correct": "C",
+      "explanation": "The crow shook the dust of snow from a hemlock tree."
+    },
+    {
+      "id": "ENG10CH01-Q028",
+      "topic": "Dust of Snow",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What does the phrase “dust of snow” refer to?",
+      "options": {
+        "A": "A snowstorm covering a town",
+        "B": "Fine particles or light flakes of snow",
+        "C": "Dust mixed with rain",
+        "D": "Frozen hailstones"
+      },
+      "correct": "B",
+      "explanation": "It refers to the fine, powdery particles of snow that fell from the tree."
+    },
+    {
+      "id": "ENG10CH01-Q029",
+      "topic": "Dust of Snow",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What effect did the incident have on the poet?",
+      "options": {
+        "A": "It worsened his mood",
+        "B": "It changed his mood and saved part of his day",
+        "C": "It made him leave the forest",
+        "D": "It reminded him of danger"
+      },
+      "correct": "B",
+      "explanation": "The small natural incident changed his mood and rescued part of a day he had regretted."
+    },
+    {
+      "id": "ENG10CH01-Q030",
+      "topic": "Dust of Snow",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "What does the word “rued” mean in the poem?",
+      "options": {
+        "A": "Celebrated",
+        "B": "Regretted",
+        "C": "Forgotten",
+        "D": "Planned"
+      },
+      "correct": "B",
+      "explanation": "“Rued” means regretted or felt sorry about."
+    },
+    {
+      "id": "ENG10CH01-Q031",
+      "topic": "Dust of Snow",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "The crow and the hemlock tree traditionally suggest gloom, yet in the poem they:",
+      "options": {
+        "A": "Cause permanent sadness",
+        "B": "Become agents of a positive change",
+        "C": "Represent wealth and success",
+        "D": "Warn the poet of a storm"
+      },
+      "correct": "B",
+      "explanation": "Frost uses normally negative symbols to bring healing and a positive change of mood."
+    },
+    {
+      "id": "ENG10CH01-Q032",
+      "topic": "Dust of Snow",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What is the rhyme scheme of “Dust of Snow”?",
+      "options": {
+        "A": "aabb ccdd",
+        "B": "abab cdcd",
+        "C": "abba cddc",
+        "D": "abcabcdd"
+      },
+      "correct": "B",
+      "explanation": "The two stanzas follow the rhyme scheme abab cdcd."
+    },
+    {
+      "id": "ENG10CH01-Q033",
+      "topic": "Fire and Ice",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Who is the poet of “Fire and Ice”?",
+      "options": {
+        "A": "Robert Frost",
+        "B": "G. L. Fuentes",
+        "C": "Walt Whitman",
+        "D": "Carl Sandburg"
+      },
+      "correct": "A",
+      "explanation": "“Fire and Ice” was written by Robert Frost."
+    },
+    {
+      "id": "ENG10CH01-Q034",
+      "topic": "Fire and Ice",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "What does “fire” primarily symbolise in the poem?",
+      "options": {
+        "A": "Peace",
+        "B": "Desire",
+        "C": "Patience",
+        "D": "Knowledge"
+      },
+      "correct": "B",
+      "explanation": "Fire represents uncontrolled desire, greed and passionate craving."
+    },
+    {
+      "id": "ENG10CH01-Q035",
+      "topic": "Fire and Ice",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "What does “ice” primarily symbolise?",
+      "options": {
+        "A": "Hatred and cold indifference",
+        "B": "Hope and kindness",
+        "C": "Courage and energy",
+        "D": "Wisdom and calmness"
+      },
+      "correct": "A",
+      "explanation": "Ice symbolises hatred, coldness, rigidity and indifference."
+    },
+    {
+      "id": "ENG10CH01-Q036",
+      "topic": "Fire and Ice",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The word “perish” means:",
+      "options": {
+        "A": "To grow",
+        "B": "To disappear temporarily",
+        "C": "To die or be destroyed",
+        "D": "To freeze"
+      },
+      "correct": "C",
+      "explanation": "“Perish” means to die or be destroyed."
+    },
+    {
+      "id": "ENG10CH01-Q037",
+      "topic": "Fire and Ice",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The word “suffice” means:",
+      "options": {
+        "A": "Be sufficient",
+        "B": "Become dangerous",
+        "C": "Burn completely",
+        "D": "Remain uncertain"
+      },
+      "correct": "A",
+      "explanation": "“Suffice” means to be enough or sufficient."
+    },
+    {
+      "id": "ENG10CH01-Q038",
+      "topic": "Fire and Ice",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Why does the poet initially agree with those who favour fire?",
+      "options": {
+        "A": "He has physically touched fire",
+        "B": "He has experienced the power of desire",
+        "C": "He dislikes winter",
+        "D": "He believes fire is harmless"
+      },
+      "correct": "B",
+      "explanation": "From his experience of desire, the poet understands how destructive it can be."
+    },
+    {
+      "id": "ENG10CH01-Q039",
+      "topic": "Fire and Ice",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "What is the poem’s central idea?",
+      "options": {
+        "A": "Only natural disasters can end the world",
+        "B": "Human emotions such as desire and hatred can cause destruction",
+        "C": "Ice is always more dangerous than fire",
+        "D": "The world cannot be destroyed"
+      },
+      "correct": "B",
+      "explanation": "The poem warns that destructive human emotions can ruin individuals and the world."
+    },
+    {
+      "id": "ENG10CH01-Q040",
+      "topic": "Fire and Ice",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What is the rhyme scheme of “Fire and Ice”?",
+      "options": {
+        "A": "abab cdcd",
+        "B": "aabbccdd",
+        "C": "abaabcbcb",
+        "D": "abbaaccaa"
+      },
+      "correct": "C",
+      "explanation": "The poem follows the rhyme scheme abaabcbcb."
+    }
+  ],
+  "tests": [
+    {
+      "testId": "ENG10CH01-T01",
+      "testTitle": "Topic Test 1",
+      "testType": "TOPIC_TEST",
+      "topic": "A Letter to God — Setting and Storm",
+      "questionLabel": "Related questions: Q1-Q8",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "ENG10CH01-Q001",
+        "ENG10CH01-Q002",
+        "ENG10CH01-Q003",
+        "ENG10CH01-Q004",
+        "ENG10CH01-Q005",
+        "ENG10CH01-Q006",
+        "ENG10CH01-Q007",
+        "ENG10CH01-Q008"
+      ]
+    },
+    {
+      "testId": "ENG10CH01-T02",
+      "testTitle": "Topic Test 2",
+      "testType": "TOPIC_TEST",
+      "topic": "A Letter to God — Faith and the Letter",
+      "questionLabel": "Related questions: Q9-Q16",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "ENG10CH01-Q009",
+        "ENG10CH01-Q010",
+        "ENG10CH01-Q011",
+        "ENG10CH01-Q012",
+        "ENG10CH01-Q013",
+        "ENG10CH01-Q014",
+        "ENG10CH01-Q015",
+        "ENG10CH01-Q016"
+      ]
+    },
+    {
+      "testId": "ENG10CH01-T03",
+      "testTitle": "Topic Test 3",
+      "testType": "TOPIC_TEST",
+      "topic": "A Letter to God — Kindness, Character and Irony",
+      "questionLabel": "Related questions: Q17-Q24",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "ENG10CH01-Q017",
+        "ENG10CH01-Q018",
+        "ENG10CH01-Q019",
+        "ENG10CH01-Q020",
+        "ENG10CH01-Q021",
+        "ENG10CH01-Q022",
+        "ENG10CH01-Q023",
+        "ENG10CH01-Q024"
+      ]
+    },
+    {
+      "testId": "ENG10CH01-T04",
+      "testTitle": "Topic Test 4",
+      "testType": "TOPIC_TEST",
+      "topic": "Dust of Snow",
+      "questionLabel": "Related questions: Q25-Q32",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "ENG10CH01-Q025",
+        "ENG10CH01-Q026",
+        "ENG10CH01-Q027",
+        "ENG10CH01-Q028",
+        "ENG10CH01-Q029",
+        "ENG10CH01-Q030",
+        "ENG10CH01-Q031",
+        "ENG10CH01-Q032"
+      ]
+    },
+    {
+      "testId": "ENG10CH01-T05",
+      "testTitle": "Topic Test 5",
+      "testType": "TOPIC_TEST",
+      "topic": "Fire and Ice",
+      "questionLabel": "Related questions: Q33-Q40",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "ENG10CH01-Q033",
+        "ENG10CH01-Q034",
+        "ENG10CH01-Q035",
+        "ENG10CH01-Q036",
+        "ENG10CH01-Q037",
+        "ENG10CH01-Q038",
+        "ENG10CH01-Q039",
+        "ENG10CH01-Q040"
+      ]
+    },
+    {
+      "testId": "ENG10CH01-FLT01",
+      "testTitle": "Full-Length Test 1",
+      "testType": "FULL_LENGTH",
+      "topic": "Complete Chapter — Set A",
+      "questionLabel": "20 balanced questions from all three texts",
+      "instructions": "20 questions • 1 mark each • Full chapter assessment • Progress saves automatically after submit.",
+      "questionIds": [
+        "ENG10CH01-Q001",
+        "ENG10CH01-Q003",
+        "ENG10CH01-Q005",
+        "ENG10CH01-Q007",
+        "ENG10CH01-Q009",
+        "ENG10CH01-Q011",
+        "ENG10CH01-Q013",
+        "ENG10CH01-Q015",
+        "ENG10CH01-Q017",
+        "ENG10CH01-Q019",
+        "ENG10CH01-Q021",
+        "ENG10CH01-Q023",
+        "ENG10CH01-Q025",
+        "ENG10CH01-Q027",
+        "ENG10CH01-Q029",
+        "ENG10CH01-Q031",
+        "ENG10CH01-Q033",
+        "ENG10CH01-Q035",
+        "ENG10CH01-Q037",
+        "ENG10CH01-Q039"
+      ]
+    },
+    {
+      "testId": "ENG10CH01-FLT02",
+      "testTitle": "Full-Length Test 2",
+      "testType": "FULL_LENGTH",
+      "topic": "Complete Chapter — Set B",
+      "questionLabel": "20 balanced questions from all three texts",
+      "instructions": "20 questions • 1 mark each • Full chapter assessment • Progress saves automatically after submit.",
+      "questionIds": [
+        "ENG10CH01-Q002",
+        "ENG10CH01-Q004",
+        "ENG10CH01-Q006",
+        "ENG10CH01-Q008",
+        "ENG10CH01-Q010",
+        "ENG10CH01-Q012",
+        "ENG10CH01-Q014",
+        "ENG10CH01-Q016",
+        "ENG10CH01-Q018",
+        "ENG10CH01-Q020",
+        "ENG10CH01-Q022",
+        "ENG10CH01-Q024",
+        "ENG10CH01-Q026",
+        "ENG10CH01-Q028",
+        "ENG10CH01-Q030",
+        "ENG10CH01-Q032",
+        "ENG10CH01-Q034",
+        "ENG10CH01-Q036",
+        "ENG10CH01-Q038",
+        "ENG10CH01-Q040"
+      ]
+    }
+  ]
+};
+  </script>
+
+  <script src="../../assets/js/static-mcq-engine.js"></script>
+</body>
+</html>
