@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="GSEB ધોરણ 10 ગણિત પ્રકરણ 2 બહુપદીઓ માટે ગુજરાતી માધ્યમની MCQ અભ્યાસ કસોટી."
+  />
+  <title>પ્રકરણ 2 MCQ | GSEB ધોરણ 10 ગણિત</title>
+  <link rel="stylesheet" href="../../assets/css/static-mcq-engine.css" />
+</head>
+<body>
+  <div class="wtc-mcq-app">
+    <header class="hero-card">
+      <div class="hero-left">
+        <p class="eyebrow">WAGH Tuition Classes • Static MCQ Engine v1.1</p>
+        <h1 id="testTitle">MCQ અભ્યાસ</h1>
+        <p id="testMeta" class="meta"></p>
+      </div>
+
+      <div class="hero-score">
+        <div class="ring" id="progressRing">
+          <span id="answeredCount">0</span>
+        </div>
+        <small>જવાબ આપેલા</small>
+      </div>
+    </header>
+
+    <section class="sticky-dashboard">
+      <div class="dash-item">
+        <span>વિદ્યાર્થી</span>
+        <b id="studentName">લૉગિન ચકાસી રહ્યું છે...</b>
+      </div>
+      <div class="dash-item">
+        <span>સમય</span>
+        <b id="timer">00:00</b>
+      </div>
+      <div class="dash-item">
+        <span>પ્રશ્નો</span>
+        <b id="questionCount">0</b>
+      </div>
+      <button id="themeBtn" class="ghost-btn" type="button">🌙</button>
+      <button id="reviewBtn" class="ghost-btn" type="button">સમીક્ષા</button>
+    </section>
+
+    <section class="notice-card">
+      દરેક પ્રશ્ન માટે એક વિકલ્પ પસંદ કરો. સબમિટ કર્યા પછી સાચા જવાબો અને
+      સમજૂતી ખુલશે. તમારું પરિણામ પ્રગતિ અહેવાલ માટે સાચવાશે.
+    </section>
+
+    <main class="layout-grid">
+      <aside class="question-palette" aria-label="પ્રશ્ન પેલેટ">
+        <h3>પ્રશ્ન પેલેટ</h3>
+        <div id="paletteGrid" class="palette-grid"></div>
+      </aside>
+
+      <section id="questionList" class="question-list"></section>
+    </main>
+
+    <section id="resultBox" class="result-box hidden"></section>
+
+    <div class="bottom-action-bar">
+      <button id="submitBtn" class="primary-btn" type="button">
+        કસોટી સબમિટ કરો
+      </button>
+      <button id="retryBtn" class="secondary-btn hidden" type="button">
+        બીજી કસોટી પસંદ કરો
+      </button>
+      <button id="topBtn" class="secondary-btn" type="button">ઉપર</button>
+    </div>
+  </div>
+
+  <!-- Keep this exact loading order. -->
+  <script src="../../assets/js/config.js"></script>
+  <script src="../../assets/js/auth.js"></script>
+  <script src="../../assets/js/api.js"></script>
+
+  <script>
+    window.WTC_STATIC_MCQ = {
+  "pageTitle": "પ્રકરણ 2: બહુપદીઓ - MCQ અભ્યાસ",
+  "selectorDescription": "બહુપદીની ઘાત અને કિંમત, શૂન્યોનો ભૌમિતિક અર્થ, શૂન્યો અને સહગુણકો વચ્ચેનો સંબંધ તથા દ્વિઘાત અને ત્રિઘાત બહુપદીઓ માટે વિષયવાર અથવા પૂર્ણ લંબાઈની કસોટી પસંદ કરો.",
+  "board": "GSEB",
+  "className": "ધોરણ 10",
+  "medium": "ગુજરાતી માધ્યમ",
+  "subjectId": "MATH10G",
+  "subjectName": "ગણિત",
+  "chapterId": "MATH10GCH02",
+  "chapterName": "બહુપદીઓ",
+  "instructions": "દરેક પ્રશ્ન માટે એક વિકલ્પ પસંદ કરો. સબમિટ કર્યા પછી સાચા જવાબો અને સમજૂતી ખુલશે. પ્રગતિ આપમેળે સાચવાશે.",
+  "questionBank": [
+    {
+      "id": "MATH10GCH02-Q001",
+      "topic": "બહુપદીની સંકલ્પના અને કિંમતો",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "બહુપદી 7u⁶ - (3/2)u⁴ + 4u² + u - 8 ની ઘાત કેટલી છે?",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "correct": "D",
+      "explanation": "u નો મહત્તમ શૂન્યેતર ઘાત 6 છે. તેથી બહુપદીની ઘાત 6 છે."
+    },
+    {
+      "id": "MATH10GCH02-Q002",
+      "topic": "બહુપદીની સંકલ્પના અને કિંમતો",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "નીચેનામાંથી કયું x માં બહુપદી નથી?",
+      "options": {
+        "A": "4x + 2",
+        "B": "x² - 3x + 5",
+        "C": "1/(x - 1)",
+        "D": "5x³ - 4x² + x - 2"
+      },
+      "correct": "C",
+      "explanation": "બહુપદીમાં ચલના ઘાત ઋણ ન હોય તેવા પૂર્ણાંક હોવા જોઈએ. 1/(x - 1) માં ચલ છેદમાં છે, તેથી તે બહુપદી નથી."
+    },
+    {
+      "id": "MATH10GCH02-Q003",
+      "topic": "બહુપદીની સંકલ્પના અને કિંમતો",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "x માં દ્વિઘાત બહુપદીનું સામાન્ય સ્વરૂપ કયું છે?",
+      "options": {
+        "A": "ax + b, જ્યાં a ≠ 0",
+        "B": "ax² + bx + c, જ્યાં a ≠ 0",
+        "C": "ax³ + bx² + cx + d, જ્યાં a ≠ 0",
+        "D": "a/x + b"
+      },
+      "correct": "B",
+      "explanation": "દ્વિઘાત બહુપદીની ઘાત 2 હોય છે અને તેનું સામાન્ય સ્વરૂપ ax² + bx + c છે, જ્યાં a ≠ 0."
+    },
+    {
+      "id": "MATH10GCH02-Q004",
+      "topic": "બહુપદીની સંકલ્પના અને કિંમતો",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "જો p(x) = x² - 3x - 4 હોય, તો p(2) ની કિંમત કેટલી?",
+      "options": {
+        "A": "-6",
+        "B": "-4",
+        "C": "0",
+        "D": "6"
+      },
+      "correct": "A",
+      "explanation": "p(2) = 2² - 3(2) - 4 = 4 - 6 - 4 = -6."
+    },
+    {
+      "id": "MATH10GCH02-Q005",
+      "topic": "બહુપદીની સંકલ્પના અને કિંમતો",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "બહુપદી x² - 3x - 4 ના શૂન્યો કયા છે?",
+      "options": {
+        "A": "1 અને -4",
+        "B": "-1 અને 4",
+        "C": "-2 અને 2",
+        "D": "0 અને 3"
+      },
+      "correct": "B",
+      "explanation": "x² - 3x - 4 = (x - 4)(x + 1). તેથી તેના શૂન્યો 4 અને -1 છે."
+    },
+    {
+      "id": "MATH10GCH02-Q006",
+      "topic": "બહુપદીની સંકલ્પના અને કિંમતો",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "સુરેખ બહુપદી ax + b, જ્યાં a ≠ 0, નું શૂન્ય કયું છે?",
+      "options": {
+        "A": "a/b",
+        "B": "b/a",
+        "C": "-b/a",
+        "D": "-a/b"
+      },
+      "correct": "C",
+      "explanation": "ax + b = 0 માંથી ax = -b અને x = -b/a મળે છે."
+    },
+    {
+      "id": "MATH10GCH02-Q007",
+      "topic": "બહુપદીની સંકલ્પના અને કિંમતો",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "જો p(x) = x² - 3x - 4 હોય, તો p(0) ની કિંમત કેટલી?",
+      "options": {
+        "A": "-4",
+        "B": "-3",
+        "C": "0",
+        "D": "4"
+      },
+      "correct": "A",
+      "explanation": "p(0) = 0² - 3(0) - 4 = -4. આ બહુપદીનું અચળ પદ પણ છે."
+    },
+    {
+      "id": "MATH10GCH02-Q008",
+      "topic": "બહુપદીની સંકલ્પના અને કિંમતો",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "x માં ત્રિઘાત બહુપદીનું સામાન્ય સ્વરૂપ કયું છે?",
+      "options": {
+        "A": "ax² + bx + c",
+        "B": "ax³ + bx² + cx + d, જ્યાં a ≠ 0",
+        "C": "ax + b",
+        "D": "ax⁴ + bx³ + cx² + dx + e"
+      },
+      "correct": "B",
+      "explanation": "ત્રિઘાત બહુપદીની ઘાત 3 હોય છે અને તેનું સામાન્ય સ્વરૂપ ax³ + bx² + cx + d છે, જ્યાં a ≠ 0."
+    },
+    {
+      "id": "MATH10GCH02-Q009",
+      "topic": "બહુપદીના શૂન્યોનો ભૌમિતિક અર્થ",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "બહુપદી p(x) ના શૂન્યોનો ભૌમિતિક અર્થ શું છે?",
+      "options": {
+        "A": "y = p(x) નો આલેખ y-અક્ષને જ્યાં છેદે તે બિંદુઓના y-યામ",
+        "B": "y = p(x) નો આલેખ x-અક્ષને જ્યાં છેદે તે બિંદુઓના x-યામ",
+        "C": "ફક્ત મૂળબિંદુના યામ",
+        "D": "આલેખના મહત્તમ બિંદુઓ"
+      },
+      "correct": "B",
+      "explanation": "x-અક્ષ પર y = p(x) = 0 હોય છે. તેથી x-અક્ષ સાથેના છેદબિંદુઓના x-યામ બહુપદીના શૂન્યો છે."
+    },
+    {
+      "id": "MATH10GCH02-Q010",
+      "topic": "બહુપદીના શૂન્યોનો ભૌમિતિક અર્થ",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "શૂન્યેતર સુરેખ બહુપદીને કેટલા શૂન્યો હોય છે?",
+      "options": {
+        "A": "કોઈ શૂન્ય નથી",
+        "B": "ચોક્કસ એક શૂન્ય",
+        "C": "ચોક્કસ બે શૂન્યો",
+        "D": "વધુમાં વધુ ત્રણ શૂન્યો"
+      },
+      "correct": "B",
+      "explanation": "સુરેખ બહુપદીનો આલેખ સીધી રેખા છે, જે x-અક્ષને ચોક્કસ એક બિંદુએ છેદે છે."
+    },
+    {
+      "id": "MATH10GCH02-Q011",
+      "topic": "બહુપદીના શૂન્યોનો ભૌમિતિક અર્થ",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "દ્વિઘાત બહુપદીને વધુમાં વધુ કેટલા શૂન્યો હોઈ શકે?",
+      "options": {
+        "A": "એક",
+        "B": "બે",
+        "C": "ત્રણ",
+        "D": "ચાર"
+      },
+      "correct": "B",
+      "explanation": "દ્વિઘાત બહુપદીનો આલેખ પરવલય છે, જે x-અક્ષને વધુમાં વધુ બે બિંદુઓએ છેદી શકે છે."
+    },
+    {
+      "id": "MATH10GCH02-Q012",
+      "topic": "બહુપદીના શૂન્યોનો ભૌમિતિક અર્થ",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "ત્રિઘાત બહુપદીને વધુમાં વધુ કેટલા શૂન્યો હોઈ શકે?",
+      "options": {
+        "A": "એક",
+        "B": "બે",
+        "C": "ત્રણ",
+        "D": "ચાર"
+      },
+      "correct": "C",
+      "explanation": "ઘાત 3 ધરાવતી બહુપદીને વધુમાં વધુ ત્રણ શૂન્યો હોઈ શકે છે."
+    },
+    {
+      "id": "MATH10GCH02-Q013",
+      "topic": "બહુપદીના શૂન્યોનો ભૌમિતિક અર્થ",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "ત્રિઘાત બહુપદી x³ - 4x ના શૂન્યો કયા છે?",
+      "options": {
+        "A": "-4, 0 અને 4",
+        "B": "-2, 0 અને 2",
+        "C": "-1, 0 અને 1",
+        "D": "0, 2 અને 4"
+      },
+      "correct": "B",
+      "explanation": "x³ - 4x = x(x² - 4) = x(x - 2)(x + 2). તેથી તેના શૂન્યો -2, 0 અને 2 છે."
+    },
+    {
+      "id": "MATH10GCH02-Q014",
+      "topic": "બહુપદીના શૂન્યોનો ભૌમિતિક અર્થ",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "બહુપદી x³ નું શૂન્ય કયું છે?",
+      "options": {
+        "A": "કોઈ શૂન્ય નથી",
+        "B": "માત્ર 0",
+        "C": "-1 અને 1",
+        "D": "ત્રણ જુદા શૂન્યો"
+      },
+      "correct": "B",
+      "explanation": "x³ = 0 ફક્ત x = 0 માટે થાય છે. તેથી 0 તેનું એકમાત્ર શૂન્ય છે."
+    },
+    {
+      "id": "MATH10GCH02-Q015",
+      "topic": "બહુપદીના શૂન્યોનો ભૌમિતિક અર્થ",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "x³ - x² ના શૂન્યો કયા છે?",
+      "options": {
+        "A": "-1 અને 0",
+        "B": "0 અને 1",
+        "C": "-1 અને 1",
+        "D": "0, 1 અને 2"
+      },
+      "correct": "B",
+      "explanation": "x³ - x² = x²(x - 1). તેથી તેના શૂન્યો 0 અને 1 છે."
+    },
+    {
+      "id": "MATH10GCH02-Q016",
+      "topic": "બહુપદીના શૂન્યોનો ભૌમિતિક અર્થ",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "જો કોઈ દ્વિઘાત બહુપદીનો આલેખ સંપૂર્ણપણે x-અક્ષની ઉપર હોય, તો તેને કેટલા વાસ્તવિક શૂન્યો હોય?",
+      "options": {
+        "A": "કોઈ વાસ્તવિક શૂન્ય નથી",
+        "B": "ચોક્કસ એક વાસ્તવિક શૂન્ય",
+        "C": "ચોક્કસ બે વાસ્તવિક શૂન્યો",
+        "D": "ચોક્કસ ત્રણ વાસ્તવિક શૂન્યો"
+      },
+      "correct": "A",
+      "explanation": "આલેખ x-અક્ષને છેદતો કે સ્પર્શતો નથી, તેથી p(x) = 0 કરતું કોઈ વાસ્તવિક x મળતું નથી."
+    },
+    {
+      "id": "MATH10GCH02-Q017",
+      "topic": "દ્વિઘાત બહુપદીના શૂન્યો અને સહગુણકો",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "2x² - 8x + 6 ના શૂન્યો કયા છે?",
+      "options": {
+        "A": "1 અને 3",
+        "B": "-1 અને -3",
+        "C": "2 અને 3",
+        "D": "-1 અને 3"
+      },
+      "correct": "A",
+      "explanation": "2x² - 8x + 6 = 2(x² - 4x + 3) = 2(x - 1)(x - 3). તેથી શૂન્યો 1 અને 3 છે."
+    },
+    {
+      "id": "MATH10GCH02-Q018",
+      "topic": "દ્વિઘાત બહુપદીના શૂન્યો અને સહગુણકો",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "2x² - 8x + 6 ના શૂન્યોનો સરવાળો અને ગુણાકાર અનુક્રમે કેટલા છે?",
+      "options": {
+        "A": "4 અને 3",
+        "B": "-4 અને 3",
+        "C": "4 અને -3",
+        "D": "3 અને 4"
+      },
+      "correct": "A",
+      "explanation": "ax² + bx + c માટે સરવાળો = -b/a = -(-8)/2 = 4 અને ગુણાકાર = c/a = 6/2 = 3."
+    },
+    {
+      "id": "MATH10GCH02-Q019",
+      "topic": "દ્વિઘાત બહુપદીના શૂન્યો અને સહગુણકો",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "3x² + 5x - 2 ના શૂન્યો કયા છે?",
+      "options": {
+        "A": "1/3 અને -2",
+        "B": "-1/3 અને 2",
+        "C": "1/3 અને 2",
+        "D": "-1/3 અને -2"
+      },
+      "correct": "A",
+      "explanation": "3x² + 5x - 2 = (3x - 1)(x + 2). તેથી તેના શૂન્યો 1/3 અને -2 છે."
+    },
+    {
+      "id": "MATH10GCH02-Q020",
+      "topic": "દ્વિઘાત બહુપદીના શૂન્યો અને સહગુણકો",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "3x² + 5x - 2 ના શૂન્યોનો સરવાળો અને ગુણાકાર અનુક્રમે કેટલા છે?",
+      "options": {
+        "A": "5/3 અને -2/3",
+        "B": "-5/3 અને -2/3",
+        "C": "-5/3 અને 2/3",
+        "D": "5/3 અને 2/3"
+      },
+      "correct": "B",
+      "explanation": "સરવાળો = -b/a = -5/3 અને ગુણાકાર = c/a = -2/3."
+    },
+    {
+      "id": "MATH10GCH02-Q021",
+      "topic": "દ્વિઘાત બહુપદીના શૂન્યો અને સહગુણકો",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "જો α અને β એ ax² + bx + c, જ્યાં a ≠ 0, ના શૂન્યો હોય, તો α + β કેટલું?",
+      "options": {
+        "A": "b/a",
+        "B": "-b/a",
+        "C": "c/a",
+        "D": "-c/a"
+      },
+      "correct": "B",
+      "explanation": "દ્વિઘાત બહુપદી ax² + bx + c માટે શૂન્યોનો સરવાળો α + β = -b/a છે."
+    },
+    {
+      "id": "MATH10GCH02-Q022",
+      "topic": "દ્વિઘાત બહુપદીના શૂન્યો અને સહગુણકો",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "જો α અને β એ ax² + bx + c, જ્યાં a ≠ 0, ના શૂન્યો હોય, તો αβ કેટલું?",
+      "options": {
+        "A": "b/a",
+        "B": "-b/a",
+        "C": "c/a",
+        "D": "-c/a"
+      },
+      "correct": "C",
+      "explanation": "દ્વિઘાત બહુપદી ax² + bx + c માટે શૂન્યોનો ગુણાકાર αβ = c/a છે."
+    },
+    {
+      "id": "MATH10GCH02-Q023",
+      "topic": "દ્વિઘાત બહુપદીના શૂન્યો અને સહગુણકો",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "x² + 7x + 10 ના શૂન્યો કયા છે?",
+      "options": {
+        "A": "2 અને 5",
+        "B": "-2 અને -5",
+        "C": "2 અને -5",
+        "D": "-2 અને 5"
+      },
+      "correct": "B",
+      "explanation": "x² + 7x + 10 = (x + 2)(x + 5). તેથી તેના શૂન્યો -2 અને -5 છે."
+    },
+    {
+      "id": "MATH10GCH02-Q024",
+      "topic": "દ્વિઘાત બહુપદીના શૂન્યો અને સહગુણકો",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "x² - 3 ના શૂન્યો કયા છે?",
+      "options": {
+        "A": "3 અને -3",
+        "B": "√3 અને -√3",
+        "C": "0 અને 3",
+        "D": "1 અને -3"
+      },
+      "correct": "B",
+      "explanation": "x² - 3 = (x - √3)(x + √3). તેથી તેના શૂન્યો √3 અને -√3 છે."
+    },
+    {
+      "id": "MATH10GCH02-Q025",
+      "topic": "શૂન્યો શોધવા અને દ્વિઘાત બહુપદી રચવા",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "x² - 2x - 8 ના શૂન્યો કયા છે?",
+      "options": {
+        "A": "4 અને -2",
+        "B": "-4 અને 2",
+        "C": "4 અને 2",
+        "D": "-4 અને -2"
+      },
+      "correct": "A",
+      "explanation": "x² - 2x - 8 = (x - 4)(x + 2). તેથી તેના શૂન્યો 4 અને -2 છે."
+    },
+    {
+      "id": "MATH10GCH02-Q026",
+      "topic": "શૂન્યો શોધવા અને દ્વિઘાત બહુપદી રચવા",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "4s² - 4s + 1 નું શૂન્ય કયું છે?",
+      "options": {
+        "A": "1",
+        "B": "-1",
+        "C": "1/2, બે વખત",
+        "D": "-1/2, બે વખત"
+      },
+      "correct": "C",
+      "explanation": "4s² - 4s + 1 = (2s - 1)². તેથી s = 1/2 પુનરાવર્તિત શૂન્ય છે."
+    },
+    {
+      "id": "MATH10GCH02-Q027",
+      "topic": "શૂન્યો શોધવા અને દ્વિઘાત બહુપદી રચવા",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "6x² - 7x - 3 ના શૂન્યો કયા છે?",
+      "options": {
+        "A": "3/2 અને -1/3",
+        "B": "-3/2 અને 1/3",
+        "C": "3 અને -1/2",
+        "D": "-3 અને 1/2"
+      },
+      "correct": "A",
+      "explanation": "6x² - 7x - 3 = (3x + 1)(2x - 3). તેથી તેના શૂન્યો -1/3 અને 3/2 છે."
+    },
+    {
+      "id": "MATH10GCH02-Q028",
+      "topic": "શૂન્યો શોધવા અને દ્વિઘાત બહુપદી રચવા",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "4u² + 8u ના શૂન્યો કયા છે?",
+      "options": {
+        "A": "0 અને 2",
+        "B": "0 અને -2",
+        "C": "2 અને -2",
+        "D": "0 અને -8"
+      },
+      "correct": "B",
+      "explanation": "4u² + 8u = 4u(u + 2). તેથી તેના શૂન્યો 0 અને -2 છે."
+    },
+    {
+      "id": "MATH10GCH02-Q029",
+      "topic": "શૂન્યો શોધવા અને દ્વિઘાત બહુપદી રચવા",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "t² - 15 ના શૂન્યો કયા છે?",
+      "options": {
+        "A": "15 અને -15",
+        "B": "√15 અને -√15",
+        "C": "0 અને 15",
+        "D": "5 અને -3"
+      },
+      "correct": "B",
+      "explanation": "t² - 15 = (t - √15)(t + √15). તેથી તેના શૂન્યો √15 અને -√15 છે."
+    },
+    {
+      "id": "MATH10GCH02-Q030",
+      "topic": "શૂન્યો શોધવા અને દ્વિઘાત બહુપદી રચવા",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "3x² - x - 4 ના શૂન્યો કયા છે?",
+      "options": {
+        "A": "4/3 અને -1",
+        "B": "-4/3 અને 1",
+        "C": "4 અને -1/3",
+        "D": "-4 અને 1/3"
+      },
+      "correct": "A",
+      "explanation": "3x² - x - 4 = (3x - 4)(x + 1). તેથી તેના શૂન્યો 4/3 અને -1 છે."
+    },
+    {
+      "id": "MATH10GCH02-Q031",
+      "topic": "શૂન્યો શોધવા અને દ્વિઘાત બહુપદી રચવા",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "જે દ્વિઘાત બહુપદીના શૂન્યોનો સરવાળો 1/4 અને ગુણાકાર -1 હોય તે કઈ?",
+      "options": {
+        "A": "4x² - x - 4",
+        "B": "4x² + x - 4",
+        "C": "x² - 4x - 1",
+        "D": "4x² - x + 4"
+      },
+      "correct": "A",
+      "explanation": "આવશ્યક બહુપદી x² - (1/4)x - 1 છે. 4 થી ગુણતાં 4x² - x - 4 મળે છે."
+    },
+    {
+      "id": "MATH10GCH02-Q032",
+      "topic": "શૂન્યો શોધવા અને દ્વિઘાત બહુપદી રચવા",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "જે દ્વિઘાત બહુપદીના શૂન્યોનો સરવાળો 4 અને ગુણાકાર 1 હોય તે કઈ?",
+      "options": {
+        "A": "x² + 4x + 1",
+        "B": "x² - 4x + 1",
+        "C": "x² + x - 4",
+        "D": "x² - x + 4"
+      },
+      "correct": "B",
+      "explanation": "શૂન્યોનો સરવાળો S અને ગુણાકાર P હોય, તો બહુપદી x² - Sx + P બને. તેથી x² - 4x + 1."
+    },
+    {
+      "id": "MATH10GCH02-Q033",
+      "topic": "ત્રિઘાત બહુપદીઓ અને મિશ્ર અભ્યાસ",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "જો α, β અને γ એ ax³ + bx² + cx + d ના શૂન્યો હોય, તો α + β + γ કેટલું?",
+      "options": {
+        "A": "b/a",
+        "B": "-b/a",
+        "C": "c/a",
+        "D": "-d/a"
+      },
+      "correct": "B",
+      "explanation": "ત્રિઘાત બહુપદી ax³ + bx² + cx + d માટે શૂન્યોનો સરવાળો α + β + γ = -b/a છે."
+    },
+    {
+      "id": "MATH10GCH02-Q034",
+      "topic": "ત્રિઘાત બહુપદીઓ અને મિશ્ર અભ્યાસ",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "2x³ - 5x² - 14x + 8 ના શૂન્યો કયા છે?",
+      "options": {
+        "A": "4, -2 અને 1/2",
+        "B": "-4, 2 અને -1/2",
+        "C": "4, 2 અને -1/2",
+        "D": "-4, -2 અને 1/2"
+      },
+      "correct": "A",
+      "explanation": "x = 4, x = -2 અને x = 1/2 મૂકતાં દરેક વખતે બહુપદીની કિંમત 0 મળે છે."
+    },
+    {
+      "id": "MATH10GCH02-Q035",
+      "topic": "ત્રિઘાત બહુપદીઓ અને મિશ્ર અભ્યાસ",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "2x³ - 5x² - 14x + 8 ના શૂન્યોનો સરવાળો કેટલો છે?",
+      "options": {
+        "A": "-5/2",
+        "B": "5/2",
+        "C": "-7",
+        "D": "4"
+      },
+      "correct": "B",
+      "explanation": "ax³ + bx² + cx + d માટે સરવાળો = -b/a. અહીં -(-5)/2 = 5/2."
+    },
+    {
+      "id": "MATH10GCH02-Q036",
+      "topic": "ત્રિઘાત બહુપદીઓ અને મિશ્ર અભ્યાસ",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "2x³ - 5x² - 14x + 8 ના શૂન્યોના બે-બે કરીને લેવાયેલા ગુણાકારોનો સરવાળો કેટલો છે?",
+      "options": {
+        "A": "7",
+        "B": "-7",
+        "C": "4",
+        "D": "-4"
+      },
+      "correct": "B",
+      "explanation": "ax³ + bx² + cx + d માટે αβ + βγ + γα = c/a. અહીં -14/2 = -7."
+    },
+    {
+      "id": "MATH10GCH02-Q037",
+      "topic": "ત્રિઘાત બહુપદીઓ અને મિશ્ર અભ્યાસ",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "2x³ - 5x² - 14x + 8 ના શૂન્યોનો ગુણાકાર કેટલો છે?",
+      "options": {
+        "A": "4",
+        "B": "-4",
+        "C": "8",
+        "D": "-8"
+      },
+      "correct": "B",
+      "explanation": "ax³ + bx² + cx + d માટે αβγ = -d/a. તેથી αβγ = -8/2 = -4."
+    },
+    {
+      "id": "MATH10GCH02-Q038",
+      "topic": "ત્રિઘાત બહુપદીઓ અને મિશ્ર અભ્યાસ",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "3x³ - 5x² - 11x - 3 ના શૂન્યોનો સમૂહ કયો છે?",
+      "options": {
+        "A": "3, -1 અને -1/3",
+        "B": "-3, 1 અને 1/3",
+        "C": "3, 1 અને -1/3",
+        "D": "-3, -1 અને 1/3"
+      },
+      "correct": "A",
+      "explanation": "સીધી મૂલ્યસ્થાપનથી p(3) = 0, p(-1) = 0 અને p(-1/3) = 0 મળે છે."
+    },
+    {
+      "id": "MATH10GCH02-Q039",
+      "topic": "ત્રિઘાત બહુપદીઓ અને મિશ્ર અભ્યાસ",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "3x³ - 5x² - 11x - 3 માટે α + β + γ, αβ + βγ + γα અને αβγ અનુક્રમે કેટલા છે?",
+      "options": {
+        "A": "5/3, -11/3 અને 1",
+        "B": "-5/3, 11/3 અને -1",
+        "C": "5/3, 11/3 અને -1",
+        "D": "-5/3, -11/3 અને 1"
+      },
+      "correct": "A",
+      "explanation": "ત્રિઘાત સંબંધો મુજબ સરવાળો = -b/a = 5/3, બે-બે ગુણાકારોનો સરવાળો = c/a = -11/3 અને ગુણાકાર = -d/a = 1."
+    },
+    {
+      "id": "MATH10GCH02-Q040",
+      "topic": "ત્રિઘાત બહુપદીઓ અને મિશ્ર અભ્યાસ",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "જે એકમુખી ત્રિઘાત બહુપદીના શૂન્યો 1, 2 અને 3 હોય તે કઈ?",
+      "options": {
+        "A": "x³ - 6x² + 11x - 6",
+        "B": "x³ + 6x² + 11x + 6",
+        "C": "x³ - 5x² + 6x",
+        "D": "x³ - 6x² - 11x + 6"
+      },
+      "correct": "A",
+      "explanation": "(x - 1)(x - 2)(x - 3) = x³ - 6x² + 11x - 6."
+    }
+  ],
+  "tests": [
+    {
+      "testId": "MATH10GCH02-T01",
+      "testTitle": "વિષય કસોટી 1",
+      "testType": "TOPIC_TEST",
+      "topic": "બહુપદીની સંકલ્પના અને કિંમતો",
+      "questionLabel": "સંબંધિત પ્રશ્નો: Q1-Q8",
+      "instructions": "8 પ્રશ્નો • દરેકનો 1 ગુણ • વિષયવાર અભ્યાસ • સબમિટ કર્યા પછી પ્રગતિ આપમેળે સાચવાશે.",
+      "questionIds": [
+        "MATH10GCH02-Q001",
+        "MATH10GCH02-Q002",
+        "MATH10GCH02-Q003",
+        "MATH10GCH02-Q004",
+        "MATH10GCH02-Q005",
+        "MATH10GCH02-Q006",
+        "MATH10GCH02-Q007",
+        "MATH10GCH02-Q008"
+      ]
+    },
+    {
+      "testId": "MATH10GCH02-T02",
+      "testTitle": "વિષય કસોટી 2",
+      "testType": "TOPIC_TEST",
+      "topic": "બહુપદીના શૂન્યોનો ભૌમિતિક અર્થ",
+      "questionLabel": "સંબંધિત પ્રશ્નો: Q9-Q16",
+      "instructions": "8 પ્રશ્નો • દરેકનો 1 ગુણ • વિષયવાર અભ્યાસ • સબમિટ કર્યા પછી પ્રગતિ આપમેળે સાચવાશે.",
+      "questionIds": [
+        "MATH10GCH02-Q009",
+        "MATH10GCH02-Q010",
+        "MATH10GCH02-Q011",
+        "MATH10GCH02-Q012",
+        "MATH10GCH02-Q013",
+        "MATH10GCH02-Q014",
+        "MATH10GCH02-Q015",
+        "MATH10GCH02-Q016"
+      ]
+    },
+    {
+      "testId": "MATH10GCH02-T03",
+      "testTitle": "વિષય કસોટી 3",
+      "testType": "TOPIC_TEST",
+      "topic": "દ્વિઘાત બહુપદીના શૂન્યો અને સહગુણકો",
+      "questionLabel": "સંબંધિત પ્રશ્નો: Q17-Q24",
+      "instructions": "8 પ્રશ્નો • દરેકનો 1 ગુણ • વિષયવાર અભ્યાસ • સબમિટ કર્યા પછી પ્રગતિ આપમેળે સાચવાશે.",
+      "questionIds": [
+        "MATH10GCH02-Q017",
+        "MATH10GCH02-Q018",
+        "MATH10GCH02-Q019",
+        "MATH10GCH02-Q020",
+        "MATH10GCH02-Q021",
+        "MATH10GCH02-Q022",
+        "MATH10GCH02-Q023",
+        "MATH10GCH02-Q024"
+      ]
+    },
+    {
+      "testId": "MATH10GCH02-T04",
+      "testTitle": "વિષય કસોટી 4",
+      "testType": "TOPIC_TEST",
+      "topic": "શૂન્યો શોધવા અને દ્વિઘાત બહુપદી રચવા",
+      "questionLabel": "સંબંધિત પ્રશ્નો: Q25-Q32",
+      "instructions": "8 પ્રશ્નો • દરેકનો 1 ગુણ • વિષયવાર અભ્યાસ • સબમિટ કર્યા પછી પ્રગતિ આપમેળે સાચવાશે.",
+      "questionIds": [
+        "MATH10GCH02-Q025",
+        "MATH10GCH02-Q026",
+        "MATH10GCH02-Q027",
+        "MATH10GCH02-Q028",
+        "MATH10GCH02-Q029",
+        "MATH10GCH02-Q030",
+        "MATH10GCH02-Q031",
+        "MATH10GCH02-Q032"
+      ]
+    },
+    {
+      "testId": "MATH10GCH02-T05",
+      "testTitle": "વિષય કસોટી 5",
+      "testType": "TOPIC_TEST",
+      "topic": "ત્રિઘાત બહુપદીઓ અને મિશ્ર અભ્યાસ",
+      "questionLabel": "સંબંધિત પ્રશ્નો: Q33-Q40",
+      "instructions": "8 પ્રશ્નો • દરેકનો 1 ગુણ • વિષયવાર અભ્યાસ • સબમિટ કર્યા પછી પ્રગતિ આપમેળે સાચવાશે.",
+      "questionIds": [
+        "MATH10GCH02-Q033",
+        "MATH10GCH02-Q034",
+        "MATH10GCH02-Q035",
+        "MATH10GCH02-Q036",
+        "MATH10GCH02-Q037",
+        "MATH10GCH02-Q038",
+        "MATH10GCH02-Q039",
+        "MATH10GCH02-Q040"
+      ]
+    },
+    {
+      "testId": "MATH10GCH02-FLT01",
+      "testTitle": "પૂર્ણ લંબાઈ કસોટી 1",
+      "testType": "FULL_LENGTH",
+      "topic": "સંપૂર્ણ પ્રકરણ",
+      "questionLabel": "સમગ્ર પ્રકરણ આવરી લેતા 20 સંતુલિત પ્રશ્નો",
+      "instructions": "20 પ્રશ્નો • દરેકનો 1 ગુણ • સમગ્ર પ્રકરણની કસોટી • સબમિટ કર્યા પછી પ્રગતિ આપમેળે સાચવાશે.",
+      "questionIds": [
+        "MATH10GCH02-Q001",
+        "MATH10GCH02-Q003",
+        "MATH10GCH02-Q005",
+        "MATH10GCH02-Q007",
+        "MATH10GCH02-Q009",
+        "MATH10GCH02-Q011",
+        "MATH10GCH02-Q013",
+        "MATH10GCH02-Q015",
+        "MATH10GCH02-Q017",
+        "MATH10GCH02-Q019",
+        "MATH10GCH02-Q021",
+        "MATH10GCH02-Q023",
+        "MATH10GCH02-Q025",
+        "MATH10GCH02-Q027",
+        "MATH10GCH02-Q029",
+        "MATH10GCH02-Q031",
+        "MATH10GCH02-Q033",
+        "MATH10GCH02-Q035",
+        "MATH10GCH02-Q037",
+        "MATH10GCH02-Q039"
+      ]
+    },
+    {
+      "testId": "MATH10GCH02-FLT02",
+      "testTitle": "પૂર્ણ લંબાઈ કસોટી 2",
+      "testType": "FULL_LENGTH",
+      "topic": "સંપૂર્ણ પ્રકરણ",
+      "questionLabel": "સમગ્ર પ્રકરણ આવરી લેતા 20 અલગ સંતુલિત પ્રશ્નો",
+      "instructions": "20 પ્રશ્નો • દરેકનો 1 ગુણ • સમગ્ર પ્રકરણની કસોટી • સબમિટ કર્યા પછી પ્રગતિ આપમેળે સાચવાશે.",
+      "questionIds": [
+        "MATH10GCH02-Q002",
+        "MATH10GCH02-Q004",
+        "MATH10GCH02-Q006",
+        "MATH10GCH02-Q008",
+        "MATH10GCH02-Q010",
+        "MATH10GCH02-Q012",
+        "MATH10GCH02-Q014",
+        "MATH10GCH02-Q016",
+        "MATH10GCH02-Q018",
+        "MATH10GCH02-Q020",
+        "MATH10GCH02-Q022",
+        "MATH10GCH02-Q024",
+        "MATH10GCH02-Q026",
+        "MATH10GCH02-Q028",
+        "MATH10GCH02-Q030",
+        "MATH10GCH02-Q032",
+        "MATH10GCH02-Q034",
+        "MATH10GCH02-Q036",
+        "MATH10GCH02-Q038",
+        "MATH10GCH02-Q040"
+      ]
+    }
+  ]
+};
+  </script>
+
+  <script src="../../assets/js/static-mcq-engine.js"></script>
+</body>
+</html>
