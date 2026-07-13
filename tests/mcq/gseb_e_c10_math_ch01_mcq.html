@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="CBSE Class 10 Mathematics Chapter 1 MCQ practice for Real Numbers."
+  />
+  <title>Chapter 1 MCQ | CBSE Class 10 Mathematics</title>
+  <link rel="stylesheet" href="../../assets/css/static-mcq-engine.css" />
+</head>
+<body>
+  <div class="wtc-mcq-app">
+    <header class="hero-card">
+      <div class="hero-left">
+        <p class="eyebrow">WAGH Tuition Classes • Static MCQ Engine v1.1</p>
+        <h1 id="testTitle">MCQ Practice</h1>
+        <p id="testMeta" class="meta"></p>
+      </div>
+
+      <div class="hero-score">
+        <div class="ring" id="progressRing">
+          <span id="answeredCount">0</span>
+        </div>
+        <small>Answered</small>
+      </div>
+    </header>
+
+    <section class="sticky-dashboard">
+      <div class="dash-item">
+        <span>Student</span>
+        <b id="studentName">Checking login...</b>
+      </div>
+      <div class="dash-item">
+        <span>Time</span>
+        <b id="timer">00:00</b>
+      </div>
+      <div class="dash-item">
+        <span>Questions</span>
+        <b id="questionCount">0</b>
+      </div>
+      <button id="themeBtn" class="ghost-btn" type="button">🌙</button>
+      <button id="reviewBtn" class="ghost-btn" type="button">Review</button>
+    </section>
+
+    <section class="notice-card">
+      Select one option for each question. After submit, correct answers and
+      explanations will open. Your result will be saved for progress report.
+    </section>
+
+    <main class="layout-grid">
+      <aside class="question-palette" aria-label="Question palette">
+        <h3>Question Palette</h3>
+        <div id="paletteGrid" class="palette-grid"></div>
+      </aside>
+
+      <section id="questionList" class="question-list"></section>
+    </main>
+
+    <section id="resultBox" class="result-box hidden"></section>
+
+    <div class="bottom-action-bar">
+      <button id="submitBtn" class="primary-btn" type="button">
+        Submit Test
+      </button>
+      <button id="retryBtn" class="secondary-btn hidden" type="button">
+        Choose Another Test
+      </button>
+      <button id="topBtn" class="secondary-btn" type="button">Top</button>
+    </div>
+  </div>
+
+  <!-- Keep this exact loading order. -->
+  <script src="../../assets/js/config.js"></script>
+  <script src="../../assets/js/auth.js"></script>
+  <script src="../../assets/js/api.js"></script>
+
+  <script>
+    window.WTC_STATIC_MCQ = {
+  "pageTitle": "Chapter 1: Real Numbers - MCQ Practice",
+  "selectorDescription": "Choose a topic-wise test or a full-length chapter test covering Real Numbers.",
+  "board": "CBSE",
+  "className": "Class 10",
+  "medium": "English Medium",
+  "subjectId": "MATH10",
+  "subjectName": "Mathematics",
+  "chapterId": "MATH10CH1",
+  "chapterName": "Real Numbers",
+  "instructions": "Select one option for each question. After submit, correct answers and explanations will open. Progress saves automatically.",
+  "questionBank": [
+    {
+      "id": "MATH10CH1-Q001",
+      "topic": "Fundamental Theorem and Prime Factorisation",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "What does the Fundamental Theorem of Arithmetic state about every composite number?",
+      "options": {
+        "A": "It can be expressed uniquely as a product of primes, apart from their order",
+        "B": "It has exactly two prime factors",
+        "C": "It can be expressed only as a sum of primes",
+        "D": "It has a unique even factor"
+      },
+      "correct": "A",
+      "explanation": "Every composite number has a prime factorisation that is unique except for the order of the prime factors."
+    },
+    {
+      "id": "MATH10CH1-Q002",
+      "topic": "Fundamental Theorem and Prime Factorisation",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which is the prime factorisation of 140?",
+      "options": {
+        "A": "2 × 5 × 14",
+        "B": "2² × 5 × 7",
+        "C": "2 × 5² × 7",
+        "D": "2² × 7²"
+      },
+      "correct": "B",
+      "explanation": "140 = 14 × 10 = (2 × 7)(2 × 5) = 2² × 5 × 7."
+    },
+    {
+      "id": "MATH10CH1-Q003",
+      "topic": "Fundamental Theorem and Prime Factorisation",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The prime factorisation of 156 is:",
+      "options": {
+        "A": "2² × 3 × 13",
+        "B": "2 × 3² × 13",
+        "C": "2³ × 3 × 7",
+        "D": "3 × 4 × 13"
+      },
+      "correct": "A",
+      "explanation": "156 = 12 × 13 = 2² × 3 × 13."
+    },
+    {
+      "id": "MATH10CH1-Q004",
+      "topic": "Fundamental Theorem and Prime Factorisation",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which is the correct prime factorisation of 3825?",
+      "options": {
+        "A": "3 × 5² × 17",
+        "B": "3² × 5 × 17",
+        "C": "3² × 5² × 17",
+        "D": "3³ × 5²"
+      },
+      "correct": "C",
+      "explanation": "3825 = 5 × 765 = 5² × 153 = 3² × 5² × 17."
+    },
+    {
+      "id": "MATH10CH1-Q005",
+      "topic": "Fundamental Theorem and Prime Factorisation",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The number 5005 can be written as:",
+      "options": {
+        "A": "5 × 7 × 11 × 13",
+        "B": "5² × 7 × 11",
+        "C": "3 × 5 × 7 × 13",
+        "D": "5 × 7² × 13"
+      },
+      "correct": "A",
+      "explanation": "5005 = 5 × 1001 and 1001 = 7 × 11 × 13, so 5005 = 5 × 7 × 11 × 13."
+    },
+    {
+      "id": "MATH10CH1-Q006",
+      "topic": "Fundamental Theorem and Prime Factorisation",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Which prime factorisation is equal to 7429?",
+      "options": {
+        "A": "13 × 19 × 29",
+        "B": "17 × 19 × 23",
+        "C": "17 × 21 × 23",
+        "D": "19 × 23 × 29"
+      },
+      "correct": "B",
+      "explanation": "17 × 19 = 323 and 323 × 23 = 7429; all three factors are prime."
+    },
+    {
+      "id": "MATH10CH1-Q007",
+      "topic": "Fundamental Theorem and Prime Factorisation",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "In what sense is the prime factorisation of a composite number unique?",
+      "options": {
+        "A": "The prime factors and their powers are fixed, though their order may change",
+        "B": "The factors must always be written in descending order",
+        "C": "Only the number of prime factors is fixed",
+        "D": "The factorisation is unique only for even numbers"
+      },
+      "correct": "A",
+      "explanation": "Changing the order of prime factors does not create a different prime factorisation."
+    },
+    {
+      "id": "MATH10CH1-Q008",
+      "topic": "Fundamental Theorem and Prime Factorisation",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which expression gives the prime factorisation of 32760?",
+      "options": {
+        "A": "2³ × 3² × 5 × 7 × 13",
+        "B": "2² × 3³ × 5 × 7 × 13",
+        "C": "2³ × 3 × 5² × 7 × 13",
+        "D": "2⁴ × 3² × 5 × 7"
+      },
+      "correct": "A",
+      "explanation": "32760 = 2 × 2 × 2 × 3 × 3 × 5 × 7 × 13 = 2³ × 3² × 5 × 7 × 13."
+    },
+    {
+      "id": "MATH10CH1-Q009",
+      "topic": "HCF and LCM by Prime Factorisation",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "While finding the HCF by prime factorisation, which powers of the common prime factors are selected?",
+      "options": {
+        "A": "The greatest powers",
+        "B": "The smallest powers",
+        "C": "Only the even powers",
+        "D": "The sum of all powers"
+      },
+      "correct": "B",
+      "explanation": "The HCF is the product of the smallest powers of all common prime factors."
+    },
+    {
+      "id": "MATH10CH1-Q010",
+      "topic": "HCF and LCM by Prime Factorisation",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "While finding the LCM by prime factorisation, which powers are selected?",
+      "options": {
+        "A": "The smallest powers of common primes only",
+        "B": "The greatest powers of all prime factors involved",
+        "C": "Only powers of 2 and 5",
+        "D": "The average powers of common primes"
+      },
+      "correct": "B",
+      "explanation": "The LCM uses the greatest power of every prime factor appearing in the numbers."
+    },
+    {
+      "id": "MATH10CH1-Q011",
+      "topic": "HCF and LCM by Prime Factorisation",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What are the HCF and LCM of 26 and 91?",
+      "options": {
+        "A": "HCF = 7, LCM = 338",
+        "B": "HCF = 13, LCM = 182",
+        "C": "HCF = 2, LCM = 1183",
+        "D": "HCF = 13, LCM = 91"
+      },
+      "correct": "B",
+      "explanation": "26 = 2 × 13 and 91 = 7 × 13. Therefore HCF = 13 and LCM = 2 × 7 × 13 = 182."
+    },
+    {
+      "id": "MATH10CH1-Q012",
+      "topic": "HCF and LCM by Prime Factorisation",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "What are the HCF and LCM of 510 and 92?",
+      "options": {
+        "A": "HCF = 2, LCM = 23460",
+        "B": "HCF = 4, LCM = 11730",
+        "C": "HCF = 2, LCM = 46920",
+        "D": "HCF = 6, LCM = 7820"
+      },
+      "correct": "A",
+      "explanation": "510 = 2 × 3 × 5 × 17 and 92 = 2² × 23. Their HCF is 2 and LCM is 2² × 3 × 5 × 17 × 23 = 23460."
+    },
+    {
+      "id": "MATH10CH1-Q013",
+      "topic": "HCF and LCM by Prime Factorisation",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Find the HCF and LCM of 336 and 54.",
+      "options": {
+        "A": "HCF = 3, LCM = 6048",
+        "B": "HCF = 6, LCM = 3024",
+        "C": "HCF = 12, LCM = 1512",
+        "D": "HCF = 18, LCM = 1008"
+      },
+      "correct": "B",
+      "explanation": "336 = 2⁴ × 3 × 7 and 54 = 2 × 3³. Thus HCF = 2 × 3 = 6 and LCM = 2⁴ × 3³ × 7 = 3024."
+    },
+    {
+      "id": "MATH10CH1-Q014",
+      "topic": "HCF and LCM by Prime Factorisation",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Given HCF(306, 657) = 9, what is LCM(306, 657)?",
+      "options": {
+        "A": "21942",
+        "B": "22338",
+        "C": "22428",
+        "D": "22638"
+      },
+      "correct": "B",
+      "explanation": "LCM = (306 × 657) ÷ 9 = 22338."
+    },
+    {
+      "id": "MATH10CH1-Q015",
+      "topic": "HCF and LCM by Prime Factorisation",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What are the HCF and LCM of 6, 72 and 120?",
+      "options": {
+        "A": "HCF = 6, LCM = 360",
+        "B": "HCF = 12, LCM = 720",
+        "C": "HCF = 3, LCM = 360",
+        "D": "HCF = 6, LCM = 720"
+      },
+      "correct": "A",
+      "explanation": "Using prime factors, the common smallest powers give HCF = 6, while the greatest powers give LCM = 360."
+    },
+    {
+      "id": "MATH10CH1-Q016",
+      "topic": "HCF and LCM by Prime Factorisation",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which statement is always true for two positive integers a and b?",
+      "options": {
+        "A": "HCF(a, b) + LCM(a, b) = a + b",
+        "B": "HCF(a, b) × LCM(a, b) = a × b",
+        "C": "HCF(a, b) = LCM(a, b)",
+        "D": "HCF(a, b) × LCM(a, b) = a + b"
+      },
+      "correct": "B",
+      "explanation": "For any two positive integers, the product of their HCF and LCM equals the product of the integers."
+    },
+    {
+      "id": "MATH10CH1-Q017",
+      "topic": "Applications of Prime Factorisation",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Why can no number of the form 4ⁿ, where n is a natural number, end with the digit 0?",
+      "options": {
+        "A": "Its prime factorisation contains only 2 and no factor 5",
+        "B": "Every power of 4 is odd",
+        "C": "Its prime factorisation contains only 5",
+        "D": "A power can never end in 0"
+      },
+      "correct": "A",
+      "explanation": "A number ending in 0 must contain both 2 and 5 as prime factors. Since 4ⁿ = 2²ⁿ has no factor 5, it cannot end in 0."
+    },
+    {
+      "id": "MATH10CH1-Q018",
+      "topic": "Applications of Prime Factorisation",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Can 6ⁿ end with the digit 0 for any natural number n?",
+      "options": {
+        "A": "Yes, when n is even",
+        "B": "Yes, when n is a multiple of 5",
+        "C": "No, because 6ⁿ has no prime factor 5",
+        "D": "No, because 6ⁿ is always odd"
+      },
+      "correct": "C",
+      "explanation": "6ⁿ = 2ⁿ × 3ⁿ. It has no factor 5, so it is not divisible by 10 and cannot end in 0."
+    },
+    {
+      "id": "MATH10CH1-Q019",
+      "topic": "Applications of Prime Factorisation",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Why is 7 × 11 × 13 + 13 a composite number?",
+      "options": {
+        "A": "It is divisible by 7 only",
+        "B": "It can be written as 13(7 × 11 + 1)",
+        "C": "It is an even number",
+        "D": "It is a multiple of 11 but not 13"
+      },
+      "correct": "B",
+      "explanation": "7 × 11 × 13 + 13 = 13(7 × 11 + 1), so it has factors other than 1 and itself."
+    },
+    {
+      "id": "MATH10CH1-Q020",
+      "topic": "Applications of Prime Factorisation",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Which factor proves that 7 × 6 × 5 × 4 × 3 × 2 × 1 + 5 is composite?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "5",
+        "D": "7"
+      },
+      "correct": "C",
+      "explanation": "The expression equals 5(7 × 6 × 4 × 3 × 2 × 1 + 1), so it is divisible by 5 and is greater than 5."
+    },
+    {
+      "id": "MATH10CH1-Q021",
+      "topic": "Applications of Prime Factorisation",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Sonia completes one round of a field in 18 minutes and Ravi in 12 minutes. If they start together in the same direction, after how many minutes will they meet again at the starting point?",
+      "options": {
+        "A": "24 minutes",
+        "B": "30 minutes",
+        "C": "36 minutes",
+        "D": "54 minutes"
+      },
+      "correct": "C",
+      "explanation": "They return together after LCM(18, 12) = 36 minutes."
+    },
+    {
+      "id": "MATH10CH1-Q022",
+      "topic": "Applications of Prime Factorisation",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "If the product of two positive integers is 4320 and their HCF is 12, what is their LCM?",
+      "options": {
+        "A": "240",
+        "B": "300",
+        "C": "360",
+        "D": "420"
+      },
+      "correct": "C",
+      "explanation": "Using HCF × LCM = product, LCM = 4320 ÷ 12 = 360."
+    },
+    {
+      "id": "MATH10CH1-Q023",
+      "topic": "Applications of Prime Factorisation",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Two positive integers have HCF 6 and LCM 180. If one integer is 30, what is the other integer?",
+      "options": {
+        "A": "18",
+        "B": "24",
+        "C": "36",
+        "D": "60"
+      },
+      "correct": "C",
+      "explanation": "The other integer is (6 × 180) ÷ 30 = 36."
+    },
+    {
+      "id": "MATH10CH1-Q024",
+      "topic": "Applications of Prime Factorisation",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "If a = 2³ × 3² and b = 2² × 3 × 5, what are HCF(a, b) and LCM(a, b)?",
+      "options": {
+        "A": "HCF = 6, LCM = 720",
+        "B": "HCF = 12, LCM = 360",
+        "C": "HCF = 24, LCM = 180",
+        "D": "HCF = 36, LCM = 120"
+      },
+      "correct": "B",
+      "explanation": "HCF = 2² × 3 = 12 and LCM = 2³ × 3² × 5 = 360."
+    },
+    {
+      "id": "MATH10CH1-Q025",
+      "topic": "Irrational Numbers and Key Theorem",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "A real number is irrational if it cannot be written in which form?",
+      "options": {
+        "A": "p/q, where p and q are integers and q ≠ 0",
+        "B": "p + q, where p and q are natural numbers",
+        "C": "p², where p is an integer",
+        "D": "p/q, where q = 0"
+      },
+      "correct": "A",
+      "explanation": "An irrational number cannot be expressed as p/q with integers p and q and a non-zero denominator q."
+    },
+    {
+      "id": "MATH10CH1-Q026",
+      "topic": "Irrational Numbers and Key Theorem",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Let p be a prime number and a be a positive integer. If p divides a², what must also be true?",
+      "options": {
+        "A": "p divides a",
+        "B": "a divides p",
+        "C": "p² divides a in every case",
+        "D": "a is prime"
+      },
+      "correct": "A",
+      "explanation": "The theorem used in the chapter states that if a prime p divides a², then p divides a."
+    },
+    {
+      "id": "MATH10CH1-Q027",
+      "topic": "Irrational Numbers and Key Theorem",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which proof technique is used in the textbook to prove that √2 is irrational?",
+      "options": {
+        "A": "Mathematical induction",
+        "B": "Proof by contradiction",
+        "C": "Graphical proof",
+        "D": "Direct measurement"
+      },
+      "correct": "B",
+      "explanation": "The proof begins by assuming the opposite—that √2 is rational—and then derives a contradiction."
+    },
+    {
+      "id": "MATH10CH1-Q028",
+      "topic": "Irrational Numbers and Key Theorem",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "To begin the contradiction proof for √2, it is written as a/b. What condition is imposed on a and b?",
+      "options": {
+        "A": "Both are even",
+        "B": "Both are prime",
+        "C": "They are coprime and b ≠ 0",
+        "D": "a is greater than b"
+      },
+      "correct": "C",
+      "explanation": "Any common factor can first be cancelled, so a and b may be taken as coprime integers with b non-zero."
+    },
+    {
+      "id": "MATH10CH1-Q029",
+      "topic": "Irrational Numbers and Key Theorem",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "If √2 = a/b, which equation is obtained after squaring and rearranging?",
+      "options": {
+        "A": "a² = b²",
+        "B": "a² = 2b²",
+        "C": "2a² = b²",
+        "D": "a = 2b"
+      },
+      "correct": "B",
+      "explanation": "Squaring √2 = a/b gives 2 = a²/b², hence a² = 2b²."
+    },
+    {
+      "id": "MATH10CH1-Q030",
+      "topic": "Irrational Numbers and Key Theorem",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "From a² = 2b², what follows first about a?",
+      "options": {
+        "A": "a is odd",
+        "B": "a is divisible by 2",
+        "C": "a is divisible by b",
+        "D": "a must equal b"
+      },
+      "correct": "B",
+      "explanation": "Since 2 divides a² and 2 is prime, the theorem implies that 2 divides a."
+    },
+    {
+      "id": "MATH10CH1-Q031",
+      "topic": "Irrational Numbers and Key Theorem",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "In the proof of irrationality of √2, if a = 2c, which relation follows after substitution into a² = 2b²?",
+      "options": {
+        "A": "b² = c²",
+        "B": "b² = 2c²",
+        "C": "2b² = c²",
+        "D": "b = 2c²"
+      },
+      "correct": "B",
+      "explanation": "Substituting a = 2c gives 4c² = 2b², so b² = 2c²."
+    },
+    {
+      "id": "MATH10CH1-Q032",
+      "topic": "Irrational Numbers and Key Theorem",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "What contradiction completes the proof that √2 is irrational?",
+      "options": {
+        "A": "a and b are both divisible by 2 although they were assumed coprime",
+        "B": "a and b are both odd",
+        "C": "a is smaller than b",
+        "D": "2 is found to be a composite number"
+      },
+      "correct": "A",
+      "explanation": "The reasoning shows that both a and b have 2 as a common factor, contradicting the assumption that they are coprime."
+    },
+    {
+      "id": "MATH10CH1-Q033",
+      "topic": "Proofs and Operations with Irrationals",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which of the following numbers is irrational?",
+      "options": {
+        "A": "√49",
+        "B": "0.25",
+        "C": "√3",
+        "D": "7/8"
+      },
+      "correct": "C",
+      "explanation": "√3 is irrational, while √49 = 7, 0.25 = 1/4, and 7/8 are rational."
+    },
+    {
+      "id": "MATH10CH1-Q034",
+      "topic": "Proofs and Operations with Irrationals",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The sum of a rational number and an irrational number is always:",
+      "options": {
+        "A": "A natural number",
+        "B": "A rational number",
+        "C": "An irrational number",
+        "D": "Zero"
+      },
+      "correct": "C",
+      "explanation": "If their sum were rational, subtracting the rational number would make the irrational number rational, which is impossible."
+    },
+    {
+      "id": "MATH10CH1-Q035",
+      "topic": "Proofs and Operations with Irrationals",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The product of a non-zero rational number and an irrational number is:",
+      "options": {
+        "A": "Always irrational",
+        "B": "Always rational",
+        "C": "Always an integer",
+        "D": "Always zero"
+      },
+      "correct": "A",
+      "explanation": "If the product were rational, division by the non-zero rational factor would make the irrational factor rational."
+    },
+    {
+      "id": "MATH10CH1-Q036",
+      "topic": "Proofs and Operations with Irrationals",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Why is 5 − √3 irrational?",
+      "options": {
+        "A": "Because the difference of any two numbers is irrational",
+        "B": "Because a rational number minus an irrational number is irrational",
+        "C": "Because 5 is irrational",
+        "D": "Because √3 is an integer"
+      },
+      "correct": "B",
+      "explanation": "5 is rational and √3 is irrational, so their difference is irrational."
+    },
+    {
+      "id": "MATH10CH1-Q037",
+      "topic": "Proofs and Operations with Irrationals",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which statement correctly explains why 3√2 is irrational?",
+      "options": {
+        "A": "3 is irrational and √2 is rational",
+        "B": "It is the product of a non-zero rational number and an irrational number",
+        "C": "Every multiple of 3 is irrational",
+        "D": "The product of two rational numbers is irrational"
+      },
+      "correct": "B",
+      "explanation": "Since 3 is non-zero rational and √2 is irrational, 3√2 is irrational."
+    },
+    {
+      "id": "MATH10CH1-Q038",
+      "topic": "Proofs and Operations with Irrationals",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "If 3 + 2√5 were assumed to be rational, which impossible conclusion would follow?",
+      "options": {
+        "A": "3 is irrational",
+        "B": "2 is irrational",
+        "C": "√5 is rational",
+        "D": "5 is not prime"
+      },
+      "correct": "C",
+      "explanation": "Subtracting 3 and dividing by 2 would make √5 rational, contradicting the irrationality of √5."
+    },
+    {
+      "id": "MATH10CH1-Q039",
+      "topic": "Proofs and Operations with Irrationals",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Which reasoning proves that 1/√2 is irrational?",
+      "options": {
+        "A": "If 1/√2 were rational and non-zero, its reciprocal √2 would be rational",
+        "B": "Every reciprocal is irrational",
+        "C": "The denominator of a rational number must be 1",
+        "D": "√2 is equal to 2"
+      },
+      "correct": "A",
+      "explanation": "A non-zero rational number has a rational reciprocal. Thus rationality of 1/√2 would force √2 to be rational, a contradiction."
+    },
+    {
+      "id": "MATH10CH1-Q040",
+      "topic": "Proofs and Operations with Irrationals",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Why is 7√5 irrational?",
+      "options": {
+        "A": "Because 7 and √5 are both irrational",
+        "B": "Because it is the product of the non-zero rational number 7 and the irrational number √5",
+        "C": "Because every number containing a square root sign is irrational",
+        "D": "Because 35 is a prime number"
+      },
+      "correct": "B",
+      "explanation": "Multiplying an irrational number by a non-zero rational number preserves irrationality."
+    }
+  ],
+  "tests": [
+    {
+      "testId": "MATH10CH1-T01",
+      "testTitle": "Topic Test 1",
+      "testType": "TOPIC_TEST",
+      "topic": "Fundamental Theorem and Prime Factorisation",
+      "questionLabel": "Related questions: Q1-Q8",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "MATH10CH1-Q001",
+        "MATH10CH1-Q002",
+        "MATH10CH1-Q003",
+        "MATH10CH1-Q004",
+        "MATH10CH1-Q005",
+        "MATH10CH1-Q006",
+        "MATH10CH1-Q007",
+        "MATH10CH1-Q008"
+      ]
+    },
+    {
+      "testId": "MATH10CH1-T02",
+      "testTitle": "Topic Test 2",
+      "testType": "TOPIC_TEST",
+      "topic": "HCF and LCM by Prime Factorisation",
+      "questionLabel": "Related questions: Q9-Q16",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "MATH10CH1-Q009",
+        "MATH10CH1-Q010",
+        "MATH10CH1-Q011",
+        "MATH10CH1-Q012",
+        "MATH10CH1-Q013",
+        "MATH10CH1-Q014",
+        "MATH10CH1-Q015",
+        "MATH10CH1-Q016"
+      ]
+    },
+    {
+      "testId": "MATH10CH1-T03",
+      "testTitle": "Topic Test 3",
+      "testType": "TOPIC_TEST",
+      "topic": "Applications of Prime Factorisation",
+      "questionLabel": "Related questions: Q17-Q24",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "MATH10CH1-Q017",
+        "MATH10CH1-Q018",
+        "MATH10CH1-Q019",
+        "MATH10CH1-Q020",
+        "MATH10CH1-Q021",
+        "MATH10CH1-Q022",
+        "MATH10CH1-Q023",
+        "MATH10CH1-Q024"
+      ]
+    },
+    {
+      "testId": "MATH10CH1-T04",
+      "testTitle": "Topic Test 4",
+      "testType": "TOPIC_TEST",
+      "topic": "Irrational Numbers and Key Theorem",
+      "questionLabel": "Related questions: Q25-Q32",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "MATH10CH1-Q025",
+        "MATH10CH1-Q026",
+        "MATH10CH1-Q027",
+        "MATH10CH1-Q028",
+        "MATH10CH1-Q029",
+        "MATH10CH1-Q030",
+        "MATH10CH1-Q031",
+        "MATH10CH1-Q032"
+      ]
+    },
+    {
+      "testId": "MATH10CH1-T05",
+      "testTitle": "Topic Test 5",
+      "testType": "TOPIC_TEST",
+      "topic": "Proofs and Operations with Irrationals",
+      "questionLabel": "Related questions: Q33-Q40",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "MATH10CH1-Q033",
+        "MATH10CH1-Q034",
+        "MATH10CH1-Q035",
+        "MATH10CH1-Q036",
+        "MATH10CH1-Q037",
+        "MATH10CH1-Q038",
+        "MATH10CH1-Q039",
+        "MATH10CH1-Q040"
+      ]
+    },
+    {
+      "testId": "MATH10CH1-FLT01",
+      "testTitle": "Full-Length Test 1",
+      "testType": "FULL_LENGTH",
+      "topic": "Complete Chapter — Set A",
+      "questionLabel": "20 balanced questions from the complete chapter",
+      "instructions": "20 questions • 1 mark each • Full chapter assessment • Progress saves automatically after submit.",
+      "questionIds": [
+        "MATH10CH1-Q001",
+        "MATH10CH1-Q003",
+        "MATH10CH1-Q005",
+        "MATH10CH1-Q007",
+        "MATH10CH1-Q009",
+        "MATH10CH1-Q011",
+        "MATH10CH1-Q013",
+        "MATH10CH1-Q015",
+        "MATH10CH1-Q017",
+        "MATH10CH1-Q019",
+        "MATH10CH1-Q021",
+        "MATH10CH1-Q023",
+        "MATH10CH1-Q025",
+        "MATH10CH1-Q027",
+        "MATH10CH1-Q029",
+        "MATH10CH1-Q031",
+        "MATH10CH1-Q033",
+        "MATH10CH1-Q035",
+        "MATH10CH1-Q037",
+        "MATH10CH1-Q039"
+      ]
+    },
+    {
+      "testId": "MATH10CH1-FLT02",
+      "testTitle": "Full-Length Test 2",
+      "testType": "FULL_LENGTH",
+      "topic": "Complete Chapter — Set B",
+      "questionLabel": "20 balanced questions from the complete chapter",
+      "instructions": "20 questions • 1 mark each • Full chapter assessment • Progress saves automatically after submit.",
+      "questionIds": [
+        "MATH10CH1-Q002",
+        "MATH10CH1-Q004",
+        "MATH10CH1-Q006",
+        "MATH10CH1-Q008",
+        "MATH10CH1-Q010",
+        "MATH10CH1-Q012",
+        "MATH10CH1-Q014",
+        "MATH10CH1-Q016",
+        "MATH10CH1-Q018",
+        "MATH10CH1-Q020",
+        "MATH10CH1-Q022",
+        "MATH10CH1-Q024",
+        "MATH10CH1-Q026",
+        "MATH10CH1-Q028",
+        "MATH10CH1-Q030",
+        "MATH10CH1-Q032",
+        "MATH10CH1-Q034",
+        "MATH10CH1-Q036",
+        "MATH10CH1-Q038",
+        "MATH10CH1-Q040"
+      ]
+    }
+  ]
+};
+  </script>
+
+  <script src="../../assets/js/static-mcq-engine.js"></script>
+</body>
+</html>

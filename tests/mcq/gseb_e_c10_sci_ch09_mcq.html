@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 9 MCQ | Light – Reflection and Refraction</title>
+  <link rel="stylesheet" href="../../assets/css/static-mcq-engine.css" />
+</head>
+<body>
+  <div class="wtc-mcq-app">
+    <header class="hero-card">
+      <div class="hero-left">
+        <p class="eyebrow">WAGH Tuition Classes • Static MCQ Engine v1.1</p>
+        <h1 id="testTitle">Light – Reflection and Refraction MCQ Practice</h1>
+        <p id="testMeta" class="meta"></p>
+      </div>
+      <div class="hero-score">
+        <div class="ring" id="progressRing"><span id="answeredCount">0</span></div>
+        <small>Answered</small>
+      </div>
+    </header>
+
+    <section class="sticky-dashboard">
+      <div class="dash-item"><span>Student</span><b id="studentName">Checking login...</b></div>
+      <div class="dash-item"><span>Time</span><b id="timer">00:00</b></div>
+      <div class="dash-item"><span>Questions</span><b id="questionCount">0</b></div>
+      <button id="themeBtn" class="ghost-btn" type="button">🌙</button>
+      <button id="reviewBtn" class="ghost-btn" type="button">Review</button>
+    </section>
+
+    <section class="notice-card">
+      Select one option for each question. After submit, correct answers and explanations will open. Your result will be saved for progress report.
+    </section>
+
+    <main class="layout-grid">
+      <aside class="question-palette" aria-label="Question palette">
+        <h3>Question Palette</h3>
+        <div id="paletteGrid" class="palette-grid"></div>
+      </aside>
+      <section id="questionList" class="question-list"></section>
+    </main>
+
+    <section id="resultBox" class="result-box hidden"></section>
+
+    <div class="bottom-action-bar">
+      <button id="submitBtn" class="primary-btn" type="button">Submit Test</button>
+      <button id="retryBtn" class="secondary-btn hidden" type="button">Choose Another Test</button>
+      <button id="topBtn" class="secondary-btn" type="button">Top</button>
+    </div>
+  </div>
+
+  <script src="../../assets/js/config.js"></script>
+  <script src="../../assets/js/auth.js"></script>
+  <script src="../../assets/js/api.js"></script>
+
+  <script>
+    window.WTC_STATIC_MCQ = {
+  "pageTitle": "Light – Reflection and Refraction MCQ Practice",
+  "selectorDescription": "Five topic tests contain 8 unique questions each. The two full-length tests contain 20 questions each and together cover all 40 chapter questions.",
+  "board": "CBSE",
+  "className": "Class 10",
+  "medium": "English Medium",
+  "subjectId": "SCI10",
+  "subjectName": "Science",
+  "chapterId": "SCI10CH9",
+  "chapterName": "Light – Reflection and Refraction",
+  "instructions": "Select one option for each question. After submit, correct answers and explanations will open. Your result will be saved for progress report.",
+  "questionBank": [
+    {
+      "id": "SCI10CH9-Q01",
+      "topic": "Reflection and Laws",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The angle between the incident ray and the normal is called:",
+      "options": {
+        "A": "Angle of reflection",
+        "B": "Angle of incidence",
+        "C": "Angle of deviation",
+        "D": "Glancing angle"
+      },
+      "correct": "B",
+      "explanation": "The angle made by the incident ray with the normal at the point of incidence is the angle of incidence."
+    },
+    {
+      "id": "SCI10CH9-Q02",
+      "topic": "Reflection and Laws",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "According to the law of reflection, the angle of incidence is:",
+      "options": {
+        "A": "Greater than angle of reflection",
+        "B": "Smaller than angle of reflection",
+        "C": "Equal to angle of reflection",
+        "D": "Always 90°"
+      },
+      "correct": "C",
+      "explanation": "The first law of reflection states that angle of incidence equals angle of reflection."
+    },
+    {
+      "id": "SCI10CH9-Q03",
+      "topic": "Reflection and Laws",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The incident ray, reflected ray and normal at the point of incidence lie in:",
+      "options": {
+        "A": "Different planes",
+        "B": "The same plane",
+        "C": "Parallel planes",
+        "D": "Perpendicular planes"
+      },
+      "correct": "B",
+      "explanation": "The second law of reflection states that all three lie in the same plane."
+    },
+    {
+      "id": "SCI10CH9-Q04",
+      "topic": "Reflection and Laws",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "A plane mirror forms an image that is:",
+      "options": {
+        "A": "Real and inverted",
+        "B": "Virtual and erect",
+        "C": "Real and enlarged",
+        "D": "Virtual and inverted"
+      },
+      "correct": "B",
+      "explanation": "A plane mirror forms a virtual, erect image of the same size."
+    },
+    {
+      "id": "SCI10CH9-Q05",
+      "topic": "Reflection and Laws",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "If a ray strikes a plane mirror normally, the angle of reflection is:",
+      "options": {
+        "A": "0°",
+        "B": "45°",
+        "C": "90°",
+        "D": "180°"
+      },
+      "correct": "A",
+      "explanation": "A normally incident ray travels along the normal, so the angle of incidence and reflection are both 0°."
+    },
+    {
+      "id": "SCI10CH9-Q06",
+      "topic": "Reflection and Laws",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "When a plane mirror is rotated through 10°, the reflected ray rotates through:",
+      "options": {
+        "A": "5°",
+        "B": "10°",
+        "C": "20°",
+        "D": "40°"
+      },
+      "correct": "C",
+      "explanation": "The reflected ray turns through twice the angle through which the mirror is rotated."
+    },
+    {
+      "id": "SCI10CH9-Q07",
+      "topic": "Reflection and Laws",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Regular reflection occurs from a:",
+      "options": {
+        "A": "Rough wall",
+        "B": "Smooth polished surface",
+        "C": "Sheet of paper",
+        "D": "Uneven road"
+      },
+      "correct": "B",
+      "explanation": "A smooth polished surface reflects parallel incident rays in one direction."
+    },
+    {
+      "id": "SCI10CH9-Q08",
+      "topic": "Reflection and Laws",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The lateral inversion produced by a plane mirror means:",
+      "options": {
+        "A": "Top and bottom interchange",
+        "B": "Left and right interchange",
+        "C": "Image becomes inverted",
+        "D": "Image becomes smaller"
+      },
+      "correct": "B",
+      "explanation": "Lateral inversion is the apparent interchange of left and right."
+    },
+    {
+      "id": "SCI10CH9-Q09",
+      "topic": "Spherical Mirrors",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The reflecting surface of a concave mirror is:",
+      "options": {
+        "A": "Bulged outward",
+        "B": "Curved inward",
+        "C": "Plane",
+        "D": "Cylindrical"
+      },
+      "correct": "B",
+      "explanation": "A concave mirror has its reflecting surface curved inward."
+    },
+    {
+      "id": "SCI10CH9-Q10",
+      "topic": "Spherical Mirrors",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The centre of the sphere of which a spherical mirror is a part is called:",
+      "options": {
+        "A": "Pole",
+        "B": "Focus",
+        "C": "Centre of curvature",
+        "D": "Aperture"
+      },
+      "correct": "C",
+      "explanation": "The centre of the parent sphere is the centre of curvature."
+    },
+    {
+      "id": "SCI10CH9-Q11",
+      "topic": "Spherical Mirrors",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The midpoint of the reflecting surface of a spherical mirror is called:",
+      "options": {
+        "A": "Pole",
+        "B": "Principal focus",
+        "C": "Optical centre",
+        "D": "Centre of curvature"
+      },
+      "correct": "A",
+      "explanation": "The geometrical centre of the mirror surface is its pole."
+    },
+    {
+      "id": "SCI10CH9-Q12",
+      "topic": "Spherical Mirrors",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "For a spherical mirror of small aperture, focal length f and radius R are related by:",
+      "options": {
+        "A": "f=R",
+        "B": "f=2R",
+        "C": "f=R/2",
+        "D": "f=R²"
+      },
+      "correct": "C",
+      "explanation": "For spherical mirrors, focal length equals half the radius of curvature."
+    },
+    {
+      "id": "SCI10CH9-Q13",
+      "topic": "Spherical Mirrors",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "A ray parallel to the principal axis after reflection from a concave mirror passes through:",
+      "options": {
+        "A": "Pole",
+        "B": "Centre of curvature",
+        "C": "Principal focus",
+        "D": "Optical centre"
+      },
+      "correct": "C",
+      "explanation": "Parallel rays converge at the principal focus of a concave mirror."
+    },
+    {
+      "id": "SCI10CH9-Q14",
+      "topic": "Spherical Mirrors",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "A ray passing through the centre of curvature of a concave mirror is reflected:",
+      "options": {
+        "A": "Parallel to principal axis",
+        "B": "Back along the same path",
+        "C": "Through focus",
+        "D": "At 90°"
+      },
+      "correct": "B",
+      "explanation": "It strikes the mirror normally and retraces its path."
+    },
+    {
+      "id": "SCI10CH9-Q15",
+      "topic": "Spherical Mirrors",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "An object placed beyond C in front of a concave mirror forms an image:",
+      "options": {
+        "A": "Between F and C, real and inverted",
+        "B": "Beyond C, virtual and erect",
+        "C": "At F, highly enlarged",
+        "D": "Behind mirror, diminished"
+      },
+      "correct": "A",
+      "explanation": "For an object beyond C, the image forms between F and C and is real, inverted and diminished."
+    },
+    {
+      "id": "SCI10CH9-Q16",
+      "topic": "Spherical Mirrors",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "A convex mirror always forms an image that is:",
+      "options": {
+        "A": "Real, inverted and enlarged",
+        "B": "Virtual, erect and diminished",
+        "C": "Real and same size",
+        "D": "Virtual and enlarged"
+      },
+      "correct": "B",
+      "explanation": "A convex mirror always gives a virtual, erect and diminished image."
+    },
+    {
+      "id": "SCI10CH9-Q17",
+      "topic": "Mirror Formula and Magnification",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The mirror formula is:",
+      "options": {
+        "A": "1/f=1/v+1/u",
+        "B": "f=u+v",
+        "C": "1/u=1/f+1/v",
+        "D": "m=u/v"
+      },
+      "correct": "A",
+      "explanation": "For spherical mirrors, 1/f = 1/v + 1/u."
+    },
+    {
+      "id": "SCI10CH9-Q18",
+      "topic": "Mirror Formula and Magnification",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "According to the new Cartesian sign convention, distances measured in the direction of incident light are:",
+      "options": {
+        "A": "Positive",
+        "B": "Negative",
+        "C": "Zero",
+        "D": "Undefined"
+      },
+      "correct": "A",
+      "explanation": "Distances measured along the direction of incident light are positive."
+    },
+    {
+      "id": "SCI10CH9-Q19",
+      "topic": "Mirror Formula and Magnification",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The focal length of a concave mirror is taken as:",
+      "options": {
+        "A": "Positive",
+        "B": "Negative",
+        "C": "Zero",
+        "D": "Sometimes positive"
+      },
+      "correct": "B",
+      "explanation": "Its focus lies in front of the mirror, opposite to the positive direction, so f is negative."
+    },
+    {
+      "id": "SCI10CH9-Q20",
+      "topic": "Mirror Formula and Magnification",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Magnification produced by a mirror is given by:",
+      "options": {
+        "A": "m=v/u",
+        "B": "m=-v/u",
+        "C": "m=u/v",
+        "D": "m=f/u"
+      },
+      "correct": "B",
+      "explanation": "For mirrors, magnification m = hᵢ/hₒ = -v/u."
+    },
+    {
+      "id": "SCI10CH9-Q21",
+      "topic": "Mirror Formula and Magnification",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "A positive magnification for a mirror indicates an image that is:",
+      "options": {
+        "A": "Real and inverted",
+        "B": "Virtual and erect",
+        "C": "Real and erect",
+        "D": "Virtual and inverted"
+      },
+      "correct": "B",
+      "explanation": "Positive magnification means the image is erect, which for mirrors is virtual."
+    },
+    {
+      "id": "SCI10CH9-Q22",
+      "topic": "Mirror Formula and Magnification",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "An object is at 30 cm from a concave mirror of focal length 15 cm. The image is formed at:",
+      "options": {
+        "A": "15 cm in front",
+        "B": "30 cm in front",
+        "C": "30 cm behind",
+        "D": "Infinity"
+      },
+      "correct": "B",
+      "explanation": "Using 1/f=1/v+1/u with f=-15 cm and u=-30 cm gives v=-30 cm."
+    },
+    {
+      "id": "SCI10CH9-Q23",
+      "topic": "Mirror Formula and Magnification",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "A convex mirror has focal length 20 cm and an object is 30 cm in front. The image distance is approximately:",
+      "options": {
+        "A": "+12 cm",
+        "B": "-12 cm",
+        "C": "+60 cm",
+        "D": "-60 cm"
+      },
+      "correct": "A",
+      "explanation": "With f=+20 cm and u=-30 cm, 1/v=1/20+1/30=1/12, so v=+12 cm."
+    },
+    {
+      "id": "SCI10CH9-Q24",
+      "topic": "Mirror Formula and Magnification",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "If magnification by a mirror is -2, the image is:",
+      "options": {
+        "A": "Erect and half size",
+        "B": "Inverted and twice the size",
+        "C": "Erect and twice the size",
+        "D": "Inverted and half size"
+      },
+      "correct": "B",
+      "explanation": "Negative sign indicates inverted image and magnitude 2 means twice the size."
+    },
+    {
+      "id": "SCI10CH9-Q25",
+      "topic": "Refraction and Refractive Index",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The bending of light when it passes from one transparent medium to another is called:",
+      "options": {
+        "A": "Reflection",
+        "B": "Refraction",
+        "C": "Dispersion",
+        "D": "Scattering"
+      },
+      "correct": "B",
+      "explanation": "Change in direction of light at the boundary of two media is refraction."
+    },
+    {
+      "id": "SCI10CH9-Q26",
+      "topic": "Refraction and Refractive Index",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Light bends towards the normal when it travels from:",
+      "options": {
+        "A": "Glass to air",
+        "B": "Air to glass",
+        "C": "Water to air",
+        "D": "Denser to rarer medium"
+      },
+      "correct": "B",
+      "explanation": "Light bends towards the normal on entering an optically denser medium from a rarer medium."
+    },
+    {
+      "id": "SCI10CH9-Q27",
+      "topic": "Refraction and Refractive Index",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The refractive index n of a medium is:",
+      "options": {
+        "A": "v/c",
+        "B": "c/v",
+        "C": "c×v",
+        "D": "c+v"
+      },
+      "correct": "B",
+      "explanation": "Absolute refractive index n = speed of light in vacuum divided by speed in the medium."
+    },
+    {
+      "id": "SCI10CH9-Q28",
+      "topic": "Refraction and Refractive Index",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "A medium with greater refractive index is optically:",
+      "options": {
+        "A": "Rarer",
+        "B": "Denser",
+        "C": "Opaque",
+        "D": "Vacuum-like"
+      },
+      "correct": "B",
+      "explanation": "A larger refractive index indicates greater optical density and lower light speed."
+    },
+    {
+      "id": "SCI10CH9-Q29",
+      "topic": "Refraction and Refractive Index",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "When a ray passes from glass to air, it bends:",
+      "options": {
+        "A": "Towards the normal",
+        "B": "Away from the normal",
+        "C": "Along the normal always",
+        "D": "Back into glass"
+      },
+      "correct": "B",
+      "explanation": "From denser to rarer medium, the ray bends away from the normal."
+    },
+    {
+      "id": "SCI10CH9-Q30",
+      "topic": "Refraction and Refractive Index",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The emergent ray from a rectangular glass slab is:",
+      "options": {
+        "A": "Perpendicular to incident ray",
+        "B": "Parallel to incident ray",
+        "C": "Always along the normal",
+        "D": "Reflected back"
+      },
+      "correct": "B",
+      "explanation": "Opposite parallel faces make the emergent ray parallel to the incident ray, though laterally displaced."
+    },
+    {
+      "id": "SCI10CH9-Q31",
+      "topic": "Refraction and Refractive Index",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "If speed of light in a medium is 2×10⁸ m/s, its refractive index is:",
+      "options": {
+        "A": "1.0",
+        "B": "1.5",
+        "C": "2.0",
+        "D": "3.0"
+      },
+      "correct": "B",
+      "explanation": "n=c/v=(3×10⁸)/(2×10⁸)=1.5."
+    },
+    {
+      "id": "SCI10CH9-Q32",
+      "topic": "Refraction and Refractive Index",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "A ray incident normally on a glass slab:",
+      "options": {
+        "A": "Bends towards normal",
+        "B": "Bends away from normal",
+        "C": "Passes undeviated",
+        "D": "Is totally reflected"
+      },
+      "correct": "C",
+      "explanation": "At normal incidence, angle of incidence is 0°, so there is no deviation."
+    },
+    {
+      "id": "SCI10CH9-Q33",
+      "topic": "Lenses and Power",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "A convex lens is also called a:",
+      "options": {
+        "A": "Diverging lens",
+        "B": "Converging lens",
+        "C": "Reflecting lens",
+        "D": "Plane lens"
+      },
+      "correct": "B",
+      "explanation": "A convex lens converges parallel rays to its principal focus."
+    },
+    {
+      "id": "SCI10CH9-Q34",
+      "topic": "Lenses and Power",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "A concave lens always forms an image that is:",
+      "options": {
+        "A": "Real, inverted and enlarged",
+        "B": "Virtual, erect and diminished",
+        "C": "Real and diminished",
+        "D": "Virtual and enlarged"
+      },
+      "correct": "B",
+      "explanation": "A concave lens always forms a virtual, erect and diminished image."
+    },
+    {
+      "id": "SCI10CH9-Q35",
+      "topic": "Lenses and Power",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The lens formula is:",
+      "options": {
+        "A": "1/f=1/v-1/u",
+        "B": "1/f=1/v+1/u",
+        "C": "f=u+v",
+        "D": "m=-v/u"
+      },
+      "correct": "A",
+      "explanation": "For thin lenses, 1/f = 1/v - 1/u."
+    },
+    {
+      "id": "SCI10CH9-Q36",
+      "topic": "Lenses and Power",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Magnification produced by a lens is:",
+      "options": {
+        "A": "m=-v/u",
+        "B": "m=v/u",
+        "C": "m=u/v",
+        "D": "m=f/v"
+      },
+      "correct": "B",
+      "explanation": "For a lens, magnification m = hᵢ/hₒ = v/u."
+    },
+    {
+      "id": "SCI10CH9-Q37",
+      "topic": "Lenses and Power",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The SI unit of power of a lens is:",
+      "options": {
+        "A": "Metre",
+        "B": "Dioptre",
+        "C": "Watt",
+        "D": "Candela"
+      },
+      "correct": "B",
+      "explanation": "Lens power is measured in dioptres (D)."
+    },
+    {
+      "id": "SCI10CH9-Q38",
+      "topic": "Lenses and Power",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The power of a convex lens of focal length 50 cm is:",
+      "options": {
+        "A": "+0.5 D",
+        "B": "+2 D",
+        "C": "-2 D",
+        "D": "+50 D"
+      },
+      "correct": "B",
+      "explanation": "P=1/f(m)=1/0.5=+2 D."
+    },
+    {
+      "id": "SCI10CH9-Q39",
+      "topic": "Lenses and Power",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The power of a concave lens is:",
+      "options": {
+        "A": "Always positive",
+        "B": "Always negative",
+        "C": "Always zero",
+        "D": "Sometimes infinite"
+      },
+      "correct": "B",
+      "explanation": "A concave lens has negative focal length, so its power is negative."
+    },
+    {
+      "id": "SCI10CH9-Q40",
+      "topic": "Lenses and Power",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Two thin lenses of powers +2 D and -0.5 D are in contact. Their combined power is:",
+      "options": {
+        "A": "+1.5 D",
+        "B": "+2.5 D",
+        "C": "-1.5 D",
+        "D": "-2.5 D"
+      },
+      "correct": "A",
+      "explanation": "P=P₁+P₂=2+(-0.5)=+1.5 D."
+    }
+  ],
+  "tests": [
+    {
+      "testId": "SCI10CH9-T01",
+      "testTitle": "Topic Test 1",
+      "testType": "TOPIC_TEST",
+      "topic": "Reflection and Laws of Reflection",
+      "questionLabel": "Related questions: Q1–Q8",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH9-Q01",
+        "SCI10CH9-Q02",
+        "SCI10CH9-Q03",
+        "SCI10CH9-Q04",
+        "SCI10CH9-Q05",
+        "SCI10CH9-Q06",
+        "SCI10CH9-Q07",
+        "SCI10CH9-Q08"
+      ]
+    },
+    {
+      "testId": "SCI10CH9-T02",
+      "testTitle": "Topic Test 2",
+      "testType": "TOPIC_TEST",
+      "topic": "Spherical Mirrors and Image Formation",
+      "questionLabel": "Related questions: Q9–Q16",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH9-Q09",
+        "SCI10CH9-Q10",
+        "SCI10CH9-Q11",
+        "SCI10CH9-Q12",
+        "SCI10CH9-Q13",
+        "SCI10CH9-Q14",
+        "SCI10CH9-Q15",
+        "SCI10CH9-Q16"
+      ]
+    },
+    {
+      "testId": "SCI10CH9-T03",
+      "testTitle": "Topic Test 3",
+      "testType": "TOPIC_TEST",
+      "topic": "Mirror Formula and Magnification",
+      "questionLabel": "Related questions: Q17–Q24",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH9-Q17",
+        "SCI10CH9-Q18",
+        "SCI10CH9-Q19",
+        "SCI10CH9-Q20",
+        "SCI10CH9-Q21",
+        "SCI10CH9-Q22",
+        "SCI10CH9-Q23",
+        "SCI10CH9-Q24"
+      ]
+    },
+    {
+      "testId": "SCI10CH9-T04",
+      "testTitle": "Topic Test 4",
+      "testType": "TOPIC_TEST",
+      "topic": "Refraction and Refractive Index",
+      "questionLabel": "Related questions: Q25–Q32",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH9-Q25",
+        "SCI10CH9-Q26",
+        "SCI10CH9-Q27",
+        "SCI10CH9-Q28",
+        "SCI10CH9-Q29",
+        "SCI10CH9-Q30",
+        "SCI10CH9-Q31",
+        "SCI10CH9-Q32"
+      ]
+    },
+    {
+      "testId": "SCI10CH9-T05",
+      "testTitle": "Topic Test 5",
+      "testType": "TOPIC_TEST",
+      "topic": "Lenses, Lens Formula and Power",
+      "questionLabel": "Related questions: Q33–Q40",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH9-Q33",
+        "SCI10CH9-Q34",
+        "SCI10CH9-Q35",
+        "SCI10CH9-Q36",
+        "SCI10CH9-Q37",
+        "SCI10CH9-Q38",
+        "SCI10CH9-Q39",
+        "SCI10CH9-Q40"
+      ]
+    },
+    {
+      "testId": "SCI10CH9-FLT01",
+      "testTitle": "Full-Length Test 1",
+      "testType": "FULL_LENGTH",
+      "topic": "Complete Chapter",
+      "questionLabel": "20 balanced chapter questions",
+      "instructions": "20 questions • 1 mark each • Full chapter assessment • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH9-Q01",
+        "SCI10CH9-Q03",
+        "SCI10CH9-Q05",
+        "SCI10CH9-Q07",
+        "SCI10CH9-Q09",
+        "SCI10CH9-Q11",
+        "SCI10CH9-Q13",
+        "SCI10CH9-Q15",
+        "SCI10CH9-Q17",
+        "SCI10CH9-Q19",
+        "SCI10CH9-Q21",
+        "SCI10CH9-Q23",
+        "SCI10CH9-Q25",
+        "SCI10CH9-Q27",
+        "SCI10CH9-Q29",
+        "SCI10CH9-Q31",
+        "SCI10CH9-Q33",
+        "SCI10CH9-Q35",
+        "SCI10CH9-Q37",
+        "SCI10CH9-Q39"
+      ]
+    },
+    {
+      "testId": "SCI10CH9-FLT02",
+      "testTitle": "Full-Length Test 2",
+      "testType": "FULL_LENGTH",
+      "topic": "Complete Chapter",
+      "questionLabel": "20 balanced chapter questions",
+      "instructions": "20 questions • 1 mark each • Full chapter assessment • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH9-Q02",
+        "SCI10CH9-Q04",
+        "SCI10CH9-Q06",
+        "SCI10CH9-Q08",
+        "SCI10CH9-Q10",
+        "SCI10CH9-Q12",
+        "SCI10CH9-Q14",
+        "SCI10CH9-Q16",
+        "SCI10CH9-Q18",
+        "SCI10CH9-Q20",
+        "SCI10CH9-Q22",
+        "SCI10CH9-Q24",
+        "SCI10CH9-Q26",
+        "SCI10CH9-Q28",
+        "SCI10CH9-Q30",
+        "SCI10CH9-Q32",
+        "SCI10CH9-Q34",
+        "SCI10CH9-Q36",
+        "SCI10CH9-Q38",
+        "SCI10CH9-Q40"
+      ]
+    }
+  ]
+};
+  </script>
+  <script src="../../assets/js/static-mcq-engine.js"></script>
+</body>
+</html>

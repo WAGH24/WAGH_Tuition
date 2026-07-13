@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="CBSE Class 10 Mathematics Chapter 2 MCQ practice for Polynomials."
+  />
+  <title>Chapter 2 MCQ | CBSE Class 10 Mathematics</title>
+  <link rel="stylesheet" href="../../assets/css/static-mcq-engine.css" />
+</head>
+<body>
+  <div class="wtc-mcq-app">
+    <header class="hero-card">
+      <div class="hero-left">
+        <p class="eyebrow">WAGH Tuition Classes • Static MCQ Engine v1.1</p>
+        <h1 id="testTitle">MCQ Practice</h1>
+        <p id="testMeta" class="meta"></p>
+      </div>
+
+      <div class="hero-score">
+        <div class="ring" id="progressRing">
+          <span id="answeredCount">0</span>
+        </div>
+        <small>Answered</small>
+      </div>
+    </header>
+
+    <section class="sticky-dashboard">
+      <div class="dash-item">
+        <span>Student</span>
+        <b id="studentName">Checking login...</b>
+      </div>
+      <div class="dash-item">
+        <span>Time</span>
+        <b id="timer">00:00</b>
+      </div>
+      <div class="dash-item">
+        <span>Questions</span>
+        <b id="questionCount">0</b>
+      </div>
+      <button id="themeBtn" class="ghost-btn" type="button">🌙</button>
+      <button id="reviewBtn" class="ghost-btn" type="button">Review</button>
+    </section>
+
+    <section class="notice-card">
+      Select one option for each question. After submit, correct answers and
+      explanations will open. Your result will be saved for progress report.
+    </section>
+
+    <main class="layout-grid">
+      <aside class="question-palette" aria-label="Question palette">
+        <h3>Question Palette</h3>
+        <div id="paletteGrid" class="palette-grid"></div>
+      </aside>
+
+      <section id="questionList" class="question-list"></section>
+    </main>
+
+    <section id="resultBox" class="result-box hidden"></section>
+
+    <div class="bottom-action-bar">
+      <button id="submitBtn" class="primary-btn" type="button">
+        Submit Test
+      </button>
+      <button id="retryBtn" class="secondary-btn hidden" type="button">
+        Choose Another Test
+      </button>
+      <button id="topBtn" class="secondary-btn" type="button">Top</button>
+    </div>
+  </div>
+
+  <!-- Keep this exact loading order. -->
+  <script src="../../assets/js/config.js"></script>
+  <script src="../../assets/js/auth.js"></script>
+  <script src="../../assets/js/api.js"></script>
+
+  <script>
+    window.WTC_STATIC_MCQ = {
+  "pageTitle": "Chapter 2: Polynomials - MCQ Practice",
+  "selectorDescription": "Choose a topic-wise test or a full-length chapter test covering zeroes of polynomials and the relationship between zeroes and coefficients of quadratic polynomials.",
+  "board": "CBSE",
+  "className": "Class 10",
+  "medium": "English Medium",
+  "subjectId": "MATH10",
+  "subjectName": "Mathematics",
+  "chapterId": "MATH10CH02",
+  "chapterName": "Polynomials",
+  "instructions": "Select one option for each question. After submit, correct answers and explanations will open. Progress saves automatically.",
+  "questionBank": [
+    {
+      "id": "MATH10CH02-Q001",
+      "topic": "Polynomial Basics and Zeroes",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "What is the zero of the linear polynomial p(x) = x - 5?",
+      "options": {
+        "A": "-5",
+        "B": "0",
+        "C": "5",
+        "D": "10"
+      },
+      "correct": "C",
+      "explanation": "A zero makes the polynomial equal to 0. Solving x - 5 = 0 gives x = 5."
+    },
+    {
+      "id": "MATH10CH02-Q002",
+      "topic": "Polynomial Basics and Zeroes",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which value of x is a zero of p(x) = 2x + 6?",
+      "options": {
+        "A": "-3",
+        "B": "-2",
+        "C": "2",
+        "D": "3"
+      },
+      "correct": "A",
+      "explanation": "Set 2x + 6 = 0. Then 2x = -6, so x = -3."
+    },
+    {
+      "id": "MATH10CH02-Q003",
+      "topic": "Polynomial Basics and Zeroes",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "What is p(2) for p(x) = x² - 5x + 6?",
+      "options": {
+        "A": "-2",
+        "B": "0",
+        "C": "2",
+        "D": "4"
+      },
+      "correct": "B",
+      "explanation": "p(2) = 2² - 5(2) + 6 = 4 - 10 + 6 = 0, so 2 is a zero."
+    },
+    {
+      "id": "MATH10CH02-Q004",
+      "topic": "Polynomial Basics and Zeroes",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which statement correctly describes a zero of a polynomial p(x)?",
+      "options": {
+        "A": "A value a for which p(a) = 1",
+        "B": "A value a for which p(a) = 0",
+        "C": "The highest power of x",
+        "D": "The constant term of p(x)"
+      },
+      "correct": "B",
+      "explanation": "A real number a is called a zero of p(x) when substituting x = a gives p(a) = 0."
+    },
+    {
+      "id": "MATH10CH02-Q005",
+      "topic": "Polynomial Basics and Zeroes",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "How many zeroes does a non-zero constant polynomial have?",
+      "options": {
+        "A": "No zero",
+        "B": "Exactly one",
+        "C": "Exactly two",
+        "D": "Infinitely many"
+      },
+      "correct": "A",
+      "explanation": "A non-zero constant polynomial never becomes 0, so it has no zero."
+    },
+    {
+      "id": "MATH10CH02-Q006",
+      "topic": "Polynomial Basics and Zeroes",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What are the zeroes of p(x) = x² - 9?",
+      "options": {
+        "A": "3 only",
+        "B": "-3 only",
+        "C": "-3 and 3",
+        "D": "0 and 9"
+      },
+      "correct": "C",
+      "explanation": "x² - 9 = (x - 3)(x + 3). Therefore, the zeroes are 3 and -3."
+    },
+    {
+      "id": "MATH10CH02-Q007",
+      "topic": "Polynomial Basics and Zeroes",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which polynomial has 0 as one of its zeroes?",
+      "options": {
+        "A": "x² + 5x",
+        "B": "x² + 5",
+        "C": "x² + x + 1",
+        "D": "2x + 3"
+      },
+      "correct": "A",
+      "explanation": "For p(x) = x² + 5x, p(0) = 0. Equivalently, p(x) = x(x + 5), so 0 is a zero."
+    },
+    {
+      "id": "MATH10CH02-Q008",
+      "topic": "Polynomial Basics and Zeroes",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "If p(k) = 0 for p(x) = x² - 4x + 3, which of the following can be the value of k?",
+      "options": {
+        "A": "-3",
+        "B": "-1",
+        "C": "1",
+        "D": "4"
+      },
+      "correct": "C",
+      "explanation": "x² - 4x + 3 = (x - 1)(x - 3). Its zeroes are 1 and 3; among the options, k = 1."
+    },
+    {
+      "id": "MATH10CH02-Q009",
+      "topic": "Graphical Meaning of Zeroes",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The zeroes of a polynomial p(x) are represented graphically by the:",
+      "options": {
+        "A": "y-coordinates where the graph meets the y-axis",
+        "B": "x-coordinates where the graph meets the x-axis",
+        "C": "highest points of the graph",
+        "D": "lowest points of the graph"
+      },
+      "correct": "B",
+      "explanation": "At a zero, p(x) = 0, so the corresponding point lies on the x-axis. Hence the zeroes are the x-coordinates of x-axis intersections."
+    },
+    {
+      "id": "MATH10CH02-Q010",
+      "topic": "Graphical Meaning of Zeroes",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "A graph of y = p(x) intersects the x-axis at x = -2 and x = 4. What are the zeroes of p(x)?",
+      "options": {
+        "A": "-2 and 4",
+        "B": "2 and -4",
+        "C": "-2 and -4",
+        "D": "2 and 4"
+      },
+      "correct": "A",
+      "explanation": "The x-coordinates of the points where the graph intersects the x-axis are the zeroes."
+    },
+    {
+      "id": "MATH10CH02-Q011",
+      "topic": "Graphical Meaning of Zeroes",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "If the graph of a polynomial does not meet the x-axis, how many real zeroes does it have?",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "Cannot be determined"
+      },
+      "correct": "A",
+      "explanation": "A real zero corresponds to an x-axis intersection. No intersection means no real zero."
+    },
+    {
+      "id": "MATH10CH02-Q012",
+      "topic": "Graphical Meaning of Zeroes",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "A parabola touches the x-axis at exactly one point. How many distinct real zeroes does the corresponding quadratic polynomial have?",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3"
+      },
+      "correct": "B",
+      "explanation": "Touching the x-axis at one point means the quadratic has one distinct real zero, repeated twice."
+    },
+    {
+      "id": "MATH10CH02-Q013",
+      "topic": "Graphical Meaning of Zeroes",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "At which x-coordinate does the graph of y = 2x - 6 meet the x-axis?",
+      "options": {
+        "A": "-3",
+        "B": "0",
+        "C": "2",
+        "D": "3"
+      },
+      "correct": "D",
+      "explanation": "On the x-axis, y = 0. Thus 2x - 6 = 0, giving x = 3."
+    },
+    {
+      "id": "MATH10CH02-Q014",
+      "topic": "Graphical Meaning of Zeroes",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "How many real zeroes does p(x) = x² + 4 have?",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "4"
+      },
+      "correct": "A",
+      "explanation": "For every real x, x² ≥ 0, so x² + 4 > 0. Its graph never meets the x-axis."
+    },
+    {
+      "id": "MATH10CH02-Q015",
+      "topic": "Graphical Meaning of Zeroes",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The graph of y = (x - 1)(x + 2) meets the x-axis at:",
+      "options": {
+        "A": "x = -1 and x = 2",
+        "B": "x = 1 and x = -2",
+        "C": "x = 1 and x = 2",
+        "D": "x = -1 and x = -2"
+      },
+      "correct": "B",
+      "explanation": "The product is 0 when x - 1 = 0 or x + 2 = 0, giving x = 1 and x = -2."
+    },
+    {
+      "id": "MATH10CH02-Q016",
+      "topic": "Graphical Meaning of Zeroes",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "The graph of a polynomial intersects the x-axis at three distinct points. What can be concluded?",
+      "options": {
+        "A": "It has exactly one real zero",
+        "B": "It has exactly two real zeroes",
+        "C": "It has three distinct real zeroes",
+        "D": "It has no real zero"
+      },
+      "correct": "C",
+      "explanation": "Each distinct x-axis intersection gives one distinct real zero, so there are three distinct real zeroes."
+    },
+    {
+      "id": "MATH10CH02-Q017",
+      "topic": "Finding Zeroes by Factorisation",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "What are the zeroes of x² - 5x + 6?",
+      "options": {
+        "A": "-2 and -3",
+        "B": "2 and 3",
+        "C": "-2 and 3",
+        "D": "2 and -3"
+      },
+      "correct": "B",
+      "explanation": "x² - 5x + 6 = (x - 2)(x - 3), so the zeroes are 2 and 3."
+    },
+    {
+      "id": "MATH10CH02-Q018",
+      "topic": "Finding Zeroes by Factorisation",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Find the zeroes of 2x² - 7x + 3.",
+      "options": {
+        "A": "3 and 1/2",
+        "B": "-3 and -1/2",
+        "C": "3 and -1/2",
+        "D": "-3 and 1/2"
+      },
+      "correct": "A",
+      "explanation": "2x² - 7x + 3 = (2x - 1)(x - 3). Hence x = 1/2 or x = 3."
+    },
+    {
+      "id": "MATH10CH02-Q019",
+      "topic": "Finding Zeroes by Factorisation",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What are the zeroes of 3x² + x - 2?",
+      "options": {
+        "A": "1 and -2/3",
+        "B": "-1 and 2/3",
+        "C": "1 and 2/3",
+        "D": "-1 and -2/3"
+      },
+      "correct": "B",
+      "explanation": "3x² + x - 2 = (3x - 2)(x + 1), so the zeroes are 2/3 and -1."
+    },
+    {
+      "id": "MATH10CH02-Q020",
+      "topic": "Finding Zeroes by Factorisation",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Find the zeroes of x² + 7x + 12.",
+      "options": {
+        "A": "3 and 4",
+        "B": "-3 and 4",
+        "C": "3 and -4",
+        "D": "-3 and -4"
+      },
+      "correct": "D",
+      "explanation": "x² + 7x + 12 = (x + 3)(x + 4), so the zeroes are -3 and -4."
+    },
+    {
+      "id": "MATH10CH02-Q021",
+      "topic": "Finding Zeroes by Factorisation",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What are the zeroes of 4x² - 4x + 1?",
+      "options": {
+        "A": "1/2 and 1/2",
+        "B": "-1/2 and -1/2",
+        "C": "1 and 1",
+        "D": "-1 and 1"
+      },
+      "correct": "A",
+      "explanation": "4x² - 4x + 1 = (2x - 1)², so x = 1/2 is a repeated zero."
+    },
+    {
+      "id": "MATH10CH02-Q022",
+      "topic": "Finding Zeroes by Factorisation",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The zeroes of x² - 16 are:",
+      "options": {
+        "A": "0 and 16",
+        "B": "-4 and 4",
+        "C": "4 and 4",
+        "D": "-8 and 2"
+      },
+      "correct": "B",
+      "explanation": "x² - 16 = (x - 4)(x + 4), so the zeroes are 4 and -4."
+    },
+    {
+      "id": "MATH10CH02-Q023",
+      "topic": "Finding Zeroes by Factorisation",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Find the zeroes of x² + x - 6.",
+      "options": {
+        "A": "2 and -3",
+        "B": "-2 and 3",
+        "C": "2 and 3",
+        "D": "-2 and -3"
+      },
+      "correct": "A",
+      "explanation": "x² + x - 6 = (x + 3)(x - 2), giving zeroes -3 and 2."
+    },
+    {
+      "id": "MATH10CH02-Q024",
+      "topic": "Finding Zeroes by Factorisation",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "What are the zeroes of 5x² - 20x?",
+      "options": {
+        "A": "0 and -4",
+        "B": "0 and 4",
+        "C": "4 and 5",
+        "D": "-4 and 5"
+      },
+      "correct": "B",
+      "explanation": "5x² - 20x = 5x(x - 4). Therefore, x = 0 or x = 4."
+    },
+    {
+      "id": "MATH10CH02-Q025",
+      "topic": "Relations between Zeroes and Coefficients",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "If α and β are the zeroes of ax² + bx + c, where a ≠ 0, then α + β equals:",
+      "options": {
+        "A": "b/a",
+        "B": "-b/a",
+        "C": "c/a",
+        "D": "-c/a"
+      },
+      "correct": "B",
+      "explanation": "For ax² + bx + c, the sum of zeroes is α + β = -b/a."
+    },
+    {
+      "id": "MATH10CH02-Q026",
+      "topic": "Relations between Zeroes and Coefficients",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "If α and β are the zeroes of ax² + bx + c, where a ≠ 0, then αβ equals:",
+      "options": {
+        "A": "-b/a",
+        "B": "b/a",
+        "C": "c/a",
+        "D": "-c/a"
+      },
+      "correct": "C",
+      "explanation": "For a quadratic polynomial ax² + bx + c, the product of zeroes is αβ = c/a."
+    },
+    {
+      "id": "MATH10CH02-Q027",
+      "topic": "Relations between Zeroes and Coefficients",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "For 2x² - 5x + 3, what are the sum and product of its zeroes?",
+      "options": {
+        "A": "Sum = -5/2, Product = 3/2",
+        "B": "Sum = 5/2, Product = 3/2",
+        "C": "Sum = 5/2, Product = -3/2",
+        "D": "Sum = -5/2, Product = -3/2"
+      },
+      "correct": "B",
+      "explanation": "Here a = 2, b = -5 and c = 3. Thus sum = -b/a = 5/2 and product = c/a = 3/2."
+    },
+    {
+      "id": "MATH10CH02-Q028",
+      "topic": "Relations between Zeroes and Coefficients",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "For 3x² + 7x - 6, the sum and product of zeroes are:",
+      "options": {
+        "A": "7/3 and -2",
+        "B": "-7/3 and 2",
+        "C": "-7/3 and -2",
+        "D": "7/3 and 2"
+      },
+      "correct": "C",
+      "explanation": "Sum = -b/a = -7/3 and product = c/a = -6/3 = -2."
+    },
+    {
+      "id": "MATH10CH02-Q029",
+      "topic": "Relations between Zeroes and Coefficients",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "If the zeroes of a quadratic polynomial are 4 and -1, what are their sum and product?",
+      "options": {
+        "A": "Sum = 3, Product = -4",
+        "B": "Sum = -3, Product = 4",
+        "C": "Sum = 5, Product = -4",
+        "D": "Sum = 3, Product = 4"
+      },
+      "correct": "A",
+      "explanation": "4 + (-1) = 3 and 4 × (-1) = -4."
+    },
+    {
+      "id": "MATH10CH02-Q030",
+      "topic": "Relations between Zeroes and Coefficients",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "A quadratic polynomial has equal zeroes whose sum is 6. What is each zero?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "6",
+        "D": "12"
+      },
+      "correct": "B",
+      "explanation": "If both zeroes are equal to r, then r + r = 6. Hence 2r = 6 and r = 3."
+    },
+    {
+      "id": "MATH10CH02-Q031",
+      "topic": "Relations between Zeroes and Coefficients",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "The zeroes of x² + kx + 12 are 3 and 4. What is k?",
+      "options": {
+        "A": "-12",
+        "B": "-7",
+        "C": "7",
+        "D": "12"
+      },
+      "correct": "B",
+      "explanation": "The sum of zeroes is 3 + 4 = 7. Since sum = -k, we get -k = 7, so k = -7."
+    },
+    {
+      "id": "MATH10CH02-Q032",
+      "topic": "Relations between Zeroes and Coefficients",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "The sum of the zeroes of 2x² + px + 8 is -5. Find p.",
+      "options": {
+        "A": "-10",
+        "B": "-5",
+        "C": "5",
+        "D": "10"
+      },
+      "correct": "D",
+      "explanation": "Sum = -p/2. Given -p/2 = -5, multiplying by -2 gives p = 10."
+    },
+    {
+      "id": "MATH10CH02-Q033",
+      "topic": "Forming Quadratic Polynomials",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which monic quadratic polynomial has zeroes 2 and 5?",
+      "options": {
+        "A": "x² + 7x + 10",
+        "B": "x² - 7x + 10",
+        "C": "x² - 3x + 10",
+        "D": "x² + 3x - 10"
+      },
+      "correct": "B",
+      "explanation": "The polynomial is (x - 2)(x - 5) = x² - 7x + 10."
+    },
+    {
+      "id": "MATH10CH02-Q034",
+      "topic": "Forming Quadratic Polynomials",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which monic quadratic polynomial has zeroes -3 and 4?",
+      "options": {
+        "A": "x² + x - 12",
+        "B": "x² - x - 12",
+        "C": "x² - 7x + 12",
+        "D": "x² + 7x - 12"
+      },
+      "correct": "B",
+      "explanation": "(x + 3)(x - 4) = x² - x - 12."
+    },
+    {
+      "id": "MATH10CH02-Q035",
+      "topic": "Forming Quadratic Polynomials",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "A quadratic polynomial has sum of zeroes 6 and product 8. Which polynomial can represent it?",
+      "options": {
+        "A": "x² + 6x + 8",
+        "B": "x² - 6x + 8",
+        "C": "x² - 8x + 6",
+        "D": "x² + 8x - 6"
+      },
+      "correct": "B",
+      "explanation": "For sum S and product P, a monic quadratic is x² - Sx + P. Thus it is x² - 6x + 8."
+    },
+    {
+      "id": "MATH10CH02-Q036",
+      "topic": "Forming Quadratic Polynomials",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which monic quadratic polynomial has sum of zeroes -2 and product -15?",
+      "options": {
+        "A": "x² - 2x - 15",
+        "B": "x² + 2x - 15",
+        "C": "x² - 2x + 15",
+        "D": "x² + 2x + 15"
+      },
+      "correct": "B",
+      "explanation": "Using x² - (sum)x + product gives x² - (-2)x - 15 = x² + 2x - 15."
+    },
+    {
+      "id": "MATH10CH02-Q037",
+      "topic": "Forming Quadratic Polynomials",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Which quadratic polynomial has zeroes 2 and 1/2?",
+      "options": {
+        "A": "2x² - 5x + 2",
+        "B": "2x² + 5x + 2",
+        "C": "2x² - 3x + 2",
+        "D": "x² - 2x + 1"
+      },
+      "correct": "A",
+      "explanation": "(x - 2)(x - 1/2) = x² - (5/2)x + 1. Multiplying by 2 gives 2x² - 5x + 2."
+    },
+    {
+      "id": "MATH10CH02-Q038",
+      "topic": "Forming Quadratic Polynomials",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "If 3 is one zero of x² - 7x + k, what is the value of k?",
+      "options": {
+        "A": "10",
+        "B": "12",
+        "C": "18",
+        "D": "21"
+      },
+      "correct": "B",
+      "explanation": "Substitute x = 3: 3² - 7(3) + k = 0, so 9 - 21 + k = 0 and k = 12."
+    },
+    {
+      "id": "MATH10CH02-Q039",
+      "topic": "Forming Quadratic Polynomials",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "The sum of the zeroes of kx² - 6x + 2 is 3. What is k?",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "6"
+      },
+      "correct": "B",
+      "explanation": "The sum is -(-6)/k = 6/k. Since 6/k = 3, k = 2."
+    },
+    {
+      "id": "MATH10CH02-Q040",
+      "topic": "Forming Quadratic Polynomials",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "If α + β = 1 and αβ = -6, which monic quadratic polynomial has zeroes α and β?",
+      "options": {
+        "A": "x² + x - 6",
+        "B": "x² - x - 6",
+        "C": "x² - x + 6",
+        "D": "x² + x + 6"
+      },
+      "correct": "B",
+      "explanation": "The polynomial is x² - (α + β)x + αβ = x² - x - 6."
+    }
+  ],
+  "tests": [
+    {
+      "testId": "MATH10CH02-T01",
+      "testTitle": "Topic Test 1",
+      "testType": "TOPIC_TEST",
+      "topic": "Polynomial Basics and Zeroes",
+      "questionLabel": "Related questions: Q1-Q8",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "MATH10CH02-Q001",
+        "MATH10CH02-Q002",
+        "MATH10CH02-Q003",
+        "MATH10CH02-Q004",
+        "MATH10CH02-Q005",
+        "MATH10CH02-Q006",
+        "MATH10CH02-Q007",
+        "MATH10CH02-Q008"
+      ]
+    },
+    {
+      "testId": "MATH10CH02-T02",
+      "testTitle": "Topic Test 2",
+      "testType": "TOPIC_TEST",
+      "topic": "Graphical Meaning of Zeroes",
+      "questionLabel": "Related questions: Q9-Q16",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "MATH10CH02-Q009",
+        "MATH10CH02-Q010",
+        "MATH10CH02-Q011",
+        "MATH10CH02-Q012",
+        "MATH10CH02-Q013",
+        "MATH10CH02-Q014",
+        "MATH10CH02-Q015",
+        "MATH10CH02-Q016"
+      ]
+    },
+    {
+      "testId": "MATH10CH02-T03",
+      "testTitle": "Topic Test 3",
+      "testType": "TOPIC_TEST",
+      "topic": "Finding Zeroes by Factorisation",
+      "questionLabel": "Related questions: Q17-Q24",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "MATH10CH02-Q017",
+        "MATH10CH02-Q018",
+        "MATH10CH02-Q019",
+        "MATH10CH02-Q020",
+        "MATH10CH02-Q021",
+        "MATH10CH02-Q022",
+        "MATH10CH02-Q023",
+        "MATH10CH02-Q024"
+      ]
+    },
+    {
+      "testId": "MATH10CH02-T04",
+      "testTitle": "Topic Test 4",
+      "testType": "TOPIC_TEST",
+      "topic": "Relations between Zeroes and Coefficients",
+      "questionLabel": "Related questions: Q25-Q32",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "MATH10CH02-Q025",
+        "MATH10CH02-Q026",
+        "MATH10CH02-Q027",
+        "MATH10CH02-Q028",
+        "MATH10CH02-Q029",
+        "MATH10CH02-Q030",
+        "MATH10CH02-Q031",
+        "MATH10CH02-Q032"
+      ]
+    },
+    {
+      "testId": "MATH10CH02-T05",
+      "testTitle": "Topic Test 5",
+      "testType": "TOPIC_TEST",
+      "topic": "Forming Quadratic Polynomials",
+      "questionLabel": "Related questions: Q33-Q40",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "MATH10CH02-Q033",
+        "MATH10CH02-Q034",
+        "MATH10CH02-Q035",
+        "MATH10CH02-Q036",
+        "MATH10CH02-Q037",
+        "MATH10CH02-Q038",
+        "MATH10CH02-Q039",
+        "MATH10CH02-Q040"
+      ]
+    },
+    {
+      "testId": "MATH10CH02-FLT01",
+      "testTitle": "Full-Length Test 1",
+      "testType": "FULL_LENGTH",
+      "topic": "Complete Chapter — Set A",
+      "questionLabel": "20 balanced questions from the complete chapter",
+      "instructions": "20 questions • 1 mark each • Full chapter assessment • Progress saves automatically after submit.",
+      "questionIds": [
+        "MATH10CH02-Q001",
+        "MATH10CH02-Q003",
+        "MATH10CH02-Q005",
+        "MATH10CH02-Q007",
+        "MATH10CH02-Q009",
+        "MATH10CH02-Q011",
+        "MATH10CH02-Q013",
+        "MATH10CH02-Q015",
+        "MATH10CH02-Q017",
+        "MATH10CH02-Q019",
+        "MATH10CH02-Q021",
+        "MATH10CH02-Q023",
+        "MATH10CH02-Q025",
+        "MATH10CH02-Q027",
+        "MATH10CH02-Q029",
+        "MATH10CH02-Q031",
+        "MATH10CH02-Q033",
+        "MATH10CH02-Q035",
+        "MATH10CH02-Q037",
+        "MATH10CH02-Q039"
+      ]
+    },
+    {
+      "testId": "MATH10CH02-FLT02",
+      "testTitle": "Full-Length Test 2",
+      "testType": "FULL_LENGTH",
+      "topic": "Complete Chapter — Set B",
+      "questionLabel": "20 balanced questions from the complete chapter",
+      "instructions": "20 questions • 1 mark each • Full chapter assessment • Progress saves automatically after submit.",
+      "questionIds": [
+        "MATH10CH02-Q002",
+        "MATH10CH02-Q004",
+        "MATH10CH02-Q006",
+        "MATH10CH02-Q008",
+        "MATH10CH02-Q010",
+        "MATH10CH02-Q012",
+        "MATH10CH02-Q014",
+        "MATH10CH02-Q016",
+        "MATH10CH02-Q018",
+        "MATH10CH02-Q020",
+        "MATH10CH02-Q022",
+        "MATH10CH02-Q024",
+        "MATH10CH02-Q026",
+        "MATH10CH02-Q028",
+        "MATH10CH02-Q030",
+        "MATH10CH02-Q032",
+        "MATH10CH02-Q034",
+        "MATH10CH02-Q036",
+        "MATH10CH02-Q038",
+        "MATH10CH02-Q040"
+      ]
+    }
+  ]
+};
+  </script>
+
+  <script src="../../assets/js/static-mcq-engine.js"></script>
+</body>
+</html>
