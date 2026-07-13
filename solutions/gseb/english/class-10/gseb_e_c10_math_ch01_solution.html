@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#102a43">
+<title>GSEB Class 10 Mathematics Chapter 1 Solutions | Real Numbers</title>
+
+<script>window.WTC_PAGE_ACCESS = "PUBLIC";</script>
+<script src="../../../../assets/js/config.js"></script>
+<script src="../../../../assets/js/auth.js"></script>
+<script src="../../../../assets/js/access-guard.js"></script>
+
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(', '\\)']],
+    displayMath: [['\\[', '\\]']]
+  },
+  chtml: {scale: 1.02}
+};
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+
+:root{
+  --ink:#102a43;--ink-soft:#334e68;--brand:#0b7285;--brand-2:#1864ab;--accent:#f59f00;
+  --paper:#ffffff;--page:#edf4f8;--line:#d9e2ec;--success:#2b8a3e;--danger:#c92a2a;
+  --purple:#7048e8;--shadow:0 14px 36px rgba(16,42,67,.12);--radius:22px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:linear-gradient(180deg,#e7f5ff 0,#f7fbfd 420px,#edf4f8 100%);
+  color:var(--ink);
+  font-family:Inter,"Segoe UI",Roboto,Arial,sans-serif;
+  line-height:1.68;
+  padding-bottom:230px;
+}
+button,a{font:inherit}
+.hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(135deg,#0b2d45 0%,#0b7285 58%,#1864ab 100%);
+  color:#fff;padding:54px 18px 68px;border-bottom:6px solid var(--accent);
+}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.08)}
+.hero:before{width:360px;height:360px;right:-130px;top:-180px}
+.hero:after{width:240px;height:240px;left:-110px;bottom:-150px}
+.hero-inner{position:relative;z-index:1;max-width:1040px;margin:auto;text-align:center}
+.brand{font-size:clamp(1.75rem,5vw,2.85rem);font-weight:900;letter-spacing:.04em;margin:0;text-transform:uppercase}
+.tagline{margin:.35rem 0 1.35rem;color:#ffd43b;font-size:clamp(1rem,3vw,1.35rem);font-style:italic;font-weight:700}
+.chapter-title{font-size:clamp(1.55rem,4.4vw,2.55rem);line-height:1.2;margin:.35rem auto 1.4rem;max-width:850px}
+.meta-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;max-width:920px;margin:0 auto}
+.meta-item{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:10px 8px;backdrop-filter:blur(4px)}
+.meta-item span{display:block;color:#cfe8f3;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em}
+.meta-item strong{font-size:.94rem}
+main{max-width:1040px;margin:-34px auto 0;padding:0 16px;position:relative;z-index:2}
+.intro-card,.download-section{
+  background:var(--paper);border:1px solid rgba(11,114,133,.16);
+  border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;margin-bottom:22px;
+}
+.intro-card{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}
+.intro-card h2{margin:0 0 6px;font-size:1.3rem}
+.intro-card p{margin:0;color:var(--ink-soft)}
+.badge{display:inline-flex;align-items:center;gap:8px;background:#e6fcf5;color:#087f5b;border:1px solid #96f2d7;border-radius:999px;padding:8px 13px;font-weight:800;white-space:nowrap}
+.part-heading{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#102a43,#1c4b6b);color:#fff;border-radius:18px;padding:17px 20px;margin:30px 0 16px;box-shadow:0 10px 24px rgba(16,42,67,.18)}
+.part-heading .part-no{display:grid;place-items:center;width:44px;height:44px;border-radius:14px;background:var(--accent);color:#102a43;font-weight:900}
+.part-heading h2{margin:0;font-size:clamp(1.15rem,3vw,1.55rem)}
+.set-heading{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:26px 4px 12px;color:var(--brand-2);font-size:1.12rem}
+.set-heading span{font-weight:900}
+.set-heading small{font-size:.78rem;color:#627d98;font-weight:700}
+.question-card{
+  background:var(--paper);border:1px solid var(--line);border-radius:20px;margin:14px 0;
+  box-shadow:0 8px 24px rgba(16,42,67,.08);overflow:hidden;
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+}
+.question-card:hover{transform:translateY(-1px);box-shadow:0 12px 30px rgba(16,42,67,.12)}
+.question-card.open{border-color:#74c0fc;box-shadow:0 14px 32px rgba(24,100,171,.16)}
+.question-toggle{
+  width:100%;border:0;background:#fff;color:var(--ink);text-align:left;cursor:pointer;
+  padding:19px 20px 16px;display:grid;grid-template-columns:auto 1fr;
+  column-gap:14px;row-gap:10px;align-items:start;
+}
+.question-toggle:focus-visible{outline:4px solid rgba(245,159,0,.35);outline-offset:-4px}
+.question-number{display:inline-flex;align-items:center;justify-content:center;min-width:100px;background:linear-gradient(135deg,#e7f5ff,#d0ebff);border:1px solid #a5d8ff;color:#1864ab;font-weight:900;border-radius:12px;padding:7px 10px;white-space:nowrap}
+.question-text{font-size:1rem;font-weight:760;line-height:1.58;min-width:0}
+.toggle-indicator{grid-column:2;color:var(--brand);font-size:.82rem;font-weight:900}
+.toggle-indicator .up{display:none}
+.question-card.open .toggle-indicator .down{display:none}
+.question-card.open .toggle-indicator .up{display:inline;color:#c92a2a}
+.solution-panel{max-height:0;opacity:0;overflow:hidden;background:#f8fbfd;border-top:0 solid var(--line);transition:max-height .48s ease,opacity .28s ease,border-top-width .28s ease}
+.question-card.open .solution-panel{opacity:1;border-top-width:1px}
+.solution-inner{padding:20px;min-width:0;max-width:100%}
+.answer-box,.given-box,.formula-box,.concept-box,.steps-box,.final-answer,.gu-final{
+  border-radius:15px;padding:15px 16px;margin:0 0 13px;border:1px solid transparent;min-width:0;max-width:100%;
+}
+.answer-box{background:#ebfbee;border-color:#b2f2bb}
+.given-box{background:#e7f5ff;border-color:#a5d8ff}
+.formula-box,.concept-box{background:#f3f0ff;border-color:#d0bfff}
+.steps-box{background:#fff;border-color:#d9e2ec}
+.final-answer{background:#e6fcf5;border-color:#96f2d7;border-left:5px solid #12b886}
+.gu-final{display:none;background:#fff9db;border-color:#ffe066;border-left:5px solid #fab005;font-family:"Noto Sans Gujarati","Nirmala UI","Shruti","Segoe UI",sans-serif}
+.show-gu .gu-final{display:block}
+.box-title{font-weight:900;color:var(--ink);margin-bottom:7px}
+.steps-box p,.answer-box p,.given-box p,.formula-box p,.concept-box p{margin:.45rem 0}
+.sub-solution{padding:13px 0;border-bottom:1px dashed #cbd5e1}
+.sub-solution:first-of-type{padding-top:2px}
+.sub-solution:last-child{border-bottom:0;padding-bottom:2px}
+.sub-solution h4{margin:0 0 8px;color:#0b7285}
+.equation-display{
+  overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;
+  text-align:center;background:#f8fafc;border:1px dashed #b8c5d1;border-radius:12px;
+  padding:10px 8px;margin:10px 0;font-size:1.04rem;max-width:100%;
+}
+.final-answer>div:last-child,.gu-final>div:last-child{
+  min-width:0;max-width:100%;overflow-x:auto;overflow-y:hidden;
+  -webkit-overflow-scrolling:touch;overscroll-behavior-inline:contain;padding-bottom:4px;
+}
+.final-answer mjx-container,.gu-final mjx-container,.equation-display mjx-container{max-width:100%}
+.download-section{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:28px}
+.download-section h2{margin:0 0 4px;font-size:1.2rem}
+.download-section p{margin:0;color:var(--ink-soft)}
+.download-btn{border:0;background:linear-gradient(135deg,#2b8a3e,#12b886);color:#fff;font-weight:900;border-radius:14px;padding:13px 20px;cursor:pointer;box-shadow:0 8px 20px rgba(43,138,62,.25);white-space:nowrap}
+.download-btn:hover{filter:brightness(1.04)}
+.footer{text-align:center;color:#627d98;padding:26px 16px 8px;font-size:.9rem}
+.float-stack{position:fixed;right:18px;bottom:18px;z-index:9998;display:flex;flex-direction:column;gap:12px;align-items:flex-end}
+.float-btn{width:58px;height:58px;border-radius:50%;border:0;display:grid;place-items:center;color:#fff;text-decoration:none;font-size:1.32rem;cursor:pointer;box-shadow:0 10px 24px rgba(0,0,0,.24);transition:transform .2s ease}
+.float-btn:hover{transform:translateY(-2px) scale(1.03)}
+.float-btn.whatsapp{background:#25d366}
+.float-btn.language{background:#7048e8}
+.float-btn.pdf{background:#e8590c}
+.float-label{position:absolute;right:70px;background:#102a43;color:#fff;padding:6px 10px;border-radius:9px;font-size:.76rem;font-weight:800;opacity:0;pointer-events:none;white-space:nowrap;transition:opacity .2s}
+.float-wrap{position:relative;display:flex;align-items:center}
+.float-wrap:hover .float-label,.float-btn:focus+.float-label{opacity:1}
+.lang-menu{position:absolute;right:70px;bottom:0;display:none;background:#fff;border:1px solid var(--line);border-radius:14px;padding:7px;box-shadow:var(--shadow);min-width:150px}
+.lang-wrap.open .lang-menu{display:block}
+.lang-menu button{width:100%;border:0;background:#fff;text-align:left;padding:9px 10px;border-radius:9px;cursor:pointer;font-weight:800}
+.lang-menu button:hover,.lang-menu button.active{background:#ede9fe;color:#5f3dc4}
+@media(max-width:760px){
+  body{padding-bottom:112px}
+  .hero{padding-top:38px}
+  .meta-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .meta-item:last-child{grid-column:1/-1}
+  .intro-card,.download-section{grid-template-columns:1fr;display:grid}
+  .badge{justify-self:start}
+  .download-btn{width:100%}
+  .question-toggle{grid-template-columns:1fr;padding:16px}
+  .question-number{justify-self:start}
+  .toggle-indicator{grid-column:1}
+  .solution-inner{padding:15px}
+  .set-heading{align-items:flex-start;flex-direction:column;gap:2px}
+  .final-answer mjx-container,.gu-final mjx-container{font-size:88%!important}
+  .float-stack{
+    left:50%;right:auto;bottom:calc(10px + env(safe-area-inset-bottom));
+    transform:translateX(-50%);flex-direction:row;align-items:center;gap:10px;
+    padding:8px 10px;border:1px solid rgba(16,42,67,.14);border-radius:999px;
+    background:rgba(255,255,255,.94);box-shadow:0 10px 30px rgba(16,42,67,.22);
+    backdrop-filter:blur(10px);
+  }
+  .float-btn{width:48px;height:48px;font-size:1.15rem}
+  .float-label{display:none}
+  .lang-menu{right:auto;left:50%;bottom:62px;transform:translateX(-50%)}
+}
+@media print{
+  @page{size:A4;margin:13mm}
+  body{background:#fff;padding:0;font-size:10.5pt}
+  .hero{background:#fff!important;color:#000;padding:0 0 18px;border-bottom:2px solid #000}
+  .hero:before,.hero:after,.float-stack,.download-section,.toggle-indicator{display:none!important}
+  .tagline{color:#000}
+  .meta-item{border:1px solid #777;background:#fff}
+  .meta-item span{color:#333}
+  main{margin:0;max-width:none;padding:0}
+  .intro-card{box-shadow:none;border:1px solid #aaa}
+  .part-heading{background:#eee!important;color:#000;box-shadow:none;border:1px solid #999;break-after:avoid}
+  .question-card{box-shadow:none;break-inside:avoid;border:1px solid #aaa;margin:8px 0}
+  .question-toggle{padding:11px 12px}
+  .solution-panel{max-height:none!important;opacity:1!important;border-top:1px solid #bbb!important;overflow:visible}
+  .solution-inner{padding:12px}
+  .gu-final{display:none!important}
+  .equation-display{overflow:visible}
+  .footer{padding:10px 0}
+}
+
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <p class="brand">WAGH Tuition Classes</p>
+    <p class="tagline">Mastering Mathematics with Wagh Sir</p>
+    <h1 class="chapter-title">Chapter 1 — Real Numbers</h1>
+    <div class="meta-grid">
+      <div class="meta-item"><span>Board</span><strong>GSEB</strong></div>
+      <div class="meta-item"><span>Class</span><strong>10</strong></div>
+      <div class="meta-item"><span>Subject</span><strong>Mathematics</strong></div>
+      <div class="meta-item"><span>Medium</span><strong>English</strong></div>
+      <div class="meta-item"><span>Chapter</span><strong>Real Numbers</strong></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="intro-card">
+    <div>
+      <h2>Complete Textbook Solutions</h2>
+      <p>All worked examples and exercise questions remain in textbook chronology. Tap any question to reveal its detailed solution. Only one solution stays open at a time.</p>
+    </div>
+    <div class="badge">✓ 7 Worked Examples + 10 Exercise Questions</div>
+  </section>
+
+  <section aria-labelledby="part1-heading">
+    <div class="part-heading" id="part1-heading">
+      <span class="part-no">I</span>
+      <h2>PART I — In-text Questions (Inside Chapter)</h2>
+    </div>
+
+    <h3 class="set-heading"><span>Worked Examples</span><small>Textbook chronology</small></h3>
+    
+<article class="question-card" id="p1-ex1">
+  <button class="question-toggle" type="button" aria-expanded="false" aria-controls="p1-ex1-solution">
+    <span class="question-number">Example 1</span>
+    <span class="question-text">Consider the numbers \(4^n\), where \(n\) is a natural number. Check whether there is any value of \(n\) for which \(4^n\) ends with the digit zero.</span>
+    <span class="toggle-indicator"><span class="down">▼ Tap to View Solution</span><span class="up">▲ Hide Solution</span></span>
+  </button>
+  <div class="solution-panel" id="p1-ex1-solution" role="region" aria-labelledby="p1-ex1">
+    <div class="solution-inner">
+      
+<div class="given-box">
+  <div class="box-title">📋 Given</div>
+  <p>The number is \(4^n\), where \(n\in\mathbb{N}\).</p>
+</div>
+<div class="concept-box">
+  <div class="box-title">📘 Key Idea</div>
+  <p>A whole number ends in \(0\) only when its prime factorisation contains both \(2\) and \(5\), because \(10=2\times5\).</p>
+</div>
+<div class="steps-box">
+  <div class="box-title">✏️ Step-by-Step Solution</div>
+  <p><strong>Step 1:</strong> Write \(4^n\) as a power of a prime.</p>
+  <div class="equation-display">\[4^n=(2^2)^n=2^{2n}\]</div>
+  <p><strong>Step 2:</strong> The only prime factor of \(4^n\) is \(2\).</p>
+  <p><strong>Step 3:</strong> Its prime factorisation contains no factor \(5\).</p>
+  <p><strong>Step 4:</strong> Therefore, \(4^n\) is not divisible by \(10\).</p>
+  <p><strong>Step 5:</strong> Hence it cannot end with the digit \(0\).</p>
+</div>
+
+<div class="final-answer">
+  <div class="box-title">✅ Final Answer</div>
+  <div>There is no natural number \(n\) for which \(4^n\) ends with the digit \(0\).</div>
+</div>
+<div class="gu-final">
+  <div class="box-title">🌐 Gujarati Translation</div>
+  <div>કોઈપણ પ્રાકૃતિક સંખ્યા \(n\) માટે \(4^n\)નો અંત \(0\)થી થતો નથી, કારણ કે તેના અવિભાજ્ય અવયવીકરણમાં \(5\) અવયવ નથી.</div>
+</div>
+
+    </div>
+  </div>
+</article>
+
+<article class="question-card" id="p1-ex2">
+  <button class="question-toggle" type="button" aria-expanded="false" aria-controls="p1-ex2-solution">
+    <span class="question-number">Example 2</span>
+    <span class="question-text">Find the LCM and HCF of 6 and 20 by the prime factorisation method.</span>
+    <span class="toggle-indicator"><span class="down">▼ Tap to View Solution</span><span class="up">▲ Hide Solution</span></span>
+  </button>
+  <div class="solution-panel" id="p1-ex2-solution" role="region" aria-labelledby="p1-ex2">
+    <div class="solution-inner">
+      
+<div class="given-box">
+  <div class="box-title">📋 Given</div>
+  <p>Numbers: \(6\) and \(20\)</p>
+</div>
+<div class="formula-box">
+  <div class="box-title">📘 Rule Used</div>
+  <p><strong>HCF:</strong> product of the smallest powers of common prime factors.</p>
+  <p><strong>LCM:</strong> product of the greatest powers of all prime factors involved.</p>
+</div>
+<div class="steps-box">
+  <div class="box-title">✏️ Step-by-Step Solution</div>
+  <p><strong>Step 1: Prime factorise both numbers.</strong></p>
+  <div class="equation-display">\[6=2\times3=2^1\times3^1\]</div>
+  <div class="equation-display">\[20=2\times2\times5=2^2\times5^1\]</div>
+  <p><strong>Step 2: Find the HCF.</strong></p>
+  <p>The only common prime factor is \(2\), and its smallest power is \(2^1\).</p>
+  <div class="equation-display">\[\mathrm{HCF}(6,20)=2\]</div>
+  <p><strong>Step 3: Find the LCM.</strong></p>
+  <p>Take \(2^2,\;3^1,\;5^1\).</p>
+  <div class="equation-display">\[\mathrm{LCM}(6,20)=2^2\times3\times5=60\]</div>
+  <p><strong>Verification:</strong></p>
+  <div class="equation-display">\[\mathrm{HCF}\times\mathrm{LCM}=2\times60=120=6\times20\]</div>
+</div>
+
+<div class="final-answer">
+  <div class="box-title">✅ Final Answer</div>
+  <div>\(\mathrm{HCF}(6,20)=2\) and \(\mathrm{LCM}(6,20)=60\).</div>
+</div>
+<div class="gu-final">
+  <div class="box-title">🌐 Gujarati Translation</div>
+  <div>\(\mathrm{HCF}(6,20)=2\) અને \(\mathrm{LCM}(6,20)=60\).</div>
+</div>
+
+    </div>
+  </div>
+</article>
+
+<article class="question-card" id="p1-ex3">
+  <button class="question-toggle" type="button" aria-expanded="false" aria-controls="p1-ex3-solution">
+    <span class="question-number">Example 3</span>
+    <span class="question-text">Find the HCF of 96 and 404 by the prime factorisation method. Hence, find their LCM.</span>
+    <span class="toggle-indicator"><span class="down">▼ Tap to View Solution</span><span class="up">▲ Hide Solution</span></span>
+  </button>
+  <div class="solution-panel" id="p1-ex3-solution" role="region" aria-labelledby="p1-ex3">
+    <div class="solution-inner">
+      
+<div class="given-box">
+  <div class="box-title">📋 Given</div>
+  <p>Numbers: \(96\) and \(404\)</p>
+</div>
+<div class="formula-box">
+  <div class="box-title">📘 Formula Used</div>
+  <div class="equation-display">\[\mathrm{HCF}(a,b)\times\mathrm{LCM}(a,b)=a\times b\]</div>
+</div>
+<div class="steps-box">
+  <div class="box-title">✏️ Step-by-Step Solution</div>
+  <p><strong>Step 1: Prime factorise \(96\).</strong></p>
+  <div class="equation-display">\[96=2\times2\times2\times2\times2\times3=2^5\times3\]</div>
+  <p><strong>Step 2: Prime factorise \(404\).</strong></p>
+  <div class="equation-display">\[404=4\times101=2^2\times101\]</div>
+  <p><strong>Step 3: Find the HCF.</strong></p>
+  <p>The common prime factor is \(2\). Its smallest power is \(2^2\).</p>
+  <div class="equation-display">\[\mathrm{HCF}(96,404)=2^2=4\]</div>
+  <p><strong>Step 4: Find the LCM.</strong></p>
+  <div class="equation-display">\[\mathrm{LCM}(96,404)=\frac{96\times404}{4}\]</div>
+  <div class="equation-display">\[=24\times404=9696\]</div>
+</div>
+
+<div class="final-answer">
+  <div class="box-title">✅ Final Answer</div>
+  <div>\(\mathrm{HCF}(96,404)=4\) and \(\mathrm{LCM}(96,404)=9696\).</div>
+</div>
+<div class="gu-final">
+  <div class="box-title">🌐 Gujarati Translation</div>
+  <div>\(\mathrm{HCF}(96,404)=4\) અને \(\mathrm{LCM}(96,404)=9696\).</div>
+</div>
+
+    </div>
+  </div>
+</article>
+
+<article class="question-card" id="p1-ex4">
+  <button class="question-toggle" type="button" aria-expanded="false" aria-controls="p1-ex4-solution">
+    <span class="question-number">Example 4</span>
+    <span class="question-text">Find the HCF and LCM of 6, 72 and 120, using the prime factorisation method.</span>
+    <span class="toggle-indicator"><span class="down">▼ Tap to View Solution</span><span class="up">▲ Hide Solution</span></span>
+  </button>
+  <div class="solution-panel" id="p1-ex4-solution" role="region" aria-labelledby="p1-ex4">
+    <div class="solution-inner">
+      
+<div class="given-box">
+  <div class="box-title">📋 Given</div>
+  <p>Numbers: \(6,\;72,\;120\)</p>
+</div>
+<div class="steps-box">
+  <div class="box-title">✏️ Step-by-Step Solution</div>
+  <p><strong>Step 1: Prime factorise all three numbers.</strong></p>
+  <div class="equation-display">\[6=2\times3\]</div>
+  <div class="equation-display">\[72=2^3\times3^2\]</div>
+  <div class="equation-display">\[120=2^3\times3\times5\]</div>
+  <p><strong>Step 2: Find the HCF.</strong></p>
+  <p>The common primes are \(2\) and \(3\). Their smallest powers are \(2^1\) and \(3^1\).</p>
+  <div class="equation-display">\[\mathrm{HCF}(6,72,120)=2\times3=6\]</div>
+  <p><strong>Step 3: Find the LCM.</strong></p>
+  <p>The greatest powers are \(2^3,\;3^2,\;5^1\).</p>
+  <div class="equation-display">\[\mathrm{LCM}(6,72,120)=2^3\times3^2\times5\]</div>
+  <div class="equation-display">\[=8\times9\times5=360\]</div>
+  <p><strong>Important:</strong> For three numbers, in general,</p>
+  <div class="equation-display">\[\mathrm{HCF}\times\mathrm{LCM}\ne\text{product of the three numbers}\]</div>
+</div>
+
+<div class="final-answer">
+  <div class="box-title">✅ Final Answer</div>
+  <div>\(\mathrm{HCF}(6,72,120)=6\) and \(\mathrm{LCM}(6,72,120)=360\).</div>
+</div>
+<div class="gu-final">
+  <div class="box-title">🌐 Gujarati Translation</div>
+  <div>\(\mathrm{HCF}(6,72,120)=6\) અને \(\mathrm{LCM}(6,72,120)=360\).</div>
+</div>
+
+    </div>
+  </div>
+</article>
+
+<article class="question-card" id="p1-ex5">
+  <button class="question-toggle" type="button" aria-expanded="false" aria-controls="p1-ex5-solution">
+    <span class="question-number">Example 5</span>
+    <span class="question-text">Prove that \(\sqrt{3}\) is irrational.</span>
+    <span class="toggle-indicator"><span class="down">▼ Tap to View Solution</span><span class="up">▲ Hide Solution</span></span>
+  </button>
+  <div class="solution-panel" id="p1-ex5-solution" role="region" aria-labelledby="p1-ex5">
+    <div class="solution-inner">
+      
+<div class="concept-box">
+  <div class="box-title">📘 Method Used</div>
+  <p>Proof by contradiction.</p>
+</div>
+<div class="steps-box">
+  <div class="box-title">✏️ Step-by-Step Proof</div>
+  <p><strong>Step 1:</strong> Assume, contrary to what we have to prove, that \(\sqrt3\) is rational.</p>
+  <p>Then it can be written in lowest terms as</p>
+  <div class="equation-display">\[\sqrt3=\frac{a}{b}\]</div>
+  <p>where \(a,b\) are coprime integers and \(b\ne0\).</p>
+  <p><strong>Step 2:</strong> Square both sides.</p>
+  <div class="equation-display">\[3=\frac{a^2}{b^2}\]</div>
+  <div class="equation-display">\[a^2=3b^2\]</div>
+  <p>Thus \(3\mid a^2\). Since \(3\) is prime, \(3\mid a\).</p>
+  <p><strong>Step 3:</strong> Let \(a=3c\) for some integer \(c\).</p>
+  <div class="equation-display">\[(3c)^2=3b^2\]</div>
+  <div class="equation-display">\[9c^2=3b^2\]</div>
+  <div class="equation-display">\[b^2=3c^2\]</div>
+  <p>Therefore \(3\mid b^2\), and hence \(3\mid b\).</p>
+  <p><strong>Step 4:</strong> So \(3\) divides both \(a\) and \(b\), contradicting that \(a\) and \(b\) are coprime.</p>
+  <p>Therefore the original assumption is false.</p>
+</div>
+
+<div class="final-answer">
+  <div class="box-title">✅ Final Answer</div>
+  <div>\(\sqrt3\) is irrational.</div>
+</div>
+<div class="gu-final">
+  <div class="box-title">🌐 Gujarati Translation</div>
+  <div>\(\sqrt3\) અપરિમેય સંખ્યા છે.</div>
+</div>
+
+    </div>
+  </div>
+</article>
+
+<article class="question-card" id="p1-ex6">
+  <button class="question-toggle" type="button" aria-expanded="false" aria-controls="p1-ex6-solution">
+    <span class="question-number">Example 6</span>
+    <span class="question-text">Show that \(5-\sqrt3\) is irrational.</span>
+    <span class="toggle-indicator"><span class="down">▼ Tap to View Solution</span><span class="up">▲ Hide Solution</span></span>
+  </button>
+  <div class="solution-panel" id="p1-ex6-solution" role="region" aria-labelledby="p1-ex6">
+    <div class="solution-inner">
+      
+<div class="concept-box">
+  <div class="box-title">📘 Method Used</div>
+  <p>Proof by contradiction, using the known fact that \(\sqrt3\) is irrational.</p>
+</div>
+<div class="steps-box">
+  <div class="box-title">✏️ Step-by-Step Proof</div>
+  <p><strong>Step 1:</strong> Assume that \(5-\sqrt3\) is rational.</p>
+  <p>Then for some integers \(a,b\), with \(b\ne0\),</p>
+  <div class="equation-display">\[5-\sqrt3=\frac{a}{b}\]</div>
+  <p><strong>Step 2:</strong> Rearrange to isolate \(\sqrt3\).</p>
+  <div class="equation-display">\[\sqrt3=5-\frac{a}{b}\]</div>
+  <div class="equation-display">\[\sqrt3=\frac{5b-a}{b}\]</div>
+  <p><strong>Step 3:</strong> Since \(a\) and \(b\) are integers, \(\frac{5b-a}{b}\) is rational.</p>
+  <p>This would make \(\sqrt3\) rational.</p>
+  <p><strong>Step 4:</strong> But \(\sqrt3\) is irrational. This is a contradiction.</p>
+</div>
+
+<div class="final-answer">
+  <div class="box-title">✅ Final Answer</div>
+  <div>\(5-\sqrt3\) is irrational.</div>
+</div>
+<div class="gu-final">
+  <div class="box-title">🌐 Gujarati Translation</div>
+  <div>\(5-\sqrt3\) અપરિમેય સંખ્યા છે.</div>
+</div>
+
+    </div>
+  </div>
+</article>
+
+<article class="question-card" id="p1-ex7">
+  <button class="question-toggle" type="button" aria-expanded="false" aria-controls="p1-ex7-solution">
+    <span class="question-number">Example 7</span>
+    <span class="question-text">Show that \(3\sqrt2\) is irrational.</span>
+    <span class="toggle-indicator"><span class="down">▼ Tap to View Solution</span><span class="up">▲ Hide Solution</span></span>
+  </button>
+  <div class="solution-panel" id="p1-ex7-solution" role="region" aria-labelledby="p1-ex7">
+    <div class="solution-inner">
+      
+<div class="concept-box">
+  <div class="box-title">📘 Method Used</div>
+  <p>Proof by contradiction, using the known fact that \(\sqrt2\) is irrational.</p>
+</div>
+<div class="steps-box">
+  <div class="box-title">✏️ Step-by-Step Proof</div>
+  <p><strong>Step 1:</strong> Assume that \(3\sqrt2\) is rational.</p>
+  <p>Then for some integers \(a,b\), with \(b\ne0\),</p>
+  <div class="equation-display">\[3\sqrt2=\frac{a}{b}\]</div>
+  <p><strong>Step 2:</strong> Divide both sides by \(3\).</p>
+  <div class="equation-display">\[\sqrt2=\frac{a}{3b}\]</div>
+  <p><strong>Step 3:</strong> Since \(a\) and \(3b\) are integers and \(3b\ne0\), \(\frac{a}{3b}\) is rational.</p>
+  <p>This would make \(\sqrt2\) rational.</p>
+  <p><strong>Step 4:</strong> But \(\sqrt2\) is irrational. This is a contradiction.</p>
+</div>
+
+<div class="final-answer">
+  <div class="box-title">✅ Final Answer</div>
+  <div>\(3\sqrt2\) is irrational.</div>
+</div>
+<div class="gu-final">
+  <div class="box-title">🌐 Gujarati Translation</div>
+  <div>\(3\sqrt2\) અપરિમેય સંખ્યા છે.</div>
+</div>
+
+    </div>
+  </div>
+</article>
+
+  </section>
+
+  <section aria-labelledby="part2-heading">
+    <div class="part-heading" id="part2-heading">
+      <span class="part-no">II</span>
+      <h2>PART II — Chapter End Exercises</h2>
+    </div>
+
+    <h3 class="set-heading"><span>Exercise 1.1</span><small>Fundamental Theorem of Arithmetic</small></h3>
+    
+<article class="question-card" id="p2-e11-q1">
+  <button class="question-toggle" type="button" aria-expanded="false" aria-controls="p2-e11-q1-solution">
+    <span class="question-number">Question 1</span>
+    <span class="question-text">Express each number as a product of its prime factors:<br>(i) 140 &nbsp;&nbsp; (ii) 156 &nbsp;&nbsp; (iii) 3825 &nbsp;&nbsp; (iv) 5005 &nbsp;&nbsp; (v) 7429</span>
+    <span class="toggle-indicator"><span class="down">▼ Tap to View Solution</span><span class="up">▲ Hide Solution</span></span>
+  </button>
+  <div class="solution-panel" id="p2-e11-q1-solution" role="region" aria-labelledby="p2-e11-q1">
+    <div class="solution-inner">
+      
+<div class="steps-box">
+  <div class="box-title">✏️ Step-by-Step Solution</div>
+
+  <div class="sub-solution">
+    <h4>(i) \(140\)</h4>
+    <div class="equation-display">\[140=14\times10\]</div>
+    <div class="equation-display">\[=(2\times7)(2\times5)\]</div>
+    <div class="equation-display">\[=2^2\times5\times7\]</div>
+  </div>
+
+  <div class="sub-solution">
+    <h4>(ii) \(156\)</h4>
+    <div class="equation-display">\[156=12\times13\]</div>
+    <div class="equation-display">\[=(2^2\times3)\times13\]</div>
+    <div class="equation-display">\[=2^2\times3\times13\]</div>
+  </div>
+
+  <div class="sub-solution">
+    <h4>(iii) \(3825\)</h4>
+    <div class="equation-display">\[3825=5\times765\]</div>
+    <div class="equation-display">\[=5\times5\times153\]</div>
+    <div class="equation-display">\[=5^2\times9\times17\]</div>
+    <div class="equation-display">\[=3^2\times5^2\times17\]</div>
+  </div>
+
+  <div class="sub-solution">
+    <h4>(iv) \(5005\)</h4>
+    <div class="equation-display">\[5005=5\times1001\]</div>
+    <div class="equation-display">\[=5\times7\times143\]</div>
+    <div class="equation-display">\[=5\times7\times11\times13\]</div>
+  </div>
+
+  <div class="sub-solution">
+    <h4>(v) \(7429\)</h4>
+    <div class="equation-display">\[7429=17\times437\]</div>
+    <div class="equation-display">\[=17\times19\times23\]</div>
+  </div>
+</div>
+
+<div class="final-answer">
+  <div class="box-title">✅ Final Answer</div>
+  <div>(i) \(140=2^2\times5\times7\)<br>(ii) \(156=2^2\times3\times13\)<br>(iii) \(3825=3^2\times5^2\times17\)<br>(iv) \(5005=5\times7\times11\times13\)<br>(v) \(7429=17\times19\times23\)</div>
+</div>
+<div class="gu-final">
+  <div class="box-title">🌐 Gujarati Translation</div>
+  <div>(i) \(140=2^2\times5\times7\)<br>(ii) \(156=2^2\times3\times13\)<br>(iii) \(3825=3^2\times5^2\times17\)<br>(iv) \(5005=5\times7\times11\times13\)<br>(v) \(7429=17\times19\times23\)</div>
+</div>
+
+    </div>
+  </div>
+</article>
+
+<article class="question-card" id="p2-e11-q2">
+  <button class="question-toggle" type="button" aria-expanded="false" aria-controls="p2-e11-q2-solution">
+    <span class="question-number">Question 2</span>
+    <span class="question-text">Find the LCM and HCF of the following pairs of integers and verify that LCM × HCF = product of the two numbers.<br>(i) 26 and 91<br>(ii) 510 and 92<br>(iii) 336 and 54</span>
+    <span class="toggle-indicator"><span class="down">▼ Tap to View Solution</span><span class="up">▲ Hide Solution</span></span>
+  </button>
+  <div class="solution-panel" id="p2-e11-q2-solution" role="region" aria-labelledby="p2-e11-q2">
+    <div class="solution-inner">
+      
+<div class="formula-box">
+  <div class="box-title">📘 Formula Used</div>
+  <div class="equation-display">\[\mathrm{LCM}(a,b)\times\mathrm{HCF}(a,b)=a\times b\]</div>
+</div>
+<div class="steps-box">
+  <div class="box-title">✏️ Step-by-Step Solution</div>
+
+  <div class="sub-solution">
+    <h4>(i) 26 and 91</h4>
+    <div class="equation-display">\[26=2\times13,\qquad91=7\times13\]</div>
+    <div class="equation-display">\[\mathrm{HCF}=13\]</div>
+    <div class="equation-display">\[\mathrm{LCM}=2\times7\times13=182\]</div>
+    <div class="equation-display">\[13\times182=2366=26\times91\]</div>
+  </div>
+
+  <div class="sub-solution">
+    <h4>(ii) 510 and 92</h4>
+    <div class="equation-display">\[510=2\times3\times5\times17\]</div>
+    <div class="equation-display">\[92=2^2\times23\]</div>
+    <div class="equation-display">\[\mathrm{HCF}=2\]</div>
+    <div class="equation-display">\[\mathrm{LCM}=2^2\times3\times5\times17\times23=23460\]</div>
+    <div class="equation-display">\[2\times23460=46920=510\times92\]</div>
+  </div>
+
+  <div class="sub-solution">
+    <h4>(iii) 336 and 54</h4>
+    <div class="equation-display">\[336=2^4\times3\times7\]</div>
+    <div class="equation-display">\[54=2\times3^3\]</div>
+    <div class="equation-display">\[\mathrm{HCF}=2\times3=6\]</div>
+    <div class="equation-display">\[\mathrm{LCM}=2^4\times3^3\times7=3024\]</div>
+    <div class="equation-display">\[6\times3024=18144=336\times54\]</div>
+  </div>
+</div>
+
+<div class="final-answer">
+  <div class="box-title">✅ Final Answer</div>
+  <div>(i) HCF \(=13\), LCM \(=182\)<br>(ii) HCF \(=2\), LCM \(=23460\)<br>(iii) HCF \(=6\), LCM \(=3024\). In every case, \(\mathrm{HCF}\times\mathrm{LCM}\) equals the product of the two numbers.</div>
+</div>
+<div class="gu-final">
+  <div class="box-title">🌐 Gujarati Translation</div>
+  <div>(i) HCF \(=13\), LCM \(=182\)<br>(ii) HCF \(=2\), LCM \(=23460\)<br>(iii) HCF \(=6\), LCM \(=3024\). દરેક કિસ્સામાં HCF × LCM બંને સંખ્યાના ગુણાકાર જેટલું થાય છે.</div>
+</div>
+
+    </div>
+  </div>
+</article>
+
+<article class="question-card" id="p2-e11-q3">
+  <button class="question-toggle" type="button" aria-expanded="false" aria-controls="p2-e11-q3-solution">
+    <span class="question-number">Question 3</span>
+    <span class="question-text">Find the LCM and HCF of the following integers by applying the prime factorisation method.<br>(i) 12, 15 and 21<br>(ii) 17, 23 and 29<br>(iii) 8, 9 and 25</span>
+    <span class="toggle-indicator"><span class="down">▼ Tap to View Solution</span><span class="up">▲ Hide Solution</span></span>
+  </button>
+  <div class="solution-panel" id="p2-e11-q3-solution" role="region" aria-labelledby="p2-e11-q3">
+    <div class="solution-inner">
+      
+<div class="steps-box">
+  <div class="box-title">✏️ Step-by-Step Solution</div>
+
+  <div class="sub-solution">
+    <h4>(i) 12, 15 and 21</h4>
+    <div class="equation-display">\[12=2^2\times3,\quad15=3\times5,\quad21=3\times7\]</div>
+    <p>The common prime factor is \(3\).</p>
+    <div class="equation-display">\[\mathrm{HCF}=3\]</div>
+    <div class="equation-display">\[\mathrm{LCM}=2^2\times3\times5\times7=420\]</div>
+  </div>
+
+  <div class="sub-solution">
+    <h4>(ii) 17, 23 and 29</h4>
+    <p>All three numbers are distinct prime numbers.</p>
+    <div class="equation-display">\[\mathrm{HCF}=1\]</div>
+    <div class="equation-display">\[\mathrm{LCM}=17\times23\times29=11339\]</div>
+  </div>
+
+  <div class="sub-solution">
+    <h4>(iii) 8, 9 and 25</h4>
+    <div class="equation-display">\[8=2^3,\quad9=3^2,\quad25=5^2\]</div>
+    <p>They have no common prime factor.</p>
+    <div class="equation-display">\[\mathrm{HCF}=1\]</div>
+    <div class="equation-display">\[\mathrm{LCM}=2^3\times3^2\times5^2=1800\]</div>
+  </div>
+</div>
+
+<div class="final-answer">
+  <div class="box-title">✅ Final Answer</div>
+  <div>(i) HCF \(=3\), LCM \(=420\)<br>(ii) HCF \(=1\), LCM \(=11339\)<br>(iii) HCF \(=1\), LCM \(=1800\).</div>
+</div>
+<div class="gu-final">
+  <div class="box-title">🌐 Gujarati Translation</div>
+  <div>(i) HCF \(=3\), LCM \(=420\)<br>(ii) HCF \(=1\), LCM \(=11339\)<br>(iii) HCF \(=1\), LCM \(=1800\).</div>
+</div>
+
+    </div>
+  </div>
+</article>
+
+<article class="question-card" id="p2-e11-q4">
+  <button class="question-toggle" type="button" aria-expanded="false" aria-controls="p2-e11-q4-solution">
+    <span class="question-number">Question 4</span>
+    <span class="question-text">Given that HCF (306, 657) = 9, find LCM (306, 657).</span>
+    <span class="toggle-indicator"><span class="down">▼ Tap to View Solution</span><span class="up">▲ Hide Solution</span></span>
+  </button>
+  <div class="solution-panel" id="p2-e11-q4-solution" role="region" aria-labelledby="p2-e11-q4">
+    <div class="solution-inner">
+      
+<div class="given-box">
+  <div class="box-title">📋 Given</div>
+  <p>\(\mathrm{HCF}(306,657)=9\)</p>
+</div>
+<div class="formula-box">
+  <div class="box-title">📘 Formula Used</div>
+  <div class="equation-display">\[\mathrm{HCF}\times\mathrm{LCM}=306\times657\]</div>
+</div>
+<div class="steps-box">
+  <div class="box-title">✏️ Step-by-Step Solution</div>
+  <div class="equation-display">\[\mathrm{LCM}=\frac{306\times657}{9}\]</div>
+  <div class="equation-display">\[=\frac{306}{9}\times657\]</div>
+  <div class="equation-display">\[=34\times657\]</div>
+  <div class="equation-display">\[=22338\]</div>
+</div>
+
+<div class="final-answer">
+  <div class="box-title">✅ Final Answer</div>
+  <div>\(\mathrm{LCM}(306,657)=22338\).</div>
+</div>
+<div class="gu-final">
+  <div class="box-title">🌐 Gujarati Translation</div>
+  <div>\(\mathrm{LCM}(306,657)=22338\).</div>
+</div>
+
+    </div>
+  </div>
+</article>
+
+<article class="question-card" id="p2-e11-q5">
+  <button class="question-toggle" type="button" aria-expanded="false" aria-controls="p2-e11-q5-solution">
+    <span class="question-number">Question 5</span>
+    <span class="question-text">Check whether \(6^n\) can end with the digit 0 for any natural number \(n\).</span>
+    <span class="toggle-indicator"><span class="down">▼ Tap to View Solution</span><span class="up">▲ Hide Solution</span></span>
+  </button>
+  <div class="solution-panel" id="p2-e11-q5-solution" role="region" aria-labelledby="p2-e11-q5">
+    <div class="solution-inner">
+      
+<div class="concept-box">
+  <div class="box-title">📘 Key Idea</div>
+  <p>A number ending in \(0\) must be divisible by \(10=2\times5\).</p>
+</div>
+<div class="steps-box">
+  <div class="box-title">✏️ Step-by-Step Solution</div>
+  <p><strong>Step 1:</strong> Prime factorise \(6^n\).</p>
+  <div class="equation-display">\[6^n=(2\times3)^n=2^n\times3^n\]</div>
+  <p><strong>Step 2:</strong> Its prime factorisation contains only \(2\) and \(3\).</p>
+  <p><strong>Step 3:</strong> There is no factor \(5\).</p>
+  <p><strong>Step 4:</strong> Hence \(6^n\) is not divisible by \(10\), so it cannot end in \(0\).</p>
+</div>
+
+<div class="final-answer">
+  <div class="box-title">✅ Final Answer</div>
+  <div>No. \(6^n\) cannot end with the digit \(0\) for any natural number \(n\).</div>
+</div>
+<div class="gu-final">
+  <div class="box-title">🌐 Gujarati Translation</div>
+  <div>ના. કોઈપણ પ્રાકૃતિક સંખ્યા \(n\) માટે \(6^n\)નો અંત \(0\)થી થઈ શકતો નથી.</div>
+</div>
+
+    </div>
+  </div>
+</article>
+
+<article class="question-card" id="p2-e11-q6">
+  <button class="question-toggle" type="button" aria-expanded="false" aria-controls="p2-e11-q6-solution">
+    <span class="question-number">Question 6</span>
+    <span class="question-text">Explain why \(7\times11\times13+13\) and \(7\times6\times5\times4\times3\times2\times1+5\) are composite numbers.</span>
+    <span class="toggle-indicator"><span class="down">▼ Tap to View Solution</span><span class="up">▲ Hide Solution</span></span>
+  </button>
+  <div class="solution-panel" id="p2-e11-q6-solution" role="region" aria-labelledby="p2-e11-q6">
+    <div class="solution-inner">
+      
+<div class="concept-box">
+  <div class="box-title">📘 Key Idea</div>
+  <p>A number is composite if it can be written as a product of two integers greater than \(1\).</p>
+</div>
+<div class="steps-box">
+  <div class="box-title">✏️ Step-by-Step Solution</div>
+
+  <div class="sub-solution">
+    <h4>(i) \(7\times11\times13+13\)</h4>
+    <p>Take \(13\) as a common factor.</p>
+    <div class="equation-display">\[7\times11\times13+13=13(7\times11+1)\]</div>
+    <div class="equation-display">\[=13(77+1)=13\times78=1014\]</div>
+    <p>Both \(13\) and \(78\) are greater than \(1\), so \(1014\) is composite.</p>
+  </div>
+
+  <div class="sub-solution">
+    <h4>(ii) \(7\times6\times5\times4\times3\times2\times1+5\)</h4>
+    <p>Take \(5\) as a common factor.</p>
+    <div class="equation-display">\[7\times6\times5\times4\times3\times2\times1+5\]</div>
+    <div class="equation-display">\[=5(7\times6\times4\times3\times2\times1+1)\]</div>
+    <div class="equation-display">\[=5(1008+1)=5\times1009=5045\]</div>
+    <p>Both \(5\) and \(1009\) are greater than \(1\), so \(5045\) is composite.</p>
+  </div>
+</div>
+
+<div class="final-answer">
+  <div class="box-title">✅ Final Answer</div>
+  <div>\(7\times11\times13+13=13\times78\) and \(7\times6\times5\times4\times3\times2\times1+5=5\times1009\). Therefore, both numbers are composite.</div>
+</div>
+<div class="gu-final">
+  <div class="box-title">🌐 Gujarati Translation</div>
+  <div>પ્રથમ સંખ્યા \(13\times78\) અને બીજી સંખ્યા \(5\times1009\) તરીકે લખાય છે; તેથી બંને સંયુક્ત સંખ્યાઓ છે.</div>
+</div>
+
+    </div>
+  </div>
+</article>
+
+<article class="question-card" id="p2-e11-q7">
+  <button class="question-toggle" type="button" aria-expanded="false" aria-controls="p2-e11-q7-solution">
+    <span class="question-number">Question 7</span>
+    <span class="question-text">There is a circular path around a sports field. Sonia takes 18 minutes to drive one round of the field, while Ravi takes 12 minutes for the same. Suppose they both start at the same point and at the same time, and go in the same direction. After how many minutes will they meet again at the starting point?</span>
+    <span class="toggle-indicator"><span class="down">▼ Tap to View Solution</span><span class="up">▲ Hide Solution</span></span>
+  </button>
+  <div class="solution-panel" id="p2-e11-q7-solution" role="region" aria-labelledby="p2-e11-q7">
+    <div class="solution-inner">
+      
+<div class="given-box">
+  <div class="box-title">📋 Given</div>
+  <p>Sonia completes one round in \(18\) minutes.</p>
+  <p>Ravi completes one round in \(12\) minutes.</p>
+</div>
+<div class="concept-box">
+  <div class="box-title">🎯 To Find</div>
+  <p>The first time at which both complete a whole number of rounds together. This is \(\mathrm{LCM}(18,12)\).</p>
+</div>
+<div class="steps-box">
+  <div class="box-title">✏️ Step-by-Step Solution</div>
+  <p><strong>Step 1: Prime factorise.</strong></p>
+  <div class="equation-display">\[18=2\times3^2\]</div>
+  <div class="equation-display">\[12=2^2\times3\]</div>
+  <p><strong>Step 2: Take the greatest power of each prime.</strong></p>
+  <div class="equation-display">\[\mathrm{LCM}(18,12)=2^2\times3^2\]</div>
+  <div class="equation-display">\[=4\times9=36\]</div>
+  <p>After \(36\) minutes, Sonia completes \(36/18=2\) rounds and Ravi completes \(36/12=3\) rounds.</p>
+</div>
+
+<div class="final-answer">
+  <div class="box-title">✅ Final Answer</div>
+  <div>They will meet again at the starting point after \(36\) minutes.</div>
+</div>
+<div class="gu-final">
+  <div class="box-title">🌐 Gujarati Translation</div>
+  <div>તેઓ \(36\) મિનિટ પછી ફરી શરૂઆતના બિંદુએ મળશે.</div>
+</div>
+
+    </div>
+  </div>
+</article>
+
+
+    <h3 class="set-heading"><span>Exercise 1.2</span><small>Revisiting Irrational Numbers</small></h3>
+    
+<article class="question-card" id="p2-e12-q1">
+  <button class="question-toggle" type="button" aria-expanded="false" aria-controls="p2-e12-q1-solution">
+    <span class="question-number">Question 1</span>
+    <span class="question-text">Prove that \(\sqrt5\) is irrational.</span>
+    <span class="toggle-indicator"><span class="down">▼ Tap to View Solution</span><span class="up">▲ Hide Solution</span></span>
+  </button>
+  <div class="solution-panel" id="p2-e12-q1-solution" role="region" aria-labelledby="p2-e12-q1">
+    <div class="solution-inner">
+      
+<div class="concept-box">
+  <div class="box-title">📘 Method Used</div>
+  <p>Proof by contradiction.</p>
+</div>
+<div class="steps-box">
+  <div class="box-title">✏️ Step-by-Step Proof</div>
+  <p><strong>Step 1:</strong> Assume that \(\sqrt5\) is rational.</p>
+  <p>Then, in lowest terms,</p>
+  <div class="equation-display">\[\sqrt5=\frac{a}{b}\]</div>
+  <p>where \(a,b\) are coprime integers and \(b\ne0\).</p>
+  <p><strong>Step 2:</strong> Square both sides.</p>
+  <div class="equation-display">\[5=\frac{a^2}{b^2}\]</div>
+  <div class="equation-display">\[a^2=5b^2\]</div>
+  <p>Thus \(5\mid a^2\). Since \(5\) is prime, \(5\mid a\).</p>
+  <p><strong>Step 3:</strong> Let \(a=5c\).</p>
+  <div class="equation-display">\[(5c)^2=5b^2\]</div>
+  <div class="equation-display">\[25c^2=5b^2\]</div>
+  <div class="equation-display">\[b^2=5c^2\]</div>
+  <p>Hence \(5\mid b^2\), so \(5\mid b\).</p>
+  <p><strong>Step 4:</strong> Therefore \(5\) divides both \(a\) and \(b\), contradicting that they are coprime.</p>
+</div>
+
+<div class="final-answer">
+  <div class="box-title">✅ Final Answer</div>
+  <div>\(\sqrt5\) is irrational.</div>
+</div>
+<div class="gu-final">
+  <div class="box-title">🌐 Gujarati Translation</div>
+  <div>\(\sqrt5\) અપરિમેય સંખ્યા છે.</div>
+</div>
+
+    </div>
+  </div>
+</article>
+
+<article class="question-card" id="p2-e12-q2">
+  <button class="question-toggle" type="button" aria-expanded="false" aria-controls="p2-e12-q2-solution">
+    <span class="question-number">Question 2</span>
+    <span class="question-text">Prove that \(3+2\sqrt5\) is irrational.</span>
+    <span class="toggle-indicator"><span class="down">▼ Tap to View Solution</span><span class="up">▲ Hide Solution</span></span>
+  </button>
+  <div class="solution-panel" id="p2-e12-q2-solution" role="region" aria-labelledby="p2-e12-q2">
+    <div class="solution-inner">
+      
+<div class="concept-box">
+  <div class="box-title">📘 Method Used</div>
+  <p>Proof by contradiction, using the known fact that \(\sqrt5\) is irrational.</p>
+</div>
+<div class="steps-box">
+  <div class="box-title">✏️ Step-by-Step Proof</div>
+  <p><strong>Step 1:</strong> Assume that \(3+2\sqrt5\) is rational.</p>
+  <p>Let</p>
+  <div class="equation-display">\[3+2\sqrt5=r\]</div>
+  <p>where \(r\) is rational.</p>
+  <p><strong>Step 2:</strong> Isolate \(\sqrt5\).</p>
+  <div class="equation-display">\[2\sqrt5=r-3\]</div>
+  <div class="equation-display">\[\sqrt5=\frac{r-3}{2}\]</div>
+  <p><strong>Step 3:</strong> Since \(r\), \(3\), and \(2\) are rational, \(\frac{r-3}{2}\) is rational.</p>
+  <p>This implies that \(\sqrt5\) is rational.</p>
+  <p><strong>Step 4:</strong> But \(\sqrt5\) is irrational. This is a contradiction.</p>
+</div>
+
+<div class="final-answer">
+  <div class="box-title">✅ Final Answer</div>
+  <div>\(3+2\sqrt5\) is irrational.</div>
+</div>
+<div class="gu-final">
+  <div class="box-title">🌐 Gujarati Translation</div>
+  <div>\(3+2\sqrt5\) અપરિમેય સંખ્યા છે.</div>
+</div>
+
+    </div>
+  </div>
+</article>
+
+<article class="question-card" id="p2-e12-q3">
+  <button class="question-toggle" type="button" aria-expanded="false" aria-controls="p2-e12-q3-solution">
+    <span class="question-number">Question 3</span>
+    <span class="question-text">Prove that the following are irrational:<br>(i) \(\dfrac{1}{\sqrt2}\) &nbsp;&nbsp; (ii) \(7\sqrt5\) &nbsp;&nbsp; (iii) \(6+\sqrt2\)</span>
+    <span class="toggle-indicator"><span class="down">▼ Tap to View Solution</span><span class="up">▲ Hide Solution</span></span>
+  </button>
+  <div class="solution-panel" id="p2-e12-q3-solution" role="region" aria-labelledby="p2-e12-q3">
+    <div class="solution-inner">
+      
+<div class="steps-box">
+  <div class="box-title">✏️ Step-by-Step Proof</div>
+
+  <div class="sub-solution">
+    <h4>(i) \(\dfrac{1}{\sqrt2}\)</h4>
+    <p>Assume \(\dfrac1{\sqrt2}\) is rational and equals \(r\), where \(r\ne0\).</p>
+    <div class="equation-display">\[\frac1{\sqrt2}=r\]</div>
+    <div class="equation-display">\[\sqrt2=\frac1r\]</div>
+    <p>Since \(r\) is non-zero rational, \(\frac1r\) is rational. This would make \(\sqrt2\) rational, a contradiction.</p>
+  </div>
+
+  <div class="sub-solution">
+    <h4>(ii) \(7\sqrt5\)</h4>
+    <p>Assume \(7\sqrt5\) is rational and equals \(r\).</p>
+    <div class="equation-display">\[7\sqrt5=r\]</div>
+    <div class="equation-display">\[\sqrt5=\frac r7\]</div>
+    <p>Because \(r/7\) is rational, this would make \(\sqrt5\) rational, a contradiction.</p>
+  </div>
+
+  <div class="sub-solution">
+    <h4>(iii) \(6+\sqrt2\)</h4>
+    <p>Assume \(6+\sqrt2\) is rational and equals \(r\).</p>
+    <div class="equation-display">\[6+\sqrt2=r\]</div>
+    <div class="equation-display">\[\sqrt2=r-6\]</div>
+    <p>Since \(r-6\) is rational, this would make \(\sqrt2\) rational, a contradiction.</p>
+  </div>
+</div>
+
+<div class="final-answer">
+  <div class="box-title">✅ Final Answer</div>
+  <div>\(\dfrac1{\sqrt2}\), \(7\sqrt5\), and \(6+\sqrt2\) are all irrational.</div>
+</div>
+<div class="gu-final">
+  <div class="box-title">🌐 Gujarati Translation</div>
+  <div>\(\dfrac1{\sqrt2}\), \(7\sqrt5\) અને \(6+\sqrt2\) ત્રણેય અપરિમેય સંખ્યાઓ છે.</div>
+</div>
+
+    </div>
+  </div>
+</article>
+
+  </section>
+
+  <section class="download-section" id="download-pdf">
+    <div>
+      <h2>Download PDF</h2>
+      <p>Open the print dialog and choose “Save as PDF”. All solutions will be expanded automatically in the print copy.</p>
+    </div>
+    <button class="download-btn" type="button" onclick="downloadPDF()">✅ Download PDF</button>
+  </section>
+</main>
+
+<footer class="footer">WAGH Tuition Classes • GSEB Class 10 Mathematics • Chapter 1</footer>
+
+<div class="float-stack" aria-label="Quick actions">
+  <div class="float-wrap">
+    <a class="float-btn whatsapp" href="https://wa.me/919537036383" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+    <span class="float-label">WhatsApp</span>
+  </div>
+
+  <div class="float-wrap lang-wrap" id="langWrap">
+    <div class="lang-menu" id="langMenu" role="menu">
+      <button class="active" id="langEnglish" type="button" onclick="setLanguage('en')">🇬🇧 English</button>
+      <button id="langGujarati" type="button" onclick="setLanguage('gu')">🇮🇳 ગુજરાતી</button>
+    </div>
+    <button class="float-btn language" type="button" onclick="toggleLanguageMenu()" aria-label="Gujarati Translation">🌐</button>
+    <span class="float-label">Gujarati Translation</span>
+  </div>
+
+  <div class="float-wrap">
+    <button class="float-btn pdf" type="button" onclick="downloadPDF()" aria-label="Download PDF">⬇</button>
+    <span class="float-label">Download PDF</span>
+  </div>
+</div>
+
+<script>
+(function(){
+  const cards = Array.from(document.querySelectorAll('.question-card'));
+
+  function resizePanel(panel){
+    if(!panel) return;
+    panel.style.maxHeight = panel.scrollHeight + 'px';
+  }
+
+  function closeCard(card){
+    card.classList.remove('open');
+    const button = card.querySelector('.question-toggle');
+    const panel = card.querySelector('.solution-panel');
+    button.setAttribute('aria-expanded','false');
+    panel.style.maxHeight = '0px';
+  }
+
+  function openCard(card){
+    cards.forEach(c => { if(c !== card) closeCard(c); });
+    card.classList.add('open');
+    const button = card.querySelector('.question-toggle');
+    const panel = card.querySelector('.solution-panel');
+    button.setAttribute('aria-expanded','true');
+    resizePanel(panel);
+    setTimeout(() => resizePanel(panel), 80);
+    setTimeout(() => resizePanel(panel), 320);
+  }
+
+  cards.forEach(card => {
+    const button = card.querySelector('.question-toggle');
+    button.addEventListener('click', () => {
+      card.classList.contains('open') ? closeCard(card) : openCard(card);
+    });
+  });
+
+  window.addEventListener('resize', () => {
+    const openPanel = document.querySelector('.question-card.open .solution-panel');
+    resizePanel(openPanel);
+  });
+
+  window.addEventListener('load', () => {
+    const openPanel = document.querySelector('.question-card.open .solution-panel');
+    resizePanel(openPanel);
+  });
+
+  if(window.MathJax && MathJax.startup && MathJax.startup.promise){
+    MathJax.startup.promise.then(() => {
+      const openPanel = document.querySelector('.question-card.open .solution-panel');
+      resizePanel(openPanel);
+    });
+  }
+})();
+
+function toggleLanguageMenu(){
+  document.getElementById('langWrap').classList.toggle('open');
+}
+
+function setLanguage(mode){
+  const gu = mode === 'gu';
+  document.body.classList.toggle('show-gu', gu);
+  document.getElementById('langEnglish').classList.toggle('active', !gu);
+  document.getElementById('langGujarati').classList.toggle('active', gu);
+  document.getElementById('langWrap').classList.remove('open');
+
+  const openPanel = document.querySelector('.question-card.open .solution-panel');
+  if(openPanel){
+    requestAnimationFrame(() => {
+      openPanel.style.maxHeight = openPanel.scrollHeight + 'px';
+    });
+  }
+
+  if(window.MathJax && MathJax.typesetPromise){
+    MathJax.typesetPromise().then(() => {
+      if(openPanel) openPanel.style.maxHeight = openPanel.scrollHeight + 'px';
+    });
+  }
+}
+
+document.addEventListener('click', function(e){
+  const wrap = document.getElementById('langWrap');
+  if(wrap && !wrap.contains(e.target)) wrap.classList.remove('open');
+});
+
+function downloadPDF(){
+  window.print();
+}
+</script>
+</body>
+</html>
