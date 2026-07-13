@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<meta name="theme-color" content="#0b4f6c"/>
+<title>GSEB ધોરણ 10 વિજ્ઞાન પ્રકરણ 9 — પ્રકાશ-પરાવર્તન અને વક્રીભવન</title>
+<script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]],displayMath:[["\\[","\\]"]]},options:{skipHtmlTags:["script","noscript","style","textarea","pre","code"]}};</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+:root{--primary:#0b4f6c;--primary2:#123a5a;--accent:#f59e0b;--bg:#f4f8fb;--card:#fff;--ink:#16324a;--muted:#64748b;--green:#15803d;--red:#be123c;--purple:#7c3aed;--line:#d9e5ec;--shadow:0 12px 34px rgba(15,76,92,.11);--radius:22px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:"Noto Sans Gujarati","Nirmala UI","Shruti","Segoe UI",Arial,sans-serif;background:linear-gradient(180deg,#e8f4fb 0,#f8fafc 430px);color:var(--ink);line-height:1.75;padding-bottom:205px;overflow-wrap:anywhere}button{font:inherit}header{background:radial-gradient(circle at 88% 10%,rgba(245,158,11,.30),transparent 26%),linear-gradient(135deg,#082f49,#0b4f6c 60%,#0f766e);color:#fff;padding:34px 16px 30px;border-bottom:6px solid var(--accent)}.hero{max-width:1080px;margin:auto}.brand{font-size:clamp(1.75rem,5.5vw,2.8rem);font-weight:950;text-align:center;letter-spacing:.4px}.tag{text-align:center;color:#fde68a;font-weight:850;font-style:italic;font-size:clamp(1rem,3.4vw,1.3rem)}.chapter{text-align:center;font-size:clamp(1.55rem,5vw,2.5rem);line-height:1.28;margin:16px 0 8px}.meta{display:grid;grid-template-columns:repeat(5,minmax(120px,1fr));gap:10px;margin-top:20px}.meta div{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.24);border-radius:14px;padding:11px 12px;backdrop-filter:blur(6px)}.meta b{display:block;color:#fde68a;font-size:.77rem}.container{max-width:1080px;margin:24px auto;padding:0 14px}.notice{background:#fff7ed;border:1px solid #fed7aa;border-left:7px solid var(--accent);padding:15px 17px;border-radius:16px;box-shadow:var(--shadow);margin:16px 0}.section-title{font-size:clamp(1.38rem,4.6vw,2rem);margin:38px 0 17px;color:#fff;background:linear-gradient(90deg,var(--primary2),var(--primary));padding:17px 19px;border-radius:18px;box-shadow:var(--shadow)}.subhead{margin:28px 0 12px;color:#854d0e;background:#fffbeb;border:1px solid #fde68a;padding:11px 15px;border-radius:14px;font-size:1.14rem}.q-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 9px 28px rgba(15,23,42,.075);margin:14px 0;overflow:hidden}.q-toggle{width:100%;border:0;background:#fff;text-align:left;padding:18px 20px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:15px;align-items:center;cursor:pointer;color:var(--ink)}.q-toggle:hover{background:#effaff}.qtext{font-weight:850;font-size:1.03rem;min-width:0}.badge{display:inline-block;background:#dbeafe;color:#1e3a8a;border-radius:999px;padding:4px 10px;font-size:.76rem;font-weight:900;margin-right:8px;margin-bottom:3px}.indicator{white-space:nowrap;color:#b45309;font-weight:900;font-size:.82rem}.q-card.open .q-toggle{background:#ecfeff;border-bottom:1px solid var(--line)}.q-card.open .indicator{color:var(--green)}.solution{display:grid;grid-template-rows:0fr;transition:grid-template-rows .38s ease;background:#fbfdff}.solution>div{overflow:hidden}.q-card.open .solution{grid-template-rows:1fr}.answer{padding:0 19px}.q-card.open .answer{padding:19px 19px 22px}.answer h4{margin:0 0 8px;color:var(--primary2)}.answer-box,.formula-box,.steps-box,.final-box,.key-box,.wrong-box,.given-box,.tip-box{padding:15px 16px;border-radius:16px;margin:11px 0}.answer-box{background:#eff9ff;border-left:6px solid #0284c7}.formula-box{background:#fff7ed;border-left:6px solid #f59e0b}.steps-box{background:#f7fbff;border-left:6px solid #2563eb}.final-box{background:#ecfdf3;border-left:6px solid var(--green)}.key-box{background:#eef2ff;border-left:6px solid #4f46e5}.wrong-box{background:#fff1f2;border-left:6px solid var(--red)}.given-box{background:#f0fdfa;border-left:6px solid #0d9488}.tip-box{background:#faf5ff;border-left:6px solid var(--purple)}.steps-list{margin:7px 0;padding-left:24px}.steps-list li{margin:7px 0}.math-line{position:relative;margin:11px 0;padding:12px 14px;border:1px solid #bfdbfe;border-left:6px solid #2563eb;border-radius:14px;background:linear-gradient(135deg,#eff6ff,#f8fbff);text-align:center;overflow-x:auto;overflow-y:hidden}.math-line mjx-container[display="true"]{margin:.25em 0!important;min-width:max-content;font-size:108%!important}.table-wrap{overflow-x:auto;margin:12px 0;border:1px solid var(--line);border-radius:14px}table{border-collapse:collapse;width:100%;min-width:620px;background:#fff}th,td{border:1px solid var(--line);padding:10px 11px;text-align:left;vertical-align:top}th{background:#dff7f2;color:#115e59}.diagram{background:#fff;border:1px solid var(--line);border-radius:18px;padding:13px;margin:12px 0;text-align:center;overflow-x:auto}.diagram svg{width:100%;max-width:760px;height:auto;min-width:620px}.caption{margin:6px 0 0;color:var(--muted);font-size:.9rem}.options-inline{display:block;margin-top:7px;color:#475569}.download-section{background:linear-gradient(135deg,#0b4f6c,#0f766e);color:#fff;border-radius:22px;padding:25px;text-align:center;margin:32px 0;box-shadow:var(--shadow)}.download-btn{border:0;background:#fbbf24;color:#422006;font-weight:950;padding:14px 24px;border-radius:999px;cursor:pointer;font-size:1rem}.footer{text-align:center;color:var(--muted);margin:30px 0}.floating{position:fixed;right:max(14px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));display:flex;flex-direction:column;gap:11px;z-index:999}.fab{width:55px;height:55px;border:0;border-radius:50%;display:grid;place-items:center;box-shadow:0 10px 24px rgba(15,23,42,.25);text-decoration:none;font-size:1.4rem;cursor:pointer;color:#fff}.wa{background:#25d366}.lang{background:#7c3aed}.pdf{background:#f59e0b}.lang-menu{position:fixed;right:80px;bottom:82px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);border-radius:16px;padding:8px;display:none;z-index:1001;min-width:215px}.lang-menu.show{display:block}.lang-menu button{display:block;width:100%;border:0;background:#fff;padding:11px 12px;border-radius:10px;text-align:left;cursor:pointer;font-weight:800}.lang-menu button:hover{background:#f0fdfa}.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:#0f172a;color:#fff;padding:11px 16px;border-radius:999px;opacity:0;pointer-events:none;transition:.25s;z-index:1200;max-width:88%;text-align:center}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:760px){.meta{grid-template-columns:1fr 1fr}.meta div:last-child{grid-column:1/-1}.q-toggle{grid-template-columns:1fr;padding:16px}.indicator{justify-self:start}.answer{padding:0 14px}.q-card.open .answer{padding:15px}.floating{right:12px;bottom:14px}.fab{width:51px;height:51px}.lang-menu{right:72px;bottom:76px}mjx-container[display="true"]{overflow-x:auto;overflow-y:hidden;max-width:100%;padding:4px 0}body{padding-bottom:205px}.diagram svg{min-width:560px}}
+@media print{body{background:#fff;color:#000;padding-bottom:0}header{background:#fff!important;color:#000;border-bottom:2px solid #000;padding:18px}.tag,.meta b{color:#000}.meta div{border:1px solid #999}.floating,.lang-menu,.indicator,.download-section,.toast{display:none!important}.solution{grid-template-rows:1fr!important}.answer{padding:13px!important}.q-card{box-shadow:none;break-inside:avoid;border-color:#aaa}.section-title{background:#fff!important;color:#000;border:2px solid #000;box-shadow:none}.container{max-width:none;margin:0}.math-line,.diagram{background:#fff!important;border:1px solid #777;box-shadow:none}}
+</style>
+</head>
+<body>
+<header><div class="hero"><div class="brand">WAGH Tuition Classes</div><div class="tag">Mastering Science with Wagh Sir</div><h1 class="chapter">પ્રકરણ 9 : પ્રકાશ-પરાવર્તન અને વક્રીભવન</h1><div class="meta"><div><b>બોર્ડ</b>GSEB</div><div><b>ધોરણ</b>10</div><div><b>વિષય</b>વિજ્ઞાન</div><div><b>માધ્યમ</b>ગુજરાતી</div><div><b>પ્રકરણનું નામ</b>પ્રકાશ-પરાવર્તન અને વક્રીભવન</div></div></div></header>
+<main class="container">
+<div class="notice"><b>📘 ઉપયોગ: </b>આ પૃષ્ઠમાં પાઠ્યપુસ્તકના ચાર અંદરના પ્રશ્નસેટના કુલ 14 પ્રશ્નો અને સ્વાધ્યાયના 17 પ્રશ્નોના વિગતવાર ઉકેલો મૂળ ક્રમ અને મૂળ પ્રશ્ન-નંબર પ્રમાણે આપવામાં આવ્યા છે. પ્રવૃત્તિઓ અને અન્ય વધારાની સામગ્રી સામેલ કરેલ નથી. એક સમયે માત્ર એક જ ઉકેલ ખુલશે.</div>
+<h2 class="section-title">PART I — પાઠની અંદરના પ્રશ્નસેટ</h2>
+<h3 class="subhead">પ્રશ્નસેટ 1 — ગોળીય અરીસા</h3>
+<article class="q-card">
+<button aria-expanded="false" class="q-toggle" type="button">
+<span class="qtext"><span class="badge">પ્રશ્નસેટ 1 • પ્રશ્ન 1</span>અંતર્ગોળ અરીસાનું મુખ્ય કેન્દ્ર વ્યાખ્યાયિત કરો.</span>
+<span class="indicator">▼ ઉકેલ જોવા ટૅપ કરો</span>
+</button>
+<div class="solution"><div class="answer">
+<div class="answer-box"><h4>✅ જવાબ</h4><p>મુખ્ય અક્ષને સમાંતર આવતાં પ્રકાશનાં કિરણો અંતર્ગોળ અરીસાથી પરાવર્તિત થયા પછી મુખ્ય અક્ષ પર જે બિંદુએ ભેગાં થાય છે, તે બિંદુને અંતર્ગોળ અરીસાનું <b>મુખ્ય કેન્દ્ર</b> કહે છે. તેને સામાન્ય રીતે <b>F</b> વડે દર્શાવવામાં આવે છે.</p></div>
+<div class="key-box"><h4>🔑 મુખ્ય મુદ્દા</h4><p>મુખ્ય કેન્દ્ર મુખ્ય અક્ષ પર, અરીસાની સામે અને ધ્રુવ P તથા વક્રતાકેન્દ્ર Cની વચ્ચે આવેલું હોય છે.</p></div></div></div>
+</article>
+<article class="q-card">
+<button aria-expanded="false" class="q-toggle" type="button">
+<span class="qtext"><span class="badge">પ્રશ્નસેટ 1 • પ્રશ્ન 2</span>એક ગોળીય અરીસાની વક્રતાત્રિજ્યા 20 cm છે. તેની કેન્દ્રલંબાઈ કેટલી હશે?</span>
+<span class="indicator">▼ ઉકેલ જોવા ટૅપ કરો</span>
+</button>
+<div class="solution"><div class="answer">
+<div class="given-box"><h4>📋 આપેલ</h4><p>વક્રતાત્રિજ્યા \(R=20\,\text{cm}\)</p></div>
+<div class="formula-box"><h4>📘 સૂત્ર</h4><div class="math-line">\[f=\frac{R}{2}\]</div></div>
+<div class="steps-box"><h4>✏️ પગલુંવાર ઉકેલ</h4><div class="math-line">\[f=\frac{20}{2}\]</div><div class="math-line">\[f=10\,\text{cm}\]</div></div>
+<div class="final-box"><h4>✅ અંતિમ જવાબ</h4><p>કેન્દ્રલંબાઈનું પરિમાણ <b>10 cm</b> છે. અરીસાના પ્રકાર પ્રમાણે તેનું ચિહ્ન નક્કી થાય છે.</p></div></div></div>
+</article>
+<article class="q-card">
+<button aria-expanded="false" class="q-toggle" type="button">
+<span class="qtext"><span class="badge">પ્રશ્નસેટ 1 • પ્રશ્ન 3</span>એવા અરીસાનું નામ આપો જે વસ્તુનું ચતું તથા વિસ્તરિત પ્રતિબિંબ આપે.</span>
+<span class="indicator">▼ ઉકેલ જોવા ટૅપ કરો</span>
+</button>
+<div class="solution"><div class="answer">
+<div class="answer-box"><h4>✅ જવાબ</h4><p><b>અંતર્ગોળ અરીસો</b> વસ્તુનું ચતું અને વિસ્તરિત પ્રતિબિંબ આપી શકે છે.</p></div>
+<div class="key-box"><h4>📌 જરૂરી શરત</h4><p>વસ્તુને અરીસાના ધ્રુવ P અને મુખ્ય કેન્દ્ર Fની વચ્ચે મૂકવામાં આવે ત્યારે પ્રતિબિંબ આભાસી, ચતું અને મોટું બને છે.</p></div><div class="diagram"><svg viewBox="0 0 760 270" role="img" aria-label="વસ્તુ P અને Fની વચ્ચે — પ્રતિબિંબ અરીસાની પાછળ ચતું અને વિસ્તરિત બને છે.">
+<defs><marker id="arr_i13" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#1d4ed8"/></marker></defs>
+<line x1="40" y1="155" x2="720" y2="155" stroke="#334155" stroke-width="2"/>
+<path d="M600 50 Q545 155 600 255" fill="none" stroke="#334155" stroke-width="8"/>
+<text x="594" y="178" font-size="18">P</text><circle cx="500" cy="155" r="4"/><text x="492" y="180" font-size="18">F</text><circle cx="390" cy="155" r="4"/><text x="380" y="180" font-size="18">C</text>
+<line x1="550" y1="155" x2="550" y2="95" stroke="#dc2626" stroke-width="5" marker-end="url(#arr_i13)"/><text x="536" y="88" font-size="18">A</text><text x="536" y="180" font-size="18">B</text>
+<line x1="550" y1="95" x2="600" y2="95" stroke="#1d4ed8" stroke-width="3" marker-end="url(#arr_i13)"/><line x1="600" y1="95" x2="470" y2="228" stroke="#1d4ed8" stroke-width="3" marker-end="url(#arr_i13)"/>
+<line x1="550" y1="95" x2="600" y2="155" stroke="#1d4ed8" stroke-width="3" marker-end="url(#arr_i13)"/><line x1="600" y1="155" x2="470" y2="25" stroke="#1d4ed8" stroke-width="3" marker-end="url(#arr_i13)"/>
+<line x1="600" y1="95" x2="690" y2="3" stroke="#64748b" stroke-width="2" stroke-dasharray="7 6"/><line x1="600" y1="155" x2="690" y2="245" stroke="#64748b" stroke-width="2" stroke-dasharray="7 6"/>
+<line x1="680" y1="155" x2="680" y2="15" stroke="#16a34a" stroke-width="5" marker-end="url(#arr_i13)"/><text x="684" y="28" font-size="18">A′</text><text x="684" y="180" font-size="18">B′</text>
+</svg><p class="caption">વસ્તુ P અને Fની વચ્ચે — પ્રતિબિંબ અરીસાની પાછળ ચતું અને વિસ્તરિત બને છે.</p></div></div></div>
+</article>
+<article class="q-card">
+<button aria-expanded="false" class="q-toggle" type="button">
+<span class="qtext"><span class="badge">પ્રશ્નસેટ 1 • પ્રશ્ન 4</span>આપણે વાહનમાં પાછળનું દૃશ્ય જોવા માટેના અરીસા તરીકે બહિર્ગોળ અરીસાને કેમ પસંદ કરીએ છીએ?</span>
+<span class="indicator">▼ ઉકેલ જોવા ટૅપ કરો</span>
+</button>
+<div class="solution"><div class="answer">
+<div class="answer-box"><h4>✅ જવાબ</h4><p>બહિર્ગોળ અરીસો હંમેશાં આભાસી, ચતું અને નાનું પ્રતિબિંબ આપે છે. તેની દૃષ્ટિક્ષેત્રની વ્યાપકતા વધુ હોવાથી ડ્રાઇવરને પાછળનો વિશાળ વિસ્તાર એકસાથે દેખાય છે.</p></div>
+<div class="key-box"><h4>🔑 કારણો</h4><ul class="steps-list"><li>પ્રતિબિંબ ચતું હોવાથી દિશા ઓળખવી સરળ રહે છે.</li><li>નાનું પ્રતિબિંબ હોવાથી વધુ વિસ્તાર અરીસામાં સમાય છે.</li><li>વિશાળ દૃષ્ટિક્ષેત્ર વાહન ચલાવતી વખતે વધુ સુરક્ષા આપે છે.</li></ul></div></div></div>
+</article>
+<h3 class="subhead">પ્રશ્નસેટ 2 — અરીસાનું સૂત્ર અને મોટવણી</h3>
+<article class="q-card">
+<button aria-expanded="false" class="q-toggle" type="button">
+<span class="qtext"><span class="badge">પ્રશ્નસેટ 2 • પ્રશ્ન 1</span>32 cm વક્રતાત્રિજ્યા ધરાવતા બહિર્ગોળ અરીસાની કેન્દ્રલંબાઈ શોધો.</span>
+<span class="indicator">▼ ઉકેલ જોવા ટૅપ કરો</span>
+</button>
+<div class="solution"><div class="answer">
+<div class="given-box"><h4>📋 આપેલ</h4><p>બહિર્ગોળ અરીસા માટે \(R=+32\,\text{cm}\)</p></div>
+<div class="formula-box"><h4>📘 સૂત્ર</h4><div class="math-line">\[f=\frac{R}{2}\]</div></div>
+<div class="steps-box"><h4>✏️ પગલુંવાર ઉકેલ</h4><div class="math-line">\[f=\frac{+32}{2}\]</div><div class="math-line">\[f=+16\,\text{cm}\]</div></div>
+<div class="final-box"><h4>✅ અંતિમ જવાબ</h4><p>બહિર્ગોળ અરીસાની કેન્દ્રલંબાઈ <b>+16 cm</b> છે.</p></div></div></div>
+</article>
+<article class="q-card">
+<button aria-expanded="false" class="q-toggle" type="button">
+<span class="qtext"><span class="badge">પ્રશ્નસેટ 2 • પ્રશ્ન 2</span>એક અંતર્ગોળ અરીસો તેની સામે 10 cm અંતરે રાખેલ વસ્તુનું ત્રણગણું મોટું (વિસ્તરિત) વાસ્તવિક પ્રતિબિંબ આપે છે. પ્રતિબિંબનું સ્થાન ક્યાં હશે?</span>
+<span class="indicator">▼ ઉકેલ જોવા ટૅપ કરો</span>
+</button>
+<div class="solution"><div class="answer">
+<div class="given-box"><h4>📋 આપેલ</h4><p>વસ્તુઅંતર \(u=-10\,\text{cm}\)<br/>વાસ્તવિક અને ઊલટું ત્રણગણું પ્રતિબિંબ હોવાથી \(m=-3\)</p></div>
+<div class="formula-box"><h4>📘 સૂત્ર</h4><div class="math-line">\[m=-\frac{v}{u}\]</div></div>
+<div class="steps-box"><h4>✏️ પગલુંવાર ઉકેલ</h4><div class="math-line">\[-3=-\frac{v}{-10}\]</div><div class="math-line">\[-3=\frac{v}{10}\]</div><div class="math-line">\[v=-30\,\text{cm}\]</div></div>
+<div class="final-box"><h4>✅ અંતિમ જવાબ</h4><p>પ્રતિબિંબ અરીસાની સામે <b>30 cm</b> અંતરે બને છે. \(v\) ઋણ હોવાથી પ્રતિબિંબ વાસ્તવિક છે.</p></div></div></div>
+</article>
+<h3 class="subhead">પ્રશ્નસેટ 3 — વક્રીભવન અને વક્રીભવનાંક</h3>
+<article class="q-card">
+<button aria-expanded="false" class="q-toggle" type="button">
+<span class="qtext"><span class="badge">પ્રશ્નસેટ 3 • પ્રશ્ન 1</span>હવામાં ગતિ કરતું પ્રકાશનું કિરણ પાણીમાં ત્રાંસું પ્રવેશે છે. શું પ્રકાશનું કિરણ લંબ તરફ વાંકું વળશે કે લંબથી દૂર જશે? કેમ?</span>
+<span class="indicator">▼ ઉકેલ જોવા ટૅપ કરો</span>
+</button>
+<div class="solution"><div class="answer">
+<div class="answer-box"><h4>✅ જવાબ</h4><p>પ્રકાશનું કિરણ <b>લંબ તરફ</b> વાંકું વળશે.</p></div>
+<div class="key-box"><h4>🧠 કારણ</h4><p>હવા કરતાં પાણી પ્રકાશીય રીતે વધુ ઘટ્ટ માધ્યમ છે. હવામાંથી પાણીમાં પ્રવેશતાં પ્રકાશની ઝડપ ઘટે છે, તેથી કિરણ લંબ તરફ વળે છે.</p></div></div></div>
+</article>
+<article class="q-card">
+<button aria-expanded="false" class="q-toggle" type="button">
+<span class="qtext"><span class="badge">પ્રશ્નસેટ 3 • પ્રશ્ન 2</span>પ્રકાશ હવામાંથી 1.50 વક્રીભવનાંક ધરાવતી કાચની પ્લેટમાં પ્રવેશે છે. કાચમાં પ્રકાશની ઝડપ કેટલી હશે? શૂન્યાવકાશમાં પ્રકાશની ઝડપ \(3\times10^8\,\text{m s}^{-1}\) છે.</span>
+<span class="indicator">▼ ઉકેલ જોવા ટૅપ કરો</span>
+</button>
+<div class="solution"><div class="answer">
+<div class="given-box"><h4>📋 આપેલ</h4><p>વક્રીભવનાંક \(n=1.50\)<br/>શૂન્યાવકાશમાં પ્રકાશની ઝડપ \(c=3\times10^8\,\text{m s}^{-1}\)</p></div>
+<div class="formula-box"><h4>📘 સૂત્ર</h4><div class="math-line">\[n=\frac{c}{v}\]</div><div class="math-line">\[v=\frac{c}{n}\]</div></div>
+<div class="steps-box"><h4>✏️ પગલુંવાર ઉકેલ</h4><div class="math-line">\[v=\frac{3\times10^8}{1.50}\]</div><div class="math-line">\[v=2\times10^8\,\text{m s}^{-1}\]</div></div>
+<div class="final-box"><h4>✅ અંતિમ જવાબ</h4><p>કાચમાં પ્રકાશની ઝડપ <b>\(2\times10^8\,\text{m s}^{-1}\)</b> છે.</p></div></div></div>
+</article>
+<article class="q-card">
+<button aria-expanded="false" class="q-toggle" type="button">
+<span class="qtext"><span class="badge">પ્રશ્નસેટ 3 • પ્રશ્ન 3</span>કોષ્ટક 9.3માંથી સૌથી વધુ પ્રકાશીય ઘનતા ધરાવતું માધ્યમ શોધો. લઘુત્તમ પ્રકાશીય ઘનતા ધરાવતું માધ્યમ પણ શોધો.</span>
+<span class="indicator">▼ ઉકેલ જોવા ટૅપ કરો</span>
+</button>
+<div class="solution"><div class="answer">
+<div class="answer-box"><h4>✅ જવાબ</h4><p>વક્રીભવનાંક જેટલો વધુ, પ્રકાશીય ઘનતા એટલી વધુ.</p></div>
+<div class="table-wrap"><table><tr><th>પ્રકાશીય ઘનતા</th><th>માધ્યમ</th><th>વક્રીભવનાંક</th></tr><tr><td>સૌથી વધુ</td><td>હીરો</td><td>2.42</td></tr><tr><td>સૌથી ઓછી</td><td>હવા</td><td>1.0003</td></tr></table></div>
+<div class="final-box"><h4>✅ નિષ્કર્ષ</h4><p>હીરો સૌથી વધુ અને હવા સૌથી ઓછી પ્રકાશીય ઘનતા ધરાવે છે.</p></div></div></div>
+</article>
+<article class="q-card">
+<button aria-expanded="false" class="q-toggle" type="button">
+<span class="qtext"><span class="badge">પ્રશ્નસેટ 3 • પ્રશ્ન 4</span>તમને કેરોસીન, ટર્પેન્ટાઇન તેલ અને પાણી આપેલ છે. આ પૈકી શેમાં પ્રકાશ સૌથી વધુ ઝડપથી ગતિ કરશે? કોષ્ટક 9.3માં આપેલ માહિતીનો ઉપયોગ કરો.</span>
+<span class="indicator">▼ ઉકેલ જોવા ટૅપ કરો</span>
+</button>
+<div class="solution"><div class="answer">
+<div class="given-box"><h4>📋 વક્રીભવનાંક</h4><p>પાણી = 1.33, કેરોસીન = 1.44, ટર્પેન્ટાઇન તેલ = 1.47</p></div>
+<div class="formula-box"><h4>📘 સંબંધ</h4><p>\(v=\dfrac{c}{n}\). એટલે વક્રીભવનાંક ઓછો હોય ત્યાં પ્રકાશની ઝડપ વધુ હોય છે.</p></div>
+<div class="final-box"><h4>✅ અંતિમ જવાબ</h4><p>આ ત્રણમાંથી <b>પાણીમાં</b> પ્રકાશ સૌથી વધુ ઝડપથી ગતિ કરશે, કારણ કે પાણીનો વક્રીભવનાંક સૌથી ઓછો છે.</p></div></div></div>
+</article>
+<article class="q-card">
+<button aria-expanded="false" class="q-toggle" type="button">
+<span class="qtext"><span class="badge">પ્રશ્નસેટ 3 • પ્રશ્ન 5</span>હીરાનો વક્રીભવનાંક 2.42 છે. આ વિધાનનો શું અર્થ થાય?</span>
+<span class="indicator">▼ ઉકેલ જોવા ટૅપ કરો</span>
+</button>
+<div class="solution"><div class="answer">
+<div class="formula-box"><h4>📘 અર્થ</h4><div class="math-line">\[n_d=\frac{c}{v_d}=2.42\]</div></div>
+<div class="answer-box"><h4>✅ જવાબ</h4><p>શૂન્યાવકાશમાં પ્રકાશની ઝડપ હીરામાં પ્રકાશની ઝડપ કરતાં <b>2.42 ગણી</b> છે. એટલે હીરામાં પ્રકાશની ઝડપ \(v_d=\dfrac{c}{2.42}\) થાય છે.</p></div>
+<div class="key-box"><h4>🔑 અર્થઘટન</h4><p>હીરો પ્રકાશીય રીતે અત્યંત ઘટ્ટ માધ્યમ છે અને તેમાં પ્રકાશની ઝડપ ઘણી ઘટે છે.</p></div></div></div>
+</article>
+<h3 class="subhead">પ્રશ્નસેટ 4 — લેન્સનો પાવર</h3>
+<article class="q-card">
+<button aria-expanded="false" class="q-toggle" type="button">
+<span class="qtext"><span class="badge">પ્રશ્નસેટ 4 • પ્રશ્ન 1</span>લેન્સના 1 ડાયોપ્ટર પાવરની વ્યાખ્યા આપો.</span>
+<span class="indicator">▼ ઉકેલ જોવા ટૅપ કરો</span>
+</button>
+<div class="solution"><div class="answer">
+<div class="answer-box"><h4>✅ વ્યાખ્યા</h4><p>જે લેન્સની કેન્દ્રલંબાઈ <b>1 મીટર</b> હોય તેના પાવરને <b>1 ડાયોપ્ટર (1 D)</b> કહે છે.</p></div>
+<div class="formula-box"><h4>📘 સૂત્ર</h4><p>\(P=\dfrac{1}{f(\text{m})}\). તેથી \(f=1\,\text{m}\) માટે \(P=1\,\text{D}\).</p></div></div></div>
+</article>
+<article class="q-card">
+<button aria-expanded="false" class="q-toggle" type="button">
+<span class="qtext"><span class="badge">પ્રશ્નસેટ 4 • પ્રશ્ન 2</span>એક બહિર્ગોળ લેન્સ દ્વારા એક સોયનું વાસ્તવિક અને ઊલટું પ્રતિબિંબ લેન્સથી 50 cm દૂર મળે છે. જો પ્રતિબિંબનું પરિમાણ વસ્તુના પરિમાણ જેટલું જ મેળવવું હોય, તો સોય બહિર્ગોળ લેન્સથી કેટલી દૂર રાખવી જોઈએ? લેન્સનો પાવર પણ ગણો.</span>
+<span class="indicator">▼ ઉકેલ જોવા ટૅપ કરો</span>
+</button>
+<div class="solution"><div class="answer">
+<div class="given-box"><h4>📋 આપેલ</h4><p>વાસ્તવિક પ્રતિબિંબનું અંતર \(v=+50\,\text{cm}\)<br/>પ્રતિબિંબનું પરિમાણ વસ્તુ જેટલું હોવાથી \(m=-1\)</p></div>
+<div class="formula-box"><h4>📘 સૂત્રો</h4><div class="math-line">\[m=\frac{v}{u}\]</div><div class="math-line">\[\frac{1}{v}-\frac{1}{u}=\frac{1}{f}\]</div><div class="math-line">\[P=\frac{1}{f(\text{m})}\]</div></div>
+<div class="steps-box"><h4>✏️ વસ્તુનું સ્થાન</h4><div class="math-line">\[-1=\frac{+50}{u}\]</div><div class="math-line">\[u=-50\,\text{cm}\]</div></div>
+<div class="steps-box"><h4>✏️ કેન્દ્રલંબાઈ</h4><div class="math-line">\[\frac{1}{f}=\frac{1}{50}-\frac{1}{-50}\]</div><div class="math-line">\[\frac{1}{f}=\frac{2}{50}=\frac{1}{25}\]</div><div class="math-line">\[f=+25\,\text{cm}=+0.25\,\text{m}\]</div></div>
+<div class="steps-box"><h4>✏️ પાવર</h4><div class="math-line">\[P=\frac{1}{0.25}=+4\,\text{D}\]</div></div>
+<div class="final-box"><h4>✅ અંતિમ જવાબ</h4><p>સોયને લેન્સથી <b>50 cm</b> દૂર રાખવી જોઈએ. લેન્સનો પાવર <b>+4 D</b> છે.</p></div></div></div>
+</article>
+<article class="q-card">
+<button aria-expanded="false" class="q-toggle" type="button">
+<span class="qtext"><span class="badge">પ્રશ્નસેટ 4 • પ્રશ્ન 3</span>2 m કેન્દ્રલંબાઈ ધરાવતા અંતર્ગોળ લેન્સનો પાવર શોધો.</span>
+<span class="indicator">▼ ઉકેલ જોવા ટૅપ કરો</span>
+</button>
+<div class="solution"><div class="answer">
+<div class="given-box"><h4>📋 આપેલ</h4><p>અંતર્ગોળ લેન્સ માટે \(f=-2\,\text{m}\)</p></div>
+<div class="formula-box"><h4>📘 સૂત્ર</h4><div class="math-line">\[P=\frac{1}{f(\text{m})}\]</div></div>
+<div class="steps-box"><h4>✏️ ગણતરી</h4><div class="math-line">\[P=\frac{1}{-2}\]</div><div class="math-line">\[P=-0.5\,\text{D}\]</div></div>
+<div class="final-box"><h4>✅ અંતિમ જવાબ</h4><p>લેન્સનો પાવર <b>−0.5 D</b> છે.</p></div></div></div>
+</article>
+<h2 class="section-title">PART II — પ્રકરણ અંત સ્વાધ્યાય</h2>
+<article class="q-card">
+<button aria-expanded="false" class="q-toggle" type="button">
+<span class="qtext"><span class="badge">Question 1</span>નીચેનાં દ્રવ્યો પૈકી લેન્સ બનાવવા માટે કયા દ્રવ્યનો ઉપયોગ થઈ શકે નહિ?<span class="options-inline">(a) પાણી &nbsp;&nbsp; (b) કાચ &nbsp;&nbsp; (c) પ્લાસ્ટિક &nbsp;&nbsp; (d) માટી (clay)</span></span>
+<span class="indicator">▼ ઉકેલ જોવા ટૅપ કરો</span>
+</button>
+<div class="solution"><div class="answer">
+<div class="final-box"><h4>✅ સાચો જવાબ</h4><p><b>(d) માટી (clay)</b></p></div>
+<div class="answer-box"><h4>🧠 આ જવાબ કેમ સાચો છે?</h4><p>લેન્સ માટે પદાર્થ પારદર્શક હોવો જરૂરી છે જેથી પ્રકાશ તેમાંમાંથી પસાર થઈ વક્રીભવન કરી શકે. માટી અપારદર્શક છે.</p></div>
+<div class="wrong-box"><h4>❌ બીજા વિકલ્પો કેમ ખોટા છે?</h4><p>પાણી, કાચ અને પારદર્શક પ્લાસ્ટિકમાંથી યોગ્ય વક્ર સપાટી બનાવી પ્રકાશનું વક્રીભવન કરાવી શકાય છે.</p></div></div></div>
+</article>
+<article class="q-card">
+<button aria-expanded="false" class="q-toggle" type="button">
+<span class="qtext"><span class="badge">Question 2</span>એક અંતર્ગોળ અરીસા વડે મળતું પ્રતિબિંબ આભાસી, ચતું અને વસ્તુ કરતાં મોટું દેખાય છે. વસ્તુનું સ્થાન ક્યાં હશે?<span class="options-inline">(a) મુખ્ય કેન્દ્ર અને વક્રતાકેન્દ્રની વચ્ચે<br/>(b) વક્રતાકેન્દ્ર પર<br/>(c) વક્રતાકેન્દ્રની પાછળ<br/>(d) અરીસાના ધ્રુવ અને મુખ્ય કેન્દ્રની વચ્ચે</span></span>
+<span class="indicator">▼ ઉકેલ જોવા ટૅપ કરો</span>
+</button>
+<div class="solution"><div class="answer">
+<div class="final-box"><h4>✅ સાચો જવાબ</h4><p><b>(d) અરીસાના ધ્રુવ P અને મુખ્ય કેન્દ્ર Fની વચ્ચે</b></p></div>
+<div class="answer-box"><h4>🧠 કારણ</h4><p>અંતર્ગોળ અરીસામાં વસ્તુ P અને Fની વચ્ચે હોય ત્યારે પરાવર્તિત કિરણોના પાછળના વિસ્તરણો ભેગાં થઈ આભાસી, ચતું અને મોટું પ્રતિબિંબ બનાવે છે.</p></div>
+<div class="wrong-box"><h4>❌ અન્ય સ્થાનો</h4><p>F અને C વચ્ચે વાસ્તવિક મોટું ઊલટું; C પર સમાન કદનું વાસ્તવિક ઊલટું; Cની પાછળ નાનું વાસ્તવિક ઊલટું પ્રતિબિંબ બને છે.</p></div></div></div>
+</article>
+<article class="q-card">
+<button aria-expanded="false" class="q-toggle" type="button">
+<span class="qtext"><span class="badge">Question 3</span>બહિર્ગોળ લેન્સની સામે વસ્તુને ક્યાં રાખતાં તેનું સાચું અને વસ્તુના પરિમાણ જેટલું જ પ્રતિબિંબ મળે?<span class="options-inline">(a) લેન્સના મુખ્ય કેન્દ્ર પર<br/>(b) કેન્દ્રલંબાઈ કરતાં બમણા અંતરે<br/>(c) અનંત અંતરે<br/>(d) લેન્સના પ્રકાશીય કેન્દ્ર અને મુખ્ય કેન્દ્રની વચ્ચે</span></span>
+<span class="indicator">▼ ઉકેલ જોવા ટૅપ કરો</span>
+</button>
+<div class="solution"><div class="answer">
+<div class="final-box"><h4>✅ સાચો જવાબ</h4><p><b>(b) કેન્દ્રલંબાઈ કરતાં બમણા અંતરે, એટલે 2F₁ પર</b></p></div>
+<div class="answer-box"><h4>🧠 કારણ</h4><p>વસ્તુ 2F₁ પર હોય ત્યારે પ્રતિબિંબ 2F₂ પર વાસ્તવિક, ઊલટું અને સમાન કદનું બને છે.</p></div>
+<div class="wrong-box"><h4>❌ અન્ય વિકલ્પો</h4><p>F₁ પર પ્રતિબિંબ અનંતે; અનંત પર F₂ પાસે બિંદુવત; O અને F₁ વચ્ચે આભાસી, ચતું અને મોટું પ્રતિબિંબ મળે છે.</p></div></div></div>
+</article>
+<article class="q-card">
+<button aria-expanded="false" class="q-toggle" type="button">
+<span class="qtext"><span class="badge">Question 4</span>એક ગોળીય અરીસા અને એક પાતળા ગોળીય લેન્સ દરેકની કેન્દ્રલંબાઈ −15 cm છે. અરીસો અને લેન્સ ______ હશે.<span class="options-inline">(a) બંને અંતર્ગોળ<br/>(b) બંને બહિર્ગોળ<br/>(c) અરીસો અંતર્ગોળ અને લેન્સ બહિર્ગોળ<br/>(d) અરીસો બહિર્ગોળ અને લેન્સ અંતર્ગોળ</span></span>
+<span class="indicator">▼ ઉકેલ જોવા ટૅપ કરો</span>
+</button>
+<div class="solution"><div class="answer">
+<div class="final-box"><h4>✅ સાચો જવાબ</h4><p><b>(a) બંને અંતર્ગોળ</b></p></div>
+<div class="answer-box"><h4>🧠 કારણ</h4><p>નવી કાર્તીય સંજ્ઞા પદ્ધતિમાં અંતર્ગોળ અરીસાની કેન્દ્રલંબાઈ ઋણ અને અંતર્ગોળ લેન્સની કેન્દ્રલંબાઈ પણ ઋણ હોય છે.</p></div>
+<div class="wrong-box"><h4>❌ અન્ય વિકલ્પો</h4><p>બહિર્ગોળ અરીસો તથા બહિર્ગોળ લેન્સની કેન્દ્રલંબાઈ ધન હોય છે.</p></div></div></div>
+</article>
+<article class="q-card">
+<button aria-expanded="false" class="q-toggle" type="button">
+<span class="qtext"><span class="badge">Question 5</span>અરીસાની સામે તમે ગમે ત્યાં ઊભા રહો છતાં તમારું પ્રતિબિંબ ચતું મળે છે, તો આ અરીસો ______ હશે.<span class="options-inline">(a) માત્ર સમતલ &nbsp;&nbsp; (b) માત્ર અંતર્ગોળ &nbsp;&nbsp; (c) માત્ર બહિર્ગોળ &nbsp;&nbsp; (d) સમતલ અથવા બહિર્ગોળ</span></span>
+<span class="indicator">▼ ઉકેલ જોવા ટૅપ કરો</span>
+</button>
+<div class="solution"><div class="answer">
+<div class="final-box"><h4>✅ સાચો જવાબ</h4><p><b>(d) સમતલ અથવા બહિર્ગોળ</b></p></div>
+<div class="answer-box"><h4>🧠 કારણ</h4><p>સમતલ અરીસો હંમેશાં ચતું, સમાન કદનું આભાસી પ્રતિબિંબ આપે છે; બહિર્ગોળ અરીસો હંમેશાં ચતું, નાનું આભાસી પ્રતિબિંબ આપે છે.</p></div>
+<div class="wrong-box"><h4>❌ અંતર્ગોળ અરીસો કેમ નહિ?</h4><p>અંતર્ગોળ અરીસો માત્ર વસ્તુ P અને Fની વચ્ચે હોય ત્યારે જ ચતું પ્રતિબિંબ આપે છે; અન્ય સ્થાનો પર ઊલટું પ્રતિબિંબ બને છે.</p></div></div></div>
+</article>
+<article class="q-card">
+<button aria-expanded="false" class="q-toggle" type="button">
+<span class="qtext"><span class="badge">Question 6</span>શબ્દકોશમાં જોવા મળતાં નાના અક્ષરોને વાંચવા માટે તમે નીચેનાં પૈકી કયો લેન્સ પસંદ કરશો?<span class="options-inline">(a) 50 cm કેન્દ્રલંબાઈનો બહિર્ગોળ લેન્સ<br/>(b) 50 cm કેન્દ્રલંબાઈનો અંતર્ગોળ લેન્સ<br/>(c) 5 cm કેન્દ્રલંબાઈનો બહિર્ગોળ લેન્સ<br/>(d) 5 cm કેન્દ્રલંબાઈનો અંતર્ગોળ લેન્સ</span></span>
+<span class="indicator">▼ ઉકેલ જોવા ટૅપ કરો</span>
+</button>
+<div class="solution"><div class="answer">
+<div class="final-box"><h4>✅ સાચો જવાબ</h4><p><b>(c) 5 cm કેન્દ્રલંબાઈનો બહિર્ગોળ લેન્સ</b></p></div>
+<div class="answer-box"><h4>🧠 કારણ</h4><p>મેગ્નિફાઇંગ ગ્લાસ માટે બહિર્ગોળ લેન્સ જોઈએ. ઓછી કેન્દ્રલંબાઈનો લેન્સ વધુ પાવર અને વધુ કોણીય મોટવણી આપે છે.</p></div>
+<div class="wrong-box"><h4>❌ અન્ય વિકલ્પો</h4><p>અંતર્ગોળ લેન્સ ચતું પરંતુ નાનું પ્રતિબિંબ આપે છે. 50 cm બહિર્ગોળ લેન્સની પાવર ઓછી હોવાથી મોટવણી ઓછી મળે છે.</p></div></div></div>
+</article>
+<article class="q-card">
+<button aria-expanded="false" class="q-toggle" type="button">
+<span class="qtext"><span class="badge">Question 7</span>આપણે 15 cm કેન્દ્રલંબાઈના અંતર્ગોળ અરીસાનો ઉપયોગ કરી એક વસ્તુનું ચતું પ્રતિબિંબ મેળવવા માગીએ છીએ. અરીસાથી વસ્તુઅંતરનો વિસ્તાર (Range) કેટલો હોવો જોઈએ? પ્રતિબિંબનો પ્રકાર કેવો હશે? પ્રતિબિંબ વસ્તુ કરતાં મોટું હશે કે નાનું? આ કિસ્સામાં પ્રતિબિંબ-નિર્માણ દર્શાવતી કિરણાકૃતિ દોરો.</span>
+<span class="indicator">▼ ઉકેલ જોવા ટૅપ કરો</span>
+</button>
+<div class="solution"><div class="answer">
+<div class="given-box"><h4>📋 આપેલ</h4><p>અંતર્ગોળ અરીસાની કેન્દ્રલંબાઈનું પરિમાણ 15 cm છે.</p></div>
+<div class="answer-box"><h4>✅ વસ્તુઅંતરનો વિસ્તાર</h4><p>વસ્તુને ધ્રુવ P અને મુખ્ય કેન્દ્ર Fની વચ્ચે રાખવી જોઈએ. એટલે અરીસાથી વસ્તુનું અંતર <b>0 cm કરતાં વધુ અને 15 cm કરતાં ઓછું</b> હોવું જોઈએ.</p></div>
+<div class="key-box"><h4>📌 પ્રતિબિંબનો પ્રકાર</h4><p>પ્રતિબિંબ અરીસાની પાછળ બને છે અને તે <b>આભાસી, ચતું તથા વિસ્તરિત</b> હોય છે.</p></div><div class="diagram"><svg viewBox="0 0 760 270" role="img" aria-label="અંતર્ગોળ અરીસો: વસ્તુ P અને Fની વચ્ચે.">
+<defs><marker id="arr_e7" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#1d4ed8"/></marker></defs>
+<line x1="40" y1="155" x2="720" y2="155" stroke="#334155" stroke-width="2"/>
+<path d="M600 50 Q545 155 600 255" fill="none" stroke="#334155" stroke-width="8"/>
+<text x="594" y="178" font-size="18">P</text><circle cx="500" cy="155" r="4"/><text x="492" y="180" font-size="18">F</text><circle cx="390" cy="155" r="4"/><text x="380" y="180" font-size="18">C</text>
+<line x1="550" y1="155" x2="550" y2="95" stroke="#dc2626" stroke-width="5" marker-end="url(#arr_e7)"/><text x="536" y="88" font-size="18">A</text><text x="536" y="180" font-size="18">B</text>
+<line x1="550" y1="95" x2="600" y2="95" stroke="#1d4ed8" stroke-width="3" marker-end="url(#arr_e7)"/><line x1="600" y1="95" x2="470" y2="228" stroke="#1d4ed8" stroke-width="3" marker-end="url(#arr_e7)"/>
+<line x1="550" y1="95" x2="600" y2="155" stroke="#1d4ed8" stroke-width="3" marker-end="url(#arr_e7)"/><line x1="600" y1="155" x2="470" y2="25" stroke="#1d4ed8" stroke-width="3" marker-end="url(#arr_e7)"/>
+<line x1="600" y1="95" x2="690" y2="3" stroke="#64748b" stroke-width="2" stroke-dasharray="7 6"/><line x1="600" y1="155" x2="690" y2="245" stroke="#64748b" stroke-width="2" stroke-dasharray="7 6"/>
+<line x1="680" y1="155" x2="680" y2="15" stroke="#16a34a" stroke-width="5" marker-end="url(#arr_e7)"/><text x="684" y="28" font-size="18">A′</text><text x="684" y="180" font-size="18">B′</text>
+</svg><p class="caption">અંતર્ગોળ અરીસો: વસ્તુ P અને Fની વચ્ચે.</p></div></div></div>
+</article>
+<article class="q-card">
+<button aria-expanded="false" class="q-toggle" type="button">
+<span class="qtext"><span class="badge">Question 8</span>નીચેનાં પરિસ્થિતિઓમાં કયા અરીસા વપરાય છે તે જણાવો:<br/>(a) કારની હેડલાઇટ<br/>(b) વાહનની પાછળનું દૃશ્ય જોવા માટેનો અરીસો<br/>(c) સોલાર ભઠ્ઠી<br/>તમારો જવાબ કારણ સહિત જણાવો.</span>
+<span class="indicator">▼ ઉકેલ જોવા ટૅપ કરો</span>
+</button>
+<div class="solution"><div class="answer">
+<div class="table-wrap"><table><tr><th>પરિસ્થિતિ</th><th>અરીસો</th><th>કારણ</th></tr><tr><td>(a) કારની હેડલાઇટ</td><td>અંતર્ગોળ અરીસો</td><td>બલ્બને મુખ્ય કેન્દ્ર પાસે મૂકતાં પ્રકાશનો શક્તિશાળી સમાંતર પુંજ મળે છે.</td></tr><tr><td>(b) પાછળનું દૃશ્ય</td><td>બહિર્ગોળ અરીસો</td><td>વિશાળ દૃષ્ટિક્ષેત્ર સાથે ચતું અને નાનું પ્રતિબિંબ આપે છે.</td></tr><tr><td>(c) સોલાર ભઠ્ઠી</td><td>અંતર્ગોળ અરીસો</td><td>સૂર્યનાં સમાંતર કિરણોને મુખ્ય કેન્દ્ર પર કેન્દ્રિત કરી ઊંચું તાપમાન પેદા કરે છે.</td></tr></table></div></div></div>
+</article>
+<article class="q-card">
+<button aria-expanded="false" class="q-toggle" type="button">
+<span class="qtext"><span class="badge">Question 9</span>બહિર્ગોળ લેન્સના અડધા ભાગને કાળા પેપર વડે ઢાંકી દેવામાં આવ્યો છે. શું આ લેન્સ વસ્તુનું સંપૂર્ણ પ્રતિબિંબ આપશે? તમારું પરિણામ પ્રાયોગિક રીતે પણ ચકાસો. તમારું અવલોકન સમજાવો.</span>
+<span class="indicator">▼ ઉકેલ જોવા ટૅપ કરો</span>
+</button>
+<div class="solution"><div class="answer">
+<div class="answer-box"><h4>✅ જવાબ</h4><p>હા, લેન્સનો અડધો ભાગ ઢાંક્યા પછી પણ વસ્તુનું <b>સંપૂર્ણ પ્રતિબિંબ</b> મળશે, પરંતુ તેની તેજસ્વિતા ઘટશે.</p></div>
+<div class="steps-box"><h4>🧪 પ્રાયોગિક ચકાસણી</h4><ol class="steps-list"><li>બહિર્ગોળ લેન્સથી પડદા પર વસ્તુનું તીક્ષ્ણ પ્રતિબિંબ મેળવો.</li><li>લેન્સનો અડધો ભાગ કાળા કાગળથી ઢાંકો.</li><li>પડદાનું પ્રતિબિંબ ફરી જુઓ.</li><li>પૂર્ણ આકાર દેખાશે, પરંતુ પ્રતિબિંબ ઓછું તેજસ્વી હશે.</li></ol></div>
+<div class="key-box"><h4>🧠 સમજણ</h4><p>વસ્તુના દરેક બિંદુમાંથી નીકળતાં કિરણો લેન્સના દરેક ભાગમાંથી પસાર થઈ શકે છે. અડધો ભાગ ઢાંકતાં કિરણોની સંખ્યા ઘટે છે, તેથી તેજસ્વિતા ઘટે છે; પ્રતિબિંબનો કોઈ ભાગ ગાયબ થતો નથી.</p></div></div></div>
+</article>
+<article class="q-card">
+<button aria-expanded="false" class="q-toggle" type="button">
+<span class="qtext"><span class="badge">Question 10</span>5 cm લંબાઈની એક વસ્તુને 10 cm કેન્દ્રલંબાઈના અભિસારી લેન્સથી 25 cm દૂર રાખી છે. કિરણાકૃતિ દોરો અને પ્રતિબિંબનું સ્થાન, પરિમાણ અને પ્રકાર જણાવો.</span>
+<span class="indicator">▼ ઉકેલ જોવા ટૅપ કરો</span>
+</button>
+<div class="solution"><div class="answer">
+<div class="given-box"><h4>📋 આપેલ</h4><p>\(h=+5\,\text{cm}\), \(u=-25\,\text{cm}\), \(f=+10\,\text{cm}\)</p></div>
+<div class="formula-box"><h4>📘 સૂત્રો</h4><div class="math-line">\[\frac{1}{v}-\frac{1}{u}=\frac{1}{f}\]</div><div class="math-line">\[m=\frac{h' }{h}=\frac{v}{u}\]</div></div>
+<div class="steps-box"><h4>✏️ પ્રતિબિંબનું સ્થાન</h4><div class="math-line">\[\frac{1}{v}-\frac{1}{-25}=\frac{1}{10}\]</div><div class="math-line">\[\frac{1}{v}+\frac{1}{25}=\frac{1}{10}\]</div><div class="math-line">\[\frac{1}{v}=\frac{1}{10}-\frac{1}{25}=\frac{3}{50}\]</div><div class="math-line">\[v=\frac{50}{3}=+16.67\,\text{cm}\]</div></div>
+<div class="steps-box"><h4>✏️ પ્રતિબિંબની ઊંચાઈ</h4><div class="math-line">\[m=\frac{v}{u}=\frac{16.67}{-25}=-0.667\]</div><div class="math-line">\[h'=mh=(-0.667)(5)=-3.33\,\text{cm}\]</div></div>
+<div class="final-box"><h4>✅ અંતિમ જવાબ</h4><p>પ્રતિબિંબ લેન્સની બીજી બાજુ <b>16.67 cm</b> અંતરે બને છે. તેની ઊંચાઈ <b>3.33 cm</b> છે અને તે <b>વાસ્તવિક, ઊલટું તથા નાનું</b> છે.</p></div><div class="diagram"><svg viewBox="0 0 760 270" role="img" aria-label="વસ્તુ 2F₁થી દૂર હોવાથી પ્રતિબિંબ F₂ અને 2F₂ની વચ્ચે બને છે.">
+<defs><marker id="arr_e10" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#1d4ed8"/></marker></defs>
+<line x1="35" y1="150" x2="725" y2="150" stroke="#334155" stroke-width="2"/><path d="M380 45 Q340 150 380 255 Q420 150 380 45" fill="#dbeafe" stroke="#1e3a8a" stroke-width="3"/>
+<circle cx="270" cy="150" r="4"/><text x="257" y="176" font-size="17">F₁</text><circle cx="160" cy="150" r="4"/><text x="142" y="176" font-size="17">2F₁</text><circle cx="490" cy="150" r="4"/><text x="478" y="176" font-size="17">F₂</text><circle cx="600" cy="150" r="4"/><text x="582" y="176" font-size="17">2F₂</text><text x="370" y="176" font-size="17">O</text>
+<line x1="110" y1="150" x2="110" y2="55" stroke="#dc2626" stroke-width="5" marker-end="url(#arr_e10)"/><text x="96" y="47" font-size="18">A</text><text x="96" y="176" font-size="18">B</text>
+<line x1="110" y1="55" x2="380" y2="55" stroke="#1d4ed8" stroke-width="3" marker-end="url(#arr_e10)"/><line x1="380" y1="55" x2="590" y2="150" stroke="#1d4ed8" stroke-width="3" marker-end="url(#arr_e10)"/>
+<line x1="110" y1="55" x2="380" y2="150" stroke="#1d4ed8" stroke-width="3" marker-end="url(#arr_e10)"/><line x1="380" y1="150" x2="650" y2="245" stroke="#1d4ed8" stroke-width="3" marker-end="url(#arr_e10)"/>
+<line x1="565" y1="150" x2="565" y2="215" stroke="#16a34a" stroke-width="5" marker-end="url(#arr_e10)"/><text x="570" y="220" font-size="18">A′</text><text x="570" y="145" font-size="18">B′</text>
+</svg><p class="caption">વસ્તુ 2F₁થી દૂર હોવાથી પ્રતિબિંબ F₂ અને 2F₂ની વચ્ચે બને છે.</p></div></div></div>
+</article>
+<article class="q-card">
+<button aria-expanded="false" class="q-toggle" type="button">
+<span class="qtext"><span class="badge">Question 11</span>15 cm કેન્દ્રલંબાઈનો અંતર્ગોળ લેન્સ 10 cm દૂર પ્રતિબિંબ રચે છે. વસ્તુને લેન્સથી કેટલી દૂર રાખી હશે? કિરણાકૃતિ દોરો.</span>
+<span class="indicator">▼ ઉકેલ જોવા ટૅપ કરો</span>
+</button>
+<div class="solution"><div class="answer">
+<div class="given-box"><h4>📋 આપેલ</h4><p>અંતર્ગોળ લેન્સ માટે \(f=-15\,\text{cm}\)<br/>આભાસી પ્રતિબિંબ માટે \(v=-10\,\text{cm}\)</p></div>
+<div class="formula-box"><h4>📘 સૂત્ર</h4><div class="math-line">\[\frac{1}{v}-\frac{1}{u}=\frac{1}{f}\]</div></div>
+<div class="steps-box"><h4>✏️ પગલુંવાર ઉકેલ</h4><div class="math-line">\[\frac{1}{-10}-\frac{1}{u}=\frac{1}{-15}\]</div><div class="math-line">\[-\frac{1}{u}=\frac{1}{10}-\frac{1}{15}=\frac{1}{30}\]</div><div class="math-line">\[u=-30\,\text{cm}\]</div></div>
+<div class="final-box"><h4>✅ અંતિમ જવાબ</h4><p>વસ્તુ લેન્સની સામે <b>30 cm</b> અંતરે રાખવામાં આવી હતી. પ્રતિબિંબ આભાસી, ચતું અને નાનું છે.</p></div><div class="diagram"><svg viewBox="0 0 760 270" role="img" aria-label="અંતર્ગોળ લેન્સમાં પ્રતિબિંબ O અને F₁ની વચ્ચે મળે છે.">
+<defs><marker id="arr_e11" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#1d4ed8"/></marker></defs>
+<line x1="35" y1="150" x2="725" y2="150" stroke="#334155" stroke-width="2"/><path d="M355 45 Q395 150 355 255 L405 255 Q365 150 405 45 Z" fill="#dbeafe" stroke="#1e3a8a" stroke-width="3"/>
+<circle cx="270" cy="150" r="4"/><text x="257" y="176" font-size="17">F₁</text><circle cx="490" cy="150" r="4"/><text x="478" y="176" font-size="17">F₂</text><text x="372" y="176" font-size="17">O</text>
+<line x1="110" y1="150" x2="110" y2="55" stroke="#dc2626" stroke-width="5" marker-end="url(#arr_e11)"/><text x="96" y="47" font-size="18">A</text><text x="96" y="176" font-size="18">B</text>
+<line x1="110" y1="55" x2="380" y2="55" stroke="#1d4ed8" stroke-width="3" marker-end="url(#arr_e11)"/><line x1="380" y1="55" x2="610" y2="20" stroke="#1d4ed8" stroke-width="3" marker-end="url(#arr_e11)"/><line x1="380" y1="55" x2="270" y2="150" stroke="#64748b" stroke-width="2" stroke-dasharray="7 6"/>
+<line x1="110" y1="55" x2="380" y2="150" stroke="#1d4ed8" stroke-width="3" marker-end="url(#arr_e11)"/><line x1="380" y1="150" x2="650" y2="245" stroke="#1d4ed8" stroke-width="3" marker-end="url(#arr_e11)"/>
+<line x1="300" y1="150" x2="300" y2="88" stroke="#16a34a" stroke-width="5" marker-end="url(#arr_e11)"/><text x="305" y="93" font-size="18">A′</text><text x="305" y="176" font-size="18">B′</text>
+</svg><p class="caption">અંતર્ગોળ લેન્સમાં પ્રતિબિંબ O અને F₁ની વચ્ચે મળે છે.</p></div></div></div>
+</article>
+<article class="q-card">
+<button aria-expanded="false" class="q-toggle" type="button">
+<span class="qtext"><span class="badge">Question 12</span>15 cm કેન્દ્રલંબાઈના બહિર્ગોળ અરીસાથી 10 cm દૂર વસ્તુને મૂકી છે. પ્રતિબિંબનું સ્થાન અને પ્રકાર જણાવો.</span>
+<span class="indicator">▼ ઉકેલ જોવા ટૅપ કરો</span>
+</button>
+<div class="solution"><div class="answer">
+<div class="given-box"><h4>📋 આપેલ</h4><p>બહિર્ગોળ અરીસા માટે \(f=+15\,\text{cm}\), વસ્તુઅંતર \(u=-10\,\text{cm}\)</p></div>
+<div class="formula-box"><h4>📘 અરીસાનું સૂત્ર</h4><div class="math-line">\[\frac{1}{v}+\frac{1}{u}=\frac{1}{f}\]</div></div>
+<div class="steps-box"><h4>✏️ પગલુંવાર ઉકેલ</h4><div class="math-line">\[\frac{1}{v}+\frac{1}{-10}=\frac{1}{15}\]</div><div class="math-line">\[\frac{1}{v}=\frac{1}{15}+\frac{1}{10}=\frac{1}{6}\]</div><div class="math-line">\[v=+6\,\text{cm}\]</div></div>
+<div class="final-box"><h4>✅ અંતિમ જવાબ</h4><p>પ્રતિબિંબ અરીસાની પાછળ <b>6 cm</b> અંતરે બને છે. તે <b>આભાસી, ચતું અને નાનું</b> છે.</p></div><div class="diagram"><svg viewBox="0 0 760 270" role="img" aria-label="બહિર્ગોળ અરીસામાં પ્રતિબિંબ P અને Fની વચ્ચે બને છે.">
+<defs><marker id="arr_e12" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#1d4ed8"/></marker></defs>
+<line x1="40" y1="155" x2="720" y2="155" stroke="#334155" stroke-width="2"/><path d="M560 50 Q615 155 560 255" fill="none" stroke="#334155" stroke-width="8"/>
+<text x="563" y="180" font-size="18">P</text><circle cx="635" cy="155" r="4"/><text x="625" y="180" font-size="18">F</text><circle cx="700" cy="155" r="4"/><text x="690" y="180" font-size="18">C</text>
+<line x1="120" y1="155" x2="120" y2="55" stroke="#dc2626" stroke-width="5" marker-end="url(#arr_e12)"/><text x="106" y="47" font-size="18">A</text><text x="106" y="180" font-size="18">B</text>
+<line x1="120" y1="55" x2="560" y2="55" stroke="#1d4ed8" stroke-width="3" marker-end="url(#arr_e12)"/><line x1="560" y1="55" x2="360" y2="5" stroke="#1d4ed8" stroke-width="3" marker-end="url(#arr_e12)"/><line x1="560" y1="55" x2="635" y2="155" stroke="#64748b" stroke-width="2" stroke-dasharray="7 6"/>
+<line x1="120" y1="55" x2="560" y2="155" stroke="#1d4ed8" stroke-width="3" marker-end="url(#arr_e12)"/><line x1="560" y1="155" x2="350" y2="235" stroke="#1d4ed8" stroke-width="3" marker-end="url(#arr_e12)"/>
+<line x1="605" y1="155" x2="605" y2="105" stroke="#16a34a" stroke-width="5" marker-end="url(#arr_e12)"/><text x="610" y="112" font-size="18">A′</text><text x="610" y="180" font-size="18">B′</text>
+</svg><p class="caption">બહિર્ગોળ અરીસામાં પ્રતિબિંબ P અને Fની વચ્ચે બને છે.</p></div></div></div>
+</article>
+<article class="q-card">
+<button aria-expanded="false" class="q-toggle" type="button">
+<span class="qtext"><span class="badge">Question 13</span>સમતલ અરીસાથી મળતી મોટવણી +1 છે. આનો શું અર્થ થાય?</span>
+<span class="indicator">▼ ઉકેલ જોવા ટૅપ કરો</span>
+</button>
+<div class="solution"><div class="answer">
+<div class="answer-box"><h4>✅ જવાબ</h4><p>મોટવણી \(+1\)ના બે અર્થ થાય છે:</p><ol class="steps-list"><li>ધન ચિહ્ન દર્શાવે છે કે પ્રતિબિંબ <b>ચતું અને આભાસી</b> છે.</li><li>મોટવણીનું પરિમાણ 1 દર્શાવે છે કે પ્રતિબિંબનું કદ <b>વસ્તુ જેટલું જ</b> છે.</li></ol></div>
+<div class="formula-box"><h4>📘 સંબંધ</h4><p>\(m=\dfrac{h'}{h}=+1\Rightarrow h'=h\)</p></div></div></div>
+</article>
+<article class="q-card">
+<button aria-expanded="false" class="q-toggle" type="button">
+<span class="qtext"><span class="badge">Question 14</span>30 cm વક્રતાત્રિજ્યા ધરાવતા બહિર્ગોળ અરીસાની સામે 20 cm દૂર 5 cm લંબાઈની એક વસ્તુ મૂકેલી છે. પ્રતિબિંબનું સ્થાન, પ્રકાર અને પરિમાણ શોધો.</span>
+<span class="indicator">▼ ઉકેલ જોવા ટૅપ કરો</span>
+</button>
+<div class="solution"><div class="answer">
+<div class="given-box"><h4>📋 આપેલ</h4><p>\(R=+30\,\text{cm}\), \(f=+15\,\text{cm}\), \(u=-20\,\text{cm}\), \(h=+5\,\text{cm}\)</p></div>
+<div class="formula-box"><h4>📘 સૂત્રો</h4><div class="math-line">\[\frac{1}{v}+\frac{1}{u}=\frac{1}{f}\]</div><div class="math-line">\[m=-\frac{v}{u}=\frac{h'}{h}\]</div></div>
+<div class="steps-box"><h4>✏️ પ્રતિબિંબનું સ્થાન</h4><div class="math-line">\[\frac{1}{v}-\frac{1}{20}=\frac{1}{15}\]</div><div class="math-line">\[\frac{1}{v}=\frac{1}{15}+\frac{1}{20}=\frac{7}{60}\]</div><div class="math-line">\[v=\frac{60}{7}=+8.57\,\text{cm}\]</div></div>
+<div class="steps-box"><h4>✏️ પરિમાણ</h4><div class="math-line">\[m=-\frac{8.57}{-20}=+0.429\]</div><div class="math-line">\[h'=mh=(0.429)(5)=2.14\,\text{cm}\]</div></div>
+<div class="final-box"><h4>✅ અંતિમ જવાબ</h4><p>પ્રતિબિંબ અરીસાની પાછળ <b>8.57 cm</b> અંતરે બને છે. તેની ઊંચાઈ <b>2.14 cm</b> છે અને તે <b>આભાસી, ચતું તથા નાનું</b> છે.</p></div><div class="diagram"><svg viewBox="0 0 760 270" role="img" aria-label="બહિર્ગોળ અરીસાનું આભાસી અને નાનું પ્રતિબિંબ.">
+<defs><marker id="arr_e14" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#1d4ed8"/></marker></defs>
+<line x1="40" y1="155" x2="720" y2="155" stroke="#334155" stroke-width="2"/><path d="M560 50 Q615 155 560 255" fill="none" stroke="#334155" stroke-width="8"/>
+<text x="563" y="180" font-size="18">P</text><circle cx="635" cy="155" r="4"/><text x="625" y="180" font-size="18">F</text><circle cx="700" cy="155" r="4"/><text x="690" y="180" font-size="18">C</text>
+<line x1="120" y1="155" x2="120" y2="55" stroke="#dc2626" stroke-width="5" marker-end="url(#arr_e14)"/><text x="106" y="47" font-size="18">A</text><text x="106" y="180" font-size="18">B</text>
+<line x1="120" y1="55" x2="560" y2="55" stroke="#1d4ed8" stroke-width="3" marker-end="url(#arr_e14)"/><line x1="560" y1="55" x2="360" y2="5" stroke="#1d4ed8" stroke-width="3" marker-end="url(#arr_e14)"/><line x1="560" y1="55" x2="635" y2="155" stroke="#64748b" stroke-width="2" stroke-dasharray="7 6"/>
+<line x1="120" y1="55" x2="560" y2="155" stroke="#1d4ed8" stroke-width="3" marker-end="url(#arr_e14)"/><line x1="560" y1="155" x2="350" y2="235" stroke="#1d4ed8" stroke-width="3" marker-end="url(#arr_e14)"/>
+<line x1="605" y1="155" x2="605" y2="105" stroke="#16a34a" stroke-width="5" marker-end="url(#arr_e14)"/><text x="610" y="112" font-size="18">A′</text><text x="610" y="180" font-size="18">B′</text>
+</svg><p class="caption">બહિર્ગોળ અરીસાનું આભાસી અને નાનું પ્રતિબિંબ.</p></div></div></div>
+</article>
+<article class="q-card">
+<button aria-expanded="false" class="q-toggle" type="button">
+<span class="qtext"><span class="badge">Question 15</span>18 cm કેન્દ્રલંબાઈ ધરાવતા અંતર્ગોળ અરીસાની સામે 27 cm દૂર 7 cm લંબાઈની એક વસ્તુને મૂકી છે. પડદાને અરીસાથી કેટલા અંતરે રાખતાં તેના પર તીક્ષ્ણ પ્રતિબિંબ કેન્દ્રિત થશે? પ્રતિબિંબનો પ્રકાર અને પરિમાણ શોધો.</span>
+<span class="indicator">▼ ઉકેલ જોવા ટૅપ કરો</span>
+</button>
+<div class="solution"><div class="answer">
+<div class="given-box"><h4>📋 આપેલ</h4><p>\(f=-18\,\text{cm}\), \(u=-27\,\text{cm}\), \(h=+7\,\text{cm}\)</p></div>
+<div class="formula-box"><h4>📘 સૂત્રો</h4><div class="math-line">\[\frac{1}{v}+\frac{1}{u}=\frac{1}{f}\]</div><div class="math-line">\[m=-\frac{v}{u}=\frac{h'}{h}\]</div></div>
+<div class="steps-box"><h4>✏️ પ્રતિબિંબનું સ્થાન</h4><div class="math-line">\[\frac{1}{v}-\frac{1}{27}=-\frac{1}{18}\]</div><div class="math-line">\[\frac{1}{v}=-\frac{1}{18}+\frac{1}{27}=-\frac{1}{54}\]</div><div class="math-line">\[v=-54\,\text{cm}\]</div></div>
+<div class="steps-box"><h4>✏️ પરિમાણ</h4><div class="math-line">\[m=-\frac{-54}{-27}=-2\]</div><div class="math-line">\[h'=mh=(-2)(7)=-14\,\text{cm}\]</div></div>
+<div class="final-box"><h4>✅ અંતિમ જવાબ</h4><p>પડદો અરીસાની સામે <b>54 cm</b> અંતરે રાખવો. પ્રતિબિંબ <b>વાસ્તવિક, ઊલટું અને બે ગણું મોટું</b> છે; તેની ઊંચાઈનું પરિમાણ <b>14 cm</b> છે.</p></div><div class="diagram"><svg viewBox="0 0 760 270" role="img" aria-label="વસ્તુ F અને Cની વચ્ચે હોવાથી પ્રતિબિંબ Cની બહાર વાસ્તવિક અને મોટું બને છે.">
+<defs><marker id="arr_e15" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#1d4ed8"/></marker></defs>
+<line x1="35" y1="155" x2="720" y2="155" stroke="#334155" stroke-width="2"/><path d="M650 45 Q590 155 650 265" fill="none" stroke="#334155" stroke-width="8"/>
+<text x="642" y="180" font-size="18">P</text><circle cx="540" cy="155" r="4"/><text x="532" y="180" font-size="18">F</text><circle cx="430" cy="155" r="4"/><text x="420" y="180" font-size="18">C</text>
+<line x1="485" y1="155" x2="485" y2="70" stroke="#dc2626" stroke-width="5" marker-end="url(#arr_e15)"/><text x="471" y="61" font-size="18">A</text><text x="471" y="180" font-size="18">B</text>
+<line x1="485" y1="70" x2="650" y2="70" stroke="#1d4ed8" stroke-width="3" marker-end="url(#arr_e15)"/><line x1="650" y1="70" x2="360" y2="225" stroke="#1d4ed8" stroke-width="3" marker-end="url(#arr_e15)"/>
+<line x1="485" y1="70" x2="650" y2="155" stroke="#1d4ed8" stroke-width="3" marker-end="url(#arr_e15)"/><line x1="650" y1="155" x2="250" y2="15" stroke="#1d4ed8" stroke-width="3" marker-end="url(#arr_e15)"/>
+<line x1="320" y1="155" x2="320" y2="245" stroke="#16a34a" stroke-width="5" marker-end="url(#arr_e15)"/><text x="325" y="250" font-size="18">A′</text><text x="325" y="150" font-size="18">B′</text>
+</svg><p class="caption">વસ્તુ F અને Cની વચ્ચે હોવાથી પ્રતિબિંબ Cની બહાર વાસ્તવિક અને મોટું બને છે.</p></div></div></div>
+</article>
+<article class="q-card">
+<button aria-expanded="false" class="q-toggle" type="button">
+<span class="qtext"><span class="badge">Question 16</span>−2.0 D પાવર ધરાવતા લેન્સની કેન્દ્રલંબાઈ શોધો. આ લેન્સ કયા પ્રકારનો હશે?</span>
+<span class="indicator">▼ ઉકેલ જોવા ટૅપ કરો</span>
+</button>
+<div class="solution"><div class="answer">
+<div class="given-box"><h4>📋 આપેલ</h4><p>\(P=-2.0\,\text{D}\)</p></div>
+<div class="formula-box"><h4>📘 સૂત્ર</h4><div class="math-line">\[P=\frac{1}{f(\text{m})}\]</div><div class="math-line">\[f=\frac{1}{P}\]</div></div>
+<div class="steps-box"><h4>✏️ ગણતરી</h4><div class="math-line">\[f=\frac{1}{-2.0}=-0.50\,\text{m}\]</div><div class="math-line">\[f=-50\,\text{cm}\]</div></div>
+<div class="final-box"><h4>✅ અંતિમ જવાબ</h4><p>કેન્દ્રલંબાઈ <b>−0.50 m = −50 cm</b> છે. ઋણ કેન્દ્રલંબાઈ હોવાથી આ <b>અંતર્ગોળ (અપસારી) લેન્સ</b> છે.</p></div></div></div>
+</article>
+<article class="q-card">
+<button aria-expanded="false" class="q-toggle" type="button">
+<span class="qtext"><span class="badge">Question 17</span>એક ડૉક્ટર +1.5 D પાવર ધરાવતાં સુધારક લેન્સની સૂચના આપે છે. લેન્સની કેન્દ્રલંબાઈ શોધો. સૂચિત કરેલો લેન્સ અભિસારી છે કે અપસારી?</span>
+<span class="indicator">▼ ઉકેલ જોવા ટૅપ કરો</span>
+</button>
+<div class="solution"><div class="answer">
+<div class="given-box"><h4>📋 આપેલ</h4><p>\(P=+1.5\,\text{D}\)</p></div>
+<div class="formula-box"><h4>📘 સૂત્ર</h4><div class="math-line">\[f=\frac{1}{P}\]</div></div>
+<div class="steps-box"><h4>✏️ ગણતરી</h4><div class="math-line">\[f=\frac{1}{1.5}=0.667\,\text{m}\]</div><div class="math-line">\[f\approx+66.7\,\text{cm}\]</div></div>
+<div class="final-box"><h4>✅ અંતિમ જવાબ</h4><p>લેન્સની કેન્દ્રલંબાઈ લગભગ <b>+0.667 m = +66.7 cm</b> છે. પાવર ધન હોવાથી આ <b>બહિર્ગોળ (અભિસારી) લેન્સ</b> છે.</p></div></div></div>
+</article>
+<section class="download-section" id="download"><h2>Download PDF</h2><p>આ સંપૂર્ણ ઉકેલ પૃષ્ઠને PDF તરીકે સાચવવા માટે નીચેનું બટન દબાવો. હાલ મફત ડાઉનલોડ ઉપલબ્ધ છે.</p><button class="download-btn" id="downloadPdf">✅ Download PDF</button></section>
+<div class="footer">WAGH Tuition Classes • Mastering Science with Wagh Sir</div>
+</main>
+<div class="lang-menu" id="langMenu"><button data-lang="gu">✓ ગુજરાતી (મૂળ માધ્યમ)</button><button data-lang="en">English interface</button></div>
+<div class="floating"><a aria-label="WhatsApp" class="fab wa" href="https://wa.me/919537036383?text=Hello%20WAGH%20Tuition%20Classes" rel="noopener" target="_blank">💬</a><button aria-label="Language" class="fab lang" id="langBtn">🌐</button><button aria-label="Download PDF" class="fab pdf" id="pdfFab">⬇️</button></div>
+<div aria-live="polite" class="toast" id="toast" role="status"></div>
+<!-- Common Runtime: required on WAGH Tuition Classes static feature pages -->
+<script src="./assets/js/config.js"></script>
+<script src="./assets/js/api.js"></script>
+<script src="./assets/js/auth.js"></script>
+<script src="./assets/js/ui.js"></script>
+<script src="./assets/js/chapter_master.js"></script>
+<script src="./assets/js/feature-runtime.js"></script>
+<script>
+(function(){
+  const cards=[...document.querySelectorAll('.q-card')];
+  let uiLang='gu';
+  function closedText(){return uiLang==='gu'?'▼ ઉકેલ જોવા ટૅપ કરો':'▼ Tap to View Solution';}
+  function openText(){return uiLang==='gu'?'▲ ઉકેલ છુપાવો':'▲ Hide Solution';}
+  cards.forEach(card=>{
+    const btn=card.querySelector('.q-toggle');
+    const indicator=card.querySelector('.indicator');
+    btn.addEventListener('click',()=>{
+      const opening=!card.classList.contains('open');
+      cards.forEach(c=>{c.classList.remove('open');const b=c.querySelector('.q-toggle');const i=c.querySelector('.indicator');if(b)b.setAttribute('aria-expanded','false');if(i)i.textContent=closedText();});
+      if(opening){card.classList.add('open');btn.setAttribute('aria-expanded','true');indicator.textContent=openText();setTimeout(()=>{if(window.MathJax&&MathJax.typesetPromise) MathJax.typesetPromise([card]);},40);}
+    });
+  });
+  function printPdf(){window.print();}
+  document.getElementById('downloadPdf').addEventListener('click',printPdf);
+  document.getElementById('pdfFab').addEventListener('click',printPdf);
+  const menu=document.getElementById('langMenu');
+  const langBtn=document.getElementById('langBtn');
+  const toast=document.getElementById('toast');
+  function showToast(msg){toast.textContent=msg;toast.classList.add('show');clearTimeout(window.__wtcToast);window.__wtcToast=setTimeout(()=>toast.classList.remove('show'),2800);}
+  langBtn.addEventListener('click',e=>{e.stopPropagation();menu.classList.toggle('show');});
+  menu.addEventListener('click',e=>{
+    const btn=e.target.closest('button');if(!btn)return;
+    uiLang=btn.dataset.lang||'gu';
+    cards.forEach(c=>{const i=c.querySelector('.indicator');if(i)i.textContent=c.classList.contains('open')?openText():closedText();});
+    menu.classList.remove('show');
+    if(uiLang==='en') showToast('Gujarati-medium textbook: original Gujarati questions and solutions are preserved.');
+    else showToast('ગુજરાતી મૂળ માધ્યમ પસંદ થયું.');
+  });
+  document.addEventListener('click',e=>{if(!menu.contains(e.target)&&e.target!==langBtn)menu.classList.remove('show');});
+  document.addEventListener('DOMContentLoaded',async()=>{
+    try{if(window.Auth&&typeof Auth.requireStudent==='function') await Auth.requireStudent();if(window.FeatureRuntime&&typeof FeatureRuntime.init==='function') FeatureRuntime.init();}catch(err){console.warn('WTC feature runtime:',err);}
+  });
+})();
+</script>
+</body>
+</html>
