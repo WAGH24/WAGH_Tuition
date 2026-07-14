@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="GSEB Class 9 Science Chapter 1 MCQ practice for Matter in Our Surroundings in English medium."
+  />
+  <title>Chapter 1 MCQ | GSEB Class 9 Science</title>
+  <link rel="stylesheet" href="../../assets/css/static-mcq-engine.css" />
+</head>
+<body>
+  <div class="wtc-mcq-app">
+    <header class="hero-card">
+      <div class="hero-left">
+        <p class="eyebrow">WAGH Tuition Classes • Static MCQ Engine v1.1</p>
+        <h1 id="testTitle">MCQ Practice</h1>
+        <p id="testMeta" class="meta"></p>
+      </div>
+
+      <div class="hero-score">
+        <div class="ring" id="progressRing">
+          <span id="answeredCount">0</span>
+        </div>
+        <small>Answered</small>
+      </div>
+    </header>
+
+    <section class="sticky-dashboard">
+      <div class="dash-item">
+        <span>Student</span>
+        <b id="studentName">Checking login...</b>
+      </div>
+      <div class="dash-item">
+        <span>Time</span>
+        <b id="timer">00:00</b>
+      </div>
+      <div class="dash-item">
+        <span>Questions</span>
+        <b id="questionCount">0</b>
+      </div>
+      <button id="themeBtn" class="ghost-btn" type="button">🌙</button>
+      <button id="reviewBtn" class="ghost-btn" type="button">Review</button>
+    </section>
+
+    <section class="notice-card">
+      Select one option for each question. After submit, correct answers and
+      explanations will open. Your result will be saved for progress report.
+    </section>
+
+    <main class="layout-grid">
+      <aside class="question-palette" aria-label="Question palette">
+        <h3>Question Palette</h3>
+        <div id="paletteGrid" class="palette-grid"></div>
+      </aside>
+
+      <section id="questionList" class="question-list"></section>
+    </main>
+
+    <section id="resultBox" class="result-box hidden"></section>
+
+    <div class="bottom-action-bar">
+      <button id="submitBtn" class="primary-btn" type="button">
+        Submit Test
+      </button>
+      <button id="retryBtn" class="secondary-btn hidden" type="button">
+        Choose Another Test
+      </button>
+      <button id="topBtn" class="secondary-btn" type="button">Top</button>
+    </div>
+  </div>
+
+  <!-- Keep this exact loading order. -->
+  <script src="../../assets/js/config.js"></script>
+  <script src="../../assets/js/auth.js"></script>
+  <script src="../../assets/js/api.js"></script>
+
+  <script>
+    window.WTC_STATIC_MCQ = {
+  "pageTitle": "Chapter 1: Matter in Our Surroundings - MCQ Practice",
+  "selectorDescription": "Choose a topic-wise test or a full-length chapter test covering particles of matter, states of matter, change of state, pressure, temperature scales and evaporation.",
+  "board": "GSEB",
+  "className": "Class 9",
+  "medium": "English Medium",
+  "subjectId": "SCI09E",
+  "subjectName": "Science",
+  "chapterId": "SCI09ECH01",
+  "chapterName": "Matter in Our Surroundings",
+  "instructions": "Select one option for each question. After submit, correct answers and explanations will open. Progress saves automatically.",
+  "questionBank": [
+    {
+      "id": "SCI09ECH01-Q001",
+      "topic": "Physical Nature and Characteristics of Matter",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which statement correctly describes matter?",
+      "options": {
+        "A": "It has only mass but occupies no space",
+        "B": "It occupies space and has mass",
+        "C": "It has neither mass nor volume",
+        "D": "It exists only in the solid state"
+      },
+      "correct": "B",
+      "explanation": "Matter is anything that occupies space and has mass. Air, water, stones, plants and animals are all examples of matter."
+    },
+    {
+      "id": "SCI09ECH01-Q002",
+      "topic": "Physical Nature and Characteristics of Matter",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "According to early Indian philosophers, matter was made from five basic elements called:",
+      "options": {
+        "A": "Pancha Kosha",
+        "B": "Panch Tatva",
+        "C": "Five forces",
+        "D": "Five compounds"
+      },
+      "correct": "B",
+      "explanation": "Early Indian philosophers classified matter into the five basic elements called Panch Tatva: air, earth, fire, sky and water."
+    },
+    {
+      "id": "SCI09ECH01-Q003",
+      "topic": "Physical Nature and Characteristics of Matter",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "When salt dissolves in water without a noticeable rise in water level, it shows that:",
+      "options": {
+        "A": "Salt loses all its mass",
+        "B": "Water particles disappear",
+        "C": "Particles of matter have spaces between them",
+        "D": "Salt changes into a gas"
+      },
+      "correct": "C",
+      "explanation": "Salt particles enter the spaces between water particles. This demonstrates that particles of matter have spaces between them."
+    },
+    {
+      "id": "SCI09ECH01-Q004",
+      "topic": "Physical Nature and Characteristics of Matter",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The colour of potassium permanganate remains visible even after repeated dilution mainly because:",
+      "options": {
+        "A": "Its particles are extremely small and numerous",
+        "B": "Water becomes a solid",
+        "C": "Its particles stop moving",
+        "D": "Potassium permanganate creates new water"
+      },
+      "correct": "A",
+      "explanation": "A few crystals can colour a very large volume of water, showing that matter is made of extremely small particles."
+    },
+    {
+      "id": "SCI09ECH01-Q005",
+      "topic": "Physical Nature and Characteristics of Matter",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The spontaneous intermixing of particles of two different substances is called:",
+      "options": {
+        "A": "Fusion",
+        "B": "Diffusion",
+        "C": "Sublimation",
+        "D": "Condensation"
+      },
+      "correct": "B",
+      "explanation": "Diffusion is the intermixing of particles of two different types of matter on their own."
+    },
+    {
+      "id": "SCI09ECH01-Q006",
+      "topic": "Physical Nature and Characteristics of Matter",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Why does the smell of hot food reach us faster than the smell of cold food?",
+      "options": {
+        "A": "Heating increases the kinetic energy and diffusion rate of particles",
+        "B": "Hot food has no particles",
+        "C": "Cold food particles are always solid",
+        "D": "Heating stops particle movement"
+      },
+      "correct": "A",
+      "explanation": "At a higher temperature, particles move faster because their kinetic energy increases. Therefore, diffusion of the smell occurs more rapidly."
+    },
+    {
+      "id": "SCI09ECH01-Q007",
+      "topic": "Physical Nature and Characteristics of Matter",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Particles of matter are continuously moving because they possess:",
+      "options": {
+        "A": "Magnetic energy only",
+        "B": "Kinetic energy",
+        "C": "Nuclear charge only",
+        "D": "No energy"
+      },
+      "correct": "B",
+      "explanation": "Particles of matter are always moving and therefore possess kinetic energy. Their movement becomes faster as temperature rises."
+    },
+    {
+      "id": "SCI09ECH01-Q008",
+      "topic": "Physical Nature and Characteristics of Matter",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which characteristic of particles keeps the surface of water together?",
+      "options": {
+        "A": "Particles have no mass",
+        "B": "Particles attract one another",
+        "C": "Particles are completely motionless",
+        "D": "Particles have no spaces between them"
+      },
+      "correct": "B",
+      "explanation": "Forces of attraction act between particles of matter. These forces help keep the particles of water together."
+    },
+    {
+      "id": "SCI09ECH01-Q009",
+      "topic": "States of Matter",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which state of matter has a definite shape and a fixed volume?",
+      "options": {
+        "A": "Solid",
+        "B": "Liquid",
+        "C": "Gas",
+        "D": "Vapour only"
+      },
+      "correct": "A",
+      "explanation": "Solids have a definite shape, distinct boundaries and a fixed volume because their particles are closely packed."
+    },
+    {
+      "id": "SCI09ECH01-Q010",
+      "topic": "States of Matter",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "A liquid has:",
+      "options": {
+        "A": "A fixed shape and no fixed volume",
+        "B": "A fixed volume but no fixed shape",
+        "C": "Neither mass nor volume",
+        "D": "A fixed shape and fixed volume"
+      },
+      "correct": "B",
+      "explanation": "A liquid has a fixed volume but takes the shape of the container in which it is kept."
+    },
+    {
+      "id": "SCI09ECH01-Q011",
+      "topic": "States of Matter",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "A gas fills the entire container because its particles:",
+      "options": {
+        "A": "Are fixed at one position",
+        "B": "Move freely in all directions",
+        "C": "Have no kinetic energy",
+        "D": "Have the strongest attraction"
+      },
+      "correct": "B",
+      "explanation": "Gas particles have very weak attraction and move freely in all directions, so a gas fills the entire available space."
+    },
+    {
+      "id": "SCI09ECH01-Q012",
+      "topic": "States of Matter",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which state of matter is most compressible?",
+      "options": {
+        "A": "Solid",
+        "B": "Liquid",
+        "C": "Gas",
+        "D": "All are equally compressible"
+      },
+      "correct": "C",
+      "explanation": "Gases are highly compressible because there are large spaces between their particles."
+    },
+    {
+      "id": "SCI09ECH01-Q013",
+      "topic": "States of Matter",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The tendency of a substance to maintain its shape when an external force is applied is called:",
+      "options": {
+        "A": "Fluidity",
+        "B": "Rigidity",
+        "C": "Diffusion",
+        "D": "Sublimation"
+      },
+      "correct": "B",
+      "explanation": "Rigidity is the property by which a substance tends to maintain its shape when subjected to an external force."
+    },
+    {
+      "id": "SCI09ECH01-Q014",
+      "topic": "States of Matter",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Liquids and gases are together called fluids because they:",
+      "options": {
+        "A": "Always have a fixed shape",
+        "B": "Can flow",
+        "C": "Are incompressible solids",
+        "D": "Have particles at fixed positions"
+      },
+      "correct": "B",
+      "explanation": "Liquids and gases can flow and change shape, so they are classified as fluids."
+    },
+    {
+      "id": "SCI09ECH01-Q015",
+      "topic": "States of Matter",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Gas exerts pressure on the walls of its container because gas particles:",
+      "options": {
+        "A": "Continuously strike the container walls",
+        "B": "Have no motion",
+        "C": "Remain only at the bottom",
+        "D": "Are joined into a rigid structure"
+      },
+      "correct": "A",
+      "explanation": "Rapidly moving gas particles collide with the walls of their container and exert force per unit area, which produces pressure."
+    },
+    {
+      "id": "SCI09ECH01-Q016",
+      "topic": "States of Matter",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Diffusion is generally fastest in gases because gas particles have:",
+      "options": {
+        "A": "The least space and strongest attraction",
+        "B": "Large spaces and high speed of motion",
+        "C": "A fixed arrangement",
+        "D": "No mass"
+      },
+      "correct": "B",
+      "explanation": "Gas particles are far apart, move rapidly and have very weak forces of attraction, so they intermix faster than particles in liquids or solids."
+    },
+    {
+      "id": "SCI09ECH01-Q017",
+      "topic": "Temperature and Change of State",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "When the temperature of a solid increases, its particles generally:",
+      "options": {
+        "A": "Lose kinetic energy",
+        "B": "Vibrate faster",
+        "C": "Stop moving completely",
+        "D": "Lose all attraction instantly"
+      },
+      "correct": "B",
+      "explanation": "Heating increases the kinetic energy of particles, so particles of a solid vibrate more rapidly about their fixed positions."
+    },
+    {
+      "id": "SCI09ECH01-Q018",
+      "topic": "Temperature and Change of State",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The minimum temperature at which a solid changes into a liquid at atmospheric pressure is its:",
+      "options": {
+        "A": "Boiling point",
+        "B": "Melting point",
+        "C": "Condensation point",
+        "D": "Ignition temperature"
+      },
+      "correct": "B",
+      "explanation": "The melting point is the minimum temperature at which a solid melts to become a liquid at atmospheric pressure."
+    },
+    {
+      "id": "SCI09ECH01-Q019",
+      "topic": "Temperature and Change of State",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The melting point of ice is approximately:",
+      "options": {
+        "A": "0 K",
+        "B": "100 K",
+        "C": "273 K",
+        "D": "373 K"
+      },
+      "correct": "C",
+      "explanation": "Ice melts at approximately 273 K, which corresponds to 0°C at atmospheric pressure."
+    },
+    {
+      "id": "SCI09ECH01-Q020",
+      "topic": "Temperature and Change of State",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The change of a solid into a liquid is also known as:",
+      "options": {
+        "A": "Fusion",
+        "B": "Deposition",
+        "C": "Condensation",
+        "D": "Sublimation"
+      },
+      "correct": "A",
+      "explanation": "Melting, or the conversion of a solid into a liquid, is also called fusion."
+    },
+    {
+      "id": "SCI09ECH01-Q021",
+      "topic": "Temperature and Change of State",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Why does the temperature remain constant while ice is melting?",
+      "options": {
+        "A": "No heat is supplied",
+        "B": "The supplied heat is used to overcome forces of attraction",
+        "C": "The thermometer stops working",
+        "D": "All particle motion stops"
+      },
+      "correct": "B",
+      "explanation": "At the melting point, the supplied heat is absorbed as latent heat to overcome forces of attraction and change the state, rather than raise the temperature."
+    },
+    {
+      "id": "SCI09ECH01-Q022",
+      "topic": "Temperature and Change of State",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Latent heat of fusion is the heat required to change:",
+      "options": {
+        "A": "1 kg of solid into liquid at its melting point",
+        "B": "1 kg of gas into liquid at any temperature",
+        "C": "1 kg of liquid into gas below its boiling point",
+        "D": "1 kg of solid into gas at its boiling point"
+      },
+      "correct": "A",
+      "explanation": "Latent heat of fusion is the heat energy needed to change 1 kg of a solid into liquid at atmospheric pressure at its melting point."
+    },
+    {
+      "id": "SCI09ECH01-Q023",
+      "topic": "Temperature and Change of State",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The boiling point of water at atmospheric pressure is:",
+      "options": {
+        "A": "273 K",
+        "B": "300 K",
+        "C": "373 K",
+        "D": "473 K"
+      },
+      "correct": "C",
+      "explanation": "Water boils at 100°C, which is approximately 373 K, at atmospheric pressure."
+    },
+    {
+      "id": "SCI09ECH01-Q024",
+      "topic": "Temperature and Change of State",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Boiling is called a bulk phenomenon because:",
+      "options": {
+        "A": "Only particles at the surface change into vapour",
+        "B": "Particles throughout the liquid change into vapour",
+        "C": "It occurs only in solids",
+        "D": "It occurs without any energy"
+      },
+      "correct": "B",
+      "explanation": "During boiling, particles from the whole bulk of the liquid gain enough energy to change into the vapour state."
+    },
+    {
+      "id": "SCI09ECH01-Q025",
+      "topic": "Pressure, Sublimation and Temperature Scale",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Gases can be compressed easily mainly because:",
+      "options": {
+        "A": "Their particles have large spaces between them",
+        "B": "Their particles have no mass",
+        "C": "Their particles are fixed in position",
+        "D": "Their particles have the strongest attraction"
+      },
+      "correct": "A",
+      "explanation": "The large spaces between gas particles allow them to be brought closer together when pressure is applied."
+    },
+    {
+      "id": "SCI09ECH01-Q026",
+      "topic": "Pressure, Sublimation and Temperature Scale",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Atmospheric gases can be liquefied by:",
+      "options": {
+        "A": "Increasing temperature and decreasing pressure",
+        "B": "Applying pressure and lowering temperature",
+        "C": "Removing all particles",
+        "D": "Increasing only the container size"
+      },
+      "correct": "B",
+      "explanation": "Applying high pressure and reducing temperature bring gas particles closer and reduce their kinetic energy, helping the gas change into a liquid."
+    },
+    {
+      "id": "SCI09ECH01-Q027",
+      "topic": "Pressure, Sublimation and Temperature Scale",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The direct change of a solid into a gas without passing through the liquid state is called:",
+      "options": {
+        "A": "Condensation",
+        "B": "Sublimation",
+        "C": "Fusion",
+        "D": "Evaporation"
+      },
+      "correct": "B",
+      "explanation": "Sublimation is the direct conversion of a solid into the gaseous state without becoming a liquid."
+    },
+    {
+      "id": "SCI09ECH01-Q028",
+      "topic": "Pressure, Sublimation and Temperature Scale",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The direct change of a gas into a solid is called:",
+      "options": {
+        "A": "Deposition",
+        "B": "Melting",
+        "C": "Boiling",
+        "D": "Evaporation"
+      },
+      "correct": "A",
+      "explanation": "Deposition is the change of a substance directly from the gaseous state to the solid state without passing through the liquid state."
+    },
+    {
+      "id": "SCI09ECH01-Q029",
+      "topic": "Pressure, Sublimation and Temperature Scale",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which substance commonly undergoes sublimation?",
+      "options": {
+        "A": "Common salt",
+        "B": "Camphor",
+        "C": "Sand",
+        "D": "Iron"
+      },
+      "correct": "B",
+      "explanation": "Camphor changes directly from solid to vapour under ordinary conditions and is a common example of a sublimating substance."
+    },
+    {
+      "id": "SCI09ECH01-Q030",
+      "topic": "Pressure, Sublimation and Temperature Scale",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Solid carbon dioxide is called dry ice because it:",
+      "options": {
+        "A": "Melts into ordinary water",
+        "B": "Changes directly into carbon dioxide gas",
+        "C": "Contains no carbon",
+        "D": "Boils at 100°C"
+      },
+      "correct": "B",
+      "explanation": "At normal atmospheric pressure, solid carbon dioxide changes directly into gas without forming a liquid, so it is called dry ice."
+    },
+    {
+      "id": "SCI09ECH01-Q031",
+      "topic": "Pressure, Sublimation and Temperature Scale",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What is 300 K on the Celsius scale, using °C = K − 273?",
+      "options": {
+        "A": "27°C",
+        "B": "73°C",
+        "C": "273°C",
+        "D": "573°C"
+      },
+      "correct": "A",
+      "explanation": "300 − 273 = 27, so 300 K is approximately 27°C."
+    },
+    {
+      "id": "SCI09ECH01-Q032",
+      "topic": "Pressure, Sublimation and Temperature Scale",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What is 25°C on the Kelvin scale, using K = °C + 273?",
+      "options": {
+        "A": "248 K",
+        "B": "273 K",
+        "C": "298 K",
+        "D": "325 K"
+      },
+      "correct": "C",
+      "explanation": "25 + 273 = 298, so 25°C is approximately 298 K."
+    },
+    {
+      "id": "SCI09ECH01-Q033",
+      "topic": "Evaporation and Cooling",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Evaporation is the change of a liquid into vapour:",
+      "options": {
+        "A": "Only at its boiling point",
+        "B": "At temperatures below its boiling point",
+        "C": "Only at 0°C",
+        "D": "Only under very high pressure"
+      },
+      "correct": "B",
+      "explanation": "Evaporation is the conversion of a liquid into vapour from its surface at any temperature below its boiling point."
+    },
+    {
+      "id": "SCI09ECH01-Q034",
+      "topic": "Evaporation and Cooling",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Evaporation is mainly a:",
+      "options": {
+        "A": "Bulk phenomenon",
+        "B": "Surface phenomenon",
+        "C": "Solid-state phenomenon",
+        "D": "Chemical reaction"
+      },
+      "correct": "B",
+      "explanation": "In evaporation, higher-energy particles at the surface of a liquid escape into the vapour state."
+    },
+    {
+      "id": "SCI09ECH01-Q035",
+      "topic": "Evaporation and Cooling",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Spreading wet clothes while drying them increases evaporation by increasing the:",
+      "options": {
+        "A": "Humidity",
+        "B": "Surface area",
+        "C": "Pressure",
+        "D": "Density"
+      },
+      "correct": "B",
+      "explanation": "A larger exposed surface allows more liquid particles to escape at the same time, increasing the rate of evaporation."
+    },
+    {
+      "id": "SCI09ECH01-Q036",
+      "topic": "Evaporation and Cooling",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "An increase in temperature speeds up evaporation because:",
+      "options": {
+        "A": "More particles gain enough kinetic energy to escape",
+        "B": "All particles become solids",
+        "C": "Humidity always becomes 100%",
+        "D": "The surface area becomes zero"
+      },
+      "correct": "A",
+      "explanation": "At a higher temperature, more liquid particles have enough kinetic energy to overcome attraction and enter the vapour state."
+    },
+    {
+      "id": "SCI09ECH01-Q037",
+      "topic": "Evaporation and Cooling",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Evaporation is slower on a humid day because:",
+      "options": {
+        "A": "The surrounding air already contains more water vapour",
+        "B": "The liquid has no surface",
+        "C": "Wind speed is always maximum",
+        "D": "Water particles lose all kinetic energy"
+      },
+      "correct": "A",
+      "explanation": "When air already contains a large amount of water vapour, it can accept less additional vapour, so evaporation slows down."
+    },
+    {
+      "id": "SCI09ECH01-Q038",
+      "topic": "Evaporation and Cooling",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Why do clothes generally dry faster on a windy day?",
+      "options": {
+        "A": "Wind increases humidity around the clothes",
+        "B": "Wind carries away water vapour near the clothes",
+        "C": "Wind converts water into ice",
+        "D": "Wind decreases the exposed surface area"
+      },
+      "correct": "B",
+      "explanation": "Wind removes water-vapour particles from near the clothes, keeping the surrounding air less humid and increasing evaporation."
+    },
+    {
+      "id": "SCI09ECH01-Q039",
+      "topic": "Evaporation and Cooling",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Evaporation causes cooling because the escaping particles:",
+      "options": {
+        "A": "Release large amounts of heat to the liquid",
+        "B": "Absorb energy from the liquid and surroundings",
+        "C": "Stop all motion in the liquid",
+        "D": "Increase the average kinetic energy left behind"
+      },
+      "correct": "B",
+      "explanation": "During evaporation, energetic particles escape and carry energy away. The liquid then absorbs energy from its surroundings, producing a cooling effect."
+    },
+    {
+      "id": "SCI09ECH01-Q040",
+      "topic": "Evaporation and Cooling",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Why are cotton clothes preferred in summer?",
+      "options": {
+        "A": "Cotton prevents all sweating",
+        "B": "Cotton absorbs sweat and exposes it for faster evaporation",
+        "C": "Cotton produces heat during evaporation",
+        "D": "Cotton increases humidity next to the skin"
+      },
+      "correct": "B",
+      "explanation": "Cotton absorbs sweat and spreads it over a larger surface. Faster evaporation of sweat absorbs heat from the body and helps us feel cool."
+    }
+  ],
+  "tests": [
+    {
+      "testId": "SCI09ECH01-T01",
+      "testTitle": "Topic Test 1",
+      "testType": "TOPIC_TEST",
+      "topic": "Physical Nature and Characteristics of Matter",
+      "questionLabel": "Related questions: Q1-Q8",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI09ECH01-Q001",
+        "SCI09ECH01-Q002",
+        "SCI09ECH01-Q003",
+        "SCI09ECH01-Q004",
+        "SCI09ECH01-Q005",
+        "SCI09ECH01-Q006",
+        "SCI09ECH01-Q007",
+        "SCI09ECH01-Q008"
+      ]
+    },
+    {
+      "testId": "SCI09ECH01-T02",
+      "testTitle": "Topic Test 2",
+      "testType": "TOPIC_TEST",
+      "topic": "States of Matter",
+      "questionLabel": "Related questions: Q9-Q16",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI09ECH01-Q009",
+        "SCI09ECH01-Q010",
+        "SCI09ECH01-Q011",
+        "SCI09ECH01-Q012",
+        "SCI09ECH01-Q013",
+        "SCI09ECH01-Q014",
+        "SCI09ECH01-Q015",
+        "SCI09ECH01-Q016"
+      ]
+    },
+    {
+      "testId": "SCI09ECH01-T03",
+      "testTitle": "Topic Test 3",
+      "testType": "TOPIC_TEST",
+      "topic": "Temperature and Change of State",
+      "questionLabel": "Related questions: Q17-Q24",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI09ECH01-Q017",
+        "SCI09ECH01-Q018",
+        "SCI09ECH01-Q019",
+        "SCI09ECH01-Q020",
+        "SCI09ECH01-Q021",
+        "SCI09ECH01-Q022",
+        "SCI09ECH01-Q023",
+        "SCI09ECH01-Q024"
+      ]
+    },
+    {
+      "testId": "SCI09ECH01-T04",
+      "testTitle": "Topic Test 4",
+      "testType": "TOPIC_TEST",
+      "topic": "Pressure, Sublimation and Temperature Scale",
+      "questionLabel": "Related questions: Q25-Q32",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI09ECH01-Q025",
+        "SCI09ECH01-Q026",
+        "SCI09ECH01-Q027",
+        "SCI09ECH01-Q028",
+        "SCI09ECH01-Q029",
+        "SCI09ECH01-Q030",
+        "SCI09ECH01-Q031",
+        "SCI09ECH01-Q032"
+      ]
+    },
+    {
+      "testId": "SCI09ECH01-T05",
+      "testTitle": "Topic Test 5",
+      "testType": "TOPIC_TEST",
+      "topic": "Evaporation and Cooling",
+      "questionLabel": "Related questions: Q33-Q40",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI09ECH01-Q033",
+        "SCI09ECH01-Q034",
+        "SCI09ECH01-Q035",
+        "SCI09ECH01-Q036",
+        "SCI09ECH01-Q037",
+        "SCI09ECH01-Q038",
+        "SCI09ECH01-Q039",
+        "SCI09ECH01-Q040"
+      ]
+    },
+    {
+      "testId": "SCI09ECH01-FLT01",
+      "testTitle": "Full-Length Test 1",
+      "testType": "FULL_LENGTH",
+      "topic": "Complete Chapter — Set A",
+      "questionLabel": "20 balanced questions covering the complete chapter",
+      "instructions": "20 questions • 1 mark each • Full chapter assessment • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI09ECH01-Q001",
+        "SCI09ECH01-Q003",
+        "SCI09ECH01-Q005",
+        "SCI09ECH01-Q007",
+        "SCI09ECH01-Q009",
+        "SCI09ECH01-Q011",
+        "SCI09ECH01-Q013",
+        "SCI09ECH01-Q015",
+        "SCI09ECH01-Q017",
+        "SCI09ECH01-Q019",
+        "SCI09ECH01-Q021",
+        "SCI09ECH01-Q023",
+        "SCI09ECH01-Q025",
+        "SCI09ECH01-Q027",
+        "SCI09ECH01-Q029",
+        "SCI09ECH01-Q031",
+        "SCI09ECH01-Q033",
+        "SCI09ECH01-Q035",
+        "SCI09ECH01-Q037",
+        "SCI09ECH01-Q039"
+      ]
+    },
+    {
+      "testId": "SCI09ECH01-FLT02",
+      "testTitle": "Full-Length Test 2",
+      "testType": "FULL_LENGTH",
+      "topic": "Complete Chapter — Set B",
+      "questionLabel": "20 balanced questions covering the complete chapter",
+      "instructions": "20 questions • 1 mark each • Full chapter assessment • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI09ECH01-Q002",
+        "SCI09ECH01-Q004",
+        "SCI09ECH01-Q006",
+        "SCI09ECH01-Q008",
+        "SCI09ECH01-Q010",
+        "SCI09ECH01-Q012",
+        "SCI09ECH01-Q014",
+        "SCI09ECH01-Q016",
+        "SCI09ECH01-Q018",
+        "SCI09ECH01-Q020",
+        "SCI09ECH01-Q022",
+        "SCI09ECH01-Q024",
+        "SCI09ECH01-Q026",
+        "SCI09ECH01-Q028",
+        "SCI09ECH01-Q030",
+        "SCI09ECH01-Q032",
+        "SCI09ECH01-Q034",
+        "SCI09ECH01-Q036",
+        "SCI09ECH01-Q038",
+        "SCI09ECH01-Q040"
+      ]
+    }
+  ]
+};
+  </script>
+
+  <script src="../../assets/js/static-mcq-engine.js"></script>
+</body>
+</html>
