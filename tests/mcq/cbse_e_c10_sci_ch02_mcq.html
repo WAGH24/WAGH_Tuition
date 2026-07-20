@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acids, Bases and Salts - MCQ Practice | WAGH Tuition Classes</title>
+  <link rel="stylesheet" href="../../assets/css/static-mcq-engine.css" />
+</head>
+<body>
+  <div class="wtc-mcq-app">
+    <header class="hero-card">
+      <div class="hero-left">
+        <p class="eyebrow">WAGH Tuition Classes • Static MCQ Engine v1.1</p>
+        <h1 id="testTitle">Acids, Bases and Salts - MCQ Practice</h1>
+        <p id="testMeta" class="meta"></p>
+      </div>
+
+      <div class="hero-score">
+        <div class="ring" id="progressRing">
+          <span id="answeredCount">0</span>
+        </div>
+        <small>Answered</small>
+      </div>
+    </header>
+
+    <section class="sticky-dashboard">
+      <div class="dash-item">
+        <span>Student</span>
+        <b id="studentName">Checking login...</b>
+      </div>
+      <div class="dash-item">
+        <span>Time</span>
+        <b id="timer">00:00</b>
+      </div>
+      <div class="dash-item">
+        <span>Questions</span>
+        <b id="questionCount">0</b>
+      </div>
+      <button id="themeBtn" class="ghost-btn" type="button">🌙</button>
+      <button id="reviewBtn" class="ghost-btn" type="button">Review</button>
+    </section>
+
+    <section class="notice-card">
+      Select one option for each question. After submit, correct answers and
+      explanations will open. Your result will be saved for progress report.
+    </section>
+
+    <main class="layout-grid">
+      <aside class="question-palette" aria-label="Question palette">
+        <h3>Question Palette</h3>
+        <div id="paletteGrid" class="palette-grid"></div>
+      </aside>
+
+      <section id="questionList" class="question-list"></section>
+    </main>
+
+    <section id="resultBox" class="result-box hidden"></section>
+
+    <div class="bottom-action-bar">
+      <button id="submitBtn" class="primary-btn" type="button">Submit Test</button>
+      <button id="retryBtn" class="secondary-btn hidden" type="button">Choose Another Test</button>
+      <button id="topBtn" class="secondary-btn" type="button">Top</button>
+    </div>
+  </div>
+
+  <!-- Keep this exact loading order. -->
+  <script src="../../assets/js/config.js"></script>
+  <script src="../../assets/js/auth.js"></script>
+  <script src="../../assets/js/api.js"></script>
+
+  <script>
+    window.WTC_STATIC_MCQ = {
+  "pageTitle": "Acids, Bases and Salts - MCQ Practice",
+  "selectorDescription": "Choose a topic-wise test or a full-length chapter test.",
+  "board": "CBSE",
+  "className": "Class 10",
+  "medium": "English Medium",
+  "subjectId": "SCI10",
+  "subjectName": "Science",
+  "chapterId": "SCI10CH02",
+  "chapterName": "Acids, Bases and Salts",
+  "instructions": "Select one option for each question. After submit, correct answers and explanations will open. Progress saves automatically.",
+  "questionBank": [
+    {
+      "id": "SCI10CH02-Q001",
+      "topic": "Indicators and Basic Properties",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "What change does an acid produce in blue litmus paper?",
+      "options": {
+        "A": "It turns blue litmus red",
+        "B": "It turns blue litmus green",
+        "C": "It turns blue litmus yellow",
+        "D": "It produces no colour change"
+      },
+      "correct": "A",
+      "explanation": "Acids turn blue litmus paper red. This is a standard test used to identify acidic substances."
+    },
+    {
+      "id": "SCI10CH02-Q002",
+      "topic": "Indicators and Basic Properties",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "What change does a base produce in red litmus paper?",
+      "options": {
+        "A": "It turns red litmus yellow",
+        "B": "It turns red litmus blue",
+        "C": "It turns red litmus black",
+        "D": "It produces no colour change"
+      },
+      "correct": "B",
+      "explanation": "Bases turn red litmus paper blue."
+    },
+    {
+      "id": "SCI10CH02-Q003",
+      "topic": "Indicators and Basic Properties",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Litmus solution is naturally obtained from which source?",
+      "options": {
+        "A": "Algae",
+        "B": "Lichen",
+        "C": "Moss",
+        "D": "Fern"
+      },
+      "correct": "B",
+      "explanation": "Litmus is a purple dye extracted from lichen and is commonly used as an acid-base indicator."
+    },
+    {
+      "id": "SCI10CH02-Q004",
+      "topic": "Indicators and Basic Properties",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "A turmeric stain on a white cloth becomes reddish-brown when soap is rubbed on it. What does this show?",
+      "options": {
+        "A": "Soap is acidic",
+        "B": "Soap is neutral",
+        "C": "Soap is basic",
+        "D": "Soap contains only water"
+      },
+      "correct": "C",
+      "explanation": "Turmeric changes from yellow to reddish-brown in a basic medium. Soap is basic in nature."
+    },
+    {
+      "id": "SCI10CH02-Q005",
+      "topic": "Indicators and Basic Properties",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which group contains only olfactory indicators?",
+      "options": {
+        "A": "Onion, vanilla and clove",
+        "B": "Litmus, turmeric and phenolphthalein",
+        "C": "Salt, sugar and water",
+        "D": "Copper, zinc and iron"
+      },
+      "correct": "A",
+      "explanation": "Onion, vanilla essence and clove oil can act as olfactory indicators because their odour changes in acidic or basic media."
+    },
+    {
+      "id": "SCI10CH02-Q006",
+      "topic": "Indicators and Basic Properties",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "What colour does phenolphthalein show in a basic solution?",
+      "options": {
+        "A": "Pink",
+        "B": "Red",
+        "C": "Blue",
+        "D": "Orange"
+      },
+      "correct": "A",
+      "explanation": "Phenolphthalein is colourless in acidic solution and pink in basic solution."
+    },
+    {
+      "id": "SCI10CH02-Q007",
+      "topic": "Indicators and Basic Properties",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What colour does methyl orange generally show in an acidic solution?",
+      "options": {
+        "A": "Yellow",
+        "B": "Red",
+        "C": "Blue",
+        "D": "Pink"
+      },
+      "correct": "B",
+      "explanation": "Methyl orange is red in acidic medium and yellow in basic medium."
+    },
+    {
+      "id": "SCI10CH02-Q008",
+      "topic": "Indicators and Basic Properties",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Three solutions are tested without tasting them. Solution X turns blue litmus red, solution Y turns red litmus blue, and solution Z changes neither. What are X, Y and Z respectively?",
+      "options": {
+        "A": "Base, acid, neutral",
+        "B": "Acid, base, neutral",
+        "C": "Neutral, acid, base",
+        "D": "Acid, neutral, base"
+      },
+      "correct": "B",
+      "explanation": "An acid turns blue litmus red, a base turns red litmus blue, and a neutral solution changes neither."
+    },
+    {
+      "id": "SCI10CH02-Q009",
+      "topic": "Chemical Reactions of Acids and Bases",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "What are the usual products when an acid reacts with a metal?",
+      "options": {
+        "A": "Salt and oxygen",
+        "B": "Salt and hydrogen gas",
+        "C": "Base and hydrogen gas",
+        "D": "Salt and carbon dioxide"
+      },
+      "correct": "B",
+      "explanation": "A metal displaces hydrogen from an acid, producing a salt and hydrogen gas."
+    },
+    {
+      "id": "SCI10CH02-Q010",
+      "topic": "Chemical Reactions of Acids and Bases",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "How is hydrogen gas commonly identified during a laboratory reaction?",
+      "options": {
+        "A": "It turns lime water milky",
+        "B": "It relights a glowing splint",
+        "C": "It burns with a pop sound",
+        "D": "It turns moist blue litmus red"
+      },
+      "correct": "C",
+      "explanation": "Hydrogen gas burns with a characteristic pop sound when a burning splint is brought near it."
+    },
+    {
+      "id": "SCI10CH02-Q011",
+      "topic": "Chemical Reactions of Acids and Bases",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which equation correctly represents the reaction of zinc with dilute sulphuric acid?",
+      "options": {
+        "A": "Zn + H₂SO₄ → ZnSO₄ + H₂",
+        "B": "Zn + H₂SO₄ → ZnO + SO₂ + H₂O",
+        "C": "Zn + 2HCl → ZnCl + H₂",
+        "D": "Zn + H₂O → ZnSO₄ + H₂"
+      },
+      "correct": "A",
+      "explanation": "Zinc reacts with dilute sulphuric acid to form zinc sulphate and hydrogen gas: Zn + H₂SO₄ → ZnSO₄ + H₂."
+    },
+    {
+      "id": "SCI10CH02-Q012",
+      "topic": "Chemical Reactions of Acids and Bases",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "A metal carbonate reacts with an acid to form which products?",
+      "options": {
+        "A": "Salt and hydrogen only",
+        "B": "Salt, carbon dioxide and water",
+        "C": "Base and oxygen",
+        "D": "Metal oxide and water"
+      },
+      "correct": "B",
+      "explanation": "Metal carbonate + Acid → Salt + Carbon dioxide + Water."
+    },
+    {
+      "id": "SCI10CH02-Q013",
+      "topic": "Chemical Reactions of Acids and Bases",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which observation confirms that the gas released from an acid-carbonate reaction is carbon dioxide?",
+      "options": {
+        "A": "It burns with a pop sound",
+        "B": "It turns lime water milky",
+        "C": "It turns red litmus blue",
+        "D": "It has a pungent smell and bleaches litmus"
+      },
+      "correct": "B",
+      "explanation": "Carbon dioxide reacts with lime water to form insoluble calcium carbonate, making the lime water milky."
+    },
+    {
+      "id": "SCI10CH02-Q014",
+      "topic": "Chemical Reactions of Acids and Bases",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which equation represents a neutralisation reaction?",
+      "options": {
+        "A": "NaOH + HCl → NaCl + H₂O",
+        "B": "Zn + H₂SO₄ → ZnSO₄ + H₂",
+        "C": "CaCO₃ → CaO + CO₂",
+        "D": "2Mg + O₂ → 2MgO"
+      },
+      "correct": "A",
+      "explanation": "Neutralisation is the reaction of an acid with a base to form salt and water."
+    },
+    {
+      "id": "SCI10CH02-Q015",
+      "topic": "Chemical Reactions of Acids and Bases",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Copper(II) oxide dissolves in dilute hydrochloric acid and forms a blue-green solution. Which salt is formed?",
+      "options": {
+        "A": "Copper sulphate",
+        "B": "Copper nitrate",
+        "C": "Copper(II) chloride",
+        "D": "Sodium chloride"
+      },
+      "correct": "C",
+      "explanation": "CuO + 2HCl → CuCl₂ + H₂O. Copper(II) chloride gives the blue-green solution."
+    },
+    {
+      "id": "SCI10CH02-Q016",
+      "topic": "Chemical Reactions of Acids and Bases",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Carbon dioxide reacts with calcium hydroxide to form calcium carbonate and water. What does this reaction indicate about carbon dioxide?",
+      "options": {
+        "A": "It is a basic oxide",
+        "B": "It is an acidic oxide",
+        "C": "It is a neutral oxide",
+        "D": "It is a metallic oxide"
+      },
+      "correct": "B",
+      "explanation": "A non-metal oxide such as CO₂ reacts with a base to form salt and water, showing that it is acidic in nature."
+    },
+    {
+      "id": "SCI10CH02-Q017",
+      "topic": "Ions, Dilution and pH",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Why do acids show acidic character only in aqueous solution?",
+      "options": {
+        "A": "Water supplies oxygen atoms",
+        "B": "Acids produce H⁺ ions only in the presence of water",
+        "C": "Water removes all ions",
+        "D": "Acids become metals in water"
+      },
+      "correct": "B",
+      "explanation": "Acid molecules ionise in water and produce H⁺ ions, which are responsible for acidic properties."
+    },
+    {
+      "id": "SCI10CH02-Q018",
+      "topic": "Ions, Dilution and pH",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Hydrogen ions do not exist freely in water. In which form are they commonly represented?",
+      "options": {
+        "A": "H₂",
+        "B": "H₃O⁺",
+        "C": "OH⁻",
+        "D": "O²⁻"
+      },
+      "correct": "B",
+      "explanation": "H⁺ combines with water molecules to form hydronium ions, H₃O⁺."
+    },
+    {
+      "id": "SCI10CH02-Q019",
+      "topic": "Ions, Dilution and pH",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which ion is responsible for the basic nature of an aqueous solution?",
+      "options": {
+        "A": "H⁺",
+        "B": "Cl⁻",
+        "C": "OH⁻",
+        "D": "Na⁺"
+      },
+      "correct": "C",
+      "explanation": "Bases produce hydroxide ions, OH⁻, in water."
+    },
+    {
+      "id": "SCI10CH02-Q020",
+      "topic": "Ions, Dilution and pH",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Why does an aqueous acid solution conduct electricity?",
+      "options": {
+        "A": "It contains moving ions",
+        "B": "It contains only neutral molecules",
+        "C": "Water becomes a metal",
+        "D": "The acid produces light directly"
+      },
+      "correct": "A",
+      "explanation": "Electric current in an acid solution is carried by ions present in the solution."
+    },
+    {
+      "id": "SCI10CH02-Q021",
+      "topic": "Ions, Dilution and pH",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "What is the safest correct procedure for diluting concentrated sulphuric acid?",
+      "options": {
+        "A": "Add water quickly to the acid",
+        "B": "Add acid slowly to water while stirring",
+        "C": "Mix equal volumes instantly",
+        "D": "Heat the acid before adding water"
+      },
+      "correct": "B",
+      "explanation": "Dilution is highly exothermic. Acid must be added slowly to water with constant stirring to avoid splashing and burns."
+    },
+    {
+      "id": "SCI10CH02-Q022",
+      "topic": "Ions, Dilution and pH",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "What is the pH of a neutral solution?",
+      "options": {
+        "A": "0",
+        "B": "5",
+        "C": "7",
+        "D": "14"
+      },
+      "correct": "C",
+      "explanation": "A neutral solution has pH 7."
+    },
+    {
+      "id": "SCI10CH02-Q023",
+      "topic": "Ions, Dilution and pH",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Rainwater is called acid rain when its pH is below approximately:",
+      "options": {
+        "A": "7.8",
+        "B": "7.0",
+        "C": "5.6",
+        "D": "3.0"
+      },
+      "correct": "C",
+      "explanation": "Rainwater with pH below 5.6 is classified as acid rain."
+    },
+    {
+      "id": "SCI10CH02-Q024",
+      "topic": "Ions, Dilution and pH",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Tooth decay generally begins when the pH in the mouth falls below:",
+      "options": {
+        "A": "9.5",
+        "B": "7.5",
+        "C": "6.5",
+        "D": "5.5"
+      },
+      "correct": "D",
+      "explanation": "Tooth enamel begins to corrode when the mouth pH falls below 5.5."
+    },
+    {
+      "id": "SCI10CH02-Q025",
+      "topic": "Salts and Chemicals from Common Salt",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "NaCl and Na₂SO₄ belong to the same family of salts because both contain:",
+      "options": {
+        "A": "Chloride ions",
+        "B": "Sulphate ions",
+        "C": "Sodium ions",
+        "D": "Hydrogen ions"
+      },
+      "correct": "C",
+      "explanation": "Salts with the same positive or negative radical belong to a family. Both NaCl and Na₂SO₄ are sodium salts."
+    },
+    {
+      "id": "SCI10CH02-Q026",
+      "topic": "Salts and Chemicals from Common Salt",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What is the expected nature and pH of sodium chloride formed from HCl and NaOH?",
+      "options": {
+        "A": "Acidic, pH below 7",
+        "B": "Basic, pH above 7",
+        "C": "Neutral, pH 7",
+        "D": "Always pH 0"
+      },
+      "correct": "C",
+      "explanation": "A salt formed from a strong acid and a strong base is neutral and has pH 7."
+    },
+    {
+      "id": "SCI10CH02-Q027",
+      "topic": "Salts and Chemicals from Common Salt",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The electrolysis of brine to produce sodium hydroxide, chlorine and hydrogen is called:",
+      "options": {
+        "A": "Solvay process",
+        "B": "Chlor-alkali process",
+        "C": "Contact process",
+        "D": "Haber process"
+      },
+      "correct": "B",
+      "explanation": "The process is called chlor-alkali because it produces chlorine and an alkali, sodium hydroxide."
+    },
+    {
+      "id": "SCI10CH02-Q028",
+      "topic": "Salts and Chemicals from Common Salt",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "During the chlor-alkali process, which gas is released at the anode?",
+      "options": {
+        "A": "Hydrogen",
+        "B": "Oxygen",
+        "C": "Chlorine",
+        "D": "Carbon dioxide"
+      },
+      "correct": "C",
+      "explanation": "Chlorine gas is released at the anode, while hydrogen gas is released at the cathode."
+    },
+    {
+      "id": "SCI10CH02-Q029",
+      "topic": "Salts and Chemicals from Common Salt",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Which statement about the chlor-alkali process is correct?",
+      "options": {
+        "A": "Hydrogen forms at the anode and chlorine at the cathode",
+        "B": "Chlorine forms at the anode, hydrogen at the cathode, and NaOH near the cathode",
+        "C": "Only sodium hydroxide is produced",
+        "D": "The process uses molten sodium chloride only"
+      },
+      "correct": "B",
+      "explanation": "Electrolysis of aqueous NaCl produces chlorine at the anode, hydrogen at the cathode, and sodium hydroxide solution near the cathode."
+    },
+    {
+      "id": "SCI10CH02-Q030",
+      "topic": "Salts and Chemicals from Common Salt",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Bleaching powder is manufactured by passing chlorine over:",
+      "options": {
+        "A": "Dry slaked lime",
+        "B": "Quicklime only",
+        "C": "Washing soda",
+        "D": "Baking soda"
+      },
+      "correct": "A",
+      "explanation": "Bleaching powder is produced by the action of chlorine on dry slaked lime, Ca(OH)₂."
+    },
+    {
+      "id": "SCI10CH02-Q031",
+      "topic": "Salts and Chemicals from Common Salt",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "What is the chemical formula of baking soda?",
+      "options": {
+        "A": "Na₂CO₃",
+        "B": "NaHCO₃",
+        "C": "CaCO₃",
+        "D": "NaOH"
+      },
+      "correct": "B",
+      "explanation": "Baking soda is sodium hydrogencarbonate, NaHCO₃."
+    },
+    {
+      "id": "SCI10CH02-Q032",
+      "topic": "Salts and Chemicals from Common Salt",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Why is tartaric acid added to baking powder?",
+      "options": {
+        "A": "To make it strongly basic",
+        "B": "To neutralise sodium carbonate formed and prevent a bitter taste",
+        "C": "To stop carbon dioxide formation",
+        "D": "To convert baking soda into washing soda before heating"
+      },
+      "correct": "B",
+      "explanation": "Tartaric acid neutralises sodium carbonate that may form during heating, preventing a bitter taste in baked food."
+    },
+    {
+      "id": "SCI10CH02-Q033",
+      "topic": "Water of Crystallisation and Useful Salts",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "What is the formula of washing soda?",
+      "options": {
+        "A": "Na₂CO₃·10H₂O",
+        "B": "NaHCO₃",
+        "C": "CaSO₄·2H₂O",
+        "D": "CuSO₄·5H₂O"
+      },
+      "correct": "A",
+      "explanation": "Washing soda is sodium carbonate decahydrate, Na₂CO₃·10H₂O."
+    },
+    {
+      "id": "SCI10CH02-Q034",
+      "topic": "Water of Crystallisation and Useful Salts",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which is an important use of washing soda?",
+      "options": {
+        "A": "Removing permanent hardness of water",
+        "B": "Testing hydrogen gas",
+        "C": "Preparing dry HCl gas",
+        "D": "Making acids stronger"
+      },
+      "correct": "A",
+      "explanation": "Washing soda is used to remove permanent hardness of water and also as a cleaning agent."
+    },
+    {
+      "id": "SCI10CH02-Q035",
+      "topic": "Water of Crystallisation and Useful Salts",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What is meant by water of crystallisation?",
+      "options": {
+        "A": "Water loosely present on the crystal surface",
+        "B": "A fixed number of water molecules present in one formula unit of a salt",
+        "C": "Water used only for washing crystals",
+        "D": "Water formed by neutralisation"
+      },
+      "correct": "B",
+      "explanation": "Water of crystallisation is the fixed number of water molecules chemically associated with one formula unit of a salt."
+    },
+    {
+      "id": "SCI10CH02-Q036",
+      "topic": "Water of Crystallisation and Useful Salts",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which formula represents hydrated copper sulphate?",
+      "options": {
+        "A": "CuSO₄·5H₂O",
+        "B": "CuSO₄·2H₂O",
+        "C": "CuSO₄·10H₂O",
+        "D": "Cu₂SO₄·H₂O"
+      },
+      "correct": "A",
+      "explanation": "Blue copper sulphate crystals contain five water molecules per formula unit: CuSO₄·5H₂O."
+    },
+    {
+      "id": "SCI10CH02-Q037",
+      "topic": "Water of Crystallisation and Useful Salts",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What happens when blue copper sulphate crystals are heated strongly?",
+      "options": {
+        "A": "They turn green and release chlorine",
+        "B": "They turn white after losing water of crystallisation",
+        "C": "They become black due to carbon formation",
+        "D": "They melt into sodium sulphate"
+      },
+      "correct": "B",
+      "explanation": "Heating removes the water of crystallisation, converting blue hydrated copper sulphate into white anhydrous copper sulphate."
+    },
+    {
+      "id": "SCI10CH02-Q038",
+      "topic": "Water of Crystallisation and Useful Salts",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "What is the chemical formula of gypsum?",
+      "options": {
+        "A": "CaSO₄·2H₂O",
+        "B": "CaSO₄·½H₂O",
+        "C": "CaCO₃",
+        "D": "Ca(OH)₂"
+      },
+      "correct": "A",
+      "explanation": "Gypsum is calcium sulphate dihydrate, CaSO₄·2H₂O."
+    },
+    {
+      "id": "SCI10CH02-Q039",
+      "topic": "Water of Crystallisation and Useful Salts",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Gypsum heated at about 373 K forms:",
+      "options": {
+        "A": "Quicklime",
+        "B": "Bleaching powder",
+        "C": "Plaster of Paris, CaSO₄·½H₂O",
+        "D": "Washing soda"
+      },
+      "correct": "C",
+      "explanation": "On heating gypsum at about 373 K, it loses part of its water of crystallisation and forms calcium sulphate hemihydrate, called Plaster of Paris."
+    },
+    {
+      "id": "SCI10CH02-Q040",
+      "topic": "Water of Crystallisation and Useful Salts",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Why should Plaster of Paris be stored in a moisture-proof container?",
+      "options": {
+        "A": "It reacts with moisture to form hard gypsum",
+        "B": "It evaporates completely in air",
+        "C": "It changes into sodium carbonate",
+        "D": "It releases chlorine in moist air"
+      },
+      "correct": "A",
+      "explanation": "Plaster of Paris reacts with moisture and changes back to gypsum, forming a hard mass. Therefore it must be kept away from moisture."
+    }
+  ],
+  "tests": [
+    {
+      "testId": "SCI10CH02-T01",
+      "testTitle": "Topic Test 1",
+      "testType": "TOPIC_TEST",
+      "topic": "Indicators and Basic Properties",
+      "questionLabel": "Related questions: Q1-Q8",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH02-Q001",
+        "SCI10CH02-Q002",
+        "SCI10CH02-Q003",
+        "SCI10CH02-Q004",
+        "SCI10CH02-Q005",
+        "SCI10CH02-Q006",
+        "SCI10CH02-Q007",
+        "SCI10CH02-Q008"
+      ]
+    },
+    {
+      "testId": "SCI10CH02-T02",
+      "testTitle": "Topic Test 2",
+      "testType": "TOPIC_TEST",
+      "topic": "Chemical Reactions of Acids and Bases",
+      "questionLabel": "Related questions: Q9-Q16",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH02-Q009",
+        "SCI10CH02-Q010",
+        "SCI10CH02-Q011",
+        "SCI10CH02-Q012",
+        "SCI10CH02-Q013",
+        "SCI10CH02-Q014",
+        "SCI10CH02-Q015",
+        "SCI10CH02-Q016"
+      ]
+    },
+    {
+      "testId": "SCI10CH02-T03",
+      "testTitle": "Topic Test 3",
+      "testType": "TOPIC_TEST",
+      "topic": "Ions, Dilution and pH",
+      "questionLabel": "Related questions: Q17-Q24",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH02-Q017",
+        "SCI10CH02-Q018",
+        "SCI10CH02-Q019",
+        "SCI10CH02-Q020",
+        "SCI10CH02-Q021",
+        "SCI10CH02-Q022",
+        "SCI10CH02-Q023",
+        "SCI10CH02-Q024"
+      ]
+    },
+    {
+      "testId": "SCI10CH02-T04",
+      "testTitle": "Topic Test 4",
+      "testType": "TOPIC_TEST",
+      "topic": "Salts and Chemicals from Common Salt",
+      "questionLabel": "Related questions: Q25-Q32",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH02-Q025",
+        "SCI10CH02-Q026",
+        "SCI10CH02-Q027",
+        "SCI10CH02-Q028",
+        "SCI10CH02-Q029",
+        "SCI10CH02-Q030",
+        "SCI10CH02-Q031",
+        "SCI10CH02-Q032"
+      ]
+    },
+    {
+      "testId": "SCI10CH02-T05",
+      "testTitle": "Topic Test 5",
+      "testType": "TOPIC_TEST",
+      "topic": "Water of Crystallisation and Useful Salts",
+      "questionLabel": "Related questions: Q33-Q40",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH02-Q033",
+        "SCI10CH02-Q034",
+        "SCI10CH02-Q035",
+        "SCI10CH02-Q036",
+        "SCI10CH02-Q037",
+        "SCI10CH02-Q038",
+        "SCI10CH02-Q039",
+        "SCI10CH02-Q040"
+      ]
+    },
+    {
+      "testId": "SCI10CH02-FLT01",
+      "testTitle": "Full-Length Test 1",
+      "testType": "FULL_LENGTH",
+      "topic": "Complete Chapter",
+      "questionLabel": "20 balanced questions from all chapter topics",
+      "instructions": "20 questions • 1 mark each • Full chapter assessment • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH02-Q001",
+        "SCI10CH02-Q003",
+        "SCI10CH02-Q005",
+        "SCI10CH02-Q007",
+        "SCI10CH02-Q009",
+        "SCI10CH02-Q011",
+        "SCI10CH02-Q013",
+        "SCI10CH02-Q015",
+        "SCI10CH02-Q017",
+        "SCI10CH02-Q019",
+        "SCI10CH02-Q021",
+        "SCI10CH02-Q023",
+        "SCI10CH02-Q025",
+        "SCI10CH02-Q027",
+        "SCI10CH02-Q029",
+        "SCI10CH02-Q031",
+        "SCI10CH02-Q033",
+        "SCI10CH02-Q035",
+        "SCI10CH02-Q037",
+        "SCI10CH02-Q039"
+      ]
+    },
+    {
+      "testId": "SCI10CH02-FLT02",
+      "testTitle": "Full-Length Test 2",
+      "testType": "FULL_LENGTH",
+      "topic": "Complete Chapter",
+      "questionLabel": "20 different balanced questions from all chapter topics",
+      "instructions": "20 questions • 1 mark each • Full chapter assessment • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH02-Q002",
+        "SCI10CH02-Q004",
+        "SCI10CH02-Q006",
+        "SCI10CH02-Q008",
+        "SCI10CH02-Q010",
+        "SCI10CH02-Q012",
+        "SCI10CH02-Q014",
+        "SCI10CH02-Q016",
+        "SCI10CH02-Q018",
+        "SCI10CH02-Q020",
+        "SCI10CH02-Q022",
+        "SCI10CH02-Q024",
+        "SCI10CH02-Q026",
+        "SCI10CH02-Q028",
+        "SCI10CH02-Q030",
+        "SCI10CH02-Q032",
+        "SCI10CH02-Q034",
+        "SCI10CH02-Q036",
+        "SCI10CH02-Q038",
+        "SCI10CH02-Q040"
+      ]
+    }
+  ]
+};
+  </script>
+
+  <script src="../../assets/js/static-mcq-engine.js"></script>
+</body>
+</html>
