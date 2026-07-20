@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="CBSE Class 10 Science Chapter 10 MCQ practice for The Human Eye and the Colourful World in English medium."
+  />
+  <title>Chapter 10 MCQ | CBSE Class 10 Science</title>
+  <link rel="stylesheet" href="../../assets/css/static-mcq-engine.css" />
+</head>
+<body>
+  <div class="wtc-mcq-app">
+    <header class="hero-card">
+      <div class="hero-left">
+        <p class="eyebrow">WAGH Tuition Classes • Static MCQ Engine v1.1</p>
+        <h1 id="testTitle">MCQ Practice</h1>
+        <p id="testMeta" class="meta"></p>
+      </div>
+
+      <div class="hero-score">
+        <div class="ring" id="progressRing">
+          <span id="answeredCount">0</span>
+        </div>
+        <small>Answered</small>
+      </div>
+    </header>
+
+    <section class="sticky-dashboard">
+      <div class="dash-item">
+        <span>Student</span>
+        <b id="studentName">Checking login...</b>
+      </div>
+      <div class="dash-item">
+        <span>Time</span>
+        <b id="timer">00:00</b>
+      </div>
+      <div class="dash-item">
+        <span>Questions</span>
+        <b id="questionCount">0</b>
+      </div>
+      <button id="themeBtn" class="ghost-btn" type="button" aria-label="Change theme">🌙</button>
+      <button id="reviewBtn" class="ghost-btn" type="button">Review</button>
+    </section>
+
+    <section class="notice-card">
+      Select one option for each question. After submit, correct answers and
+      explanations will open. Your result will be saved for progress report.
+    </section>
+
+    <main class="layout-grid">
+      <aside class="question-palette" aria-label="Question palette">
+        <h3>Question Palette</h3>
+        <div id="paletteGrid" class="palette-grid"></div>
+      </aside>
+
+      <section id="questionList" class="question-list"></section>
+    </main>
+
+    <section id="resultBox" class="result-box hidden"></section>
+
+    <div class="bottom-action-bar">
+      <button id="submitBtn" class="primary-btn" type="button">
+        Submit Test
+      </button>
+      <button id="retryBtn" class="secondary-btn hidden" type="button">
+        Choose Another Test
+      </button>
+      <button id="topBtn" class="secondary-btn" type="button">Top</button>
+    </div>
+  </div>
+
+  <!-- Keep this exact loading order. -->
+  <script src="../../assets/js/config.js"></script>
+  <script src="../../assets/js/auth.js"></script>
+  <script src="../../assets/js/api.js"></script>
+
+  <script>
+    window.WTC_STATIC_MCQ = {
+  "pageTitle": "Chapter 10: The Human Eye and the Colourful World - MCQ Practice",
+  "selectorDescription": "Choose a topic-wise test or a full-length chapter test covering the human eye, defects of vision, prisms, dispersion, atmospheric refraction and scattering of light.",
+  "board": "CBSE",
+  "className": "Class 10",
+  "medium": "English Medium",
+  "subjectId": "SCI10",
+  "subjectName": "Science",
+  "chapterId": "SCI10CH10",
+  "chapterName": "The Human Eye and the Colourful World",
+  "instructions": "Select one option for each question. After submit, correct answers and explanations will open. Progress saves automatically.",
+  "questionBank": [
+    {
+      "id": "SCI10CH10-Q001",
+      "topic": "Human Eye and Accommodation",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Most of the refraction of light entering the human eye occurs at the:",
+      "options": {
+        "A": "outer surface of the cornea",
+        "B": "retina",
+        "C": "optic nerve",
+        "D": "iris"
+      },
+      "correct": "A",
+      "explanation": "The outer surface of the cornea causes most of the refraction of incoming light. The crystalline lens mainly provides finer adjustment of focal length."
+    },
+    {
+      "id": "SCI10CH10-Q002",
+      "topic": "Human Eye and Accommodation",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which part of the eye controls the size of the pupil?",
+      "options": {
+        "A": "Retina",
+        "B": "Iris",
+        "C": "Optic nerve",
+        "D": "Cornea"
+      },
+      "correct": "B",
+      "explanation": "The iris is a dark muscular diaphragm that controls the size of the pupil and therefore regulates the amount of light entering the eye."
+    },
+    {
+      "id": "SCI10CH10-Q003",
+      "topic": "Human Eye and Accommodation",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The image formed by the eye lens on the retina is:",
+      "options": {
+        "A": "virtual and erect",
+        "B": "real and inverted",
+        "C": "virtual and inverted",
+        "D": "real and erect"
+      },
+      "correct": "B",
+      "explanation": "The eye lens forms a real and inverted image on the light-sensitive retina. The brain interprets the electrical signals so that we perceive the object correctly."
+    },
+    {
+      "id": "SCI10CH10-Q004",
+      "topic": "Human Eye and Accommodation",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What happens when the ciliary muscles relax while viewing a distant object?",
+      "options": {
+        "A": "The eye lens becomes thicker and its focal length decreases",
+        "B": "The eye lens becomes thinner and its focal length increases",
+        "C": "The pupil closes completely",
+        "D": "The retina moves toward the lens"
+      },
+      "correct": "B",
+      "explanation": "For distant vision, the ciliary muscles relax. The lens becomes thinner, its curvature decreases and its focal length increases."
+    },
+    {
+      "id": "SCI10CH10-Q005",
+      "topic": "Human Eye and Accommodation",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "While viewing a nearby object, the ciliary muscles:",
+      "options": {
+        "A": "contract, making the lens thicker and decreasing its focal length",
+        "B": "relax, making the lens thinner and increasing its focal length",
+        "C": "contract, making the pupil permanently larger",
+        "D": "stop the retina from responding to light"
+      },
+      "correct": "A",
+      "explanation": "For near vision, the ciliary muscles contract. This increases the curvature and thickness of the lens, reducing its focal length."
+    },
+    {
+      "id": "SCI10CH10-Q006",
+      "topic": "Human Eye and Accommodation",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The ability of the eye lens to adjust its focal length for objects at different distances is called:",
+      "options": {
+        "A": "dispersion",
+        "B": "accommodation",
+        "C": "scattering",
+        "D": "persistence"
+      },
+      "correct": "B",
+      "explanation": "Accommodation is the ability of the eye lens to change its focal length so that both near and distant objects can be focused clearly on the retina."
+    },
+    {
+      "id": "SCI10CH10-Q007",
+      "topic": "Human Eye and Accommodation",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "For a young adult with normal vision, the near point and far point are approximately:",
+      "options": {
+        "A": "25 cm and infinity",
+        "B": "25 m and 25 cm",
+        "C": "2.5 cm and 25 m",
+        "D": "infinity and 25 cm"
+      },
+      "correct": "A",
+      "explanation": "The least distance of distinct vision for a normal young adult is about 25 cm, while the far point is at infinity."
+    },
+    {
+      "id": "SCI10CH10-Q008",
+      "topic": "Human Eye and Accommodation",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The condition in which the crystalline lens becomes milky and cloudy is called:",
+      "options": {
+        "A": "myopia",
+        "B": "cataract",
+        "C": "hypermetropia",
+        "D": "dispersion"
+      },
+      "correct": "B",
+      "explanation": "In cataract, the crystalline lens becomes cloudy, causing partial or complete loss of vision. Vision may be restored through cataract surgery."
+    },
+    {
+      "id": "SCI10CH10-Q009",
+      "topic": "Defects of Vision and Their Correction",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "A person who can see nearby objects clearly but cannot see distant objects distinctly suffers from:",
+      "options": {
+        "A": "myopia",
+        "B": "hypermetropia",
+        "C": "presbyopia only",
+        "D": "cataract only"
+      },
+      "correct": "A",
+      "explanation": "Myopia, or near-sightedness, allows clear vision of nearby objects but makes distant objects appear blurred."
+    },
+    {
+      "id": "SCI10CH10-Q010",
+      "topic": "Defects of Vision and Their Correction",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "In a myopic eye, the image of a distant object is formed:",
+      "options": {
+        "A": "in front of the retina",
+        "B": "behind the retina",
+        "C": "on the iris",
+        "D": "on the cornea"
+      },
+      "correct": "A",
+      "explanation": "In myopia, excessive converging power or elongation of the eyeball causes the image of a distant object to form in front of the retina."
+    },
+    {
+      "id": "SCI10CH10-Q011",
+      "topic": "Defects of Vision and Their Correction",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which combination can cause myopia?",
+      "options": {
+        "A": "Excessive curvature of the eye lens or elongation of the eyeball",
+        "B": "Insufficient curvature of the eye lens or a very short eyeball",
+        "C": "Clouding of the lens only",
+        "D": "Weak scattering by atmospheric particles"
+      },
+      "correct": "A",
+      "explanation": "Myopia may result from excessive curvature of the eye lens or elongation of the eyeball, both of which bring the image in front of the retina."
+    },
+    {
+      "id": "SCI10CH10-Q012",
+      "topic": "Defects of Vision and Their Correction",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "The far point of a myopic person is 80 cm in front of the eye. What power of lens is required to correct distant vision?",
+      "options": {
+        "A": "+1.25 D",
+        "B": "−1.25 D",
+        "C": "+0.80 D",
+        "D": "−0.80 D"
+      },
+      "correct": "B",
+      "explanation": "For a distant object, u = −∞ and the corrective lens must form a virtual image at the far point, v = −0.80 m. Thus f = −0.80 m and P = 1/f = −1.25 D. A concave lens is required."
+    },
+    {
+      "id": "SCI10CH10-Q013",
+      "topic": "Defects of Vision and Their Correction",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "A person who sees distant objects clearly but cannot see nearby objects distinctly suffers from:",
+      "options": {
+        "A": "hypermetropia",
+        "B": "myopia",
+        "C": "colour dispersion",
+        "D": "atmospheric refraction"
+      },
+      "correct": "A",
+      "explanation": "Hypermetropia, or far-sightedness, causes difficulty in seeing nearby objects while distant objects may remain clear."
+    },
+    {
+      "id": "SCI10CH10-Q014",
+      "topic": "Defects of Vision and Their Correction",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "In a hypermetropic eye, light from a nearby object tends to focus:",
+      "options": {
+        "A": "behind the retina",
+        "B": "in front of the retina",
+        "C": "on the iris",
+        "D": "inside the pupil"
+      },
+      "correct": "A",
+      "explanation": "In hypermetropia, insufficient converging power or a short eyeball causes the image of a nearby object to form behind the retina."
+    },
+    {
+      "id": "SCI10CH10-Q015",
+      "topic": "Defects of Vision and Their Correction",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which lenses are used to correct myopia and hypermetropia, respectively?",
+      "options": {
+        "A": "Convex and concave",
+        "B": "Concave and convex",
+        "C": "Both concave",
+        "D": "Both convex"
+      },
+      "correct": "B",
+      "explanation": "A concave lens diverges light appropriately to correct myopia, while a convex lens supplies extra converging power to correct hypermetropia."
+    },
+    {
+      "id": "SCI10CH10-Q016",
+      "topic": "Defects of Vision and Their Correction",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "A common bifocal lens used by a person with both near- and far-vision problems generally has:",
+      "options": {
+        "A": "a concave upper part and a convex lower part",
+        "B": "a convex upper part and a concave lower part",
+        "C": "two concave parts only",
+        "D": "two plane-glass parts only"
+      },
+      "correct": "A",
+      "explanation": "The concave upper portion helps distant vision, while the convex lower portion helps near vision. Such bifocals may be used when both myopia and hypermetropia are present."
+    },
+    {
+      "id": "SCI10CH10-Q017",
+      "topic": "Prism, Dispersion and Rainbow",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The angle between the two lateral refracting faces of a prism is called the:",
+      "options": {
+        "A": "angle of prism",
+        "B": "angle of reflection",
+        "C": "critical angle",
+        "D": "angle of elevation"
+      },
+      "correct": "A",
+      "explanation": "The angle between the two inclined lateral faces through which refraction occurs is called the angle of the prism."
+    },
+    {
+      "id": "SCI10CH10-Q018",
+      "topic": "Prism, Dispersion and Rainbow",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The angle between the direction of the incident ray and the emergent ray from a prism is called the angle of:",
+      "options": {
+        "A": "deviation",
+        "B": "incidence",
+        "C": "reflection",
+        "D": "accommodation"
+      },
+      "correct": "A",
+      "explanation": "Because the refracting surfaces of a prism are inclined, the emergent ray bends away from the original direction. The angle between these directions is the angle of deviation."
+    },
+    {
+      "id": "SCI10CH10-Q019",
+      "topic": "Prism, Dispersion and Rainbow",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The splitting of white light into its component colours is called:",
+      "options": {
+        "A": "dispersion",
+        "B": "accommodation",
+        "C": "reflection",
+        "D": "persistence of vision"
+      },
+      "correct": "A",
+      "explanation": "Dispersion is the separation of white light into its constituent colours when the colours bend by different amounts."
+    },
+    {
+      "id": "SCI10CH10-Q020",
+      "topic": "Prism, Dispersion and Rainbow",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which sequence correctly lists the colours of the visible spectrum from violet to red?",
+      "options": {
+        "A": "Violet, Indigo, Blue, Green, Yellow, Orange, Red",
+        "B": "Violet, Blue, Indigo, Yellow, Green, Orange, Red",
+        "C": "Red, Orange, Yellow, Green, Blue, Indigo, Violet",
+        "D": "Blue, Violet, Green, Indigo, Yellow, Red, Orange"
+      },
+      "correct": "A",
+      "explanation": "The sequence is Violet, Indigo, Blue, Green, Yellow, Orange and Red, remembered by the acronym VIBGYOR."
+    },
+    {
+      "id": "SCI10CH10-Q021",
+      "topic": "Prism, Dispersion and Rainbow",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "When white light passes through a glass prism, which colour deviates the least and which deviates the most?",
+      "options": {
+        "A": "Red least and violet most",
+        "B": "Violet least and red most",
+        "C": "Green least and yellow most",
+        "D": "All colours deviate equally"
+      },
+      "correct": "A",
+      "explanation": "Red light bends through the smallest angle, while violet light bends through the largest angle in a prism."
+    },
+    {
+      "id": "SCI10CH10-Q022",
+      "topic": "Prism, Dispersion and Rainbow",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What did Newton observe when he placed a second identical prism in an inverted position after the first prism?",
+      "options": {
+        "A": "The spectrum recombined to form white light",
+        "B": "Only red light emerged",
+        "C": "The colours split into additional new colours",
+        "D": "No light emerged"
+      },
+      "correct": "A",
+      "explanation": "The inverted second prism recombined the seven colours of the spectrum into white light, showing that sunlight is composed of these colours."
+    },
+    {
+      "id": "SCI10CH10-Q023",
+      "topic": "Prism, Dispersion and Rainbow",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "A rainbow is normally seen in a direction:",
+      "options": {
+        "A": "opposite to the Sun",
+        "B": "toward the Sun",
+        "C": "directly above the Sun only",
+        "D": "independent of the Sun's position"
+      },
+      "correct": "A",
+      "explanation": "A rainbow is formed in the part of the sky opposite to the Sun. The observer should have the Sun behind them."
+    },
+    {
+      "id": "SCI10CH10-Q024",
+      "topic": "Prism, Dispersion and Rainbow",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Which sequence best describes the main optical events in a raindrop during rainbow formation?",
+      "options": {
+        "A": "Refraction and dispersion → internal reflection → refraction on emergence",
+        "B": "Reflection only → absorption → refraction",
+        "C": "Dispersion only → no reflection → absorption",
+        "D": "Scattering → diffraction → total absorption"
+      },
+      "correct": "A",
+      "explanation": "Sunlight is refracted and dispersed on entering the droplet, internally reflected, and refracted again as it leaves. Different colours then reach the observer."
+    },
+    {
+      "id": "SCI10CH10-Q025",
+      "topic": "Atmospheric Refraction",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The apparent wavering of an object seen through hot air above a fire is mainly due to:",
+      "options": {
+        "A": "atmospheric refraction through layers of changing refractive index",
+        "B": "dispersion by a glass prism",
+        "C": "total internal reflection inside the eye",
+        "D": "absorption of all colours"
+      },
+      "correct": "A",
+      "explanation": "Hot and cooler air layers have different and continuously changing refractive indices. Light bends irregularly through them, making the apparent position fluctuate."
+    },
+    {
+      "id": "SCI10CH10-Q026",
+      "topic": "Atmospheric Refraction",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The twinkling of stars is caused by:",
+      "options": {
+        "A": "atmospheric refraction of starlight",
+        "B": "dispersion inside the star",
+        "C": "reflection from the Moon",
+        "D": "scattering by the retina"
+      },
+      "correct": "A",
+      "explanation": "Starlight is continuously refracted through atmospheric layers of changing optical density, causing fluctuations in apparent position and brightness."
+    },
+    {
+      "id": "SCI10CH10-Q027",
+      "topic": "Atmospheric Refraction",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "A star viewed near the horizon appears slightly:",
+      "options": {
+        "A": "higher than its actual position",
+        "B": "lower than its actual position",
+        "C": "at its exact position at all times",
+        "D": "inside the atmosphere"
+      },
+      "correct": "A",
+      "explanation": "Atmospheric refraction bends starlight toward the normal, so the apparent position of a star near the horizon is slightly above its actual position."
+    },
+    {
+      "id": "SCI10CH10-Q028",
+      "topic": "Atmospheric Refraction",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Why do planets generally not twinkle like stars?",
+      "options": {
+        "A": "They are seen as extended sources, so fluctuations from different parts average out",
+        "B": "They produce no light and cannot be seen",
+        "C": "Their light does not enter the atmosphere",
+        "D": "They are point-sized sources much farther away than stars"
+      },
+      "correct": "A",
+      "explanation": "Planets appear as extended sources made of many point sources. Atmospheric fluctuations from the different points average out, greatly reducing twinkling."
+    },
+    {
+      "id": "SCI10CH10-Q029",
+      "topic": "Atmospheric Refraction",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Because of atmospheric refraction, the Sun is visible approximately how long before the actual sunrise?",
+      "options": {
+        "A": "2 minutes",
+        "B": "20 minutes",
+        "C": "2 hours",
+        "D": "20 seconds"
+      },
+      "correct": "A",
+      "explanation": "Atmospheric refraction makes the Sun visible about two minutes before it actually crosses the horizon."
+    },
+    {
+      "id": "SCI10CH10-Q030",
+      "topic": "Atmospheric Refraction",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The Sun remains visible after actual sunset for approximately:",
+      "options": {
+        "A": "2 minutes",
+        "B": "12 minutes",
+        "C": "30 minutes",
+        "D": "1 hour"
+      },
+      "correct": "A",
+      "explanation": "The apparent sunset is delayed by about two minutes because atmospheric refraction bends sunlight toward the observer."
+    },
+    {
+      "id": "SCI10CH10-Q031",
+      "topic": "Atmospheric Refraction",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The apparent flattening of the Sun's disc at sunrise and sunset is due to:",
+      "options": {
+        "A": "atmospheric refraction",
+        "B": "dispersion by raindrops",
+        "C": "reflection by clouds only",
+        "D": "the Tyndall effect inside the eye"
+      },
+      "correct": "A",
+      "explanation": "Different parts of the Sun's disc undergo slightly different amounts of atmospheric refraction near the horizon, making the disc appear flattened."
+    },
+    {
+      "id": "SCI10CH10-Q032",
+      "topic": "Atmospheric Refraction",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Why does a star sometimes appear brighter and sometimes fainter?",
+      "options": {
+        "A": "Changing atmospheric conditions vary the amount of starlight entering the eye",
+        "B": "The star repeatedly switches off and on",
+        "C": "Its actual distance from Earth changes every second",
+        "D": "The retina disperses its light into seven colours"
+      },
+      "correct": "A",
+      "explanation": "The refractive index of the atmosphere changes continually. The path of starlight and the amount reaching the eye fluctuate, producing variations in apparent brightness."
+    },
+    {
+      "id": "SCI10CH10-Q033",
+      "topic": "Scattering of Light and Natural Phenomena",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The visibility of a light beam passing through a colloidal solution is known as the:",
+      "options": {
+        "A": "Tyndall effect",
+        "B": "power of accommodation",
+        "C": "presbyopia effect",
+        "D": "reflex action"
+      },
+      "correct": "A",
+      "explanation": "Colloidal particles scatter light and make the path of the beam visible. This phenomenon is called the Tyndall effect."
+    },
+    {
+      "id": "SCI10CH10-Q034",
+      "topic": "Scattering of Light and Natural Phenomena",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Why is the path of light generally visible in a colloid but not in a true solution?",
+      "options": {
+        "A": "Colloidal particles are large enough to scatter light effectively",
+        "B": "True solutions contain no liquid",
+        "C": "Colloids absorb all light completely",
+        "D": "True solutions always produce a rainbow"
+      },
+      "correct": "A",
+      "explanation": "The particles in a colloid are large enough to scatter the incident light, while particles in a true solution are too small to make the beam path visible."
+    },
+    {
+      "id": "SCI10CH10-Q035",
+      "topic": "Scattering of Light and Natural Phenomena",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Very fine atmospheric particles scatter which part of visible light most strongly?",
+      "options": {
+        "A": "Blue light of shorter wavelength",
+        "B": "Red light of longer wavelength",
+        "C": "All wavelengths equally",
+        "D": "Infrared light only"
+      },
+      "correct": "A",
+      "explanation": "Very fine particles are more effective at scattering shorter wavelengths, especially the blue region of visible light."
+    },
+    {
+      "id": "SCI10CH10-Q036",
+      "topic": "Scattering of Light and Natural Phenomena",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "If the scattering particles are sufficiently large, the scattered light may appear:",
+      "options": {
+        "A": "white",
+        "B": "only violet",
+        "C": "completely black",
+        "D": "only ultraviolet"
+      },
+      "correct": "A",
+      "explanation": "Large particles can scatter different visible wavelengths more nearly equally, so the scattered light may appear white."
+    },
+    {
+      "id": "SCI10CH10-Q037",
+      "topic": "Scattering of Light and Natural Phenomena",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The clear sky appears blue mainly because:",
+      "options": {
+        "A": "shorter-wavelength blue light is scattered more strongly by fine atmospheric particles",
+        "B": "the atmosphere emits blue light",
+        "C": "red light has the shortest wavelength",
+        "D": "the oceans reflect all their blue light into space"
+      },
+      "correct": "A",
+      "explanation": "Air molecules and fine particles scatter shorter wavelengths more effectively. The scattered blue light entering our eyes makes the sky appear blue."
+    },
+    {
+      "id": "SCI10CH10-Q038",
+      "topic": "Scattering of Light and Natural Phenomena",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "If Earth had no atmosphere, the daytime sky would appear:",
+      "options": {
+        "A": "dark",
+        "B": "bright blue",
+        "C": "green",
+        "D": "uniformly red"
+      },
+      "correct": "A",
+      "explanation": "Without an atmosphere there would be almost no scattering of sunlight, so the sky away from the Sun would appear dark."
+    },
+    {
+      "id": "SCI10CH10-Q039",
+      "topic": "Scattering of Light and Natural Phenomena",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Danger signals are commonly red because red light:",
+      "options": {
+        "A": "is scattered the least by fog and smoke",
+        "B": "has the shortest visible wavelength",
+        "C": "is scattered more than blue light",
+        "D": "cannot travel through air"
+      },
+      "correct": "A",
+      "explanation": "Red light has a comparatively long wavelength and is scattered less by fog, smoke and fine particles, so it remains visible from a greater distance."
+    },
+    {
+      "id": "SCI10CH10-Q040",
+      "topic": "Scattering of Light and Natural Phenomena",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Why can the sky appear dark to passengers flying at very high altitudes?",
+      "options": {
+        "A": "There are fewer atmospheric particles, so scattering is not prominent",
+        "B": "The Sun stops emitting visible light at high altitude",
+        "C": "The aircraft absorbs all blue light",
+        "D": "Atmospheric refraction becomes infinitely large"
+      },
+      "correct": "A",
+      "explanation": "At very high altitudes, the atmosphere is thinner and contains fewer scattering particles. With less scattered light reaching the eye, the sky appears darker."
+    }
+  ],
+  "tests": [
+    {
+      "testId": "SCI10CH10-T01",
+      "testTitle": "Topic Test 1: Human Eye and Accommodation",
+      "testType": "TOPIC_TEST",
+      "topic": "Human Eye and Accommodation",
+      "questionLabel": "Related questions: Q1-Q8 • Cornea, iris, retina, ciliary muscles, accommodation, near point and cataract",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH10-Q001",
+        "SCI10CH10-Q002",
+        "SCI10CH10-Q003",
+        "SCI10CH10-Q004",
+        "SCI10CH10-Q005",
+        "SCI10CH10-Q006",
+        "SCI10CH10-Q007",
+        "SCI10CH10-Q008"
+      ]
+    },
+    {
+      "testId": "SCI10CH10-T02",
+      "testTitle": "Topic Test 2: Defects of Vision",
+      "testType": "TOPIC_TEST",
+      "topic": "Defects of Vision and Their Correction",
+      "questionLabel": "Related questions: Q9-Q16 • Myopia, hypermetropia, presbyopia, corrective lenses and numerical application",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH10-Q009",
+        "SCI10CH10-Q010",
+        "SCI10CH10-Q011",
+        "SCI10CH10-Q012",
+        "SCI10CH10-Q013",
+        "SCI10CH10-Q014",
+        "SCI10CH10-Q015",
+        "SCI10CH10-Q016"
+      ]
+    },
+    {
+      "testId": "SCI10CH10-T03",
+      "testTitle": "Topic Test 3: Prism, Dispersion and Rainbow",
+      "testType": "TOPIC_TEST",
+      "topic": "Prism, Dispersion and Rainbow",
+      "questionLabel": "Related questions: Q17-Q24 • Refraction through a prism, spectrum, VIBGYOR, Newton's experiment and rainbow formation",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH10-Q017",
+        "SCI10CH10-Q018",
+        "SCI10CH10-Q019",
+        "SCI10CH10-Q020",
+        "SCI10CH10-Q021",
+        "SCI10CH10-Q022",
+        "SCI10CH10-Q023",
+        "SCI10CH10-Q024"
+      ]
+    },
+    {
+      "testId": "SCI10CH10-T04",
+      "testTitle": "Topic Test 4: Atmospheric Refraction",
+      "testType": "TOPIC_TEST",
+      "topic": "Atmospheric Refraction",
+      "questionLabel": "Related questions: Q25-Q32 • Wavering through hot air, twinkling, planets, advance sunrise and delayed sunset",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH10-Q025",
+        "SCI10CH10-Q026",
+        "SCI10CH10-Q027",
+        "SCI10CH10-Q028",
+        "SCI10CH10-Q029",
+        "SCI10CH10-Q030",
+        "SCI10CH10-Q031",
+        "SCI10CH10-Q032"
+      ]
+    },
+    {
+      "testId": "SCI10CH10-T05",
+      "testTitle": "Topic Test 5: Scattering of Light",
+      "testType": "TOPIC_TEST",
+      "topic": "Scattering of Light and Natural Phenomena",
+      "questionLabel": "Related questions: Q33-Q40 • Tyndall effect, particle size, blue sky, red signals and high-altitude sky",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH10-Q033",
+        "SCI10CH10-Q034",
+        "SCI10CH10-Q035",
+        "SCI10CH10-Q036",
+        "SCI10CH10-Q037",
+        "SCI10CH10-Q038",
+        "SCI10CH10-Q039",
+        "SCI10CH10-Q040"
+      ]
+    },
+    {
+      "testId": "SCI10CH10-FLT01",
+      "testTitle": "Full-Length Test 1",
+      "testType": "FULL_LENGTH",
+      "topic": "Complete Chapter",
+      "questionLabel": "20 balanced questions from all five chapter topics",
+      "instructions": "20 questions • 1 mark each • Full chapter assessment • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH10-Q001",
+        "SCI10CH10-Q002",
+        "SCI10CH10-Q003",
+        "SCI10CH10-Q004",
+        "SCI10CH10-Q009",
+        "SCI10CH10-Q010",
+        "SCI10CH10-Q011",
+        "SCI10CH10-Q012",
+        "SCI10CH10-Q017",
+        "SCI10CH10-Q018",
+        "SCI10CH10-Q019",
+        "SCI10CH10-Q020",
+        "SCI10CH10-Q025",
+        "SCI10CH10-Q026",
+        "SCI10CH10-Q027",
+        "SCI10CH10-Q028",
+        "SCI10CH10-Q033",
+        "SCI10CH10-Q034",
+        "SCI10CH10-Q035",
+        "SCI10CH10-Q036"
+      ]
+    },
+    {
+      "testId": "SCI10CH10-FLT02",
+      "testTitle": "Full-Length Test 2",
+      "testType": "FULL_LENGTH",
+      "topic": "Complete Chapter",
+      "questionLabel": "20 different balanced questions from all five chapter topics",
+      "instructions": "20 questions • 1 mark each • No overlap with Full-Length Test 1 • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH10-Q005",
+        "SCI10CH10-Q006",
+        "SCI10CH10-Q007",
+        "SCI10CH10-Q008",
+        "SCI10CH10-Q013",
+        "SCI10CH10-Q014",
+        "SCI10CH10-Q015",
+        "SCI10CH10-Q016",
+        "SCI10CH10-Q021",
+        "SCI10CH10-Q022",
+        "SCI10CH10-Q023",
+        "SCI10CH10-Q024",
+        "SCI10CH10-Q029",
+        "SCI10CH10-Q030",
+        "SCI10CH10-Q031",
+        "SCI10CH10-Q032",
+        "SCI10CH10-Q037",
+        "SCI10CH10-Q038",
+        "SCI10CH10-Q039",
+        "SCI10CH10-Q040"
+      ]
+    }
+  ]
+};
+  </script>
+
+  <script src="../../assets/js/static-mcq-engine.js"></script>
+</body>
+</html>

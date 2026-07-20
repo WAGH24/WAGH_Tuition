@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CBSE Class 10 Science Chapter 13 MCQ practice for Our Environment in English medium." />
+  <title>Chapter 13 MCQ | CBSE Class 10 Science</title>
+  <link rel="stylesheet" href="../../assets/css/static-mcq-engine.css" />
+</head>
+<body>
+  <div class="wtc-mcq-app">
+    <header class="hero-card">
+      <div class="hero-left">
+        <p class="eyebrow">WAGH Tuition Classes • Static MCQ Engine v1.1</p>
+        <h1 id="testTitle">MCQ Practice</h1>
+        <p id="testMeta" class="meta"></p>
+      </div>
+      <div class="hero-score">
+        <div class="ring" id="progressRing"><span id="answeredCount">0</span></div>
+        <small>Answered</small>
+      </div>
+    </header>
+
+    <section class="sticky-dashboard">
+      <div class="dash-item"><span>Student</span><b id="studentName">Checking login...</b></div>
+      <div class="dash-item"><span>Time</span><b id="timer">00:00</b></div>
+      <div class="dash-item"><span>Questions</span><b id="questionCount">0</b></div>
+      <button id="themeBtn" class="ghost-btn" type="button" aria-label="Change theme">🌙</button>
+      <button id="reviewBtn" class="ghost-btn" type="button">Review</button>
+    </section>
+
+    <section class="notice-card">
+      Select one option for each question. After submit, correct answers and explanations will open.
+      Your result will be saved for progress report.
+    </section>
+
+    <main class="layout-grid">
+      <aside class="question-palette" aria-label="Question palette">
+        <h3>Question Palette</h3>
+        <div id="paletteGrid" class="palette-grid"></div>
+      </aside>
+      <section id="questionList" class="question-list"></section>
+    </main>
+
+    <section id="resultBox" class="result-box hidden"></section>
+
+    <div class="bottom-action-bar">
+      <button id="submitBtn" class="primary-btn" type="button">Submit Test</button>
+      <button id="retryBtn" class="secondary-btn hidden" type="button">Choose Another Test</button>
+      <button id="topBtn" class="secondary-btn" type="button">Top</button>
+    </div>
+  </div>
+
+  <script src="../../assets/js/config.js"></script>
+  <script src="../../assets/js/auth.js"></script>
+  <script src="../../assets/js/api.js"></script>
+
+  <script>
+    window.WTC_STATIC_MCQ = {
+  "pageTitle": "Chapter 13: Our Environment - MCQ Practice",
+  "selectorDescription": "Choose a topic-wise test or a full-length chapter test covering ecosystems, food chains, energy transfer, biological magnification, ozone and waste management.",
+  "board": "CBSE",
+  "className": "Class 10",
+  "medium": "English Medium",
+  "subjectId": "SCI10",
+  "subjectName": "Science",
+  "chapterId": "SCI10CH13",
+  "chapterName": "Our Environment",
+  "instructions": "Select one option for each question. After submit, correct answers and explanations will open. Progress saves automatically.",
+  "questionBank": [
+    {
+      "id": "SCI10CH13-Q001",
+      "topic": "Ecosystem and Its Components",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "An ecosystem consists of:",
+      "options": {
+        "A": "only living organisms",
+        "B": "only non-living surroundings",
+        "C": "living organisms interacting with one another and with the physical environment",
+        "D": "only plants and animals"
+      },
+      "correct": "C",
+      "explanation": "An ecosystem includes biotic components such as plants, animals and microorganisms, together with abiotic components such as air, water, soil and climate."
+    },
+    {
+      "id": "SCI10CH13-Q002",
+      "topic": "Ecosystem and Its Components",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which of the following is an abiotic component of an ecosystem?",
+      "options": {
+        "A": "Grass",
+        "B": "Fungus",
+        "C": "Sunlight",
+        "D": "Bacteria"
+      },
+      "correct": "C",
+      "explanation": "Sunlight is a non-living, or abiotic, component. Grass, fungi and bacteria are living components."
+    },
+    {
+      "id": "SCI10CH13-Q003",
+      "topic": "Ecosystem and Its Components",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Green plants are called producers because they:",
+      "options": {
+        "A": "consume other organisms",
+        "B": "prepare food using sunlight",
+        "C": "decompose dead matter",
+        "D": "feed only on animals"
+      },
+      "correct": "B",
+      "explanation": "Green plants use solar energy to synthesise food through photosynthesis and therefore form the producer level of an ecosystem."
+    },
+    {
+      "id": "SCI10CH13-Q004",
+      "topic": "Ecosystem and Its Components",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Organisms that obtain energy directly by eating producers are called:",
+      "options": {
+        "A": "primary consumers",
+        "B": "secondary consumers",
+        "C": "decomposers",
+        "D": "top carnivores"
+      },
+      "correct": "A",
+      "explanation": "Herbivores that feed directly on producers occupy the primary-consumer level."
+    },
+    {
+      "id": "SCI10CH13-Q005",
+      "topic": "Ecosystem and Its Components",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which organisms break down dead remains and wastes into simpler substances?",
+      "options": {
+        "A": "Producers",
+        "B": "Decomposers",
+        "C": "Primary consumers",
+        "D": "Top carnivores"
+      },
+      "correct": "B",
+      "explanation": "Bacteria and fungi act as decomposers and convert dead organic matter into simpler substances."
+    },
+    {
+      "id": "SCI10CH13-Q006",
+      "topic": "Ecosystem and Its Components",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which is an important role of decomposers in an ecosystem?",
+      "options": {
+        "A": "They permanently remove all nutrients from soil",
+        "B": "They recycle nutrients back into the environment",
+        "C": "They convert sunlight directly into heat only",
+        "D": "They prevent the death of organisms"
+      },
+      "correct": "B",
+      "explanation": "Decomposers release nutrients from dead organisms and wastes, making these nutrients available again to producers."
+    },
+    {
+      "id": "SCI10CH13-Q007",
+      "topic": "Ecosystem and Its Components",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which of the following is an artificial ecosystem?",
+      "options": {
+        "A": "Forest",
+        "B": "Pond",
+        "C": "Crop field",
+        "D": "Lake"
+      },
+      "correct": "C",
+      "explanation": "A crop field is maintained by human intervention and is therefore an artificial ecosystem."
+    },
+    {
+      "id": "SCI10CH13-Q008",
+      "topic": "Ecosystem and Its Components",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "If decomposers disappeared from an ecosystem, which consequence would be most likely?",
+      "options": {
+        "A": "Dead matter would accumulate and nutrient cycling would be disrupted",
+        "B": "Producers would receive more nutrients immediately",
+        "C": "Food chains would gain unlimited energy",
+        "D": "All consumers would become producers"
+      },
+      "correct": "A",
+      "explanation": "Without decomposers, dead organic matter would accumulate and essential nutrients would not be efficiently returned to soil and water."
+    },
+    {
+      "id": "SCI10CH13-Q009",
+      "topic": "Food Chains and Trophic Levels",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "A food chain shows:",
+      "options": {
+        "A": "the transfer of food and energy from one organism to another",
+        "B": "only the movement of water",
+        "C": "the formation of ozone",
+        "D": "the breakdown of plastic"
+      },
+      "correct": "A",
+      "explanation": "A food chain represents a sequence of organisms through which food and energy pass."
+    },
+    {
+      "id": "SCI10CH13-Q010",
+      "topic": "Food Chains and Trophic Levels",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "In the food chain grass → deer → tiger, the deer occupies the:",
+      "options": {
+        "A": "first trophic level",
+        "B": "second trophic level",
+        "C": "third trophic level",
+        "D": "fourth trophic level"
+      },
+      "correct": "B",
+      "explanation": "Grass is the producer at the first trophic level. Deer, a herbivore, is the primary consumer at the second trophic level."
+    },
+    {
+      "id": "SCI10CH13-Q011",
+      "topic": "Food Chains and Trophic Levels",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The first trophic level in a food chain is occupied by:",
+      "options": {
+        "A": "producers",
+        "B": "herbivores",
+        "C": "carnivores",
+        "D": "decomposers only"
+      },
+      "correct": "A",
+      "explanation": "Producers capture solar energy and convert it into chemical energy, forming the first trophic level."
+    },
+    {
+      "id": "SCI10CH13-Q012",
+      "topic": "Food Chains and Trophic Levels",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "A food web is formed when:",
+      "options": {
+        "A": "several food chains are interconnected",
+        "B": "only one organism feeds on one other organism",
+        "C": "all producers disappear",
+        "D": "energy flows backward"
+      },
+      "correct": "A",
+      "explanation": "In natural ecosystems, organisms often participate in more than one food chain, producing an interconnected food web."
+    },
+    {
+      "id": "SCI10CH13-Q013",
+      "topic": "Food Chains and Trophic Levels",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Why are food chains generally limited to only a few trophic levels?",
+      "options": {
+        "A": "Most energy is lost at each transfer",
+        "B": "Energy increases at each transfer",
+        "C": "Producers do not contain energy",
+        "D": "Consumers return all energy to producers"
+      },
+      "correct": "A",
+      "explanation": "Only a small fraction of energy is transferred to the next trophic level, so insufficient energy remains to support many successive levels."
+    },
+    {
+      "id": "SCI10CH13-Q014",
+      "topic": "Food Chains and Trophic Levels",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The flow of energy in an ecosystem is:",
+      "options": {
+        "A": "unidirectional",
+        "B": "cyclic in the same way as nutrients",
+        "C": "from consumers to the Sun",
+        "D": "independent of producers"
+      },
+      "correct": "A",
+      "explanation": "Energy enters through sunlight, passes from producers to consumers and is eventually dissipated as heat. It does not return to the Sun."
+    },
+    {
+      "id": "SCI10CH13-Q015",
+      "topic": "Food Chains and Trophic Levels",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "If producers in an ecosystem store 10,000 J of energy, approximately how much energy may reach primary consumers according to the ten per cent law?",
+      "options": {
+        "A": "10 J",
+        "B": "100 J",
+        "C": "1,000 J",
+        "D": "9,000 J"
+      },
+      "correct": "C",
+      "explanation": "About ten per cent of energy is transferred to the next trophic level. Ten per cent of 10,000 J is 1,000 J."
+    },
+    {
+      "id": "SCI10CH13-Q016",
+      "topic": "Food Chains and Trophic Levels",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "In a food chain, organisms at higher trophic levels generally receive:",
+      "options": {
+        "A": "more energy than producers",
+        "B": "less energy than organisms at lower trophic levels",
+        "C": "exactly the same amount of energy",
+        "D": "energy directly from sunlight only"
+      },
+      "correct": "B",
+      "explanation": "Energy decreases greatly at each trophic transfer, so higher trophic levels receive much less energy."
+    },
+    {
+      "id": "SCI10CH13-Q017",
+      "topic": "Ten Per Cent Law and Energy Transfer",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The ten per cent law refers to the approximate fraction of energy:",
+      "options": {
+        "A": "transferred from one trophic level to the next",
+        "B": "lost only by producers",
+        "C": "stored permanently in decomposers",
+        "D": "returned to the Sun"
+      },
+      "correct": "A",
+      "explanation": "On average, only about ten per cent of the energy available at one trophic level is transferred to the next level."
+    },
+    {
+      "id": "SCI10CH13-Q018",
+      "topic": "Ten Per Cent Law and Energy Transfer",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Most energy available at a trophic level is used by organisms for:",
+      "options": {
+        "A": "life processes and is lost as heat",
+        "B": "creating unlimited biomass",
+        "C": "moving back to the previous trophic level",
+        "D": "forming ozone"
+      },
+      "correct": "A",
+      "explanation": "Organisms use much of their energy for respiration, movement, growth and maintenance, and a large part is dissipated as heat."
+    },
+    {
+      "id": "SCI10CH13-Q019",
+      "topic": "Ten Per Cent Law and Energy Transfer",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which trophic level has the greatest amount of available energy in a typical food chain?",
+      "options": {
+        "A": "Producers",
+        "B": "Primary consumers",
+        "C": "Secondary consumers",
+        "D": "Top carnivores"
+      },
+      "correct": "A",
+      "explanation": "Producers capture solar energy directly and therefore have the greatest energy available in the food chain."
+    },
+    {
+      "id": "SCI10CH13-Q020",
+      "topic": "Ten Per Cent Law and Energy Transfer",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "If primary consumers receive 500 J of energy, approximately how much energy would be available to secondary consumers?",
+      "options": {
+        "A": "5 J",
+        "B": "50 J",
+        "C": "450 J",
+        "D": "5,000 J"
+      },
+      "correct": "B",
+      "explanation": "Applying the ten per cent law, secondary consumers receive about 10% of 500 J, which is 50 J."
+    },
+    {
+      "id": "SCI10CH13-Q021",
+      "topic": "Ten Per Cent Law and Energy Transfer",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Plants in a food chain capture about 20,000 J of energy. Approximately how much may reach a tertiary consumer after three transfers?",
+      "options": {
+        "A": "20 J",
+        "B": "200 J",
+        "C": "2,000 J",
+        "D": "18,000 J"
+      },
+      "correct": "A",
+      "explanation": "20,000 J → 2,000 J at primary consumers → 200 J at secondary consumers → 20 J at tertiary consumers."
+    },
+    {
+      "id": "SCI10CH13-Q022",
+      "topic": "Ten Per Cent Law and Energy Transfer",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Why does eating plants directly generally make more energy available to humans than eating animals that fed on plants?",
+      "options": {
+        "A": "It avoids one or more energy-loss steps between trophic levels",
+        "B": "Plants contain no stored energy",
+        "C": "Animals create energy from nothing",
+        "D": "Energy increases in longer food chains"
+      },
+      "correct": "A",
+      "explanation": "Each trophic transfer loses most of the available energy. Eating at a lower trophic level avoids an additional loss."
+    },
+    {
+      "id": "SCI10CH13-Q023",
+      "topic": "Ten Per Cent Law and Energy Transfer",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which statement about matter and energy in an ecosystem is correct?",
+      "options": {
+        "A": "Matter can be recycled, but energy flow is one-way",
+        "B": "Both matter and energy return completely to the Sun",
+        "C": "Energy is recycled endlessly without loss",
+        "D": "Neither matter nor energy moves between organisms"
+      },
+      "correct": "A",
+      "explanation": "Nutrients can cycle through ecosystems, while energy flows from the Sun through organisms and is gradually lost as heat."
+    },
+    {
+      "id": "SCI10CH13-Q024",
+      "topic": "Ten Per Cent Law and Energy Transfer",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Which change would most directly reduce the energy available to every consumer level in a grassland?",
+      "options": {
+        "A": "A major decrease in grass biomass",
+        "B": "An increase in decomposer activity",
+        "C": "A slight increase in soil minerals",
+        "D": "More sunlight reaching producers"
+      },
+      "correct": "A",
+      "explanation": "Grass is the producer base of the food chain. A major reduction in producers reduces the energy entering all higher trophic levels."
+    },
+    {
+      "id": "SCI10CH13-Q025",
+      "topic": "Biological Magnification",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The progressive increase in the concentration of certain harmful chemicals at successive trophic levels is called:",
+      "options": {
+        "A": "biological magnification",
+        "B": "nitrogen fixation",
+        "C": "photosynthesis",
+        "D": "composting"
+      },
+      "correct": "A",
+      "explanation": "Biological magnification is the increase in concentration of persistent pollutants as they pass through a food chain."
+    },
+    {
+      "id": "SCI10CH13-Q026",
+      "topic": "Biological Magnification",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Biological magnification occurs mainly because certain pollutants:",
+      "options": {
+        "A": "are not readily degraded and accumulate in body tissues",
+        "B": "are used completely in respiration",
+        "C": "are converted immediately into harmless gases",
+        "D": "remain only in soil and never enter food chains"
+      },
+      "correct": "A",
+      "explanation": "Persistent chemicals are not easily broken down or excreted, so they accumulate in organisms and become more concentrated at higher trophic levels."
+    },
+    {
+      "id": "SCI10CH13-Q027",
+      "topic": "Biological Magnification",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "In a contaminated aquatic food chain, the highest concentration of a non-biodegradable pesticide is usually found in:",
+      "options": {
+        "A": "water",
+        "B": "phytoplankton",
+        "C": "small fish",
+        "D": "the top fish-eating bird"
+      },
+      "correct": "D",
+      "explanation": "The pollutant becomes progressively concentrated at higher trophic levels, so the top consumer generally contains the highest concentration."
+    },
+    {
+      "id": "SCI10CH13-Q028",
+      "topic": "Biological Magnification",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Which sequence correctly represents increasing concentration of a persistent pesticide?",
+      "options": {
+        "A": "Water < algae < small fish < large fish",
+        "B": "Large fish < small fish < algae < water",
+        "C": "Algae < water < large fish < small fish",
+        "D": "All levels contain exactly the same concentration"
+      },
+      "correct": "A",
+      "explanation": "Persistent pollutants enter producers and become increasingly concentrated as contaminated organisms are eaten by consumers."
+    },
+    {
+      "id": "SCI10CH13-Q029",
+      "topic": "Biological Magnification",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which agricultural practice can directly contribute to biological magnification?",
+      "options": {
+        "A": "Excessive use of persistent pesticides",
+        "B": "Using compost",
+        "C": "Crop rotation",
+        "D": "Manual removal of weeds"
+      },
+      "correct": "A",
+      "explanation": "Persistent pesticides may enter soil and water, move into food chains and accumulate at higher trophic levels."
+    },
+    {
+      "id": "SCI10CH13-Q030",
+      "topic": "Biological Magnification",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Humans are especially at risk from biological magnification because they:",
+      "options": {
+        "A": "may occupy high trophic levels in several food chains",
+        "B": "never consume plants",
+        "C": "cannot excrete water",
+        "D": "produce all pesticides naturally"
+      },
+      "correct": "A",
+      "explanation": "Humans consume organisms from various trophic levels and may therefore receive high concentrations of persistent pollutants."
+    },
+    {
+      "id": "SCI10CH13-Q031",
+      "topic": "Biological Magnification",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Which measure would best reduce biological magnification in the long term?",
+      "options": {
+        "A": "Reducing the release and use of persistent toxic chemicals",
+        "B": "Adding more top carnivores",
+        "C": "Lengthening food chains",
+        "D": "Burning all organic waste"
+      },
+      "correct": "A",
+      "explanation": "Preventing persistent pollutants from entering ecosystems is the most effective way to reduce their accumulation in food chains."
+    },
+    {
+      "id": "SCI10CH13-Q032",
+      "topic": "Biological Magnification",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "A pollutant that is rapidly broken down into harmless substances is less likely to:",
+      "options": {
+        "A": "undergo biological magnification",
+        "B": "enter the environment",
+        "C": "be used by decomposers",
+        "D": "dissolve in water"
+      },
+      "correct": "A",
+      "explanation": "Biological magnification is mainly associated with persistent substances that resist decomposition and remain in body tissues."
+    },
+    {
+      "id": "SCI10CH13-Q033",
+      "topic": "Ozone Layer and Waste Management",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The ozone layer protects living organisms by absorbing much of the Sun's harmful:",
+      "options": {
+        "A": "ultraviolet radiation",
+        "B": "visible green light",
+        "C": "infrared radiation only",
+        "D": "radio waves"
+      },
+      "correct": "A",
+      "explanation": "Stratospheric ozone absorbs a large proportion of harmful ultraviolet radiation before it reaches Earth's surface."
+    },
+    {
+      "id": "SCI10CH13-Q034",
+      "topic": "Ozone Layer and Waste Management",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Ozone is a molecule made of:",
+      "options": {
+        "A": "one oxygen atom",
+        "B": "two oxygen atoms",
+        "C": "three oxygen atoms",
+        "D": "oxygen and nitrogen atoms"
+      },
+      "correct": "C",
+      "explanation": "Ozone has the chemical formula O₃ and contains three oxygen atoms."
+    },
+    {
+      "id": "SCI10CH13-Q035",
+      "topic": "Ozone Layer and Waste Management",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which group of chemicals has been strongly associated with depletion of stratospheric ozone?",
+      "options": {
+        "A": "Chlorofluorocarbons",
+        "B": "Carbohydrates",
+        "C": "Proteins",
+        "D": "Common salt"
+      },
+      "correct": "A",
+      "explanation": "Chlorofluorocarbons release chlorine-containing species in the upper atmosphere that damage ozone molecules."
+    },
+    {
+      "id": "SCI10CH13-Q036",
+      "topic": "Ozone Layer and Waste Management",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which of the following is biodegradable?",
+      "options": {
+        "A": "Vegetable peels",
+        "B": "Plastic bottle",
+        "C": "Glass jar",
+        "D": "Aluminium foil"
+      },
+      "correct": "A",
+      "explanation": "Vegetable peels can be decomposed by microorganisms, while plastic, glass and aluminium persist much longer."
+    },
+    {
+      "id": "SCI10CH13-Q037",
+      "topic": "Ozone Layer and Waste Management",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which waste is non-biodegradable?",
+      "options": {
+        "A": "Dry leaves",
+        "B": "Cotton cloth",
+        "C": "Plastic packaging",
+        "D": "Fruit peel"
+      },
+      "correct": "C",
+      "explanation": "Most conventional plastics are not readily decomposed by microorganisms and are therefore non-biodegradable."
+    },
+    {
+      "id": "SCI10CH13-Q038",
+      "topic": "Ozone Layer and Waste Management",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The best first step for effective household waste management is to:",
+      "options": {
+        "A": "segregate waste at the source",
+        "B": "mix all waste together",
+        "C": "burn plastic openly",
+        "D": "throw waste into water bodies"
+      },
+      "correct": "A",
+      "explanation": "Separating biodegradable, recyclable and hazardous waste at the source makes composting, recycling and safe disposal much more effective."
+    },
+    {
+      "id": "SCI10CH13-Q039",
+      "topic": "Ozone Layer and Waste Management",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which method is most suitable for managing kitchen scraps and garden waste?",
+      "options": {
+        "A": "Composting",
+        "B": "Open burning",
+        "C": "Dumping into drains",
+        "D": "Mixing with electronic waste"
+      },
+      "correct": "A",
+      "explanation": "Biodegradable kitchen and garden waste can be converted into useful manure through composting."
+    },
+    {
+      "id": "SCI10CH13-Q040",
+      "topic": "Ozone Layer and Waste Management",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Which combination represents environmentally responsible waste handling?",
+      "options": {
+        "A": "Reduce consumption, reuse items, segregate waste and recycle suitable materials",
+        "B": "Use more disposable products and burn mixed waste",
+        "C": "Mix hazardous and biodegradable waste",
+        "D": "Dump plastics in open land"
+      },
+      "correct": "A",
+      "explanation": "Reducing waste generation, reusing products, segregating waste and recycling materials lowers pollution and conserves resources."
+    }
+  ],
+  "tests": [
+    {
+      "testId": "SCI10CH13-T01",
+      "testTitle": "Topic Test 1: Ecosystem and Its Components",
+      "testType": "TOPIC_TEST",
+      "topic": "Ecosystem and Its Components",
+      "questionLabel": "Related questions: Q1-Q8 • Biotic and abiotic components, producers, consumers and decomposers",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH13-Q001",
+        "SCI10CH13-Q002",
+        "SCI10CH13-Q003",
+        "SCI10CH13-Q004",
+        "SCI10CH13-Q005",
+        "SCI10CH13-Q006",
+        "SCI10CH13-Q007",
+        "SCI10CH13-Q008"
+      ]
+    },
+    {
+      "testId": "SCI10CH13-T02",
+      "testTitle": "Topic Test 2: Food Chains and Trophic Levels",
+      "testType": "TOPIC_TEST",
+      "topic": "Food Chains and Trophic Levels",
+      "questionLabel": "Related questions: Q9-Q16 • Food chains, food webs, trophic levels and unidirectional energy flow",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH13-Q009",
+        "SCI10CH13-Q010",
+        "SCI10CH13-Q011",
+        "SCI10CH13-Q012",
+        "SCI10CH13-Q013",
+        "SCI10CH13-Q014",
+        "SCI10CH13-Q015",
+        "SCI10CH13-Q016"
+      ]
+    },
+    {
+      "testId": "SCI10CH13-T03",
+      "testTitle": "Topic Test 3: Energy Transfer",
+      "testType": "TOPIC_TEST",
+      "topic": "Ten Per Cent Law and Energy Transfer",
+      "questionLabel": "Related questions: Q17-Q24 • Ten per cent law, energy loss and trophic-level calculations",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH13-Q017",
+        "SCI10CH13-Q018",
+        "SCI10CH13-Q019",
+        "SCI10CH13-Q020",
+        "SCI10CH13-Q021",
+        "SCI10CH13-Q022",
+        "SCI10CH13-Q023",
+        "SCI10CH13-Q024"
+      ]
+    },
+    {
+      "testId": "SCI10CH13-T04",
+      "testTitle": "Topic Test 4: Biological Magnification",
+      "testType": "TOPIC_TEST",
+      "topic": "Biological Magnification",
+      "questionLabel": "Related questions: Q25-Q32 • Persistent pollutants, food-chain accumulation and prevention",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH13-Q025",
+        "SCI10CH13-Q026",
+        "SCI10CH13-Q027",
+        "SCI10CH13-Q028",
+        "SCI10CH13-Q029",
+        "SCI10CH13-Q030",
+        "SCI10CH13-Q031",
+        "SCI10CH13-Q032"
+      ]
+    },
+    {
+      "testId": "SCI10CH13-T05",
+      "testTitle": "Topic Test 5: Ozone and Waste Management",
+      "testType": "TOPIC_TEST",
+      "topic": "Ozone Layer and Waste Management",
+      "questionLabel": "Related questions: Q33-Q40 • Ozone protection, CFCs, biodegradable waste, segregation and recycling",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH13-Q033",
+        "SCI10CH13-Q034",
+        "SCI10CH13-Q035",
+        "SCI10CH13-Q036",
+        "SCI10CH13-Q037",
+        "SCI10CH13-Q038",
+        "SCI10CH13-Q039",
+        "SCI10CH13-Q040"
+      ]
+    },
+    {
+      "testId": "SCI10CH13-FLT01",
+      "testTitle": "Full-Length Test 1",
+      "testType": "FULL_LENGTH",
+      "topic": "Complete Chapter",
+      "questionLabel": "20 balanced questions from all five chapter topics",
+      "instructions": "20 questions • 1 mark each • Full chapter assessment • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH13-Q001",
+        "SCI10CH13-Q002",
+        "SCI10CH13-Q003",
+        "SCI10CH13-Q004",
+        "SCI10CH13-Q009",
+        "SCI10CH13-Q010",
+        "SCI10CH13-Q011",
+        "SCI10CH13-Q012",
+        "SCI10CH13-Q017",
+        "SCI10CH13-Q018",
+        "SCI10CH13-Q019",
+        "SCI10CH13-Q020",
+        "SCI10CH13-Q025",
+        "SCI10CH13-Q026",
+        "SCI10CH13-Q027",
+        "SCI10CH13-Q028",
+        "SCI10CH13-Q033",
+        "SCI10CH13-Q034",
+        "SCI10CH13-Q035",
+        "SCI10CH13-Q036"
+      ]
+    },
+    {
+      "testId": "SCI10CH13-FLT02",
+      "testTitle": "Full-Length Test 2",
+      "testType": "FULL_LENGTH",
+      "topic": "Complete Chapter",
+      "questionLabel": "20 different balanced questions from all five chapter topics",
+      "instructions": "20 questions • 1 mark each • No overlap with Full-Length Test 1 • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH13-Q005",
+        "SCI10CH13-Q006",
+        "SCI10CH13-Q007",
+        "SCI10CH13-Q008",
+        "SCI10CH13-Q013",
+        "SCI10CH13-Q014",
+        "SCI10CH13-Q015",
+        "SCI10CH13-Q016",
+        "SCI10CH13-Q021",
+        "SCI10CH13-Q022",
+        "SCI10CH13-Q023",
+        "SCI10CH13-Q024",
+        "SCI10CH13-Q029",
+        "SCI10CH13-Q030",
+        "SCI10CH13-Q031",
+        "SCI10CH13-Q032",
+        "SCI10CH13-Q037",
+        "SCI10CH13-Q038",
+        "SCI10CH13-Q039",
+        "SCI10CH13-Q040"
+      ]
+    }
+  ]
+};
+  </script>
+
+  <script src="../../assets/js/static-mcq-engine.js"></script>
+</body>
+</html>

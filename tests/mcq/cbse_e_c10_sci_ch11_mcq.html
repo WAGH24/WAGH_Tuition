@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="CBSE Class 10 Science Chapter 11 MCQ practice for Electricity in English medium."
+  />
+  <title>Chapter 11 MCQ | CBSE Class 10 Science</title>
+  <link rel="stylesheet" href="../../assets/css/static-mcq-engine.css" />
+</head>
+<body>
+  <div class="wtc-mcq-app">
+    <header class="hero-card">
+      <div class="hero-left">
+        <p class="eyebrow">WAGH Tuition Classes • Static MCQ Engine v1.1</p>
+        <h1 id="testTitle">MCQ Practice</h1>
+        <p id="testMeta" class="meta"></p>
+      </div>
+
+      <div class="hero-score">
+        <div class="ring" id="progressRing">
+          <span id="answeredCount">0</span>
+        </div>
+        <small>Answered</small>
+      </div>
+    </header>
+
+    <section class="sticky-dashboard">
+      <div class="dash-item">
+        <span>Student</span>
+        <b id="studentName">Checking login...</b>
+      </div>
+      <div class="dash-item">
+        <span>Time</span>
+        <b id="timer">00:00</b>
+      </div>
+      <div class="dash-item">
+        <span>Questions</span>
+        <b id="questionCount">0</b>
+      </div>
+      <button id="themeBtn" class="ghost-btn" type="button" aria-label="Change theme">🌙</button>
+      <button id="reviewBtn" class="ghost-btn" type="button">Review</button>
+    </section>
+
+    <section class="notice-card">
+      Select one option for each question. After submit, correct answers and
+      explanations will open. Your result will be saved for progress report.
+    </section>
+
+    <main class="layout-grid">
+      <aside class="question-palette" aria-label="Question palette">
+        <h3>Question Palette</h3>
+        <div id="paletteGrid" class="palette-grid"></div>
+      </aside>
+
+      <section id="questionList" class="question-list"></section>
+    </main>
+
+    <section id="resultBox" class="result-box hidden"></section>
+
+    <div class="bottom-action-bar">
+      <button id="submitBtn" class="primary-btn" type="button">
+        Submit Test
+      </button>
+      <button id="retryBtn" class="secondary-btn hidden" type="button">
+        Choose Another Test
+      </button>
+      <button id="topBtn" class="secondary-btn" type="button">Top</button>
+    </div>
+  </div>
+
+  <!-- Keep this exact loading order. -->
+  <script src="../../assets/js/config.js"></script>
+  <script src="../../assets/js/auth.js"></script>
+  <script src="../../assets/js/api.js"></script>
+
+  <script>
+    window.WTC_STATIC_MCQ = {
+  "pageTitle": "Chapter 11: Electricity - MCQ Practice",
+  "selectorDescription": "Choose a topic-wise test or a full-length chapter test covering electric current, potential difference, Ohm's law, resistance, resistor combinations, heating effect, electric power and energy.",
+  "board": "CBSE",
+  "className": "Class 10",
+  "medium": "English Medium",
+  "subjectId": "SCI10",
+  "subjectName": "Science",
+  "chapterId": "SCI10CH11",
+  "chapterName": "Electricity",
+  "instructions": "Select one option for each question. After submit, correct answers and explanations will open. Progress saves automatically.",
+  "questionBank": [
+    {
+      "id": "SCI10CH11-Q001",
+      "topic": "Electric Current, Circuit and Potential Difference",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "A continuous and closed path through which electric current flows is called an:",
+      "options": {
+        "A": "electric circuit",
+        "B": "electric field",
+        "C": "open switch",
+        "D": "insulator"
+      },
+      "correct": "A",
+      "explanation": "An electric circuit is a continuous and closed conducting path. If the path is broken, current stops flowing."
+    },
+    {
+      "id": "SCI10CH11-Q002",
+      "topic": "Electric Current, Circuit and Potential Difference",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Electric current is defined as the:",
+      "options": {
+        "A": "work done per unit charge",
+        "B": "rate of flow of electric charge",
+        "C": "resistance offered per unit length",
+        "D": "energy consumed per unit time"
+      },
+      "correct": "B",
+      "explanation": "Electric current is the amount of charge flowing through a cross-section of a conductor per unit time: I = Q/t."
+    },
+    {
+      "id": "SCI10CH11-Q003",
+      "topic": "Electric Current, Circuit and Potential Difference",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "A current of 0.5 A flows through a bulb filament for 10 minutes. How much charge passes through it?",
+      "options": {
+        "A": "5 C",
+        "B": "50 C",
+        "C": "300 C",
+        "D": "600 C"
+      },
+      "correct": "C",
+      "explanation": "Q = It = 0.5 A × (10 × 60 s) = 0.5 × 600 = 300 C."
+    },
+    {
+      "id": "SCI10CH11-Q004",
+      "topic": "Electric Current, Circuit and Potential Difference",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "One ampere is equal to:",
+      "options": {
+        "A": "1 joule per coulomb",
+        "B": "1 coulomb per second",
+        "C": "1 volt per ohm-second",
+        "D": "1 watt per volt-second"
+      },
+      "correct": "B",
+      "explanation": "A current of 1 ampere flows when 1 coulomb of charge passes through a cross-section in 1 second."
+    },
+    {
+      "id": "SCI10CH11-Q005",
+      "topic": "Electric Current, Circuit and Potential Difference",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The conventional direction of electric current in a metallic conductor is:",
+      "options": {
+        "A": "the same as the direction of electron flow",
+        "B": "opposite to the direction of electron flow",
+        "C": "always from the negative terminal to the positive terminal outside the cell",
+        "D": "independent of the movement of charge"
+      },
+      "correct": "B",
+      "explanation": "Conventional current is taken as the direction in which positive charge would flow, which is opposite to the movement of electrons."
+    },
+    {
+      "id": "SCI10CH11-Q006",
+      "topic": "Electric Current, Circuit and Potential Difference",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "An ammeter is connected in a circuit:",
+      "options": {
+        "A": "in parallel with the component",
+        "B": "in series with the component",
+        "C": "only across the cell terminals",
+        "D": "without completing the circuit"
+      },
+      "correct": "B",
+      "explanation": "An ammeter measures the current flowing through a component, so it is connected in series with that component."
+    },
+    {
+      "id": "SCI10CH11-Q007",
+      "topic": "Electric Current, Circuit and Potential Difference",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Electric potential difference between two points is defined as:",
+      "options": {
+        "A": "charge flowing per unit time",
+        "B": "work done per unit charge",
+        "C": "power used per unit current",
+        "D": "resistance multiplied by time"
+      },
+      "correct": "B",
+      "explanation": "Potential difference is the work done to move unit charge from one point to another: V = W/Q."
+    },
+    {
+      "id": "SCI10CH11-Q008",
+      "topic": "Electric Current, Circuit and Potential Difference",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "How much work is done in moving a charge of 3 C through a potential difference of 12 V?",
+      "options": {
+        "A": "4 J",
+        "B": "15 J",
+        "C": "36 J",
+        "D": "144 J"
+      },
+      "correct": "C",
+      "explanation": "W = VQ = 12 V × 3 C = 36 J. A voltmeter used to measure V is connected in parallel across the two points."
+    },
+    {
+      "id": "SCI10CH11-Q009",
+      "topic": "Ohm's Law, Resistance and Resistivity",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "According to Ohm's law, at constant temperature the potential difference across a conductor is:",
+      "options": {
+        "A": "directly proportional to the current",
+        "B": "inversely proportional to the current",
+        "C": "independent of the current",
+        "D": "equal to the square of the current"
+      },
+      "correct": "A",
+      "explanation": "Ohm's law states that V ∝ I for a given metallic conductor at constant temperature, or V = IR."
+    },
+    {
+      "id": "SCI10CH11-Q010",
+      "topic": "Ohm's Law, Resistance and Resistivity",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "For an ohmic conductor at constant temperature, the graph of potential difference V against current I is:",
+      "options": {
+        "A": "a straight line through the origin",
+        "B": "a circle",
+        "C": "a horizontal line",
+        "D": "a curve that never meets the origin"
+      },
+      "correct": "A",
+      "explanation": "Since V = IR and R is constant, V varies linearly with I. Therefore, the V–I graph is a straight line passing through the origin."
+    },
+    {
+      "id": "SCI10CH11-Q011",
+      "topic": "Ohm's Law, Resistance and Resistivity",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The SI unit of electrical resistance is:",
+      "options": {
+        "A": "volt",
+        "B": "ampere",
+        "C": "ohm",
+        "D": "watt"
+      },
+      "correct": "C",
+      "explanation": "Resistance is measured in ohms, symbol Ω. A conductor has resistance 1 Ω when 1 V produces a current of 1 A."
+    },
+    {
+      "id": "SCI10CH11-Q012",
+      "topic": "Ohm's Law, Resistance and Resistivity",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "A potential difference of 12 V produces a current of 2 A through a resistor. Its resistance is:",
+      "options": {
+        "A": "4 Ω",
+        "B": "6 Ω",
+        "C": "10 Ω",
+        "D": "24 Ω"
+      },
+      "correct": "B",
+      "explanation": "Using R = V/I, R = 12 V ÷ 2 A = 6 Ω."
+    },
+    {
+      "id": "SCI10CH11-Q013",
+      "topic": "Ohm's Law, Resistance and Resistivity",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "For a wire of the same material and cross-sectional area, its resistance is:",
+      "options": {
+        "A": "directly proportional to its length",
+        "B": "inversely proportional to its length",
+        "C": "independent of its length",
+        "D": "proportional to the square of its length"
+      },
+      "correct": "A",
+      "explanation": "For a uniform conductor, R = ρl/A. Therefore, resistance is directly proportional to length l."
+    },
+    {
+      "id": "SCI10CH11-Q014",
+      "topic": "Ohm's Law, Resistance and Resistivity",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "For wires of the same material and length, which wire has the smaller resistance?",
+      "options": {
+        "A": "The thinner wire",
+        "B": "The thicker wire",
+        "C": "Both have the same resistance",
+        "D": "The wire with the smaller cross-sectional area"
+      },
+      "correct": "B",
+      "explanation": "Resistance is inversely proportional to cross-sectional area. A thicker wire has a larger area and therefore a smaller resistance."
+    },
+    {
+      "id": "SCI10CH11-Q015",
+      "topic": "Ohm's Law, Resistance and Resistivity",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The SI unit of electrical resistivity is:",
+      "options": {
+        "A": "Ω m",
+        "B": "Ω/m",
+        "C": "V A",
+        "D": "A/m²"
+      },
+      "correct": "A",
+      "explanation": "From R = ρl/A, the SI unit of resistivity ρ is ohm metre, written Ω m."
+    },
+    {
+      "id": "SCI10CH11-Q016",
+      "topic": "Ohm's Law, Resistance and Resistivity",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "A wire has resistance 8 Ω. Another wire of the same material has half its length and twice its cross-sectional area. Its resistance is:",
+      "options": {
+        "A": "1 Ω",
+        "B": "2 Ω",
+        "C": "4 Ω",
+        "D": "16 Ω"
+      },
+      "correct": "B",
+      "explanation": "R ∝ l/A. The new resistance is R' = 8 × (1/2) ÷ 2 = 8/4 = 2 Ω."
+    },
+    {
+      "id": "SCI10CH11-Q017",
+      "topic": "Series and Parallel Combinations of Resistors",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "In a series combination of resistors, the quantity that remains the same through every resistor is:",
+      "options": {
+        "A": "current",
+        "B": "potential difference",
+        "C": "resistance",
+        "D": "power"
+      },
+      "correct": "A",
+      "explanation": "There is only one path for charge in a series circuit, so the same current flows through every resistor."
+    },
+    {
+      "id": "SCI10CH11-Q018",
+      "topic": "Series and Parallel Combinations of Resistors",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "For resistors connected in series, the total potential difference is:",
+      "options": {
+        "A": "equal to the potential difference across the largest resistor only",
+        "B": "the sum of the potential differences across the individual resistors",
+        "C": "the same across every resistor",
+        "D": "always zero"
+      },
+      "correct": "B",
+      "explanation": "In series, the source voltage is divided among the resistors: V = V₁ + V₂ + V₃ + …"
+    },
+    {
+      "id": "SCI10CH11-Q019",
+      "topic": "Series and Parallel Combinations of Resistors",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The equivalent resistance of resistors R₁, R₂ and R₃ connected in series is:",
+      "options": {
+        "A": "R₁ + R₂ + R₃",
+        "B": "1/R₁ + 1/R₂ + 1/R₃",
+        "C": "R₁R₂R₃",
+        "D": "(R₁ + R₂ + R₃)/3"
+      },
+      "correct": "A",
+      "explanation": "For a series combination, equivalent resistance is the sum of the individual resistances."
+    },
+    {
+      "id": "SCI10CH11-Q020",
+      "topic": "Series and Parallel Combinations of Resistors",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Three resistors of 2 Ω, 3 Ω and 5 Ω are connected in series. Their equivalent resistance is:",
+      "options": {
+        "A": "1 Ω",
+        "B": "5 Ω",
+        "C": "10 Ω",
+        "D": "30 Ω"
+      },
+      "correct": "C",
+      "explanation": "Rₛ = 2 Ω + 3 Ω + 5 Ω = 10 Ω."
+    },
+    {
+      "id": "SCI10CH11-Q021",
+      "topic": "Series and Parallel Combinations of Resistors",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "In a parallel combination of resistors, the quantity that is the same across every branch is:",
+      "options": {
+        "A": "potential difference",
+        "B": "current",
+        "C": "resistance",
+        "D": "heat produced"
+      },
+      "correct": "A",
+      "explanation": "All branches in a parallel circuit are connected across the same two points, so each branch has the same potential difference."
+    },
+    {
+      "id": "SCI10CH11-Q022",
+      "topic": "Series and Parallel Combinations of Resistors",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "For three resistors connected in parallel, the equivalent resistance Rₚ is given by:",
+      "options": {
+        "A": "Rₚ = R₁ + R₂ + R₃",
+        "B": "1/Rₚ = 1/R₁ + 1/R₂ + 1/R₃",
+        "C": "Rₚ = R₁R₂R₃",
+        "D": "Rₚ = (R₁ + R₂ + R₃)/3 in every case"
+      },
+      "correct": "B",
+      "explanation": "For parallel resistors, the reciprocal of equivalent resistance equals the sum of the reciprocals of the individual resistances."
+    },
+    {
+      "id": "SCI10CH11-Q023",
+      "topic": "Series and Parallel Combinations of Resistors",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "A 6 Ω resistor and a 3 Ω resistor are connected in parallel. Their equivalent resistance is:",
+      "options": {
+        "A": "2 Ω",
+        "B": "3 Ω",
+        "C": "4.5 Ω",
+        "D": "9 Ω"
+      },
+      "correct": "A",
+      "explanation": "1/Rₚ = 1/6 + 1/3 = 1/6 + 2/6 = 3/6 = 1/2. Therefore, Rₚ = 2 Ω."
+    },
+    {
+      "id": "SCI10CH11-Q024",
+      "topic": "Series and Parallel Combinations of Resistors",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Why are household appliances generally connected in parallel rather than in series?",
+      "options": {
+        "A": "Each appliance receives the same supply voltage and can be operated independently",
+        "B": "The same current must pass through every appliance",
+        "C": "The total resistance always becomes infinite",
+        "D": "Switching off one appliance must switch off all appliances"
+      },
+      "correct": "A",
+      "explanation": "Parallel connection gives every appliance the full supply potential difference and allows separate switching without interrupting other branches."
+    },
+    {
+      "id": "SCI10CH11-Q025",
+      "topic": "Heating Effect of Electric Current and Fuse",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "In a purely resistive circuit, electrical energy is mainly converted into:",
+      "options": {
+        "A": "heat energy",
+        "B": "chemical energy",
+        "C": "nuclear energy",
+        "D": "gravitational potential energy"
+      },
+      "correct": "A",
+      "explanation": "When current flows through a resistor, electrical energy is dissipated as heat. This is the heating effect of electric current."
+    },
+    {
+      "id": "SCI10CH11-Q026",
+      "topic": "Heating Effect of Electric Current and Fuse",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "According to Joule's law of heating, the heat produced in a resistor is:",
+      "options": {
+        "A": "H = I²Rt",
+        "B": "H = IR/t",
+        "C": "H = V/I",
+        "D": "H = R/It"
+      },
+      "correct": "A",
+      "explanation": "Joule's law gives H = I²Rt. The heat is proportional to the square of current, resistance and time."
+    },
+    {
+      "id": "SCI10CH11-Q027",
+      "topic": "Heating Effect of Electric Current and Fuse",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "A current of 2 A flows through a 5 Ω resistor for 10 s. The heat produced is:",
+      "options": {
+        "A": "50 J",
+        "B": "100 J",
+        "C": "200 J",
+        "D": "400 J"
+      },
+      "correct": "C",
+      "explanation": "H = I²Rt = (2 A)² × 5 Ω × 10 s = 4 × 5 × 10 = 200 J."
+    },
+    {
+      "id": "SCI10CH11-Q028",
+      "topic": "Heating Effect of Electric Current and Fuse",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "If the current through a resistor is doubled while resistance and time remain unchanged, the heat produced becomes:",
+      "options": {
+        "A": "half",
+        "B": "double",
+        "C": "four times",
+        "D": "eight times"
+      },
+      "correct": "C",
+      "explanation": "Since H ∝ I², doubling current changes heat by a factor of 2² = 4."
+    },
+    {
+      "id": "SCI10CH11-Q029",
+      "topic": "Heating Effect of Electric Current and Fuse",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Heating elements of electric irons and toasters are commonly made of alloys because alloys generally have:",
+      "options": {
+        "A": "high resistivity, high melting point and low tendency to oxidise",
+        "B": "zero resistance and low melting point",
+        "C": "very low resistivity and high chemical reactivity",
+        "D": "no heating effect when current flows"
+      },
+      "correct": "A",
+      "explanation": "Alloys such as nichrome have high resistivity, can withstand high temperatures and do not oxidise readily, making them suitable heating elements."
+    },
+    {
+      "id": "SCI10CH11-Q030",
+      "topic": "Heating Effect of Electric Current and Fuse",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Tungsten is used for electric-bulb filaments mainly because it has a:",
+      "options": {
+        "A": "very high melting point",
+        "B": "very low melting point",
+        "C": "very low density only",
+        "D": "complete inability to produce heat"
+      },
+      "correct": "A",
+      "explanation": "A bulb filament becomes extremely hot. Tungsten has a very high melting point, so it can glow without melting under normal operation."
+    },
+    {
+      "id": "SCI10CH11-Q031",
+      "topic": "Heating Effect of Electric Current and Fuse",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "An electric fuse protects a circuit because its wire:",
+      "options": {
+        "A": "melts and breaks the circuit when excessive current flows",
+        "B": "increases the supply voltage during overloading",
+        "C": "is connected in parallel and never heats",
+        "D": "has an infinitely high melting point"
+      },
+      "correct": "A",
+      "explanation": "A fuse is connected in series. Excessive current heats its low-melting-point wire until it melts, opening the circuit."
+    },
+    {
+      "id": "SCI10CH11-Q032",
+      "topic": "Heating Effect of Electric Current and Fuse",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "An electric iron rated 1 kW operates at 220 V. Which fuse rating is most suitable?",
+      "options": {
+        "A": "1 A",
+        "B": "3 A",
+        "C": "5 A",
+        "D": "10 mA"
+      },
+      "correct": "C",
+      "explanation": "I = P/V = 1000 W ÷ 220 V ≈ 4.55 A. A 5 A fuse is the nearest suitable rating above the normal operating current."
+    },
+    {
+      "id": "SCI10CH11-Q033",
+      "topic": "Electric Power and Electrical Energy",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Electric power is the rate at which electrical energy is:",
+      "options": {
+        "A": "consumed or converted",
+        "B": "stored as charge only",
+        "C": "measured as resistance",
+        "D": "converted only into chemical energy"
+      },
+      "correct": "A",
+      "explanation": "Electric power measures the rate of consumption or conversion of electrical energy."
+    },
+    {
+      "id": "SCI10CH11-Q034",
+      "topic": "Electric Power and Electrical Energy",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which set contains three equivalent expressions for electric power?",
+      "options": {
+        "A": "P = VI, P = I²R, P = V²/R",
+        "B": "P = V/I, P = IR, P = Rt",
+        "C": "P = Q/t, P = W/Q, P = ρl/A",
+        "D": "P = I/R, P = Vt, P = R/V"
+      },
+      "correct": "A",
+      "explanation": "Electric power can be written as P = VI. Using V = IR gives P = I²R and P = V²/R."
+    },
+    {
+      "id": "SCI10CH11-Q035",
+      "topic": "Electric Power and Electrical Energy",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The SI unit of electric power is:",
+      "options": {
+        "A": "watt",
+        "B": "kilowatt-hour",
+        "C": "joule per coulomb",
+        "D": "ohm metre"
+      },
+      "correct": "A",
+      "explanation": "The SI unit of power is watt (W). One watt equals one volt multiplied by one ampere."
+    },
+    {
+      "id": "SCI10CH11-Q036",
+      "topic": "Electric Power and Electrical Energy",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "An appliance draws 2 A from a 220 V supply. Its electric power is:",
+      "options": {
+        "A": "110 W",
+        "B": "220 W",
+        "C": "440 W",
+        "D": "880 W"
+      },
+      "correct": "C",
+      "explanation": "P = VI = 220 V × 2 A = 440 W."
+    },
+    {
+      "id": "SCI10CH11-Q037",
+      "topic": "Electric Power and Electrical Energy",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "A 1000 W heater is used for 2 hours. The electrical energy consumed is:",
+      "options": {
+        "A": "0.5 kWh",
+        "B": "1 kWh",
+        "C": "2 kWh",
+        "D": "2000 kWh"
+      },
+      "correct": "C",
+      "explanation": "Energy = power × time = 1 kW × 2 h = 2 kWh."
+    },
+    {
+      "id": "SCI10CH11-Q038",
+      "topic": "Electric Power and Electrical Energy",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "One kilowatt-hour is equal to:",
+      "options": {
+        "A": "3.6 × 10³ J",
+        "B": "3.6 × 10⁴ J",
+        "C": "3.6 × 10⁵ J",
+        "D": "3.6 × 10⁶ J"
+      },
+      "correct": "D",
+      "explanation": "1 kWh = 1000 W × 3600 s = 3.6 × 10⁶ J. It is the commercial unit of electrical energy."
+    },
+    {
+      "id": "SCI10CH11-Q039",
+      "topic": "Electric Power and Electrical Energy",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "A 1100 W appliance is connected to a 220 V supply. The current drawn is:",
+      "options": {
+        "A": "0.2 A",
+        "B": "2 A",
+        "C": "5 A",
+        "D": "242 A"
+      },
+      "correct": "C",
+      "explanation": "Using I = P/V, I = 1100 W ÷ 220 V = 5 A."
+    },
+    {
+      "id": "SCI10CH11-Q040",
+      "topic": "Electric Power and Electrical Energy",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "A 60 W bulb is used for 5 hours. How much electrical energy does it consume?",
+      "options": {
+        "A": "0.03 kWh",
+        "B": "0.3 kWh",
+        "C": "3 kWh",
+        "D": "300 kWh"
+      },
+      "correct": "B",
+      "explanation": "60 W = 0.06 kW. Energy = 0.06 kW × 5 h = 0.30 kWh."
+    }
+  ],
+  "tests": [
+    {
+      "testId": "SCI10CH11-T01",
+      "testTitle": "Topic Test 1: Current, Circuit and Potential Difference",
+      "testType": "TOPIC_TEST",
+      "topic": "Electric Current, Circuit and Potential Difference",
+      "questionLabel": "Related questions: Q1-Q8 • Electric circuit, charge flow, current, ammeter, potential difference and voltmeter",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH11-Q001",
+        "SCI10CH11-Q002",
+        "SCI10CH11-Q003",
+        "SCI10CH11-Q004",
+        "SCI10CH11-Q005",
+        "SCI10CH11-Q006",
+        "SCI10CH11-Q007",
+        "SCI10CH11-Q008"
+      ]
+    },
+    {
+      "testId": "SCI10CH11-T02",
+      "testTitle": "Topic Test 2: Ohm's Law and Resistance",
+      "testType": "TOPIC_TEST",
+      "topic": "Ohm's Law, Resistance and Resistivity",
+      "questionLabel": "Related questions: Q9-Q16 • Ohm's law, V–I graph, resistance, length, area and resistivity",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH11-Q009",
+        "SCI10CH11-Q010",
+        "SCI10CH11-Q011",
+        "SCI10CH11-Q012",
+        "SCI10CH11-Q013",
+        "SCI10CH11-Q014",
+        "SCI10CH11-Q015",
+        "SCI10CH11-Q016"
+      ]
+    },
+    {
+      "testId": "SCI10CH11-T03",
+      "testTitle": "Topic Test 3: Resistor Combinations",
+      "testType": "TOPIC_TEST",
+      "topic": "Series and Parallel Combinations of Resistors",
+      "questionLabel": "Related questions: Q17-Q24 • Series and parallel rules, equivalent resistance and household connections",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH11-Q017",
+        "SCI10CH11-Q018",
+        "SCI10CH11-Q019",
+        "SCI10CH11-Q020",
+        "SCI10CH11-Q021",
+        "SCI10CH11-Q022",
+        "SCI10CH11-Q023",
+        "SCI10CH11-Q024"
+      ]
+    },
+    {
+      "testId": "SCI10CH11-T04",
+      "testTitle": "Topic Test 4: Heating Effect and Fuse",
+      "testType": "TOPIC_TEST",
+      "topic": "Heating Effect of Electric Current and Fuse",
+      "questionLabel": "Related questions: Q25-Q32 • Joule heating, heating elements, bulb filament and electric fuse",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH11-Q025",
+        "SCI10CH11-Q026",
+        "SCI10CH11-Q027",
+        "SCI10CH11-Q028",
+        "SCI10CH11-Q029",
+        "SCI10CH11-Q030",
+        "SCI10CH11-Q031",
+        "SCI10CH11-Q032"
+      ]
+    },
+    {
+      "testId": "SCI10CH11-T05",
+      "testTitle": "Topic Test 5: Electric Power and Energy",
+      "testType": "TOPIC_TEST",
+      "topic": "Electric Power and Electrical Energy",
+      "questionLabel": "Related questions: Q33-Q40 • Power formulae, watt, kilowatt-hour and numerical applications",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH11-Q033",
+        "SCI10CH11-Q034",
+        "SCI10CH11-Q035",
+        "SCI10CH11-Q036",
+        "SCI10CH11-Q037",
+        "SCI10CH11-Q038",
+        "SCI10CH11-Q039",
+        "SCI10CH11-Q040"
+      ]
+    },
+    {
+      "testId": "SCI10CH11-FLT01",
+      "testTitle": "Full-Length Test 1",
+      "testType": "FULL_LENGTH",
+      "topic": "Complete Chapter",
+      "questionLabel": "20 balanced questions from all five chapter topics",
+      "instructions": "20 questions • 1 mark each • Full chapter assessment • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH11-Q001",
+        "SCI10CH11-Q002",
+        "SCI10CH11-Q003",
+        "SCI10CH11-Q004",
+        "SCI10CH11-Q009",
+        "SCI10CH11-Q010",
+        "SCI10CH11-Q011",
+        "SCI10CH11-Q012",
+        "SCI10CH11-Q017",
+        "SCI10CH11-Q018",
+        "SCI10CH11-Q019",
+        "SCI10CH11-Q020",
+        "SCI10CH11-Q025",
+        "SCI10CH11-Q026",
+        "SCI10CH11-Q027",
+        "SCI10CH11-Q028",
+        "SCI10CH11-Q033",
+        "SCI10CH11-Q034",
+        "SCI10CH11-Q035",
+        "SCI10CH11-Q036"
+      ]
+    },
+    {
+      "testId": "SCI10CH11-FLT02",
+      "testTitle": "Full-Length Test 2",
+      "testType": "FULL_LENGTH",
+      "topic": "Complete Chapter",
+      "questionLabel": "20 different balanced questions from all five chapter topics",
+      "instructions": "20 questions • 1 mark each • No overlap with Full-Length Test 1 • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH11-Q005",
+        "SCI10CH11-Q006",
+        "SCI10CH11-Q007",
+        "SCI10CH11-Q008",
+        "SCI10CH11-Q013",
+        "SCI10CH11-Q014",
+        "SCI10CH11-Q015",
+        "SCI10CH11-Q016",
+        "SCI10CH11-Q021",
+        "SCI10CH11-Q022",
+        "SCI10CH11-Q023",
+        "SCI10CH11-Q024",
+        "SCI10CH11-Q029",
+        "SCI10CH11-Q030",
+        "SCI10CH11-Q031",
+        "SCI10CH11-Q032",
+        "SCI10CH11-Q037",
+        "SCI10CH11-Q038",
+        "SCI10CH11-Q039",
+        "SCI10CH11-Q040"
+      ]
+    }
+  ]
+};
+  </script>
+
+  <script src="../../assets/js/static-mcq-engine.js"></script>
+</body>
+</html>

@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="CBSE Class 10 Science Chapter 3 MCQ practice for Metals and Non-metals in English medium."
+  />
+  <title>Chapter 3 MCQ | CBSE Class 10 Science</title>
+  <link rel="stylesheet" href="../../assets/css/static-mcq-engine.css" />
+</head>
+<body>
+  <div class="wtc-mcq-app">
+    <header class="hero-card">
+      <div class="hero-left">
+        <p class="eyebrow">WAGH Tuition Classes • Static MCQ Engine v1.1</p>
+        <h1 id="testTitle">MCQ Practice</h1>
+        <p id="testMeta" class="meta"></p>
+      </div>
+
+      <div class="hero-score">
+        <div class="ring" id="progressRing">
+          <span id="answeredCount">0</span>
+        </div>
+        <small>Answered</small>
+      </div>
+    </header>
+
+    <section class="sticky-dashboard">
+      <div class="dash-item">
+        <span>Student</span>
+        <b id="studentName">Checking login...</b>
+      </div>
+      <div class="dash-item">
+        <span>Time</span>
+        <b id="timer">00:00</b>
+      </div>
+      <div class="dash-item">
+        <span>Questions</span>
+        <b id="questionCount">0</b>
+      </div>
+      <button id="themeBtn" class="ghost-btn" type="button" aria-label="Change theme">🌙</button>
+      <button id="reviewBtn" class="ghost-btn" type="button">Review</button>
+    </section>
+
+    <section class="notice-card">
+      Select one option for each question. After submit, correct answers and
+      explanations will open. Your result will be saved for progress report.
+    </section>
+
+    <main class="layout-grid">
+      <aside class="question-palette" aria-label="Question palette">
+        <h3>Question Palette</h3>
+        <div id="paletteGrid" class="palette-grid"></div>
+      </aside>
+
+      <section id="questionList" class="question-list"></section>
+    </main>
+
+    <section id="resultBox" class="result-box hidden"></section>
+
+    <div class="bottom-action-bar">
+      <button id="submitBtn" class="primary-btn" type="button">
+        Submit Test
+      </button>
+      <button id="retryBtn" class="secondary-btn hidden" type="button">
+        Choose Another Test
+      </button>
+      <button id="topBtn" class="secondary-btn" type="button">Top</button>
+    </div>
+  </div>
+
+  <!-- Keep this exact loading order. -->
+  <script src="../../assets/js/config.js"></script>
+  <script src="../../assets/js/auth.js"></script>
+  <script src="../../assets/js/api.js"></script>
+
+  <script>
+    window.WTC_STATIC_MCQ = {
+  "pageTitle": "Chapter 3: Metals and Non-metals - MCQ Practice",
+  "selectorDescription": "Choose a topic-wise test or a full-length chapter test covering physical properties, chemical reactions, the reactivity series, ionic compounds, metallurgy, corrosion and alloys.",
+  "board": "CBSE",
+  "className": "Class 10",
+  "medium": "English Medium",
+  "subjectId": "SCI10",
+  "subjectName": "Science",
+  "chapterId": "SCI10CH03",
+  "chapterName": "Metals and Non-metals",
+  "instructions": "Select one option for each question. After submit, correct answers and explanations will open. Progress saves automatically.",
+  "questionBank": [
+    {
+      "id": "SCI10CH03-Q001",
+      "topic": "Physical Properties of Metals and Non-metals",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The shiny surface of a freshly cut metal is described by which property?",
+      "options": {
+        "A": "Malleability",
+        "B": "Metallic lustre",
+        "C": "Ductility",
+        "D": "Sonority"
+      },
+      "correct": "B",
+      "explanation": "Metals in their pure state generally have a shining surface. This characteristic is called metallic lustre."
+    },
+    {
+      "id": "SCI10CH03-Q002",
+      "topic": "Physical Properties of Metals and Non-metals",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The ability of a metal to be beaten into thin sheets is called:",
+      "options": {
+        "A": "ductility",
+        "B": "sonority",
+        "C": "malleability",
+        "D": "conductivity"
+      },
+      "correct": "C",
+      "explanation": "Malleability is the property that allows a metal to be hammered or beaten into thin sheets."
+    },
+    {
+      "id": "SCI10CH03-Q003",
+      "topic": "Physical Properties of Metals and Non-metals",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which property enables metals to be drawn into thin wires?",
+      "options": {
+        "A": "Ductility",
+        "B": "Brittleness",
+        "C": "Lustre",
+        "D": "Hardness"
+      },
+      "correct": "A",
+      "explanation": "Ductility is the ability of a metal to be drawn into thin wires. Gold is the most ductile metal."
+    },
+    {
+      "id": "SCI10CH03-Q004",
+      "topic": "Physical Properties of Metals and Non-metals",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Why are metals commonly used for making bells?",
+      "options": {
+        "A": "They are brittle",
+        "B": "They are sonorous",
+        "C": "They are poor conductors",
+        "D": "They have low density"
+      },
+      "correct": "B",
+      "explanation": "Metals produce a ringing sound when struck. This property is called sonority, so metals are used for making bells."
+    },
+    {
+      "id": "SCI10CH03-Q005",
+      "topic": "Physical Properties of Metals and Non-metals",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which pair consists of the best conductors of heat among common metals?",
+      "options": {
+        "A": "Lead and mercury",
+        "B": "Silver and copper",
+        "C": "Sodium and potassium",
+        "D": "Iron and zinc"
+      },
+      "correct": "B",
+      "explanation": "Silver and copper are among the best conductors of heat. Lead and mercury are comparatively poor conductors."
+    },
+    {
+      "id": "SCI10CH03-Q006",
+      "topic": "Physical Properties of Metals and Non-metals",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which metal is liquid at room temperature?",
+      "options": {
+        "A": "Mercury",
+        "B": "Aluminium",
+        "C": "Iron",
+        "D": "Sodium"
+      },
+      "correct": "A",
+      "explanation": "Mercury is the common metal that exists as a liquid at room temperature."
+    },
+    {
+      "id": "SCI10CH03-Q007",
+      "topic": "Physical Properties of Metals and Non-metals",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which non-metal is an exception because it conducts electricity?",
+      "options": {
+        "A": "Sulphur",
+        "B": "Phosphorus",
+        "C": "Graphite",
+        "D": "Bromine"
+      },
+      "correct": "C",
+      "explanation": "Graphite, an allotrope of carbon, conducts electricity even though carbon is a non-metal."
+    },
+    {
+      "id": "SCI10CH03-Q008",
+      "topic": "Physical Properties of Metals and Non-metals",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Which statement correctly identifies an exception to the usual physical properties of non-metals?",
+      "options": {
+        "A": "Iodine is lustrous",
+        "B": "Sulphur is ductile",
+        "C": "Bromine is malleable",
+        "D": "Phosphorus is sonorous"
+      },
+      "correct": "A",
+      "explanation": "Iodine is a non-metal but has a lustrous appearance. It is an important exception to the usual dull nature of non-metals."
+    },
+    {
+      "id": "SCI10CH03-Q009",
+      "topic": "Chemical Properties and Reactivity Series",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Most metal oxides are generally:",
+      "options": {
+        "A": "acidic",
+        "B": "basic",
+        "C": "neutral",
+        "D": "always amphoteric"
+      },
+      "correct": "B",
+      "explanation": "Most metal oxides are basic in nature, although aluminium oxide and zinc oxide are amphoteric."
+    },
+    {
+      "id": "SCI10CH03-Q010",
+      "topic": "Chemical Properties and Reactivity Series",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which pair of oxides is amphoteric?",
+      "options": {
+        "A": "Na₂O and K₂O",
+        "B": "CO₂ and SO₂",
+        "C": "Al₂O₃ and ZnO",
+        "D": "MgO and CaO"
+      },
+      "correct": "C",
+      "explanation": "Aluminium oxide and zinc oxide react with both acids and bases, so they are amphoteric oxides."
+    },
+    {
+      "id": "SCI10CH03-Q011",
+      "topic": "Chemical Properties and Reactivity Series",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Why are sodium and potassium stored under kerosene oil?",
+      "options": {
+        "A": "They dissolve in kerosene",
+        "B": "They react vigorously with air and moisture",
+        "C": "Kerosene increases their density",
+        "D": "Kerosene makes them harder"
+      },
+      "correct": "B",
+      "explanation": "Sodium and potassium react very vigorously with oxygen and moisture and may catch fire. Kerosene keeps them away from air and water."
+    },
+    {
+      "id": "SCI10CH03-Q012",
+      "topic": "Chemical Properties and Reactivity Series",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Calcium starts floating when it reacts with water because:",
+      "options": {
+        "A": "calcium is lighter than water",
+        "B": "hydrogen bubbles stick to its surface",
+        "C": "calcium hydroxide is a gas",
+        "D": "oxygen bubbles lift it"
+      },
+      "correct": "B",
+      "explanation": "The hydrogen gas produced in the reaction forms bubbles that stick to the calcium surface, making the metal float."
+    },
+    {
+      "id": "SCI10CH03-Q013",
+      "topic": "Chemical Properties and Reactivity Series",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which metal reacts with steam but does not react with cold or hot water under ordinary conditions?",
+      "options": {
+        "A": "Copper",
+        "B": "Iron",
+        "C": "Gold",
+        "D": "Silver"
+      },
+      "correct": "B",
+      "explanation": "Iron does not react with cold or hot water, but it reacts with steam to form Fe₃O₄ and hydrogen gas."
+    },
+    {
+      "id": "SCI10CH03-Q014",
+      "topic": "Chemical Properties and Reactivity Series",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Why does copper not liberate hydrogen gas from dilute hydrochloric acid?",
+      "options": {
+        "A": "Copper is above hydrogen in the activity series",
+        "B": "Copper is below hydrogen in the activity series",
+        "C": "Copper reacts only with water",
+        "D": "Hydrochloric acid contains no hydrogen"
+      },
+      "correct": "B",
+      "explanation": "Copper lies below hydrogen in the activity series and therefore cannot displace hydrogen from dilute hydrochloric acid."
+    },
+    {
+      "id": "SCI10CH03-Q015",
+      "topic": "Chemical Properties and Reactivity Series",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Hydrogen gas is usually not evolved when a metal reacts with nitric acid because nitric acid:",
+      "options": {
+        "A": "is a weak acid",
+        "B": "is a strong oxidising agent",
+        "C": "contains no hydrogen ions",
+        "D": "forms only insoluble salts"
+      },
+      "correct": "B",
+      "explanation": "Nitric acid is a strong oxidising agent. It oxidises the hydrogen formed to water and itself gets reduced to nitrogen oxides. Very dilute nitric acid with magnesium or manganese is an exception."
+    },
+    {
+      "id": "SCI10CH03-Q016",
+      "topic": "Chemical Properties and Reactivity Series",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "What happens when an iron nail is placed in copper(II) sulphate solution?",
+      "options": {
+        "A": "No reaction occurs",
+        "B": "Iron displaces copper and forms iron(II) sulphate",
+        "C": "Copper displaces iron",
+        "D": "Only hydrogen gas is produced"
+      },
+      "correct": "B",
+      "explanation": "Iron is more reactive than copper, so it displaces copper from copper(II) sulphate: Fe + CuSO₄ → FeSO₄ + Cu."
+    },
+    {
+      "id": "SCI10CH03-Q017",
+      "topic": "Ionic Compounds",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "A sodium atom forms a sodium ion by:",
+      "options": {
+        "A": "gaining one electron",
+        "B": "losing one electron",
+        "C": "gaining two electrons",
+        "D": "sharing four electrons"
+      },
+      "correct": "B",
+      "explanation": "Sodium has electronic configuration 2,8,1. It loses one valence electron to form Na⁺ with the stable configuration 2,8."
+    },
+    {
+      "id": "SCI10CH03-Q018",
+      "topic": "Ionic Compounds",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "A chlorine atom forms a chloride ion by:",
+      "options": {
+        "A": "losing one electron",
+        "B": "gaining one electron",
+        "C": "losing two electrons",
+        "D": "gaining three electrons"
+      },
+      "correct": "B",
+      "explanation": "Chlorine has seven valence electrons and gains one electron to complete its octet, forming Cl⁻."
+    },
+    {
+      "id": "SCI10CH03-Q019",
+      "topic": "Ionic Compounds",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which ions are present in magnesium chloride, MgCl₂?",
+      "options": {
+        "A": "Mg⁺ and Cl²⁻",
+        "B": "Mg²⁺ and two Cl⁻ ions",
+        "C": "Two Mg⁺ ions and Cl²⁻",
+        "D": "Mg²⁻ and two Cl⁺ ions"
+      },
+      "correct": "B",
+      "explanation": "Magnesium loses two electrons to form Mg²⁺. Two chlorine atoms each gain one electron, producing two Cl⁻ ions."
+    },
+    {
+      "id": "SCI10CH03-Q020",
+      "topic": "Ionic Compounds",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The force that holds oppositely charged ions together in an ionic compound is:",
+      "options": {
+        "A": "gravitational force",
+        "B": "electrostatic force of attraction",
+        "C": "magnetic force",
+        "D": "nuclear force"
+      },
+      "correct": "B",
+      "explanation": "Ionic compounds are held together by strong electrostatic forces of attraction between positively and negatively charged ions."
+    },
+    {
+      "id": "SCI10CH03-Q021",
+      "topic": "Ionic Compounds",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which statement about sodium chloride is correct?",
+      "options": {
+        "A": "It exists as separate NaCl molecules only",
+        "B": "It exists as an aggregate of oppositely charged ions",
+        "C": "It contains covalent bonds only",
+        "D": "It contains free sodium atoms"
+      },
+      "correct": "B",
+      "explanation": "Solid sodium chloride consists of a large three-dimensional aggregate of Na⁺ and Cl⁻ ions rather than separate molecules."
+    },
+    {
+      "id": "SCI10CH03-Q022",
+      "topic": "Ionic Compounds",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Why do ionic compounds generally have high melting and boiling points?",
+      "options": {
+        "A": "Their ions are very light",
+        "B": "Strong inter-ionic attractions require much energy to overcome",
+        "C": "They contain trapped gases",
+        "D": "Their ions do not attract one another"
+      },
+      "correct": "B",
+      "explanation": "A large amount of energy is needed to overcome the strong electrostatic attraction between oppositely charged ions."
+    },
+    {
+      "id": "SCI10CH03-Q023",
+      "topic": "Ionic Compounds",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Why does solid sodium chloride not conduct electricity, whereas molten sodium chloride does?",
+      "options": {
+        "A": "Solid sodium chloride has no ions",
+        "B": "Ions are fixed in the solid but can move in the molten state",
+        "C": "Molten sodium chloride contains electrons only",
+        "D": "Heating converts it into a metal"
+      },
+      "correct": "B",
+      "explanation": "In the solid state, ions are held in fixed positions in a rigid lattice. On melting, the ions become mobile and can carry electric current."
+    },
+    {
+      "id": "SCI10CH03-Q024",
+      "topic": "Ionic Compounds",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which statement correctly describes the solubility of most ionic compounds?",
+      "options": {
+        "A": "They are generally soluble in water and insoluble in kerosene",
+        "B": "They are insoluble in water and soluble in petrol",
+        "C": "They dissolve equally in all solvents",
+        "D": "They are soluble only in molten metals"
+      },
+      "correct": "A",
+      "explanation": "Most ionic compounds dissolve in polar water but are generally insoluble in non-polar solvents such as kerosene and petrol."
+    },
+    {
+      "id": "SCI10CH03-Q025",
+      "topic": "Occurrence, Extraction and Refining of Metals",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "A naturally occurring material from which a metal can be extracted profitably is called:",
+      "options": {
+        "A": "an alloy",
+        "B": "an ore",
+        "C": "a gangue",
+        "D": "a slag"
+      },
+      "correct": "B",
+      "explanation": "An ore is a mineral containing enough of a particular metal for its profitable extraction."
+    },
+    {
+      "id": "SCI10CH03-Q026",
+      "topic": "Occurrence, Extraction and Refining of Metals",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The unwanted earthy impurities such as soil and sand present in an ore are called:",
+      "options": {
+        "A": "flux",
+        "B": "gangue",
+        "C": "alloy",
+        "D": "catalyst"
+      },
+      "correct": "B",
+      "explanation": "The unwanted impurities associated with an ore are called gangue and must be removed before metal extraction."
+    },
+    {
+      "id": "SCI10CH03-Q027",
+      "topic": "Occurrence, Extraction and Refining of Metals",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which group of metals is most likely to be found in the native state?",
+      "options": {
+        "A": "Potassium, sodium and calcium",
+        "B": "Magnesium, aluminium and zinc",
+        "C": "Gold, silver and platinum",
+        "D": "Iron, lead and zinc"
+      },
+      "correct": "C",
+      "explanation": "Very unreactive metals near the bottom of the activity series, such as gold, silver and platinum, may occur in the free or native state."
+    },
+    {
+      "id": "SCI10CH03-Q028",
+      "topic": "Occurrence, Extraction and Refining of Metals",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Metals high in the activity series, such as sodium and calcium, are generally extracted by:",
+      "options": {
+        "A": "heating their oxides alone",
+        "B": "reduction with carbon",
+        "C": "electrolytic reduction of molten compounds",
+        "D": "washing with water"
+      },
+      "correct": "C",
+      "explanation": "Highly reactive metals have greater affinity for oxygen than carbon and are therefore obtained by electrolysis of their molten compounds."
+    },
+    {
+      "id": "SCI10CH03-Q029",
+      "topic": "Occurrence, Extraction and Refining of Metals",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Which statement correctly distinguishes roasting from calcination?",
+      "options": {
+        "A": "Roasting heats sulphide ores in excess air; calcination heats carbonate ores in limited air",
+        "B": "Roasting is used only for metals in the native state",
+        "C": "Calcination always uses excess oxygen",
+        "D": "Both processes are identical"
+      },
+      "correct": "A",
+      "explanation": "Sulphide ores are converted to oxides by roasting in excess air, whereas carbonate ores are converted to oxides by calcination in limited or no air."
+    },
+    {
+      "id": "SCI10CH03-Q030",
+      "topic": "Occurrence, Extraction and Refining of Metals",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The thermit reaction is used to:",
+      "options": {
+        "A": "extract sodium by electrolysis",
+        "B": "join railway tracks and cracked machine parts",
+        "C": "prevent silver from tarnishing",
+        "D": "prepare an alloy of copper and zinc"
+      },
+      "correct": "B",
+      "explanation": "The highly exothermic reaction between iron(III) oxide and aluminium produces molten iron and is used for welding railway tracks and machine parts."
+    },
+    {
+      "id": "SCI10CH03-Q031",
+      "topic": "Occurrence, Extraction and Refining of Metals",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "In electrolytic refining of copper, the impure copper and pure copper strip are respectively made the:",
+      "options": {
+        "A": "cathode and anode",
+        "B": "anode and cathode",
+        "C": "electrolyte and cathode",
+        "D": "anode and electrolyte"
+      },
+      "correct": "B",
+      "explanation": "The impure metal is made the anode and a thin strip of pure metal is made the cathode. Pure copper deposits on the cathode."
+    },
+    {
+      "id": "SCI10CH03-Q032",
+      "topic": "Occurrence, Extraction and Refining of Metals",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Which substance settles below the anode during electrolytic refining and contains insoluble impurities?",
+      "options": {
+        "A": "Slag",
+        "B": "Anode mud",
+        "C": "Flux",
+        "D": "Gangue solution"
+      },
+      "correct": "B",
+      "explanation": "Insoluble impurities from the impure anode settle at the bottom of the electrolytic cell as anode mud."
+    },
+    {
+      "id": "SCI10CH03-Q033",
+      "topic": "Corrosion, Alloys and Their Prevention",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Iron rusts when it is exposed to:",
+      "options": {
+        "A": "dry air only",
+        "B": "water without air only",
+        "C": "both air and water",
+        "D": "nitrogen only"
+      },
+      "correct": "C",
+      "explanation": "Rusting requires both oxygen from air and moisture. Iron does not rust when either air or water is excluded."
+    },
+    {
+      "id": "SCI10CH03-Q034",
+      "topic": "Corrosion, Alloys and Their Prevention",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The black coating that develops on silver articles is mainly:",
+      "options": {
+        "A": "silver oxide",
+        "B": "silver sulphide",
+        "C": "silver chloride",
+        "D": "silver carbonate"
+      },
+      "correct": "B",
+      "explanation": "Silver reacts with sulphur compounds present in air and forms a black coating of silver sulphide."
+    },
+    {
+      "id": "SCI10CH03-Q035",
+      "topic": "Corrosion, Alloys and Their Prevention",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The green coating formed on copper exposed to moist air is:",
+      "options": {
+        "A": "copper sulphide",
+        "B": "basic copper carbonate",
+        "C": "copper chloride",
+        "D": "copper nitrate"
+      },
+      "correct": "B",
+      "explanation": "Copper reacts slowly with moist carbon dioxide and oxygen to form a green coating of basic copper carbonate."
+    },
+    {
+      "id": "SCI10CH03-Q036",
+      "topic": "Corrosion, Alloys and Their Prevention",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Galvanisation protects iron from rusting by coating it with a thin layer of:",
+      "options": {
+        "A": "copper",
+        "B": "zinc",
+        "C": "silver",
+        "D": "lead"
+      },
+      "correct": "B",
+      "explanation": "Galvanisation is the process of coating iron or steel with zinc to protect it from corrosion."
+    },
+    {
+      "id": "SCI10CH03-Q037",
+      "topic": "Corrosion, Alloys and Their Prevention",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "An alloy is best defined as:",
+      "options": {
+        "A": "a pure metal",
+        "B": "a homogeneous mixture of two or more metals, or a metal and a non-metal",
+        "C": "an ionic compound only",
+        "D": "a heterogeneous mixture of gases"
+      },
+      "correct": "B",
+      "explanation": "An alloy is a homogeneous mixture made from two or more metals, or from a metal and a non-metal, in definite proportions."
+    },
+    {
+      "id": "SCI10CH03-Q038",
+      "topic": "Corrosion, Alloys and Their Prevention",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Brass is an alloy of:",
+      "options": {
+        "A": "copper and zinc",
+        "B": "copper and tin",
+        "C": "lead and tin",
+        "D": "iron and carbon"
+      },
+      "correct": "A",
+      "explanation": "Brass is made by alloying copper with zinc. Bronze, in contrast, is an alloy of copper and tin."
+    },
+    {
+      "id": "SCI10CH03-Q039",
+      "topic": "Corrosion, Alloys and Their Prevention",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Why is solder useful for joining electrical wires?",
+      "options": {
+        "A": "It is an alloy of lead and tin with a low melting point",
+        "B": "It is pure iron with a high melting point",
+        "C": "It is a non-metal and cannot melt",
+        "D": "It is an alloy of gold and silver"
+      },
+      "correct": "A",
+      "explanation": "Solder is an alloy of lead and tin. Its low melting point makes it suitable for joining electrical wires."
+    },
+    {
+      "id": "SCI10CH03-Q040",
+      "topic": "Corrosion, Alloys and Their Prevention",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "What does 22-carat gold used for jewellery contain?",
+      "options": {
+        "A": "22 parts pure gold and 2 parts copper or silver",
+        "B": "22 parts copper and 2 parts gold",
+        "C": "Pure gold only",
+        "D": "Equal parts gold and mercury"
+      },
+      "correct": "A",
+      "explanation": "Twenty-two-carat gold contains 22 parts pure gold alloyed with 2 parts copper or silver, which makes it harder than pure 24-carat gold."
+    }
+  ],
+  "tests": [
+    {
+      "testId": "SCI10CH03-T01",
+      "testTitle": "Topic Test 1: Physical Properties",
+      "testType": "TOPIC_TEST",
+      "topic": "Physical Properties of Metals and Non-metals",
+      "questionLabel": "Related questions: Q1-Q8",
+      "instructions": "8 questions • 1 mark each • Physical properties and important exceptions • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH03-Q001",
+        "SCI10CH03-Q002",
+        "SCI10CH03-Q003",
+        "SCI10CH03-Q004",
+        "SCI10CH03-Q005",
+        "SCI10CH03-Q006",
+        "SCI10CH03-Q007",
+        "SCI10CH03-Q008"
+      ]
+    },
+    {
+      "testId": "SCI10CH03-T02",
+      "testTitle": "Topic Test 2: Chemical Properties and Reactivity",
+      "testType": "TOPIC_TEST",
+      "topic": "Chemical Properties and Reactivity Series",
+      "questionLabel": "Related questions: Q9-Q16",
+      "instructions": "8 questions • 1 mark each • Reactions with oxygen, water, acids and salt solutions • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH03-Q009",
+        "SCI10CH03-Q010",
+        "SCI10CH03-Q011",
+        "SCI10CH03-Q012",
+        "SCI10CH03-Q013",
+        "SCI10CH03-Q014",
+        "SCI10CH03-Q015",
+        "SCI10CH03-Q016"
+      ]
+    },
+    {
+      "testId": "SCI10CH03-T03",
+      "testTitle": "Topic Test 3: Ionic Compounds",
+      "testType": "TOPIC_TEST",
+      "topic": "Ionic Compounds",
+      "questionLabel": "Related questions: Q17-Q24",
+      "instructions": "8 questions • 1 mark each • Formation and properties of ionic compounds • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH03-Q017",
+        "SCI10CH03-Q018",
+        "SCI10CH03-Q019",
+        "SCI10CH03-Q020",
+        "SCI10CH03-Q021",
+        "SCI10CH03-Q022",
+        "SCI10CH03-Q023",
+        "SCI10CH03-Q024"
+      ]
+    },
+    {
+      "testId": "SCI10CH03-T04",
+      "testTitle": "Topic Test 4: Occurrence and Extraction of Metals",
+      "testType": "TOPIC_TEST",
+      "topic": "Occurrence, Extraction and Refining of Metals",
+      "questionLabel": "Related questions: Q25-Q32",
+      "instructions": "8 questions • 1 mark each • Ores, extraction methods and electrolytic refining • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH03-Q025",
+        "SCI10CH03-Q026",
+        "SCI10CH03-Q027",
+        "SCI10CH03-Q028",
+        "SCI10CH03-Q029",
+        "SCI10CH03-Q030",
+        "SCI10CH03-Q031",
+        "SCI10CH03-Q032"
+      ]
+    },
+    {
+      "testId": "SCI10CH03-T05",
+      "testTitle": "Topic Test 5: Corrosion and Alloys",
+      "testType": "TOPIC_TEST",
+      "topic": "Corrosion, Alloys and Their Prevention",
+      "questionLabel": "Related questions: Q33-Q40",
+      "instructions": "8 questions • 1 mark each • Corrosion, prevention and common alloys • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH03-Q033",
+        "SCI10CH03-Q034",
+        "SCI10CH03-Q035",
+        "SCI10CH03-Q036",
+        "SCI10CH03-Q037",
+        "SCI10CH03-Q038",
+        "SCI10CH03-Q039",
+        "SCI10CH03-Q040"
+      ]
+    },
+    {
+      "testId": "SCI10CH03-FLT01",
+      "testTitle": "Full-Length Test 1",
+      "testType": "FULL_LENGTH",
+      "topic": "Complete Chapter",
+      "questionLabel": "20 balanced questions from all five topics",
+      "instructions": "20 questions • 1 mark each • Full chapter assessment • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH03-Q001",
+        "SCI10CH03-Q002",
+        "SCI10CH03-Q003",
+        "SCI10CH03-Q004",
+        "SCI10CH03-Q009",
+        "SCI10CH03-Q010",
+        "SCI10CH03-Q011",
+        "SCI10CH03-Q012",
+        "SCI10CH03-Q017",
+        "SCI10CH03-Q018",
+        "SCI10CH03-Q019",
+        "SCI10CH03-Q020",
+        "SCI10CH03-Q025",
+        "SCI10CH03-Q026",
+        "SCI10CH03-Q027",
+        "SCI10CH03-Q028",
+        "SCI10CH03-Q033",
+        "SCI10CH03-Q034",
+        "SCI10CH03-Q035",
+        "SCI10CH03-Q036"
+      ]
+    },
+    {
+      "testId": "SCI10CH03-FLT02",
+      "testTitle": "Full-Length Test 2",
+      "testType": "FULL_LENGTH",
+      "topic": "Complete Chapter",
+      "questionLabel": "20 different balanced questions from all five topics",
+      "instructions": "20 questions • 1 mark each • Full chapter assessment • No overlap with Full-Length Test 1 • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH03-Q005",
+        "SCI10CH03-Q006",
+        "SCI10CH03-Q007",
+        "SCI10CH03-Q008",
+        "SCI10CH03-Q013",
+        "SCI10CH03-Q014",
+        "SCI10CH03-Q015",
+        "SCI10CH03-Q016",
+        "SCI10CH03-Q021",
+        "SCI10CH03-Q022",
+        "SCI10CH03-Q023",
+        "SCI10CH03-Q024",
+        "SCI10CH03-Q029",
+        "SCI10CH03-Q030",
+        "SCI10CH03-Q031",
+        "SCI10CH03-Q032",
+        "SCI10CH03-Q037",
+        "SCI10CH03-Q038",
+        "SCI10CH03-Q039",
+        "SCI10CH03-Q040"
+      ]
+    }
+  ]
+};
+  </script>
+
+  <script src="../../assets/js/static-mcq-engine.js"></script>
+</body>
+</html>

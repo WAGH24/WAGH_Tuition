@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="CBSE Class 10 Science Chapter 12 MCQ practice for Magnetic Effects of Electric Current in English medium."
+  />
+  <title>Chapter 12 MCQ | CBSE Class 10 Science</title>
+  <link rel="stylesheet" href="../../assets/css/static-mcq-engine.css" />
+</head>
+<body>
+  <div class="wtc-mcq-app">
+    <header class="hero-card">
+      <div class="hero-left">
+        <p class="eyebrow">WAGH Tuition Classes • Static MCQ Engine v1.1</p>
+        <h1 id="testTitle">MCQ Practice</h1>
+        <p id="testMeta" class="meta"></p>
+      </div>
+
+      <div class="hero-score">
+        <div class="ring" id="progressRing">
+          <span id="answeredCount">0</span>
+        </div>
+        <small>Answered</small>
+      </div>
+    </header>
+
+    <section class="sticky-dashboard">
+      <div class="dash-item">
+        <span>Student</span>
+        <b id="studentName">Checking login...</b>
+      </div>
+      <div class="dash-item">
+        <span>Time</span>
+        <b id="timer">00:00</b>
+      </div>
+      <div class="dash-item">
+        <span>Questions</span>
+        <b id="questionCount">0</b>
+      </div>
+      <button id="themeBtn" class="ghost-btn" type="button" aria-label="Change theme">🌙</button>
+      <button id="reviewBtn" class="ghost-btn" type="button">Review</button>
+    </section>
+
+    <section class="notice-card">
+      Select one option for each question. After submit, correct answers and
+      explanations will open. Your result will be saved for progress report.
+    </section>
+
+    <main class="layout-grid">
+      <aside class="question-palette" aria-label="Question palette">
+        <h3>Question Palette</h3>
+        <div id="paletteGrid" class="palette-grid"></div>
+      </aside>
+
+      <section id="questionList" class="question-list"></section>
+    </main>
+
+    <section id="resultBox" class="result-box hidden"></section>
+
+    <div class="bottom-action-bar">
+      <button id="submitBtn" class="primary-btn" type="button">
+        Submit Test
+      </button>
+      <button id="retryBtn" class="secondary-btn hidden" type="button">
+        Choose Another Test
+      </button>
+      <button id="topBtn" class="secondary-btn" type="button">Top</button>
+    </div>
+  </div>
+
+  <!-- Keep this exact loading order. -->
+  <script src="../../assets/js/config.js"></script>
+  <script src="../../assets/js/auth.js"></script>
+  <script src="../../assets/js/api.js"></script>
+
+  <script>
+    window.WTC_STATIC_MCQ = {
+  "pageTitle": "Chapter 12: Magnetic Effects of Electric Current - MCQ Practice",
+  "selectorDescription": "Choose a topic-wise test or a full-length chapter test covering magnetic fields, current-carrying conductors, circular coils, solenoids, magnetic force and domestic electric circuits.",
+  "board": "CBSE",
+  "className": "Class 10",
+  "medium": "English Medium",
+  "subjectId": "SCI10",
+  "subjectName": "Science",
+  "chapterId": "SCI10CH12",
+  "chapterName": "Magnetic Effects of Electric Current",
+  "instructions": "Select one option for each question. After submit, correct answers and explanations will open. Progress saves automatically.",
+  "questionBank": [
+    {
+      "id": "SCI10CH12-Q001",
+      "topic": "Magnetic Field and Field Lines",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The region surrounding a magnet in which its force can be detected is called the:",
+      "options": {
+        "A": "electric circuit",
+        "B": "magnetic field",
+        "C": "neutral region",
+        "D": "resistive field"
+      },
+      "correct": "B",
+      "explanation": "A magnetic field is the region around a magnet where its magnetic force can be detected."
+    },
+    {
+      "id": "SCI10CH12-Q002",
+      "topic": "Magnetic Field and Field Lines",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "A compass needle is best described as a:",
+      "options": {
+        "A": "small bar magnet",
+        "B": "current-carrying solenoid",
+        "C": "soft-iron electromagnet",
+        "D": "non-magnetic conductor"
+      },
+      "correct": "A",
+      "explanation": "A compass needle is a small bar magnet with a north-seeking and a south-seeking pole."
+    },
+    {
+      "id": "SCI10CH12-Q003",
+      "topic": "Magnetic Field and Field Lines",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Outside a bar magnet, magnetic field lines are conventionally directed from:",
+      "options": {
+        "A": "south pole to north pole",
+        "B": "north pole to south pole",
+        "C": "the centre to both poles",
+        "D": "east to west"
+      },
+      "correct": "B",
+      "explanation": "Outside a magnet, field lines emerge from the north pole and enter the south pole."
+    },
+    {
+      "id": "SCI10CH12-Q004",
+      "topic": "Magnetic Field and Field Lines",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Inside a bar magnet, magnetic field lines are directed from:",
+      "options": {
+        "A": "north pole to south pole",
+        "B": "south pole to north pole",
+        "C": "both poles toward the centre",
+        "D": "the centre toward the north pole only"
+      },
+      "correct": "B",
+      "explanation": "Inside the magnet, field lines run from the south pole to the north pole, completing closed curves."
+    },
+    {
+      "id": "SCI10CH12-Q005",
+      "topic": "Magnetic Field and Field Lines",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The magnetic field is strongest in a region where the field lines are:",
+      "options": {
+        "A": "widely separated",
+        "B": "crowded closely together",
+        "C": "absent",
+        "D": "perfectly horizontal"
+      },
+      "correct": "B",
+      "explanation": "The closeness of magnetic field lines indicates field strength. A denser pattern represents a stronger field."
+    },
+    {
+      "id": "SCI10CH12-Q006",
+      "topic": "Magnetic Field and Field Lines",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Why do two magnetic field lines never intersect?",
+      "options": {
+        "A": "A magnet has only one pole",
+        "B": "The field would have two directions at the intersection point",
+        "C": "Field lines are always straight",
+        "D": "A compass cannot move in a magnetic field"
+      },
+      "correct": "B",
+      "explanation": "At any point, the magnetic field has only one definite direction. Intersecting field lines would imply two directions at the same point."
+    },
+    {
+      "id": "SCI10CH12-Q007",
+      "topic": "Magnetic Field and Field Lines",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The direction of the magnetic field at a point is taken as the direction in which:",
+      "options": {
+        "A": "the south pole of a compass needle points",
+        "B": "the north pole of a compass needle points",
+        "C": "an electron always moves",
+        "D": "the magnet itself moves"
+      },
+      "correct": "B",
+      "explanation": "By convention, the direction of the magnetic field at a point is the direction in which the north pole of a compass needle points."
+    },
+    {
+      "id": "SCI10CH12-Q008",
+      "topic": "Magnetic Field and Field Lines",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Iron filings sprinkled around a bar magnet arrange themselves in a pattern because:",
+      "options": {
+        "A": "they become electrically charged",
+        "B": "they align along the magnetic field lines",
+        "C": "gravity pulls them toward the poles only",
+        "D": "the paper becomes magnetised permanently"
+      },
+      "correct": "B",
+      "explanation": "The magnetic force acting on the iron filings makes them align along the local direction of magnetic field lines."
+    },
+    {
+      "id": "SCI10CH12-Q009",
+      "topic": "Magnetic Field Around a Straight Conductor",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The magnetic field lines around a straight current-carrying conductor are:",
+      "options": {
+        "A": "parallel straight lines",
+        "B": "concentric circles",
+        "C": "elliptical lines with two centres",
+        "D": "radial lines"
+      },
+      "correct": "B",
+      "explanation": "A straight current-carrying conductor produces concentric circular magnetic field lines around itself."
+    },
+    {
+      "id": "SCI10CH12-Q010",
+      "topic": "Magnetic Field Around a Straight Conductor",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What happens to the direction of the magnetic field around a straight conductor when the direction of current is reversed?",
+      "options": {
+        "A": "It remains unchanged",
+        "B": "It reverses",
+        "C": "It becomes zero permanently",
+        "D": "It becomes radial"
+      },
+      "correct": "B",
+      "explanation": "Reversing the current reverses the direction of the magnetic field around the conductor."
+    },
+    {
+      "id": "SCI10CH12-Q011",
+      "topic": "Magnetic Field Around a Straight Conductor",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "At a fixed point near a straight conductor, the magnetic field becomes stronger when the:",
+      "options": {
+        "A": "current is increased",
+        "B": "current is decreased",
+        "C": "distance from the conductor is increased",
+        "D": "circuit is opened"
+      },
+      "correct": "A",
+      "explanation": "The magnetic field produced by a straight conductor increases as the current through the conductor increases."
+    },
+    {
+      "id": "SCI10CH12-Q012",
+      "topic": "Magnetic Field Around a Straight Conductor",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "For the same current, the magnetic field around a straight conductor becomes weaker when:",
+      "options": {
+        "A": "the observation point moves closer to the conductor",
+        "B": "the observation point moves farther from the conductor",
+        "C": "the current direction is reversed",
+        "D": "the conductor is made vertical"
+      },
+      "correct": "B",
+      "explanation": "The magnetic field due to a straight current-carrying conductor decreases as the distance from the conductor increases."
+    },
+    {
+      "id": "SCI10CH12-Q013",
+      "topic": "Magnetic Field Around a Straight Conductor",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "According to the right-hand thumb rule, if the right thumb points in the direction of current, the curled fingers show the direction of:",
+      "options": {
+        "A": "electron flow",
+        "B": "magnetic field lines",
+        "C": "force on the conductor",
+        "D": "electric potential"
+      },
+      "correct": "B",
+      "explanation": "In the right-hand thumb rule, the thumb indicates current and the curled fingers indicate the direction of magnetic field lines."
+    },
+    {
+      "id": "SCI10CH12-Q014",
+      "topic": "Magnetic Field Around a Straight Conductor",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The right-hand thumb rule is also known as:",
+      "options": {
+        "A": "Fleming's left-hand rule",
+        "B": "Maxwell's corkscrew rule",
+        "C": "Ohm's law",
+        "D": "Joule's law"
+      },
+      "correct": "B",
+      "explanation": "The right-hand thumb rule is also called Maxwell's corkscrew rule."
+    },
+    {
+      "id": "SCI10CH12-Q015",
+      "topic": "Magnetic Field Around a Straight Conductor",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "A vertical conductor carries current upward. When viewed from above, the magnetic field lines around it are:",
+      "options": {
+        "A": "clockwise",
+        "B": "anticlockwise",
+        "C": "directed upward",
+        "D": "directed downward"
+      },
+      "correct": "B",
+      "explanation": "Point the right thumb upward in the direction of current. The curled fingers move anticlockwise when viewed from above."
+    },
+    {
+      "id": "SCI10CH12-Q016",
+      "topic": "Magnetic Field Around a Straight Conductor",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "A straight conductor passes perpendicularly into the plane of a sheet. The current is directed into the sheet. The magnetic field lines, as seen by an observer, are:",
+      "options": {
+        "A": "clockwise",
+        "B": "anticlockwise",
+        "C": "parallel to the conductor",
+        "D": "from north to south in straight lines"
+      },
+      "correct": "A",
+      "explanation": "With the right thumb pointing into the sheet, the fingers curl clockwise, giving the magnetic-field direction."
+    },
+    {
+      "id": "SCI10CH12-Q017",
+      "topic": "Circular Loop, Solenoid and Electromagnet",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "At the centre of a current-carrying circular loop, the magnetic field lines contributed by different parts of the loop:",
+      "options": {
+        "A": "cancel completely",
+        "B": "act in the same direction and add together",
+        "C": "have random directions",
+        "D": "remain circular at the exact centre"
+      },
+      "correct": "B",
+      "explanation": "Every part of the loop contributes a magnetic field in the same direction at the centre, so the fields add."
+    },
+    {
+      "id": "SCI10CH12-Q018",
+      "topic": "Circular Loop, Solenoid and Electromagnet",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "For the same current, increasing the number of turns in a circular coil generally:",
+      "options": {
+        "A": "decreases the magnetic field",
+        "B": "increases the magnetic field",
+        "C": "has no effect on the magnetic field",
+        "D": "reverses the magnetic field"
+      },
+      "correct": "B",
+      "explanation": "The fields produced by individual turns act in the same direction. Therefore, more turns produce a stronger total magnetic field."
+    },
+    {
+      "id": "SCI10CH12-Q019",
+      "topic": "Circular Loop, Solenoid and Electromagnet",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "If a circular coil has n identical turns carrying the same current, the field at its centre is approximately:",
+      "options": {
+        "A": "1/n times that of one turn",
+        "B": "n times that of one turn",
+        "C": "independent of n",
+        "D": "zero for every value of n"
+      },
+      "correct": "B",
+      "explanation": "Since each turn contributes in the same direction, the magnetic field of an n-turn coil is approximately n times that of one turn."
+    },
+    {
+      "id": "SCI10CH12-Q020",
+      "topic": "Circular Loop, Solenoid and Electromagnet",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "A closely wound cylindrical coil made of many turns of insulated copper wire is called a:",
+      "options": {
+        "A": "solenoid",
+        "B": "fuse",
+        "C": "rheostat",
+        "D": "resistor"
+      },
+      "correct": "A",
+      "explanation": "A solenoid is a long cylindrical coil consisting of many closely wound turns of insulated copper wire."
+    },
+    {
+      "id": "SCI10CH12-Q021",
+      "topic": "Circular Loop, Solenoid and Electromagnet",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The magnetic-field pattern of a current-carrying solenoid resembles that of a:",
+      "options": {
+        "A": "bar magnet",
+        "B": "charged glass rod",
+        "C": "straight resistor",
+        "D": "parallel-plate capacitor"
+      },
+      "correct": "A",
+      "explanation": "One end of a solenoid behaves like a north pole and the other like a south pole, producing a field pattern similar to a bar magnet."
+    },
+    {
+      "id": "SCI10CH12-Q022",
+      "topic": "Circular Loop, Solenoid and Electromagnet",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The magnetic field inside a long current-carrying solenoid is represented by:",
+      "options": {
+        "A": "parallel, equally spaced straight lines",
+        "B": "widely separated circles only",
+        "C": "intersecting curved lines",
+        "D": "radial lines from the centre"
+      },
+      "correct": "A",
+      "explanation": "Parallel, equally spaced field lines indicate that the field inside a long solenoid is nearly uniform."
+    },
+    {
+      "id": "SCI10CH12-Q023",
+      "topic": "Circular Loop, Solenoid and Electromagnet",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "A strong temporary magnet formed by placing soft iron inside a current-carrying solenoid is called an:",
+      "options": {
+        "A": "electromagnet",
+        "B": "electric fuse",
+        "C": "permanent resistor",
+        "D": "insulator"
+      },
+      "correct": "A",
+      "explanation": "The strong magnetic field of the solenoid magnetises the soft-iron core, producing an electromagnet."
+    },
+    {
+      "id": "SCI10CH12-Q024",
+      "topic": "Circular Loop, Solenoid and Electromagnet",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "A circular loop lies in the plane of a table and carries clockwise current as viewed from above. The magnetic field at the centre is directed:",
+      "options": {
+        "A": "vertically upward",
+        "B": "vertically downward",
+        "C": "toward the east",
+        "D": "toward the north"
+      },
+      "correct": "B",
+      "explanation": "Curl the right-hand fingers in the clockwise direction of current. The thumb points downward, giving the field direction at the centre."
+    },
+    {
+      "id": "SCI10CH12-Q025",
+      "topic": "Force on a Current-Carrying Conductor",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "A current-carrying conductor placed in a magnetic field experiences a:",
+      "options": {
+        "A": "magnetic force",
+        "B": "chemical change only",
+        "C": "decrease in mass",
+        "D": "permanent loss of current"
+      },
+      "correct": "A",
+      "explanation": "The magnetic field exerts a force on a conductor carrying electric current."
+    },
+    {
+      "id": "SCI10CH12-Q026",
+      "topic": "Force on a Current-Carrying Conductor",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The direction of force on a current-carrying conductor reverses when:",
+      "options": {
+        "A": "the direction of current is reversed",
+        "B": "the conductor is made thicker only",
+        "C": "the circuit remains unchanged",
+        "D": "the conductor is shortened without changing the field"
+      },
+      "correct": "A",
+      "explanation": "Reversing either the current direction or the magnetic-field direction reverses the force on the conductor."
+    },
+    {
+      "id": "SCI10CH12-Q027",
+      "topic": "Force on a Current-Carrying Conductor",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The force on a current-carrying conductor is greatest when the current is:",
+      "options": {
+        "A": "parallel to the magnetic field",
+        "B": "perpendicular to the magnetic field",
+        "C": "zero",
+        "D": "in the same direction as electron flow only"
+      },
+      "correct": "B",
+      "explanation": "The magnetic force is maximum when the directions of current and magnetic field are at right angles."
+    },
+    {
+      "id": "SCI10CH12-Q028",
+      "topic": "Force on a Current-Carrying Conductor",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Fleming's left-hand rule is used to determine the direction of:",
+      "options": {
+        "A": "force on a current-carrying conductor",
+        "B": "magnetic field around a straight wire only",
+        "C": "conventional current in a resistor",
+        "D": "heat produced by a fuse"
+      },
+      "correct": "A",
+      "explanation": "Fleming's left-hand rule relates the directions of magnetic field, current and force or motion."
+    },
+    {
+      "id": "SCI10CH12-Q029",
+      "topic": "Force on a Current-Carrying Conductor",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "In Fleming's left-hand rule, the forefinger represents the direction of the:",
+      "options": {
+        "A": "magnetic field",
+        "B": "current",
+        "C": "force",
+        "D": "electron drift only"
+      },
+      "correct": "A",
+      "explanation": "The forefinger indicates magnetic field, the middle finger indicates current and the thumb indicates force or motion."
+    },
+    {
+      "id": "SCI10CH12-Q030",
+      "topic": "Force on a Current-Carrying Conductor",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "In Fleming's left-hand rule, the middle finger represents the direction of:",
+      "options": {
+        "A": "magnetic field",
+        "B": "current",
+        "C": "force",
+        "D": "motion of the magnet"
+      },
+      "correct": "B",
+      "explanation": "The middle finger points in the direction of conventional current."
+    },
+    {
+      "id": "SCI10CH12-Q031",
+      "topic": "Force on a Current-Carrying Conductor",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "In Fleming's left-hand rule, the thumb gives the direction of:",
+      "options": {
+        "A": "force or motion",
+        "B": "magnetic field",
+        "C": "current",
+        "D": "potential difference"
+      },
+      "correct": "A",
+      "explanation": "The thumb indicates the direction of the force acting on the conductor or its resulting motion."
+    },
+    {
+      "id": "SCI10CH12-Q032",
+      "topic": "Force on a Current-Carrying Conductor",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "A positive charge moves eastward in a magnetic field directed northward. The magnetic force on it is directed:",
+      "options": {
+        "A": "vertically upward",
+        "B": "vertically downward",
+        "C": "toward the east",
+        "D": "toward the south"
+      },
+      "correct": "A",
+      "explanation": "For a positive charge, conventional current is eastward. Using Fleming's left-hand rule with field northward gives force vertically upward."
+    },
+    {
+      "id": "SCI10CH12-Q033",
+      "topic": "Domestic Electric Circuits and Safety",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The potential difference between the live and neutral wires in a typical Indian domestic supply is:",
+      "options": {
+        "A": "12 V",
+        "B": "110 V",
+        "C": "220 V",
+        "D": "4400 V"
+      },
+      "correct": "C",
+      "explanation": "The domestic potential difference between the live and neutral wires is about 220 V."
+    },
+    {
+      "id": "SCI10CH12-Q034",
+      "topic": "Domestic Electric Circuits and Safety",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The earth wire in a domestic circuit is commonly identified by which insulation colour in the textbook convention?",
+      "options": {
+        "A": "Green",
+        "B": "Red",
+        "C": "Black",
+        "D": "White"
+      },
+      "correct": "A",
+      "explanation": "The earth wire is shown with green insulation and is connected to a metal plate deep in the earth."
+    },
+    {
+      "id": "SCI10CH12-Q035",
+      "topic": "Domestic Electric Circuits and Safety",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The main safety function of an earth wire connected to the metallic body of an appliance is to:",
+      "options": {
+        "A": "provide a low-resistance path for leakage current",
+        "B": "increase the appliance voltage",
+        "C": "store electric charge in the appliance body",
+        "D": "replace the live wire"
+      },
+      "correct": "A",
+      "explanation": "The earth wire carries leakage current safely to earth and keeps the metallic body near earth potential, reducing electric-shock risk."
+    },
+    {
+      "id": "SCI10CH12-Q036",
+      "topic": "Domestic Electric Circuits and Safety",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Domestic appliances are connected in parallel mainly so that:",
+      "options": {
+        "A": "each appliance receives the same potential difference and can be switched independently",
+        "B": "the same current must pass through every appliance",
+        "C": "switching off one appliance switches off all others",
+        "D": "the supply voltage is divided equally"
+      },
+      "correct": "A",
+      "explanation": "Parallel connection gives every appliance the full supply voltage and permits independent operation."
+    },
+    {
+      "id": "SCI10CH12-Q037",
+      "topic": "Domestic Electric Circuits and Safety",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Short-circuiting occurs when:",
+      "options": {
+        "A": "the live and neutral wires come into direct contact",
+        "B": "all appliances are switched off",
+        "C": "the earth wire is connected correctly",
+        "D": "only one low-power bulb is used"
+      },
+      "correct": "A",
+      "explanation": "Damaged insulation or an appliance fault may bring live and neutral wires into direct contact, causing a sudden large current."
+    },
+    {
+      "id": "SCI10CH12-Q038",
+      "topic": "Domestic Electric Circuits and Safety",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "An electric fuse protects a domestic circuit by:",
+      "options": {
+        "A": "melting and breaking the circuit when excessive current flows",
+        "B": "raising the supply voltage",
+        "C": "connecting live and neutral wires directly",
+        "D": "storing the excess current"
+      },
+      "correct": "A",
+      "explanation": "Excessive current heats the fuse wire by Joule heating until it melts and opens the circuit."
+    },
+    {
+      "id": "SCI10CH12-Q039",
+      "topic": "Domestic Electric Circuits and Safety",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Overloading of a domestic circuit can be caused by:",
+      "options": {
+        "A": "connecting too many appliances to one socket",
+        "B": "using an earth wire",
+        "C": "connecting appliances in parallel",
+        "D": "switching off unused appliances"
+      },
+      "correct": "A",
+      "explanation": "Too many appliances on one socket can draw current beyond the safe rating of the circuit, causing overloading."
+    },
+    {
+      "id": "SCI10CH12-Q040",
+      "topic": "Domestic Electric Circuits and Safety",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "A 2 kW electric oven is connected to a 220 V circuit rated at 5 A. What is most likely to happen?",
+      "options": {
+        "A": "It draws about 9.1 A, so the circuit may overload and the fuse may melt",
+        "B": "It draws exactly 5 A and operates safely in every condition",
+        "C": "It draws about 0.11 A, so no protection is needed",
+        "D": "It draws no current because 2 kW is less than 220 V"
+      },
+      "correct": "A",
+      "explanation": "I = P/V = 2000 W ÷ 220 V ≈ 9.1 A, which exceeds the 5 A circuit rating. The circuit is overloaded and its protective fuse should operate."
+    }
+  ],
+  "tests": [
+    {
+      "testId": "SCI10CH12-T01",
+      "testTitle": "Topic Test 1: Magnetic Field and Field Lines",
+      "testType": "TOPIC_TEST",
+      "topic": "Magnetic Field and Field Lines",
+      "questionLabel": "Related questions: Q1-Q8 • Compass needle, magnetic field, field-line direction, strength and properties",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH12-Q001",
+        "SCI10CH12-Q002",
+        "SCI10CH12-Q003",
+        "SCI10CH12-Q004",
+        "SCI10CH12-Q005",
+        "SCI10CH12-Q006",
+        "SCI10CH12-Q007",
+        "SCI10CH12-Q008"
+      ]
+    },
+    {
+      "testId": "SCI10CH12-T02",
+      "testTitle": "Topic Test 2: Field Around a Straight Conductor",
+      "testType": "TOPIC_TEST",
+      "topic": "Magnetic Field Around a Straight Conductor",
+      "questionLabel": "Related questions: Q9-Q16 • Concentric field lines, current strength, distance and right-hand thumb rule",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH12-Q009",
+        "SCI10CH12-Q010",
+        "SCI10CH12-Q011",
+        "SCI10CH12-Q012",
+        "SCI10CH12-Q013",
+        "SCI10CH12-Q014",
+        "SCI10CH12-Q015",
+        "SCI10CH12-Q016"
+      ]
+    },
+    {
+      "testId": "SCI10CH12-T03",
+      "testTitle": "Topic Test 3: Circular Coil and Solenoid",
+      "testType": "TOPIC_TEST",
+      "topic": "Circular Loop, Solenoid and Electromagnet",
+      "questionLabel": "Related questions: Q17-Q24 • Circular loops, coil turns, solenoid field and electromagnets",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH12-Q017",
+        "SCI10CH12-Q018",
+        "SCI10CH12-Q019",
+        "SCI10CH12-Q020",
+        "SCI10CH12-Q021",
+        "SCI10CH12-Q022",
+        "SCI10CH12-Q023",
+        "SCI10CH12-Q024"
+      ]
+    },
+    {
+      "testId": "SCI10CH12-T04",
+      "testTitle": "Topic Test 4: Force on a Conductor",
+      "testType": "TOPIC_TEST",
+      "topic": "Force on a Current-Carrying Conductor",
+      "questionLabel": "Related questions: Q25-Q32 • Magnetic force, current and field directions, and Fleming's left-hand rule",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH12-Q025",
+        "SCI10CH12-Q026",
+        "SCI10CH12-Q027",
+        "SCI10CH12-Q028",
+        "SCI10CH12-Q029",
+        "SCI10CH12-Q030",
+        "SCI10CH12-Q031",
+        "SCI10CH12-Q032"
+      ]
+    },
+    {
+      "testId": "SCI10CH12-T05",
+      "testTitle": "Topic Test 5: Domestic Electric Circuits",
+      "testType": "TOPIC_TEST",
+      "topic": "Domestic Electric Circuits and Safety",
+      "questionLabel": "Related questions: Q33-Q40 • Live, neutral and earth wires, parallel appliances, fuse, short circuit and overloading",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH12-Q033",
+        "SCI10CH12-Q034",
+        "SCI10CH12-Q035",
+        "SCI10CH12-Q036",
+        "SCI10CH12-Q037",
+        "SCI10CH12-Q038",
+        "SCI10CH12-Q039",
+        "SCI10CH12-Q040"
+      ]
+    },
+    {
+      "testId": "SCI10CH12-FLT01",
+      "testTitle": "Full-Length Test 1",
+      "testType": "FULL_LENGTH",
+      "topic": "Complete Chapter",
+      "questionLabel": "20 balanced questions from all five chapter topics",
+      "instructions": "20 questions • 1 mark each • Full chapter assessment • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH12-Q001",
+        "SCI10CH12-Q002",
+        "SCI10CH12-Q003",
+        "SCI10CH12-Q004",
+        "SCI10CH12-Q009",
+        "SCI10CH12-Q010",
+        "SCI10CH12-Q011",
+        "SCI10CH12-Q012",
+        "SCI10CH12-Q017",
+        "SCI10CH12-Q018",
+        "SCI10CH12-Q019",
+        "SCI10CH12-Q020",
+        "SCI10CH12-Q025",
+        "SCI10CH12-Q026",
+        "SCI10CH12-Q027",
+        "SCI10CH12-Q028",
+        "SCI10CH12-Q033",
+        "SCI10CH12-Q034",
+        "SCI10CH12-Q035",
+        "SCI10CH12-Q036"
+      ]
+    },
+    {
+      "testId": "SCI10CH12-FLT02",
+      "testTitle": "Full-Length Test 2",
+      "testType": "FULL_LENGTH",
+      "topic": "Complete Chapter",
+      "questionLabel": "20 different balanced questions from all five chapter topics",
+      "instructions": "20 questions • 1 mark each • No overlap with Full-Length Test 1 • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH12-Q005",
+        "SCI10CH12-Q006",
+        "SCI10CH12-Q007",
+        "SCI10CH12-Q008",
+        "SCI10CH12-Q013",
+        "SCI10CH12-Q014",
+        "SCI10CH12-Q015",
+        "SCI10CH12-Q016",
+        "SCI10CH12-Q021",
+        "SCI10CH12-Q022",
+        "SCI10CH12-Q023",
+        "SCI10CH12-Q024",
+        "SCI10CH12-Q029",
+        "SCI10CH12-Q030",
+        "SCI10CH12-Q031",
+        "SCI10CH12-Q032",
+        "SCI10CH12-Q037",
+        "SCI10CH12-Q038",
+        "SCI10CH12-Q039",
+        "SCI10CH12-Q040"
+      ]
+    }
+  ]
+};
+  </script>
+
+  <script src="../../assets/js/static-mcq-engine.js"></script>
+</body>
+</html>

@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="CBSE Class 10 Science Chapter 8 MCQ practice for Heredity in English medium."
+  />
+  <title>Chapter 8 MCQ | CBSE Class 10 Science</title>
+  <link rel="stylesheet" href="../../assets/css/static-mcq-engine.css" />
+</head>
+<body>
+  <div class="wtc-mcq-app">
+    <header class="hero-card">
+      <div class="hero-left">
+        <p class="eyebrow">WAGH Tuition Classes • Static MCQ Engine v1.1</p>
+        <h1 id="testTitle">MCQ Practice</h1>
+        <p id="testMeta" class="meta"></p>
+      </div>
+
+      <div class="hero-score">
+        <div class="ring" id="progressRing">
+          <span id="answeredCount">0</span>
+        </div>
+        <small>Answered</small>
+      </div>
+    </header>
+
+    <section class="sticky-dashboard">
+      <div class="dash-item">
+        <span>Student</span>
+        <b id="studentName">Checking login...</b>
+      </div>
+      <div class="dash-item">
+        <span>Time</span>
+        <b id="timer">00:00</b>
+      </div>
+      <div class="dash-item">
+        <span>Questions</span>
+        <b id="questionCount">0</b>
+      </div>
+      <button id="themeBtn" class="ghost-btn" type="button" aria-label="Change theme">🌙</button>
+      <button id="reviewBtn" class="ghost-btn" type="button">Review</button>
+    </section>
+
+    <section class="notice-card">
+      Select one option for each question. After submit, correct answers and
+      explanations will open. Your result will be saved for progress report.
+    </section>
+
+    <main class="layout-grid">
+      <aside class="question-palette" aria-label="Question palette">
+        <h3>Question Palette</h3>
+        <div id="paletteGrid" class="palette-grid"></div>
+      </aside>
+
+      <section id="questionList" class="question-list"></section>
+    </main>
+
+    <section id="resultBox" class="result-box hidden"></section>
+
+    <div class="bottom-action-bar">
+      <button id="submitBtn" class="primary-btn" type="button">
+        Submit Test
+      </button>
+      <button id="retryBtn" class="secondary-btn hidden" type="button">
+        Choose Another Test
+      </button>
+      <button id="topBtn" class="secondary-btn" type="button">Top</button>
+    </div>
+  </div>
+
+  <!-- Keep this exact loading order. -->
+  <script src="../../assets/js/config.js"></script>
+  <script src="../../assets/js/auth.js"></script>
+  <script src="../../assets/js/api.js"></script>
+
+  <script>
+    window.WTC_STATIC_MCQ = {
+  "pageTitle": "Chapter 8: Heredity - MCQ Practice",
+  "selectorDescription": "Choose a topic-wise test or a full-length chapter test covering heredity, Mendel's experiments, inheritance patterns, expression of traits and sex determination.",
+  "board": "CBSE",
+  "className": "Class 10",
+  "medium": "English Medium",
+  "subjectId": "SCI10",
+  "subjectName": "Science",
+  "chapterId": "SCI10CH08",
+  "chapterName": "Heredity",
+  "instructions": "Select one option for each question. After submit, correct answers and explanations will open. Progress saves automatically.",
+  "questionBank": [
+    {
+      "id": "SCI10CH08-Q001",
+      "topic": "Heredity, Traits and Variation",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The transmission of characteristics from parents to offspring is called:",
+      "options": {
+        "A": "respiration",
+        "B": "heredity",
+        "C": "excretion",
+        "D": "nutrition"
+      },
+      "correct": "B",
+      "explanation": "Heredity is the process by which biological characteristics are passed from parents to their offspring."
+    },
+    {
+      "id": "SCI10CH08-Q002",
+      "topic": "Heredity, Traits and Variation",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Differences among individuals of the same species are known as:",
+      "options": {
+        "A": "variations",
+        "B": "reflexes",
+        "C": "tropisms",
+        "D": "secretions"
+      },
+      "correct": "A",
+      "explanation": "Variations are differences in characteristics among individuals belonging to the same species."
+    },
+    {
+      "id": "SCI10CH08-Q003",
+      "topic": "Heredity, Traits and Variation",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What is the main biological source of inherited variation in offspring?",
+      "options": {
+        "A": "Changes produced only by exercise",
+        "B": "Differences arising during DNA copying and sexual reproduction",
+        "C": "Temporary changes caused by weather",
+        "D": "Food stored in body tissues"
+      },
+      "correct": "B",
+      "explanation": "Small inaccuracies during DNA copying and the mixing of genetic material in sexual reproduction create inherited variation."
+    },
+    {
+      "id": "SCI10CH08-Q004",
+      "topic": "Heredity, Traits and Variation",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "A unit of heredity that controls a particular characteristic is called a:",
+      "options": {
+        "A": "gene",
+        "B": "tissue",
+        "C": "gamete",
+        "D": "hormone"
+      },
+      "correct": "A",
+      "explanation": "A gene is a segment of DNA that carries information for a particular inherited characteristic."
+    },
+    {
+      "id": "SCI10CH08-Q005",
+      "topic": "Heredity, Traits and Variation",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Genes are located on:",
+      "options": {
+        "A": "chromosomes",
+        "B": "ribosomes only",
+        "C": "cell walls",
+        "D": "vacuoles"
+      },
+      "correct": "A",
+      "explanation": "Genes are segments of DNA arranged on chromosomes inside the nucleus."
+    },
+    {
+      "id": "SCI10CH08-Q006",
+      "topic": "Heredity, Traits and Variation",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which of the following is an inherited trait?",
+      "options": {
+        "A": "A scar caused by an injury",
+        "B": "Muscles developed through exercise",
+        "C": "Natural eye colour",
+        "D": "A suntan"
+      },
+      "correct": "C",
+      "explanation": "Natural eye colour is determined largely by inherited genetic information. Scars, suntans and exercise-developed muscles are acquired during life."
+    },
+    {
+      "id": "SCI10CH08-Q007",
+      "topic": "Heredity, Traits and Variation",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Why is variation useful to the long-term survival of a species?",
+      "options": {
+        "A": "It makes every organism identical",
+        "B": "It increases the chance that some individuals can survive environmental changes",
+        "C": "It prevents reproduction",
+        "D": "It removes all inherited traits"
+      },
+      "correct": "B",
+      "explanation": "When environmental conditions change, some variations may help certain individuals survive and reproduce, supporting continuation of the species."
+    },
+    {
+      "id": "SCI10CH08-Q008",
+      "topic": "Heredity, Traits and Variation",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Which statement correctly relates DNA, genes and chromosomes?",
+      "options": {
+        "A": "Genes are sections of DNA arranged on chromosomes",
+        "B": "Chromosomes are sections of proteins arranged on genes",
+        "C": "DNA is produced only after a trait appears",
+        "D": "Genes are located outside all cells"
+      },
+      "correct": "A",
+      "explanation": "A chromosome contains DNA, and specific segments of that DNA function as genes carrying hereditary information."
+    },
+    {
+      "id": "SCI10CH08-Q009",
+      "topic": "Mendel and Monohybrid Inheritance",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Gregor Mendel carried out his classical inheritance experiments mainly on:",
+      "options": {
+        "A": "pea plants",
+        "B": "mango trees",
+        "C": "wheat plants",
+        "D": "rose plants"
+      },
+      "correct": "A",
+      "explanation": "Mendel used garden pea plants because they had clear contrasting traits and could be self-pollinated or cross-pollinated conveniently."
+    },
+    {
+      "id": "SCI10CH08-Q010",
+      "topic": "Mendel and Monohybrid Inheritance",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "When a pure tall pea plant is crossed with a pure dwarf pea plant, the F₁ generation is expected to be:",
+      "options": {
+        "A": "all tall",
+        "B": "all dwarf",
+        "C": "half tall and half dwarf",
+        "D": "three tall and one dwarf"
+      },
+      "correct": "A",
+      "explanation": "Tallness is dominant over dwarfness. Therefore, all F₁ plants produced from TT × tt have genotype Tt and appear tall."
+    },
+    {
+      "id": "SCI10CH08-Q011",
+      "topic": "Mendel and Monohybrid Inheritance",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "A trait that is expressed in the F₁ generation of a cross between contrasting pure parents is called:",
+      "options": {
+        "A": "dominant",
+        "B": "acquired",
+        "C": "recessive",
+        "D": "environmental"
+      },
+      "correct": "A",
+      "explanation": "The dominant trait is expressed in a hybrid containing two different alleles, while the recessive trait remains masked."
+    },
+    {
+      "id": "SCI10CH08-Q012",
+      "topic": "Mendel and Monohybrid Inheritance",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "In a monohybrid cross between two F₁ tall pea plants, the expected F₂ phenotypic ratio is:",
+      "options": {
+        "A": "1 tall : 1 dwarf",
+        "B": "3 tall : 1 dwarf",
+        "C": "1 tall : 3 dwarf",
+        "D": "all tall"
+      },
+      "correct": "B",
+      "explanation": "A cross Tt × Tt produces TT, Tt, Tt and tt. Three plants are tall and one is dwarf, giving a 3:1 phenotypic ratio."
+    },
+    {
+      "id": "SCI10CH08-Q013",
+      "topic": "Mendel and Monohybrid Inheritance",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What is the genotype of every F₁ offspring produced by the cross TT × tt?",
+      "options": {
+        "A": "TT",
+        "B": "Tt",
+        "C": "tt",
+        "D": "either TT or tt"
+      },
+      "correct": "B",
+      "explanation": "Each F₁ offspring receives T from the tall parent and t from the dwarf parent, so its genotype is Tt."
+    },
+    {
+      "id": "SCI10CH08-Q014",
+      "topic": "Mendel and Monohybrid Inheritance",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "The expected genotypic ratio from the cross Tt × Tt is:",
+      "options": {
+        "A": "1 TT : 2 Tt : 1 tt",
+        "B": "3 TT : 1 tt",
+        "C": "1 TT : 1 Tt",
+        "D": "all Tt"
+      },
+      "correct": "A",
+      "explanation": "The four possible combinations are TT, Tt, Tt and tt, producing the genotypic ratio 1:2:1."
+    },
+    {
+      "id": "SCI10CH08-Q015",
+      "topic": "Mendel and Monohybrid Inheritance",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "A recessive trait is expressed when:",
+      "options": {
+        "A": "at least one dominant allele is present",
+        "B": "both alleles are recessive",
+        "C": "the organism has no chromosomes",
+        "D": "the trait is acquired during life"
+      },
+      "correct": "B",
+      "explanation": "A recessive characteristic is expressed only when no dominant allele is present, as in the homozygous recessive genotype tt."
+    },
+    {
+      "id": "SCI10CH08-Q016",
+      "topic": "Mendel and Monohybrid Inheritance",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Which Mendelian idea explains why a Tt individual produces two kinds of gametes, T and t?",
+      "options": {
+        "A": "The two alleles separate during gamete formation",
+        "B": "Both alleles enter every gamete",
+        "C": "The recessive allele is destroyed",
+        "D": "Gametes contain no hereditary information"
+      },
+      "correct": "A",
+      "explanation": "The paired alleles separate during formation of gametes, so each gamete receives only one allele for the trait."
+    },
+    {
+      "id": "SCI10CH08-Q017",
+      "topic": "Dihybrid Cross and Inheritance Patterns",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "In pea plants, round seeds are represented by R and wrinkled seeds by r. The genotype of a pure round-seeded plant is:",
+      "options": {
+        "A": "RR",
+        "B": "Rr",
+        "C": "rr",
+        "D": "RY"
+      },
+      "correct": "A",
+      "explanation": "A pure dominant plant is homozygous and therefore has two dominant alleles, RR."
+    },
+    {
+      "id": "SCI10CH08-Q018",
+      "topic": "Dihybrid Cross and Inheritance Patterns",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What is the genotype of the F₁ offspring from the cross RRYY × rryy?",
+      "options": {
+        "A": "RrYy",
+        "B": "RRYY",
+        "C": "rryy",
+        "D": "RRyy"
+      },
+      "correct": "A",
+      "explanation": "Each F₁ plant receives R and Y from one parent and r and y from the other, giving genotype RrYy."
+    },
+    {
+      "id": "SCI10CH08-Q019",
+      "topic": "Dihybrid Cross and Inheritance Patterns",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "The classical phenotypic ratio obtained in the F₂ generation of a dihybrid cross is:",
+      "options": {
+        "A": "3 : 1",
+        "B": "1 : 2 : 1",
+        "C": "9 : 3 : 3 : 1",
+        "D": "1 : 1"
+      },
+      "correct": "C",
+      "explanation": "When two pairs of contrasting traits assort independently, a dihybrid F₂ generation shows the phenotypic ratio 9:3:3:1."
+    },
+    {
+      "id": "SCI10CH08-Q020",
+      "topic": "Dihybrid Cross and Inheritance Patterns",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Which set lists all possible gametes produced by an individual with genotype RrYy?",
+      "options": {
+        "A": "RY, Ry, rY, ry",
+        "B": "RR, Rr, YY, Yy",
+        "C": "RY and ry only",
+        "D": "R, r, Y and y as four separate gametes"
+      },
+      "correct": "A",
+      "explanation": "Each gamete receives one allele for seed shape and one for seed colour, producing RY, Ry, rY and ry."
+    },
+    {
+      "id": "SCI10CH08-Q021",
+      "topic": "Dihybrid Cross and Inheritance Patterns",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "In the cross Rr × Rr, the probability of obtaining an rr offspring is:",
+      "options": {
+        "A": "1/4",
+        "B": "1/2",
+        "C": "3/4",
+        "D": "1"
+      },
+      "correct": "A",
+      "explanation": "Rr × Rr produces RR, Rr, Rr and rr. One of four combinations is rr, so the probability is 1/4."
+    },
+    {
+      "id": "SCI10CH08-Q022",
+      "topic": "Dihybrid Cross and Inheritance Patterns",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "In the self-cross RrYy × RrYy, the probability of an offspring being wrinkled and green (rryy) is:",
+      "options": {
+        "A": "1/16",
+        "B": "3/16",
+        "C": "9/16",
+        "D": "1/4"
+      },
+      "correct": "A",
+      "explanation": "The probability of rr is 1/4 and that of yy is 1/4. With independent assortment, 1/4 × 1/4 = 1/16."
+    },
+    {
+      "id": "SCI10CH08-Q023",
+      "topic": "Dihybrid Cross and Inheritance Patterns",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "A test cross between a heterozygous tall plant and a dwarf plant is Tt × tt. What phenotypic ratio is expected?",
+      "options": {
+        "A": "1 tall : 1 dwarf",
+        "B": "3 tall : 1 dwarf",
+        "C": "all tall",
+        "D": "all dwarf"
+      },
+      "correct": "A",
+      "explanation": "Tt produces T and t gametes, while tt produces only t gametes. The offspring are Tt and tt in equal proportions."
+    },
+    {
+      "id": "SCI10CH08-Q024",
+      "topic": "Dihybrid Cross and Inheritance Patterns",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What is the main purpose of a Punnett square?",
+      "options": {
+        "A": "To predict possible allele combinations in offspring",
+        "B": "To measure chromosome length directly",
+        "C": "To identify acquired traits",
+        "D": "To count proteins in a cell"
+      },
+      "correct": "A",
+      "explanation": "A Punnett square organises parental gametes and shows the possible genotypes and their expected probabilities in offspring."
+    },
+    {
+      "id": "SCI10CH08-Q025",
+      "topic": "Expression of Traits",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "A gene influences a characteristic mainly by providing information for making:",
+      "options": {
+        "A": "a specific protein",
+        "B": "a complete organ directly",
+        "C": "only water molecules",
+        "D": "a chromosome from minerals"
+      },
+      "correct": "A",
+      "explanation": "Genes contain instructions for producing proteins. The activity of these proteins influences the development and expression of traits."
+    },
+    {
+      "id": "SCI10CH08-Q026",
+      "topic": "Expression of Traits",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "How can a gene affect the height of a pea plant?",
+      "options": {
+        "A": "By controlling the production of a protein involved in growth",
+        "B": "By changing soil into chlorophyll",
+        "C": "By removing all hormones from the plant",
+        "D": "By making every cell genetically different"
+      },
+      "correct": "A",
+      "explanation": "A gene may control an enzyme or protein involved in producing growth-related substances. Differences in that protein can influence plant height."
+    },
+    {
+      "id": "SCI10CH08-Q027",
+      "topic": "Expression of Traits",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Different forms of the same gene are called:",
+      "options": {
+        "A": "alleles",
+        "B": "tissues",
+        "C": "gametes",
+        "D": "organs"
+      },
+      "correct": "A",
+      "explanation": "Alleles are alternative forms of a gene, such as T and t for plant height."
+    },
+    {
+      "id": "SCI10CH08-Q028",
+      "topic": "Expression of Traits",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The genetic constitution of an organism for a particular trait is its:",
+      "options": {
+        "A": "genotype",
+        "B": "phenotype",
+        "C": "habitat",
+        "D": "metabolism"
+      },
+      "correct": "A",
+      "explanation": "Genotype refers to the allele combination an organism carries, such as TT, Tt or tt."
+    },
+    {
+      "id": "SCI10CH08-Q029",
+      "topic": "Expression of Traits",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The observable expression of a characteristic, such as tall or dwarf, is called the:",
+      "options": {
+        "A": "phenotype",
+        "B": "genotype",
+        "C": "chromosome pair",
+        "D": "gamete"
+      },
+      "correct": "A",
+      "explanation": "Phenotype is the observable form of a trait, while genotype is the underlying allele combination."
+    },
+    {
+      "id": "SCI10CH08-Q030",
+      "topic": "Expression of Traits",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which of the following is an acquired trait?",
+      "options": {
+        "A": "A bodybuilder's enlarged muscles",
+        "B": "Natural blood group",
+        "C": "Natural eye colour",
+        "D": "Inherited seed shape"
+      },
+      "correct": "A",
+      "explanation": "Enlarged muscles developed through exercise are acquired during life and are not produced by inherited changes in germ-cell DNA."
+    },
+    {
+      "id": "SCI10CH08-Q031",
+      "topic": "Expression of Traits",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Why is an acquired trait generally not inherited by offspring?",
+      "options": {
+        "A": "It usually does not alter the DNA of germ cells",
+        "B": "It always changes every chromosome",
+        "C": "It is always controlled by a dominant allele",
+        "D": "It can be transmitted only by blood"
+      },
+      "correct": "A",
+      "explanation": "Changes in ordinary body tissues do not usually alter the DNA of reproductive cells, so they are not passed to the next generation."
+    },
+    {
+      "id": "SCI10CH08-Q032",
+      "topic": "Expression of Traits",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Two tall pea plants can produce a dwarf offspring when:",
+      "options": {
+        "A": "both parents are heterozygous Tt",
+        "B": "both parents are homozygous TT",
+        "C": "one parent has no alleles",
+        "D": "dwarfness is dominant"
+      },
+      "correct": "A",
+      "explanation": "Two heterozygous tall plants can each contribute a recessive t allele, producing a dwarf tt offspring."
+    },
+    {
+      "id": "SCI10CH08-Q033",
+      "topic": "Sex Determination in Humans",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "A normal human body cell contains:",
+      "options": {
+        "A": "23 pairs of chromosomes",
+        "B": "23 chromosomes in 23 pairs",
+        "C": "46 pairs of chromosomes",
+        "D": "only two chromosomes"
+      },
+      "correct": "A",
+      "explanation": "A human body cell normally contains 46 chromosomes arranged in 23 pairs."
+    },
+    {
+      "id": "SCI10CH08-Q034",
+      "topic": "Sex Determination in Humans",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The sex-chromosome combination in a human female is:",
+      "options": {
+        "A": "XX",
+        "B": "XY",
+        "C": "YY",
+        "D": "XO only"
+      },
+      "correct": "A",
+      "explanation": "Human females normally have two X chromosomes, represented as XX."
+    },
+    {
+      "id": "SCI10CH08-Q035",
+      "topic": "Sex Determination in Humans",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The sex-chromosome combination in a human male is:",
+      "options": {
+        "A": "XX",
+        "B": "XY",
+        "C": "YY",
+        "D": "XXX"
+      },
+      "correct": "B",
+      "explanation": "Human males normally have one X chromosome and one Y chromosome, represented as XY."
+    },
+    {
+      "id": "SCI10CH08-Q036",
+      "topic": "Sex Determination in Humans",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which sex chromosome is present in every human egg cell?",
+      "options": {
+        "A": "X",
+        "B": "Y",
+        "C": "Either X or Y in equal numbers",
+        "D": "Both X and Y"
+      },
+      "correct": "A",
+      "explanation": "A human female has XX chromosomes, so every egg receives an X chromosome."
+    },
+    {
+      "id": "SCI10CH08-Q037",
+      "topic": "Sex Determination in Humans",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Human sperm cells carry:",
+      "options": {
+        "A": "either an X chromosome or a Y chromosome",
+        "B": "only X chromosomes",
+        "C": "only Y chromosomes",
+        "D": "both X and Y chromosomes together"
+      },
+      "correct": "A",
+      "explanation": "During sperm formation, half the sperm receive an X chromosome and the other half receive a Y chromosome."
+    },
+    {
+      "id": "SCI10CH08-Q038",
+      "topic": "Sex Determination in Humans",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "A human child develops as genetically female when the fertilising sperm carries:",
+      "options": {
+        "A": "an X chromosome",
+        "B": "a Y chromosome",
+        "C": "both X and Y chromosomes",
+        "D": "no chromosome"
+      },
+      "correct": "A",
+      "explanation": "An X-bearing sperm fertilising an X-bearing egg forms an XX zygote, which normally develops as female."
+    },
+    {
+      "id": "SCI10CH08-Q039",
+      "topic": "Sex Determination in Humans",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Why is the father said to determine the chromosomal sex of a human child?",
+      "options": {
+        "A": "His sperm may carry either X or Y, while the egg always carries X",
+        "B": "The mother provides no sex chromosome",
+        "C": "All sperm carry Y chromosomes",
+        "D": "The father controls the genes after birth"
+      },
+      "correct": "A",
+      "explanation": "The egg always contributes X, whereas the fertilising sperm contributes either X or Y. This determines whether the zygote is XX or XY."
+    },
+    {
+      "id": "SCI10CH08-Q040",
+      "topic": "Sex Determination in Humans",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "A family already has three daughters. What is the approximate probability that the next child will be a son?",
+      "options": {
+        "A": "50%",
+        "B": "25%",
+        "C": "75%",
+        "D": "0%"
+      },
+      "correct": "A",
+      "explanation": "Each fertilisation is an independent event. The chance of an X-bearing or Y-bearing sperm fertilising the egg is approximately equal, regardless of previous children."
+    }
+  ],
+  "tests": [
+    {
+      "testId": "SCI10CH08-T01",
+      "testTitle": "Topic Test 1: Heredity, Traits and Variation",
+      "testType": "TOPIC_TEST",
+      "topic": "Heredity, Traits and Variation",
+      "questionLabel": "Related questions: Q1-Q8 • Heredity, genes, chromosomes, inherited traits and the importance of variation",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH08-Q001",
+        "SCI10CH08-Q002",
+        "SCI10CH08-Q003",
+        "SCI10CH08-Q004",
+        "SCI10CH08-Q005",
+        "SCI10CH08-Q006",
+        "SCI10CH08-Q007",
+        "SCI10CH08-Q008"
+      ]
+    },
+    {
+      "testId": "SCI10CH08-T02",
+      "testTitle": "Topic Test 2: Mendel and Monohybrid Inheritance",
+      "testType": "TOPIC_TEST",
+      "topic": "Mendel and Monohybrid Inheritance",
+      "questionLabel": "Related questions: Q9-Q16 • Mendel's pea experiments, dominance, recessiveness and monohybrid ratios",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH08-Q009",
+        "SCI10CH08-Q010",
+        "SCI10CH08-Q011",
+        "SCI10CH08-Q012",
+        "SCI10CH08-Q013",
+        "SCI10CH08-Q014",
+        "SCI10CH08-Q015",
+        "SCI10CH08-Q016"
+      ]
+    },
+    {
+      "testId": "SCI10CH08-T03",
+      "testTitle": "Topic Test 3: Dihybrid Cross and Inheritance Patterns",
+      "testType": "TOPIC_TEST",
+      "topic": "Dihybrid Cross and Inheritance Patterns",
+      "questionLabel": "Related questions: Q17-Q24 • Dihybrid inheritance, gametes, probabilities, test crosses and Punnett squares",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH08-Q017",
+        "SCI10CH08-Q018",
+        "SCI10CH08-Q019",
+        "SCI10CH08-Q020",
+        "SCI10CH08-Q021",
+        "SCI10CH08-Q022",
+        "SCI10CH08-Q023",
+        "SCI10CH08-Q024"
+      ]
+    },
+    {
+      "testId": "SCI10CH08-T04",
+      "testTitle": "Topic Test 4: Expression of Traits",
+      "testType": "TOPIC_TEST",
+      "topic": "Expression of Traits",
+      "questionLabel": "Related questions: Q25-Q32 • Genes, proteins, alleles, genotype, phenotype and acquired versus inherited traits",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH08-Q025",
+        "SCI10CH08-Q026",
+        "SCI10CH08-Q027",
+        "SCI10CH08-Q028",
+        "SCI10CH08-Q029",
+        "SCI10CH08-Q030",
+        "SCI10CH08-Q031",
+        "SCI10CH08-Q032"
+      ]
+    },
+    {
+      "testId": "SCI10CH08-T05",
+      "testTitle": "Topic Test 5: Sex Determination in Humans",
+      "testType": "TOPIC_TEST",
+      "topic": "Sex Determination in Humans",
+      "questionLabel": "Related questions: Q33-Q40 • Human chromosomes, XX-XY mechanism and probability of chromosomal sex",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH08-Q033",
+        "SCI10CH08-Q034",
+        "SCI10CH08-Q035",
+        "SCI10CH08-Q036",
+        "SCI10CH08-Q037",
+        "SCI10CH08-Q038",
+        "SCI10CH08-Q039",
+        "SCI10CH08-Q040"
+      ]
+    },
+    {
+      "testId": "SCI10CH08-FLT01",
+      "testTitle": "Full-Length Test 1",
+      "testType": "FULL_LENGTH",
+      "topic": "Complete Chapter",
+      "questionLabel": "20 balanced questions from all five chapter topics",
+      "instructions": "20 questions • 1 mark each • Full chapter assessment • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH08-Q001",
+        "SCI10CH08-Q002",
+        "SCI10CH08-Q003",
+        "SCI10CH08-Q004",
+        "SCI10CH08-Q009",
+        "SCI10CH08-Q010",
+        "SCI10CH08-Q011",
+        "SCI10CH08-Q012",
+        "SCI10CH08-Q017",
+        "SCI10CH08-Q018",
+        "SCI10CH08-Q019",
+        "SCI10CH08-Q020",
+        "SCI10CH08-Q025",
+        "SCI10CH08-Q026",
+        "SCI10CH08-Q027",
+        "SCI10CH08-Q028",
+        "SCI10CH08-Q033",
+        "SCI10CH08-Q034",
+        "SCI10CH08-Q035",
+        "SCI10CH08-Q036"
+      ]
+    },
+    {
+      "testId": "SCI10CH08-FLT02",
+      "testTitle": "Full-Length Test 2",
+      "testType": "FULL_LENGTH",
+      "topic": "Complete Chapter",
+      "questionLabel": "20 different balanced questions from all five chapter topics",
+      "instructions": "20 questions • 1 mark each • No overlap with Full-Length Test 1 • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10CH08-Q005",
+        "SCI10CH08-Q006",
+        "SCI10CH08-Q007",
+        "SCI10CH08-Q008",
+        "SCI10CH08-Q013",
+        "SCI10CH08-Q014",
+        "SCI10CH08-Q015",
+        "SCI10CH08-Q016",
+        "SCI10CH08-Q021",
+        "SCI10CH08-Q022",
+        "SCI10CH08-Q023",
+        "SCI10CH08-Q024",
+        "SCI10CH08-Q029",
+        "SCI10CH08-Q030",
+        "SCI10CH08-Q031",
+        "SCI10CH08-Q032",
+        "SCI10CH08-Q037",
+        "SCI10CH08-Q038",
+        "SCI10CH08-Q039",
+        "SCI10CH08-Q040"
+      ]
+    }
+  ]
+};
+  </script>
+
+  <script src="../../assets/js/static-mcq-engine.js"></script>
+</body>
+</html>
