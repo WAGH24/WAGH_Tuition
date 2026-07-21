@@ -5,3 +5,51 @@
 /* Feature Engine v1.0 states */
 .feature-btn.is-disabled{opacity:.62;cursor:not-allowed;filter:grayscale(.25)}
 .feature-btn.is-disabled:hover{transform:none;border-color:var(--border)}
+
+
+/* ===== Student Profile Change Approval System v1.0 ===== */
+.profile-section-heading{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;margin-bottom:16px}
+.profile-section-heading h2{margin:8px 0 4px}
+.profile-summary-card,.profile-request-card,.password-change-card{margin-bottom:18px}
+.profile-lock-title{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;margin-bottom:16px}
+.profile-lock-title h3{margin:0 0 4px}
+.profile-lock-badge,.profile-request-badge,.password-direct-badge{display:inline-flex;align-items:center;gap:6px;padding:8px 11px;border-radius:999px;font-size:12px;font-weight:900;white-space:nowrap}
+.profile-lock-badge{background:#eef2ff;color:#4338ca}
+.profile-request-badge{background:#fff7ed;color:#c2410c}
+.password-direct-badge{background:#ecfdf5;color:#047857}
+.profile-readonly-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.profile-readonly-item{padding:14px;border:1px solid var(--border);border-radius:14px;background:#f8fafc;min-width:0}
+.profile-readonly-item span{display:block;color:var(--muted);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;margin-bottom:5px}
+.profile-readonly-item b{display:block;overflow-wrap:anywhere}
+.profile-privacy-note{margin:14px 0 0;padding:11px 13px;border-radius:12px;background:#f0fdfa;color:#0f766e;font-size:13px;font-weight:700}
+.profile-request-status{margin:0 0 16px}
+.profile-request-card textarea{width:100%;resize:vertical}
+.profile-request-card .field small{display:block;margin-top:5px;color:var(--muted);font-size:12px;line-height:1.4}
+.profile-form-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.profile-request-entry{border:1px solid var(--border);border-radius:16px;padding:15px;background:#fff;margin-bottom:12px}
+.profile-request-entry.pending{border-color:#fdba74;background:#fffaf5}
+.profile-request-entry.applied{border-color:#86efac;background:#f7fff9}
+.profile-request-entry.rejected{border-color:#fecaca;background:#fff8f8}
+.profile-request-entry.cancelled{background:#f8fafc}
+.profile-request-entry-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:12px}
+.profile-request-entry-head h4{margin:0}
+.profile-request-status-pill{display:inline-flex;padding:6px 9px;border-radius:999px;font-size:11px;font-weight:900}
+.profile-request-status-pill.pending{background:#ffedd5;color:#c2410c}
+.profile-request-status-pill.applied{background:#dcfce7;color:#166534}
+.profile-request-status-pill.rejected{background:#fee2e2;color:#991b1b}
+.profile-request-status-pill.cancelled{background:#e2e8f0;color:#475569}
+.profile-change-list{display:grid;gap:8px;margin:10px 0}
+.profile-change-line{display:grid;grid-template-columns:minmax(90px,.8fr) minmax(0,1fr) 24px minmax(0,1fr);gap:8px;align-items:center;padding:9px 10px;border-radius:11px;background:rgba(255,255,255,.78);font-size:13px}
+.profile-change-line strong{color:var(--muted)}
+.profile-change-line span{overflow-wrap:anywhere}
+.profile-request-meta{font-size:12px;color:var(--muted);line-height:1.5}
+.profile-request-remarks{margin-top:9px;padding:10px 12px;border-radius:10px;background:#f8fafc;font-size:13px}
+.profile-request-empty{padding:16px;border:1px dashed var(--border);border-radius:14px;text-align:center;color:var(--muted)}
+.profile-cancel-row{display:flex;gap:10px;align-items:end;flex-wrap:wrap;margin-top:12px}
+.profile-cancel-row .field{flex:1 1 200px}
+@media(max-width:700px){
+  .profile-lock-title,.profile-request-entry-head{flex-direction:column}
+  .profile-readonly-grid{grid-template-columns:1fr}
+  .profile-change-line{grid-template-columns:1fr}
+  .profile-change-line .profile-arrow{display:none}
+}
