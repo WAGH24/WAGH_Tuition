@@ -3,249 +3,546 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f172a">
   <title>Admin Dashboard | WAGH Tuition Classes</title>
   <link rel="icon" href="assets/images/favicon.png">
-  <link rel="stylesheet" href="assets/css/admin.css">
-  <link rel="stylesheet" href="assets/css/admin-ai.css">
+  <link rel="stylesheet" href="assets/css/admin.css?v=admin-ui-2-0">
+  <link rel="stylesheet" href="assets/css/admin-ai.css?v=admin-ui-2-0">
+  <!-- stylesheet for teacher assignment by admin -->
+  <link rel="stylesheet" href="assets/css/admin-teacher-assignments.css?v=phase-2-5g-1-0">
 </head>
-<body>
-<header class="topbar">
-  <div class="topbar-inner">
-    <a class="brand" href="admin.html">
-      <img src="assets/images/logo.png" alt="WTC">
-      <span>Admin Dashboard</span>
-    </a>
+<body class="admin-page">
+<header class="topbar admin-topbar">
+  <div class="topbar-inner admin-topbar-inner">
+    <div class="admin-topbar-start">
+      <button class="admin-menu-toggle" type="button" aria-label="Open admin navigation" aria-controls="adminSidebar" aria-expanded="false" onclick="AdminApp.toggleSidebar()">☰</button>
+      <a class="brand" href="admin.html" aria-label="WAGH Tuition Classes Admin Dashboard">
+        <img src="assets/images/logo.png" alt="WTC">
+        <span>Admin Dashboard</span>
+      </a>
+    </div>
     <div class="top-actions">
-      <span data-user-name>Admin</span>
-      <span class="avatar" data-user-avatar>A</span>
-      <button class="btn danger small" onclick="WTC_AUTH.logout()">Logout</button>
+      <div class="admin-user-copy hide-mobile">
+        <strong data-user-name>Admin</strong>
+        <small>Platform administrator</small>
+      </div>
+      <span class="avatar" data-user-avatar aria-hidden="true">A</span>
+      <button class="btn danger small" type="button" onclick="WTC_AUTH.logout()">Logout</button>
     </div>
   </div>
 </header>
 
-<main class="main-area">
-  <section class="hero-card">
-    <h1>Admin Dashboard</h1>
-    <p class="muted">Manage platform data from WTC_CONTENT_ENGINE and AI content from WTC_AI_CONTENT_ENGINE.</p>
-  </section>
-
-  <br>
-
-  <section class="grid grid-3">
-    <div class="card"><h3>Students</h3><p id="studentTotal">Loading...</p></div>
-    <div class="card"><h3>Teachers</h3><p id="teacherTotal">Loading...</p></div>
-    <div class="card"><h3>Logs</h3><p id="logTotal">Loading...</p></div>
-  </section>
-
-  <br>
-
-  <div class="card">
-    <h2>📚 Content Manager</h2>
-    <p class="muted">Manage subjects, chapters and feature URLs.</p>
-    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:15px;">
-      <button class="btn" onclick="showPanel('contentManagerPanel',this)">📚 Open Content Manager</button>
+<div class="admin-shell">
+  <aside id="adminSidebar" class="admin-sidebar" aria-label="Admin navigation">
+    <div class="admin-sidebar-head">
+      <span class="admin-sidebar-mark">WTC</span>
+      <div>
+        <strong>Control Centre</strong>
+        <small>WAGH Tuition Classes</small>
+      </div>
+      <button class="admin-sidebar-close" type="button" aria-label="Close admin navigation" onclick="AdminApp.toggleSidebar(false)">×</button>
     </div>
-  </div>
 
-  <section id="contentManagerPanel" class="panel">
-    <div class="card">
-      <h2>📚 Content Manager</h2>
-      <p class="muted">This section will manage SUBJECT_MASTER, CHAPTER_MASTER and CHAPTER_LIST.</p>
+    <nav class="admin-nav">
+      <button class="admin-nav-item active" type="button" data-admin-nav="dashboardPanel" onclick="AdminApp.openPanel('dashboardPanel', this)">
+        <span class="admin-nav-icon">⌂</span><span>Dashboard</span>
+      </button>
+      <button class="admin-nav-item" type="button" data-admin-nav="profileRequestPanel" onclick="AdminApp.openPanel('profileRequestPanel', this)">
+        <span class="admin-nav-icon">🪪</span><span>Profile Requests</span><b id="profileRequestSidebarCount" class="admin-nav-count">0</b>
+      </button>
+      <button class="admin-nav-item" type="button" data-admin-nav="teacherAssignmentPanel" onclick="AdminApp.openPanel('teacherAssignmentPanel', this);WTC_TEACHER_ASSIGNMENT_ADMIN.open()">
+  <span class="admin-nav-icon">🔗</span><span>Teacher Assignments</span>
+      </button>
+      <button class="admin-nav-item" type="button" data-admin-nav="contentManagerPanel" onclick="AdminApp.openPanel('contentManagerPanel', this)">
+        <span class="admin-nav-icon">📚</span><span>Content Manager</span>
+      </button>
+      <button class="admin-nav-item" type="button" data-admin-nav="aiContentEnginePanel" onclick="AdminApp.openPanel('aiContentEnginePanel', this)">
+        <span class="admin-nav-icon">🤖</span><span>AI Content Engine</span>
+      </button>
+    </nav>
 
-      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:15px;">
-        <button class="btn small">Subjects</button>
-        <button class="btn small">Chapters</button>
-        <button class="btn small">Feature URLs</button>
+    <div class="admin-sidebar-note">
+      <span>Architecture</span>
+      <strong>LOCKED v2.3.1 R2</strong>
+      <small>Dynamic-first · Static fallback</small>
+    </div>
+  </aside>
+
+  <button id="adminSidebarOverlay" class="admin-sidebar-overlay" type="button" aria-label="Close admin navigation" onclick="AdminApp.toggleSidebar(false)"></button>
+
+  <main class="admin-main">
+    <div class="admin-page-head">
+      <div>
+        <p class="admin-breadcrumb">Admin / <span id="adminBreadcrumbCurrent">Dashboard</span></p>
+        <h1 id="adminPageTitle">Dashboard</h1>
+        <p id="adminPageSubtitle" class="muted">Monitor the platform and open key management tools.</p>
+      </div>
+      <button class="btn outline small admin-refresh-dashboard" type="button" onclick="AdminApp.loadDashboard()">↻ Refresh overview</button>
+    </div>
+
+    <section id="dashboardPanel" class="admin-panel active" data-panel-title="Dashboard" data-panel-subtitle="Monitor the platform and open key management tools.">
+      <div class="admin-hero">
+        <div>
+          <span class="admin-eyebrow">WAGH Tuition Classes</span>
+          <h2>Everything important, in one clear workspace.</h2>
+          <p>Manage runtime data from WTC_CONTENT_ENGINE and authoring content from WTC_AI_CONTENT_ENGINE without changing the locked architecture.</p>
+        </div>
+        <div class="admin-hero-badge">
+          <span>System mode</span>
+          <strong>Development</strong>
+          <small>Review before stable promotion</small>
+        </div>
       </div>
 
-      <div style="margin-top:18px;padding:15px;border-radius:14px;background:#f8fafc;">
-        <h3>Subject Manager</h3>
-        <form id="subjectManagerForm" style="display:grid;gap:10px;margin-top:12px;">
-          <input name="subjectId" placeholder="Subject ID e.g. SCI10" required>
-          <input name="subjectName" placeholder="Subject Name e.g. Science" required>
-          <input name="icon" placeholder="Icon e.g. 🔬">
-          <select name="board">
-            <option>CBSE</option>
-            <option>GSEB</option>
-          </select>
-          <select name="className">
-            <option>Class 5</option>
-            <option>Class 6</option>
-            <option>Class 7</option>
-            <option>Class 8</option>
-            <option>Class 9</option>
-            <option>Class 10</option>
-          </select>
-          <select name="medium">
-            <option>English Medium</option>
-            <option>Gujarati Medium</option>
-          </select>
-          <input name="description" placeholder="Description">
-          <select name="status">
-            <option>Active</option>
-            <option>Inactive</option>
-          </select>
-          <input name="sortOrder" type="number" placeholder="Sort Order">
-          <button class="btn" type="submit">💾 Save Subject</button>
+      <div class="admin-stat-grid" aria-label="Platform overview">
+        <article class="admin-stat-card">
+          <span class="admin-stat-icon">👨‍🎓</span>
+          <div><small>Students</small><strong id="studentTotal">—</strong><p>Registered learner accounts</p></div>
+        </article>
+        <article class="admin-stat-card">
+          <span class="admin-stat-icon">👩‍🏫</span>
+          <div><small>Teachers</small><strong id="teacherTotal">—</strong><p>Teacher accounts</p></div>
+        </article>
+        <article class="admin-stat-card">
+          <span class="admin-stat-icon">🧾</span>
+          <div><small>Access logs</small><strong id="logTotal">—</strong><p>Recorded runtime activity</p></div>
+        </article>
+        <article class="admin-stat-card admin-stat-warning">
+          <span class="admin-stat-icon">🪪</span>
+          <div><small>Pending requests</small><strong id="profileRequestPendingTotal">0</strong><p>Student profile approvals</p></div>
+        </article>
+      </div>
+
+      <div class="admin-section-block">
+        <div class="admin-section-heading">
+          <div><span class="admin-kicker">Quick actions</span><h2>Continue managing the platform</h2></div>
+        </div>
+        <div class="admin-quick-grid">
+          <button class="admin-quick-card" type="button" onclick="AdminApp.openPanel('profileRequestPanel')">
+            <span class="admin-quick-icon">🪪</span>
+            <span><strong>Review profile requests</strong><small>Approve or reject student changes securely.</small></span>
+            <b>→</b>
+          </button>
+          <button class="admin-quick-card" type="button" onclick="AdminApp.openPanel('contentManagerPanel')">
+            <span class="admin-quick-icon">📚</span>
+            <span><strong>Manage catalogue</strong><small>Subjects, chapters and static feature URLs.</small></span>
+            <b>→</b>
+          </button>
+          <button class="admin-quick-card" type="button" onclick="AdminApp.openPanel('aiContentEnginePanel')">
+            <span class="admin-quick-icon">🤖</span>
+            <span><strong>Open AI content engine</strong><small>Import, review and publish structured content.</small></span>
+            <b>→</b>
+          </button>
+          <button class="admin-quick-card" type="button" onclick="AdminApp.openPanel('teacherAssignmentPanel');WTC_TEACHER_ASSIGNMENT_ADMIN.open()">
+  <span class="admin-quick-icon">🔗</span>
+  <span><strong>Assign teachers</strong><small>Connect teachers to classes, selected students and subjects.</small></span>
+  <b>→</b>
+          </button>
+        </div>
+      </div>
+
+      <div class="admin-info-grid">
+        <article class="admin-info-card">
+          <span>Catalogue flow</span>
+          <strong>Subject → Chapter → Feature</strong>
+          <p>Admin managers continue to write to SUBJECT_MASTER, CHAPTER_MASTER and CHAPTER_LIST using stable IDs.</p>
+        </article>
+        <article class="admin-info-card">
+          <span>Content flow</span>
+          <strong>Draft → Review → Publish</strong>
+          <p>Static and AI-generated content remains hidden from students until an administrator publishes it.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="profileRequestPanel" class="admin-panel" data-panel-title="Profile Requests" data-panel-subtitle="Review requested student profile changes with administrator confirmation.">
+      <div class="admin-panel-card">
+        <div class="admin-section-heading profile-admin-heading">
+          <div>
+            <span class="admin-kicker">Student accounts</span>
+            <h2>Profile Change Approval</h2>
+            <p class="muted">Approval updates STUDENT_MASTER. Existing progress remains stored under the original profile combination.</p>
+          </div>
+          <button class="btn small outline" type="button" onclick="AdminApp.loadProfileChangeRequests('PENDING', this)">↻ Refresh</button>
+        </div>
+
+        <div class="admin-password-confirmation">
+          <div>
+            <label for="profileRequestAdminPassword">Admin password confirmation</label>
+            <small>Required only when approving or rejecting a request.</small>
+          </div>
+          <div class="password-field-row">
+            <input id="profileRequestAdminPassword" type="password" autocomplete="current-password" placeholder="Enter admin password">
+            <button class="btn small outline" type="button" aria-label="Show or hide password" onclick="AdminApp.toggleReviewPassword(this)">Show</button>
+          </div>
+        </div>
+
+        <div class="profile-request-toolbar">
+          <div class="profile-request-filters" role="tablist" aria-label="Profile request filters">
+            <button class="btn small profile-filter active" type="button" data-profile-filter="PENDING" onclick="AdminApp.loadProfileChangeRequests('PENDING', this)">Pending</button>
+            <button class="btn small outline profile-filter" type="button" data-profile-filter="ALL" onclick="AdminApp.loadProfileChangeRequests('ALL', this)">All Requests</button>
+          </div>
+          <span class="pending-request-count"><b id="profileRequestPanelCount">0</b> pending</span>
+        </div>
+
+        <div id="profileRequestAdminList" class="profile-admin-list">
+          <div class="profile-admin-empty">Open or refresh to load student requests.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="teacherAssignmentPanel" class="admin-panel" data-panel-title="Teacher Assignments" data-panel-subtitle="Securely connect teachers to classes, selected students and one or more subjects.">
+  <div class="admin-panel-card teacher-assignment-admin">
+    <div class="admin-section-heading">
+      <div>
+        <span class="admin-kicker">Phase 2.5G · Admin controlled</span>
+        <h2>Teacher Assignment Manager</h2>
+        <p class="muted">Teachers cannot expand their own access. Admin creates explicit subject-level assignments.</p>
+      </div>
+      <button class="btn small outline" type="button" onclick="WTC_TEACHER_ASSIGNMENT_ADMIN.load()">↻ Refresh</button>
+    </div>
+
+    <div id="teacherAssignmentLoadStatus" class="teacher-assignment-status info">Open this panel to load assignment data.</div>
+
+    <div class="teacher-assignment-stats">
+      <article class="teacher-assignment-stat"><small>Total rows</small><strong id="teacherAssignmentTotal">0</strong></article>
+      <article class="teacher-assignment-stat"><small>Active rows</small><strong id="teacherAssignmentActiveTotal">0</strong></article>
+      <article class="teacher-assignment-stat"><small>Class scope</small><strong id="teacherAssignmentClassTotal">0</strong></article>
+      <article class="teacher-assignment-stat"><small>Student scope</small><strong id="teacherAssignmentStudentTotal">0</strong></article>
+      <article class="teacher-assignment-stat"><small>Legacy-only teachers</small><strong id="teacherAssignmentLegacyTotal">0</strong></article>
+    </div>
+
+    <div class="teacher-assignment-grid">
+      <article class="teacher-assignment-card">
+        <div class="teacher-assignment-card-head">
+          <div>
+            <span class="admin-kicker">Create / update scope</span>
+            <h3>Assign a teacher</h3>
+          </div>
+        </div>
+
+        <form id="teacherAssignmentForm" class="teacher-assignment-form-grid">
+          <div class="teacher-assignment-field teacher-assignment-field-wide">
+            <label for="teacherAssignmentTeacher">Teacher</label>
+            <select id="teacherAssignmentTeacher" required><option value="">Select Teacher</option></select>
+          </div>
+
+          <div class="teacher-assignment-field">
+            <label for="teacherAssignmentScopeType">Assignment scope</label>
+            <select id="teacherAssignmentScopeType">
+              <option value="CLASS">Whole class</option>
+              <option value="STUDENT">Selected students</option>
+            </select>
+          </div>
+
+          <div class="teacher-assignment-field">
+            <label for="teacherAssignmentBoard">Board</label>
+            <select id="teacherAssignmentBoard" required><option value="">Select Board</option></select>
+          </div>
+
+          <div class="teacher-assignment-field">
+            <label for="teacherAssignmentClass">Class</label>
+            <select id="teacherAssignmentClass" required><option value="">Select Class</option></select>
+          </div>
+
+          <div class="teacher-assignment-field">
+            <label for="teacherAssignmentMedium">Medium</label>
+            <select id="teacherAssignmentMedium" required><option value="">Select Medium</option></select>
+          </div>
+
+          <div class="teacher-assignment-field teacher-assignment-field-wide">
+            <label for="teacherAssignmentSection">Section (optional)</label>
+            <select id="teacherAssignmentSection"><option value="">All Sections / No Section</option></select>
+          </div>
+
+          <p id="teacherAssignmentScopeHelp" class="teacher-assignment-help teacher-assignment-field-wide">All current and future active students matching the selected profile are included automatically.</p>
+
+          <div class="teacher-assignment-field teacher-assignment-field-wide">
+            <div class="teacher-assignment-toolbar">
+              <label>Subjects (<span id="teacherAssignmentSubjectCount">0</span>)</label>
+              <div class="teacher-assignment-toolbar-actions">
+                <button class="btn small outline" type="button" onclick="WTC_TEACHER_ASSIGNMENT_ADMIN.selectAllSubjects(true)">Select all</button>
+                <button class="btn small outline" type="button" onclick="WTC_TEACHER_ASSIGNMENT_ADMIN.selectAllSubjects(false)">Clear</button>
+              </div>
+            </div>
+            <div id="teacherAssignmentSubjectList" class="teacher-assignment-checklist"><div class="teacher-assignment-empty">Select a profile to see subjects.</div></div>
+          </div>
+
+          <div id="teacherAssignmentStudentBlock" class="teacher-assignment-field teacher-assignment-field-wide is-hidden">
+            <div class="teacher-assignment-toolbar">
+              <label>Students (<span id="teacherAssignmentStudentCount">0</span>)</label>
+              <div class="teacher-assignment-toolbar-actions">
+                <button class="btn small outline" type="button" onclick="WTC_TEACHER_ASSIGNMENT_ADMIN.selectAllStudents(true)">Select all</button>
+                <button class="btn small outline" type="button" onclick="WTC_TEACHER_ASSIGNMENT_ADMIN.selectAllStudents(false)">Clear</button>
+              </div>
+            </div>
+            <div id="teacherAssignmentStudentList" class="teacher-assignment-checklist"><div class="teacher-assignment-empty">Select a profile to see students.</div></div>
+          </div>
+
+          <label class="teacher-assignment-primary teacher-assignment-field-wide">
+            <input id="teacherAssignmentPrimary" type="checkbox">
+            <span><strong>Primary teacher</strong><br><small>Leave unchecked for a supporting teacher.</small></span>
+          </label>
+
+          <div class="teacher-assignment-field">
+            <label for="teacherAssignmentStartDate">Start date (optional)</label>
+            <input id="teacherAssignmentStartDate" type="date">
+          </div>
+
+          <div class="teacher-assignment-field">
+            <label for="teacherAssignmentEndDate">End date (optional)</label>
+            <input id="teacherAssignmentEndDate" type="date">
+          </div>
+
+          <div class="teacher-assignment-field teacher-assignment-field-wide">
+            <label for="teacherAssignmentAdminPassword">Admin password confirmation</label>
+            <input id="teacherAssignmentAdminPassword" type="password" autocomplete="current-password" placeholder="Required for save, status change or migration">
+          </div>
+
+          <button class="btn teacher-assignment-field-wide" type="submit">Save Teacher Assignment</button>
         </form>
 
-        <br>
-        <button class="btn small outline" onclick="AdminApp.loadSubjectsManager()">🔄 Refresh Subjects</button>
-        <div id="subjectManagerList" style="margin-top:15px;">Subjects will appear here.</div>
+        <div class="teacher-assignment-migration">
+          <div class="teacher-assignment-card-head">
+            <div><h3>Legacy TEACHER_MASTER migration</h3><p class="muted">Preview first. Only teachers with zero explicit rows are migrated.</p></div>
+          </div>
+          <div class="teacher-assignment-migration-actions">
+            <button class="btn small outline" type="button" onclick="WTC_TEACHER_ASSIGNMENT_ADMIN.previewMigration()">Preview migration</button>
+            <button class="btn small warning" type="button" onclick="WTC_TEACHER_ASSIGNMENT_ADMIN.migrateLegacy()">Migrate legacy-only teachers</button>
+          </div>
+          <div id="teacherAssignmentMigrationPreview" class="teacher-assignment-status info" style="margin-top:10px">No preview generated.</div>
+        </div>
+      </article>
+
+      <article class="teacher-assignment-card">
+        <div class="teacher-assignment-card-head">
+          <div>
+            <span class="admin-kicker">Existing scope rows</span>
+            <h3>Current assignments</h3>
+          </div>
+          <select id="teacherAssignmentStatusFilter" aria-label="Filter assignment status">
+            <option value="ALL">All statuses</option>
+            <option value="ACTIVE">Active</option>
+            <option value="INACTIVE">Inactive</option>
+          </select>
+        </div>
+        <div id="teacherAssignmentExistingList" class="teacher-assignment-list">
+          <div class="teacher-assignment-empty">Open this panel to load assignments.</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+    <section id="contentManagerPanel" class="admin-panel" data-panel-title="Content Manager" data-panel-subtitle="Manage subjects, chapters and static fallback feature URLs.">
+      <div class="admin-panel-card">
+        <div class="admin-section-heading">
+          <div>
+            <span class="admin-kicker">Managed catalogue</span>
+            <h2>Content Manager</h2>
+            <p class="muted">Preserves stable IDs and existing API-driven catalogue behaviour.</p>
+          </div>
+        </div>
+
+        <div class="admin-tabbar" role="tablist" aria-label="Content manager sections">
+          <button class="admin-tab active" type="button" data-content-tab="subjects" onclick="AdminApp.openContentTab('subjects', this)">📚 Subjects</button>
+          <button class="admin-tab" type="button" data-content-tab="chapters" onclick="AdminApp.openContentTab('chapters', this)">📖 Chapters</button>
+          <button class="admin-tab" type="button" data-content-tab="features" onclick="AdminApp.openContentTab('features', this)">🔗 Feature URLs</button>
+        </div>
+
+        <div id="contentTabSubjects" class="content-tab-panel active">
+          <div class="manager-layout">
+            <article class="manager-editor">
+              <div class="manager-card-head">
+                <div><span class="admin-kicker">SUBJECT_MASTER</span><h3>Add or edit subject</h3></div>
+                <button class="btn small outline" type="button" onclick="AdminApp.resetManagerForm('subjectManagerForm')">Clear</button>
+              </div>
+              <form id="subjectManagerForm" class="admin-form-grid">
+                <div class="admin-field"><label>Subject ID</label><input name="subjectId" placeholder="SCI10" required></div>
+                <div class="admin-field"><label>Subject name</label><input name="subjectName" placeholder="Science" required></div>
+                <div class="admin-field"><label>Icon</label><input name="icon" placeholder="🔬"></div>
+                <div class="admin-field"><label>Board</label><select name="board"><option>CBSE</option><option>GSEB</option></select></div>
+                <div class="admin-field"><label>Class</label><select name="className"><option>Class 5</option><option>Class 6</option><option>Class 7</option><option>Class 8</option><option>Class 9</option><option>Class 10</option></select></div>
+                <div class="admin-field"><label>Medium</label><select name="medium"><option>English Medium</option><option>Gujarati Medium</option></select></div>
+                <div class="admin-field admin-field-wide"><label>Description</label><input name="description" placeholder="Short student-facing description"></div>
+                <div class="admin-field"><label>Status</label><select name="status"><option>Active</option><option>Inactive</option></select></div>
+                <div class="admin-field"><label>Sort order</label><input name="sortOrder" type="number" min="0" placeholder="1"></div>
+                <button class="btn admin-form-submit" type="submit">💾 Save Subject</button>
+              </form>
+            </article>
+
+            <article class="manager-list-card">
+              <div class="manager-card-head">
+                <div><span class="admin-kicker">Current records</span><h3>Subjects</h3></div>
+                <button class="btn small outline" type="button" onclick="AdminApp.loadSubjectsManager()">↻ Refresh</button>
+              </div>
+              <div class="admin-search-row">
+                <label class="admin-search"><span>⌕</span><input id="subjectManagerSearch" type="search" placeholder="Search subject name or ID"></label>
+              </div>
+              <div id="subjectManagerStatus" class="manager-status" aria-live="polite"></div>
+              <div id="subjectManagerList" class="manager-record-list"><div class="manager-empty">Subjects will appear here.</div></div>
+            </article>
+          </div>
+        </div>
+
+        <div id="contentTabChapters" class="content-tab-panel">
+          <div class="manager-layout">
+            <article class="manager-editor">
+              <div class="manager-card-head">
+                <div><span class="admin-kicker">CHAPTER_MASTER</span><h3>Add or edit chapter</h3></div>
+                <button class="btn small outline" type="button" onclick="AdminApp.resetManagerForm('chapterManagerForm')">Clear</button>
+              </div>
+              <form id="chapterManagerForm" class="admin-form-grid">
+                <div class="admin-field"><label>Chapter ID</label><input name="chapterId" placeholder="SCI10CH9" required></div>
+                <div class="admin-field"><label>Subject ID</label><input name="subjectId" placeholder="SCI10" required></div>
+                <div class="admin-field"><label>Chapter number</label><input name="chapterNo" placeholder="9"></div>
+                <div class="admin-field"><label>Chapter name</label><input name="chapterName" placeholder="Heredity and Evolution" required></div>
+                <div class="admin-field"><label>Board</label><select name="board"><option>CBSE</option><option>GSEB</option></select></div>
+                <div class="admin-field"><label>Class</label><select name="className"><option>Class 5</option><option>Class 6</option><option>Class 7</option><option>Class 8</option><option>Class 9</option><option>Class 10</option></select></div>
+                <div class="admin-field"><label>Medium</label><select name="medium"><option>English Medium</option><option>Gujarati Medium</option></select></div>
+                <div class="admin-field"><label>Status</label><select name="status"><option>Active</option><option>Inactive</option></select></div>
+                <div class="admin-field admin-field-wide"><label>Description</label><input name="description" placeholder="Class 10 Science Chapter 9"></div>
+                <div class="admin-field"><label>Sort order</label><input name="sortOrder" type="number" min="0" placeholder="9"></div>
+                <button class="btn admin-form-submit" type="submit">💾 Save Chapter</button>
+              </form>
+            </article>
+
+            <article class="manager-list-card">
+              <div class="manager-card-head">
+                <div><span class="admin-kicker">Current records</span><h3>Chapters</h3></div>
+                <button class="btn small outline" type="button" onclick="AdminApp.loadChaptersManager()">↻ Refresh</button>
+              </div>
+              <div class="admin-search-row">
+                <label class="admin-search"><span>⌕</span><input id="chapterManagerSearch" type="search" placeholder="Search chapter name, ID or subject"></label>
+              </div>
+              <div id="chapterManagerStatus" class="manager-status" aria-live="polite"></div>
+              <div id="chapterManagerList" class="manager-record-list"><div class="manager-empty">Chapters will appear here.</div></div>
+            </article>
+          </div>
+        </div>
+
+        <div id="contentTabFeatures" class="content-tab-panel">
+          <article class="manager-editor manager-editor-wide">
+            <div class="manager-card-head">
+              <div><span class="admin-kicker">CHAPTER_LIST</span><h3>Feature URL Manager</h3><p class="muted">Static URLs remain fallback routes while dynamic content is preferred first.</p></div>
+            </div>
+            <form id="featureUrlManagerForm" class="admin-form-grid admin-form-grid-3">
+              <div class="admin-field admin-field-wide"><label>Chapter ID</label><div class="admin-inline-field"><input name="chapterId" placeholder="SCI10CH9" required><button class="btn small outline" type="button" onclick="AdminApp.loadChapterFeaturesManager()">⌕ Load</button></div></div>
+              <div class="admin-field"><label>Lesson URL</label><input name="lessonUrl" placeholder="Lesson URL"></div>
+              <div class="admin-field"><label>Notes URL</label><input name="notesUrl" placeholder="Notes URL"></div>
+              <div class="admin-field"><label>MCQ URL</label><input name="mcqUrl" placeholder="MCQ Test URL"></div>
+              <div class="admin-field"><label>Worksheet URL</label><input name="worksheetUrl" placeholder="Worksheet URL"></div>
+              <div class="admin-field"><label>Answer Writing URL</label><input name="answerWritingUrl" placeholder="Answer Writing URL"></div>
+              <div class="admin-field"><label>Video URL</label><input name="videoUrl" placeholder="Video URL"></div>
+              <div class="admin-field"><label>Revision URL</label><input name="revisionUrl" placeholder="Revision URL"></div>
+              <div class="admin-field"><label>Solution URL</label><input name="solutionUrl" placeholder="solutions/.../chapter_solution.html"></div>
+              <div class="admin-field"><label>Status</label><select name="status"><option>Active</option><option>Inactive</option></select></div>
+              <button class="btn admin-form-submit" type="submit">💾 Save Feature URLs</button>
+            </form>
+            <div id="featureUrlManagerStatus" class="manager-status manager-status-box">Enter a Chapter ID, then load or save feature URLs.</div>
+          </article>
+        </div>
       </div>
+    </section>
 
-      <!-- chapter update by admin -->
+    <section id="aiContentEnginePanel" class="admin-panel" data-panel-title="AI Content Engine" data-panel-subtitle="Import, analyse, review and publish structured learning content.">
+      <div class="ai-engine-panel">
+        <div class="ai-hero">
+          <div>
+            <span class="ai-eyebrow">WTC_AI_CONTENT_ENGINE</span>
+            <h2>AI Chapter Extraction Engine</h2>
+            <p>Use the guided workflow for OCR, chapter analysis, static-page migration, review and publishing.</p>
+          </div>
+          <span class="ai-hero-pill">DRAFT-FIRST WORKFLOW</span>
+        </div>
 
-      <div style="margin-top:18px;padding:15px;border-radius:14px;background:#f8fafc;">
-  <h3>Chapter Manager</h3>
+        <div class="ai-stepper" aria-label="Content workflow">
+          <span class="active"><b>1</b> Source</span>
+          <span><b>2</b> Metadata</span>
+          <span><b>3</b> Analyse</span>
+          <span><b>4</b> Import Draft</span>
+          <span><b>5</b> Review</span>
+          <span><b>6</b> Publish</span>
+        </div>
 
-  <form id="chapterManagerForm" style="display:grid;gap:10px;margin-top:12px;">
-    <input name="chapterId" placeholder="Chapter ID e.g. SCI10CH9" required>
-    <input name="subjectId" placeholder="Subject ID e.g. SCI10" required>
-    <input name="chapterNo" placeholder="Chapter No e.g. 9">
-    <input name="chapterName" placeholder="Chapter Name e.g. Heredity and Evolution" required>
+        <div class="ai-stage-grid">
+          <div class="ai-card ai-source-card">
+            <div class="ai-card-head">
+              <div><span class="ai-card-number">1</span><div><h3>Upload or paste chapter source</h3><p>For OCR/AI generation from textbook material.</p></div></div>
+              <span class="ai-type-pill">AI PIPELINE</span>
+            </div>
+            <div class="ai-grid">
+              <div><label for="aiSourceType">Source Type</label><select id="aiSourceType"><option value="text">Pasted Text</option><option value="pdf">PDF</option><option value="image">Image / Scan</option></select></div>
+              <div><label for="aiBoard">Board</label><select id="aiBoard"><option>CBSE</option><option>GSEB</option></select></div>
+              <div><label for="aiClassName">Class</label><select id="aiClassName"><option>Class 5</option><option>Class 6</option><option>Class 7</option><option>Class 8</option><option>Class 9</option><option>Class 10</option></select></div>
+              <div><label for="aiMedium">Medium</label><select id="aiMedium"><option>English Medium</option><option>Gujarati Medium</option></select></div>
+              <div><label for="aiSubjectId">Subject ID</label><input id="aiSubjectId" placeholder="SCI10 / MATH9"></div>
+              <div><label for="aiChapterId">Chapter ID</label><input id="aiChapterId" placeholder="SCI10CH1"></div>
+            </div>
+            <div class="ai-upload-grid">
+              <div><label for="aiFileInput">Upload PDF / Image / Scan</label><input id="aiFileInput" type="file" accept=".pdf,image/*"><div id="aiFileName" class="ai-file-name">No file selected</div></div>
+              <div><label for="aiRawContent">Or paste extracted chapter text</label><textarea id="aiRawContent" placeholder="Paste chapter text here..."></textarea></div>
+            </div>
+            <input id="currentUploadId" type="hidden">
+            <div class="ai-action-groups">
+              <div class="ai-action-group"><span>Prepare</span><div class="ai-action-row"><button class="ai-btn" type="button" onclick="WTC_AI_CONTENT_ADMIN.submitInput()">Save to AI Queue</button><button class="ai-btn secondary" type="button" onclick="WTC_AI_CONTENT_ADMIN.runOCR()">Run OCR</button><button class="ai-btn warning" type="button" onclick="WTC_AI_CONTENT_ADMIN.parseChapter()">Analyse Chapter</button></div></div>
+              <div class="ai-action-group"><span>Generate</span><div class="ai-action-row"><button class="ai-btn outline" type="button" onclick="WTC_AI_CONTENT_ADMIN.detectQuestions()">Detect Questions</button><button class="ai-btn success" type="button" onclick="WTC_AI_CONTENT_ADMIN.generateContent()">Generate Content</button><button class="ai-btn success" type="button" onclick="WTC_AI_CONTENT_ADMIN.fullPipeline()">Run Full Pipeline</button></div></div>
+              <div class="ai-action-group"><span>Review</span><div class="ai-action-row"><button class="ai-btn outline" type="button" onclick="WTC_AI_CONTENT_ADMIN.markUnderReview()">Mark Under Review</button><button class="ai-btn success" type="button" onclick="WTC_AI_CONTENT_ADMIN.publishReviewed()">Publish Reviewed Content</button></div></div>
+            </div>
+          </div>
 
-    <select name="board">
-      <option>CBSE</option>
-      <option>GSEB</option>
-    </select>
+          <div class="ai-card static-import-card">
+            <div class="ai-card-head static-import-heading">
+              <div><span class="ai-card-number">2</span><div><h3>Import existing static feature page</h3><p>Import a WTC MCQ or Solution Engine HTML page into the structured content bank.</p></div></div>
+              <span class="draft-pill">DRAFT FIRST</span>
+            </div>
 
-    <select name="className">
-      <option>Class 5</option>
-      <option>Class 6</option>
-      <option>Class 7</option>
-      <option>Class 8</option>
-      <option>Class 9</option>
-      <option>Class 10</option>
-    </select>
+            <div class="ai-upload-grid compact">
+              <div><label for="staticImportFile">Upload Static HTML Page</label><input id="staticImportFile" type="file" accept=".html,.htm,text/html"><div id="staticImportFileName" class="ai-file-name">No HTML file selected</div></div>
+              <div><label for="staticImportUrl">GitHub Pages URL / repository-relative path</label><div class="static-url-row"><input id="staticImportUrl" type="url" placeholder="tests/mcq/chapter.html or https://..."><button class="ai-btn secondary" type="button" onclick="WTC_STATIC_CONTENT_IMPORTER.loadUrl()">Load URL</button></div></div>
+            </div>
 
-    <select name="medium">
-      <option>English Medium</option>
-      <option>Gujarati Medium</option>
-    </select>
+            <input id="staticImportUploadId" type="hidden">
+            <div class="ai-action-row static-import-actions">
+              <button class="ai-btn warning" type="button" data-static-import-action="analyze" onclick="WTC_STATIC_CONTENT_IMPORTER.analyze()">Analyse Static Page</button>
+              <button class="ai-btn" type="button" data-static-import-action="importDraft" onclick="WTC_STATIC_CONTENT_IMPORTER.importDraft()">Import as Draft</button>
+              <button class="ai-btn success" type="button" data-static-import-action="publishImported" onclick="WTC_STATIC_CONTENT_IMPORTER.publishImported()">Approve &amp; Publish</button>
+            </div>
+            <label class="static-override-check"><input id="staticUseMetadataOverride" type="checkbox"> Use the Board, Class, Medium, Subject ID and Chapter ID fields above as admin-confirmed metadata.</label>
+            <p class="static-help">MCQ pages normally contain an exact Chapter ID. For Solution pages, confirm the existing Chapter ID before import.</p>
+          </div>
+        </div>
 
-    <input name="description" placeholder="Description e.g. Class 10 Science Chapter 9">
+        <div class="ai-feedback-grid">
+          <div><span>Static importer</span><div id="staticImportStatus" class="ai-status info">Static importer ready.</div></div>
+          <div><span>AI pipeline</span><div id="aiStatus" class="ai-status info">Ready.</div></div>
+        </div>
 
-    <select name="status">
-      <option>Active</option>
-      <option>Inactive</option>
-    </select>
+        <div id="staticImportPreview" class="static-import-preview"><div class="ai-empty">Choose an HTML page and tap Analyse Static Page.</div></div>
 
-    <input name="sortOrder" type="number" placeholder="Sort Order e.g. 9">
+        <div class="ai-card">
+          <div class="ai-card-head">
+            <div><span class="ai-card-number">3</span><div><h3>AI Queue</h3><p>Review uploads and continue processing.</p></div></div>
+            <button class="ai-btn outline" type="button" onclick="WTC_AI_CONTENT_ADMIN.refreshQueue()">↻ Refresh Queue</button>
+          </div>
+          <div id="aiQueueTable" class="ai-table-wrap"></div>
+        </div>
 
-    <button class="btn" type="submit">💾 Save Chapter</button>
-  </form>
-
-  <br>
-
-  <button class="btn small outline" onclick="AdminApp.loadChaptersManager()">🔄 Refresh Chapters</button>
-
-  <div id="chapterManagerList" style="margin-top:15px;">
-    Chapters will appear here.
-  </div>
-
-        <!-- features of chapter form for update to excel by admin -->
-
-    <div style="margin-top:18px;padding:15px;border-radius:14px;background:#f8fafc;">
-  <h3>Feature URL Manager</h3>
-
-  <form id="featureUrlManagerForm" style="display:grid;gap:10px;margin-top:12px;">
-    <input name="chapterId" placeholder="Chapter ID e.g. SCI10CH9" required>
-
-    <button class="btn small outline" type="button" onclick="AdminApp.loadChapterFeaturesManager()">
-      🔍 Load Feature URLs
-    </button>
-
-    <input name="lessonUrl" placeholder="Lesson URL">
-    <input name="notesUrl" placeholder="Notes URL">
-    <input name="mcqUrl" placeholder="MCQ Test URL">
-    <input name="worksheetUrl" placeholder="Worksheet URL">
-    <input name="answerWritingUrl" placeholder="Answer Writing URL">
-    <input name="videoUrl" placeholder="Video URL">
-    <input name="revisionUrl" placeholder="Revision URL">
-    <input name="solutionUrl" placeholder="Solution URL e.g. solutions/cbse/english/class-10/cbse_e_c10_sci_ch09_solution.html">
-
-    <select name="status">
-      <option>Active</option>
-      <option>Inactive</option>
-    </select>
-
-    <button class="btn" type="submit">💾 Save Feature URLs</button>
-  </form>
-
-  <div id="featureUrlManagerStatus" style="margin-top:15px;">
-    Enter Chapter ID and load or save feature URLs.
-  </div>
+        <div id="aiPreview" class="ai-preview"><h3>Processing preview</h3><pre>OCR / metadata / generation result will appear here.</pre></div>
+      </div>
+    </section>
+  </main>
 </div>
-      </div>
-    </div>
-  </section>
-
-  <br>
-
-  <div class="card">
-    <h2>🤖 AI Content Engine</h2>
-    <p class="muted">Upload chapter PDF, image or text and let AI generate learning content automatically.</p>
-    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:15px;">
-      <button class="btn" onclick="showPanel('aiContentEnginePanel',this)">🤖 Open AI Engine</button>
-    </div>
-  </div>
-
-  <section id="aiContentEnginePanel" class="panel">
-    <div class="ai-engine-panel">
-      <div class="ai-hero">
-        <h2>🤖 AI Chapter Extraction Engine</h2>
-        <p>Upload PDF/image or paste chapter text. The system extracts OCR text, detects chapter structure, separates inside-chapter and end-exercise questions, then generates Lesson, MCQ, Worksheet and Solutions.</p>
-      </div>
-
-      <div class="ai-card">
-        <h3>1. Upload / Paste Chapter Source</h3>
-        <div class="ai-grid">
-          <div><label>Source Type</label><select id="aiSourceType"><option value="text">Pasted Text</option><option value="pdf">PDF</option><option value="image">Image / Scan</option></select></div>
-          <div><label>Board</label><select id="aiBoard"><option>CBSE</option><option>GSEB</option></select></div>
-          <div><label>Class</label><select id="aiClassName"><option>Class 5</option><option>Class 6</option><option>Class 7</option><option>Class 8</option><option>Class 9</option><option>Class 10</option></select></div>
-          <div><label>Medium</label><select id="aiMedium"><option>English Medium</option><option>Gujarati Medium</option></select></div>
-          <div><label>Subject ID</label><input id="aiSubjectId" placeholder="SCI10 / MATH9"></div>
-          <div><label>Chapter ID</label><input id="aiChapterId" placeholder="SCI10CH1"></div>
-        </div>
-        <label>Upload PDF / Image / Scan</label>
-        <input id="aiFileInput" type="file" accept=".pdf,image/*">
-        <div id="aiFileName" class="ai-file-name">No file selected</div>
-        <label>Or Paste Extracted Chapter Text</label>
-        <textarea id="aiRawContent" placeholder="Paste chapter text here..."></textarea>
-        <input id="currentUploadId" type="hidden">
-        <div class="ai-action-row">
-          <button class="ai-btn" onclick="WTC_AI_CONTENT_ADMIN.submitInput()">Save to AI Queue</button>
-          <button class="ai-btn secondary" onclick="WTC_AI_CONTENT_ADMIN.runOCR()">Run OCR / Text Extraction</button>
-          <button class="ai-btn warning" onclick="WTC_AI_CONTENT_ADMIN.parseChapter()">Analyze Chapter</button>
-          <button class="ai-btn outline" onclick="WTC_AI_CONTENT_ADMIN.detectQuestions()">Detect Questions</button>
-          <button class="ai-btn success" onclick="WTC_AI_CONTENT_ADMIN.generateContent()">Generate Content</button>
-          <button class="ai-btn success" onclick="WTC_AI_CONTENT_ADMIN.fullPipeline()">Run Full Pipeline</button>
-        </div>
-      </div>
-
-      <div id="aiStatus" class="ai-status info">Ready.</div>
-
-      <div class="ai-card">
-        <h3>2. AI Queue</h3>
-        <button class="ai-btn outline" onclick="WTC_AI_CONTENT_ADMIN.refreshQueue()">Refresh Queue</button>
-        <div id="aiQueueTable" class="ai-table-wrap" style="margin-top:12px"></div>
-      </div>
-
-      <div id="aiPreview" class="ai-preview"><h3>Preview</h3><pre>OCR / metadata / generation result will appear here.</pre></div>
-    </div>
-  </section>
-
-  <br>
-</main>
 
 <script src="assets/js/config.js"></script>
-<script src="assets/js/ui.js"></script>
+<script src="assets/js/ui.js?v=admin-ui-2-0"></script>
 <script src="assets/js/auth.js"></script>
-<script src="assets/js/api.js"></script>
+<script src="assets/js/api.js?v=pcr1"></script>
 <script src="assets/js/assessment-config.js"></script>
 <script src="assets/js/assessment-api.js"></script>
 <script src="assets/js/ai-content.js"></script>
-<script src="assets/js/admin.js"></script>
+<script src="assets/js/static-content-importer.js"></script>
+<script src="assets/js/admin.js?v=admin-ui-2-0"></script>
+<script src="assets/js/admin-teacher-assignments.js?v=phase-2-5g-1-0"></script>
 </body>
 </html>

@@ -1,1 +1,426 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Teacher Dashboard | WTC</title><link rel="icon" href="assets/images/favicon.png"><link rel="stylesheet" href="assets/css/teacher.css"></head><body><header class="topbar"><div class="topbar-inner"><a class="brand" href="teacher.html"><img src="assets/images/logo.png" alt="WTC"><span>Teacher Dashboard</span></a><div class="top-actions"><span data-user-name>Teacher</span><span class="avatar" data-user-avatar>T</span><button class="btn danger small" onclick="WTC_AUTH.logout()">Logout</button></div></div></header><main class="main-area"><div class="hero-card"><h1>Teacher Dashboard</h1><p class="muted">Student analytics and content upload modules will continue in Phase 2.5.</p></div><br><div class="card"><h3>API-ready dashboard</h3><p class="muted">This page is protected by teacher login session.</p></div></main><script src="assets/js/config.js"></script><script src="assets/js/ui.js"></script><script src="assets/js/auth.js"></script><script src="assets/js/api.js"></script><script src="assets/js/teacher.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="description" content="WAGH Tuition Classes teacher analytics, test assignment, sent-test reporting and student follow-up dashboard">
+  <title>Teacher Dashboard | WAGH Tuition Classes</title>
+  <link rel="icon" href="assets/images/favicon.png">
+  <link rel="stylesheet" href="assets/css/teacher.css?v=phase-2-5f-1-0">
+  <link rel="stylesheet" href="assets/css/teacher-test-assignments.css?v=phase-2-5f-1-0">
+</head>
+<body class="teacher-page">
+<header class="topbar teacher-topbar">
+  <div class="topbar-inner teacher-topbar-inner">
+    <div class="teacher-topbar-start">
+      <button class="teacher-menu-toggle" type="button" aria-label="Open teacher navigation" aria-controls="teacherSidebar" aria-expanded="false" onclick="TeacherApp.toggleSidebar()">☰</button>
+      <a class="brand" href="teacher.html" aria-label="WAGH Tuition Classes Teacher Dashboard">
+        <img src="assets/images/logo.png" alt="WTC">
+        <span>Teacher Dashboard</span>
+      </a>
+    </div>
+    <div class="top-actions">
+      <div class="teacher-user-copy hide-mobile">
+        <strong data-teacher-name>Teacher</strong>
+        <small data-teacher-assignment>Loading assignment…</small>
+      </div>
+      <span class="avatar" data-teacher-avatar aria-hidden="true">T</span>
+      <button class="btn danger small" type="button" onclick="WTC_AUTH.logout()">Logout</button>
+    </div>
+  </div>
+</header>
+
+<div class="teacher-shell">
+  <aside id="teacherSidebar" class="teacher-sidebar" aria-label="Teacher navigation">
+    <div class="teacher-sidebar-head">
+      <span class="teacher-sidebar-mark">WTC</span>
+      <div><strong>Teacher Centre</strong><small>Phase 2.5F Test Assignment</small></div>
+      <button class="teacher-sidebar-close" type="button" aria-label="Close teacher navigation" onclick="TeacherApp.toggleSidebar(false)">×</button>
+    </div>
+
+    <nav class="teacher-nav">
+      <button class="teacher-nav-item active" type="button" data-teacher-nav="dashboardPanel" onclick="TeacherApp.openPanel('dashboardPanel', this)"><span class="teacher-nav-icon">⌂</span><span>Overview</span></button>
+      <button class="teacher-nav-item" type="button" data-teacher-nav="studentsPanel" onclick="TeacherApp.openPanel('studentsPanel', this)"><span class="teacher-nav-icon">👥</span><span>My Students</span><b id="teacherStudentNavCount" class="teacher-nav-count">0</b></button>
+      <button class="teacher-nav-item" type="button" data-teacher-nav="chaptersPanel" onclick="TeacherApp.openPanel('chaptersPanel', this)"><span class="teacher-nav-icon">📚</span><span>Chapter Progress</span></button>
+      <button class="teacher-nav-item" type="button" data-teacher-nav="resultsPanel" onclick="TeacherApp.openPanel('resultsPanel', this)"><span class="teacher-nav-icon">📊</span><span>Test Results</span></button>
+      <button class="teacher-nav-item" type="button" data-teacher-nav="testMonitoringPanel" onclick="TeacherApp.openPanel('testMonitoringPanel', this)"><span class="teacher-nav-icon">🧪</span><span>Test Monitoring</span><b id="teacherTestNavCount" class="teacher-nav-count">0</b></button>
+      <button class="teacher-nav-item" type="button" data-teacher-nav="assignTestsPanel" onclick="WTC_TEACHER_TEST_ASSIGNMENTS.openPanel('assignTestsPanel')"><span class="teacher-nav-icon">📨</span><span>Assign Tests</span><b id="teacherAssignmentNavCount" class="teacher-nav-count warning">0</b></button>
+      <button class="teacher-nav-item" type="button" data-teacher-nav="sentTestsPanel" onclick="WTC_TEACHER_TEST_ASSIGNMENTS.openPanel('sentTestsPanel')"><span class="teacher-nav-icon">📬</span><span>Sent Tests</span><b id="teacherSentNavCount" class="teacher-nav-count">0</b></button>
+      <button class="teacher-nav-item" type="button" data-teacher-nav="classReportsPanel" onclick="TeacherApp.openPanel('classReportsPanel', this)"><span class="teacher-nav-icon">📄</span><span>Class Reports</span></button>
+      <button class="teacher-nav-item" type="button" data-teacher-nav="attentionPanel" onclick="TeacherApp.openPanel('attentionPanel', this)"><span class="teacher-nav-icon">⚑</span><span>Weak Areas</span><b id="teacherAttentionNavCount" class="teacher-nav-count warning">0</b></button>
+      <button class="teacher-nav-item" type="button" data-teacher-nav="followUpPanel" onclick="TeacherApp.openPanel('followUpPanel', this)"><span class="teacher-nav-icon">🔔</span><span>Follow-up Centre</span><b id="teacherFollowUpNavCount" class="teacher-nav-count warning">0</b></button>
+      <button class="teacher-nav-item" type="button" data-teacher-nav="profilePanel" onclick="TeacherApp.openPanel('profilePanel', this)"><span class="teacher-nav-icon">🪪</span><span>My Profile</span></button>
+    </nav>
+
+    <div class="teacher-sidebar-note"><b>Controlled Teacher actions</b><span>Teachers may assign published tests only. Editing questions, marks and published content remains disabled.</span></div>
+  </aside>
+
+  <button id="teacherSidebarBackdrop" class="teacher-sidebar-backdrop" type="button" aria-label="Close navigation" onclick="TeacherApp.toggleSidebar(false)"></button>
+
+  <main class="teacher-main">
+    <div class="teacher-page-head">
+      <div>
+        <p class="teacher-breadcrumb">Teacher / <span id="teacherBreadcrumbCurrent">Overview</span></p>
+        <h1 id="teacherPageTitle">Overview</h1>
+        <p id="teacherPageSubtitle">Your assigned class, chapter progress and student performance.</p>
+      </div>
+      <button class="btn outline small teacher-refresh-button" type="button" onclick="TeacherApp.refresh()">↻ Refresh</button>
+    </div>
+
+    <div id="teacherGlobalStatus" class="teacher-status info" role="status" aria-live="polite">Loading teacher analytics…</div>
+
+    <section id="dashboardPanel" class="teacher-panel active" data-panel-title="Overview" data-panel-subtitle="Your assigned class, chapter progress and student performance.">
+      <div class="teacher-hero">
+        <div>
+          <span class="teacher-eyebrow">WAGH Tuition Classes • Teacher Portal</span>
+          <h2>Welcome, <span data-teacher-first-name>Teacher</span></h2>
+          <p id="teacherHeroAssignment">Loading your current assignment…</p>
+          <div class="teacher-hero-actions">
+            <button class="btn" type="button" onclick="TeacherApp.openPanel('studentsPanel')">View Students</button>
+            <button class="btn outline" type="button" onclick="TeacherApp.openPanel('testMonitoringPanel')">Monitor Tests</button>
+            <button class="btn outline" type="button" onclick="WTC_TEACHER_TEST_ASSIGNMENTS.openPanel('assignTestsPanel')">Assign a Test</button>
+          </div>
+        </div>
+        <div class="teacher-hero-badge" aria-hidden="true"><span>2.5F</span><small>Test Assign</small></div>
+      </div>
+
+      <div class="teacher-stats" aria-label="Teacher dashboard summary">
+        <article class="teacher-stat-card"><span class="teacher-stat-icon students">👥</span><div><small>Assigned Students</small><strong id="teacherAssignedStudents">0</strong><p id="teacherActiveStudentsText">0 active</p></div></article>
+        <article class="teacher-stat-card"><span class="teacher-stat-icon attempts">📝</span><div><small>Recorded Attempts</small><strong id="teacherTotalAttempts">0</strong><p>Subject-scoped evidence</p></div></article>
+        <article class="teacher-stat-card"><span class="teacher-stat-icon average">📈</span><div><small>Class Average</small><strong id="teacherAveragePercent">0%</strong><p>Across recorded results</p></div></article>
+        <article class="teacher-stat-card"><span class="teacher-stat-icon attention">⚑</span><div><small>Needs Attention</small><strong id="teacherAttentionCount">0</strong><p>Risk and inactivity signals</p></div></article>
+        <article class="teacher-stat-card"><span class="teacher-stat-icon chapters">📚</span><div><small>Assigned Chapters</small><strong id="teacherAssignedChapters">0</strong><p id="teacherAttemptedChaptersText">0 attempted</p></div></article>
+        <article class="teacher-stat-card"><span class="teacher-stat-icon tests">🧪</span><div><small>Recorded Tests</small><strong id="teacherUniqueTests">0</strong><p>Derived from scoped results</p></div></article>
+        <article class="teacher-stat-card"><span class="teacher-stat-icon completion">✓</span><div><small>Avg. Completion</small><strong id="teacherAverageCompletion">0%</strong><p id="teacherNoAttemptText">0 students without attempts</p></div></article>
+        <article class="teacher-stat-card"><span class="teacher-stat-icon followup">🔔</span><div><small>Follow-ups Due</small><strong id="teacherFollowUpDue">0</strong><p id="teacherFollowUpDueText">0 overdue • 0 open</p></div></article>
+        <article class="teacher-stat-card"><span class="teacher-stat-icon tests">📨</span><div><small>Sent Test Groups</small><strong id="teacherAssignedTestsOverview">0</strong><p>Official in-app assignments</p></div></article>
+        <article class="teacher-stat-card"><span class="teacher-stat-icon attention">⏳</span><div><small>Pending Assignments</small><strong id="teacherPendingAssignmentsOverview">0</strong><p>Students yet to attempt</p></div></article>
+      </div>
+
+      <div class="teacher-dashboard-grid">
+        <article class="teacher-card">
+          <div class="teacher-card-head"><div><span class="teacher-card-kicker">Current assignment</span><h3>Teaching Scope</h3></div><span id="teacherAssignmentStatus" class="teacher-chip neutral">Loading</span></div>
+          <dl class="teacher-definition-list">
+            <div><dt>Teacher ID</dt><dd id="teacherAssignmentId">—</dd></div>
+            <div><dt>Class</dt><dd id="teacherAssignmentClass">—</dd></div>
+            <div><dt>Subject</dt><dd id="teacherAssignmentSubject">—</dd></div>
+            <div><dt>Available profiles</dt><dd id="teacherAssignmentProfiles">—</dd></div>
+          </dl>
+          <div id="teacherAssignmentWarning" class="teacher-inline-note hidden"></div>
+        </article>
+
+        <article class="teacher-card">
+          <div class="teacher-card-head"><div><span class="teacher-card-kicker">Priority review</span><h3>Students Needing Attention</h3></div><button class="teacher-text-button" type="button" onclick="TeacherApp.openPanel('attentionPanel')">See all</button></div>
+          <div id="teacherAttentionPreview" class="teacher-compact-list"><div class="teacher-empty">Loading priority students…</div></div>
+        </article>
+      </div>
+
+      <div class="teacher-dashboard-grid teacher-dashboard-grid-second">
+        <article class="teacher-card">
+          <div class="teacher-card-head"><div><span class="teacher-card-kicker">Chapter evidence</span><h3>Chapter Snapshot</h3></div><button class="teacher-text-button" type="button" onclick="TeacherApp.openPanel('chaptersPanel')">See all</button></div>
+          <div id="teacherChapterPreview" class="teacher-compact-list"><div class="teacher-empty">Loading chapter analytics…</div></div>
+        </article>
+        <article class="teacher-card">
+          <div class="teacher-card-head"><div><span class="teacher-card-kicker">Latest evidence</span><h3>Recent Results</h3></div><button class="teacher-text-button" type="button" onclick="TeacherApp.openPanel('resultsPanel')">See all</button></div>
+          <div id="teacherRecentResultPreview" class="teacher-compact-list"><div class="teacher-empty">Loading recent results…</div></div>
+        </article>
+      </div>
+
+      <div class="teacher-dashboard-grid teacher-dashboard-grid-third">
+        <article class="teacher-card">
+          <div class="teacher-card-head"><div><span class="teacher-card-kicker">Test completion</span><h3>Test Monitoring Snapshot</h3></div><button class="teacher-text-button" type="button" onclick="TeacherApp.openPanel('testMonitoringPanel')">Monitor tests</button></div>
+          <div id="teacherTestPreview" class="teacher-compact-list"><div class="teacher-empty">Loading test monitoring…</div></div>
+        </article>
+        <article class="teacher-card">
+          <div class="teacher-card-head"><div><span class="teacher-card-kicker">Printable evidence</span><h3>Class Report Snapshot</h3></div><button class="teacher-text-button" type="button" onclick="TeacherApp.openPanel('classReportsPanel')">Open report</button></div>
+          <div id="teacherClassReportPreview" class="teacher-report-preview"><div class="teacher-empty">Loading class report summary…</div></div>
+        </article>
+      </div>
+
+      <div class="teacher-dashboard-grid teacher-dashboard-grid-fourth">
+        <article class="teacher-card teacher-followup-preview-card">
+          <div class="teacher-card-head"><div><span class="teacher-card-kicker">Teacher action list</span><h3>Notifications &amp; Follow-ups</h3></div><button class="teacher-text-button" type="button" onclick="TeacherApp.openPanel('followUpPanel')">Open centre</button></div>
+          <div id="teacherFollowUpPreview" class="teacher-compact-list"><div class="teacher-empty">Loading follow-up priorities…</div></div>
+        </article>
+        <article class="teacher-card">
+          <div class="teacher-card-head"><div><span class="teacher-card-kicker">Privacy-safe workflow</span><h3>Follow-up Rules</h3></div><span class="teacher-chip neutral">Local workspace</span></div>
+          <div class="teacher-followup-rules"><p>Use analytics signals to plan academic follow-up. Notes are stored only in this browser and are not a shared school record.</p><button class="btn outline small" type="button" onclick="TeacherApp.openPanel('followUpPanel')">Review actions</button></div>
+        </article>
+      </div>
+
+      <div class="teacher-dashboard-grid">
+        <article class="teacher-card">
+          <div class="teacher-card-head"><div><span class="teacher-card-kicker">Official student delivery</span><h3>Sent Test Snapshot</h3></div><button class="teacher-text-button" type="button" onclick="WTC_TEACHER_TEST_ASSIGNMENTS.openPanel('sentTestsPanel')">See all</button></div>
+          <div id="teacherAssignmentSnapshot" class="teacher-assignment-snapshot"><div class="teacher-empty">Loading sent tests…</div></div>
+        </article>
+        <article class="teacher-card">
+          <div class="teacher-card-head"><div><span class="teacher-card-kicker">Easy assignment</span><h3>Assign Published Tests</h3></div><span class="teacher-chip active">2.5F</span></div>
+          <div class="teacher-followup-rules"><p>Choose from published tests in the dynamic test bank, then assign to all, selected, attention, or no-attempt students.</p><button class="btn small" type="button" onclick="WTC_TEACHER_TEST_ASSIGNMENTS.openPanel('assignTestsPanel')">Open Test Library</button></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="studentsPanel" class="teacher-panel" data-panel-title="My Students" data-panel-subtitle="Open a verified student report for chapter and test analytics.">
+      <div class="teacher-section-card">
+        <div class="teacher-section-heading">
+          <div><span class="teacher-card-kicker">Assigned class</span><h2>My Students</h2><p>Search, filter and open a read-only analytics report for any assigned student.</p></div>
+          <span id="teacherStudentCountLabel" class="teacher-count-pill">0 students</span>
+        </div>
+        <div class="teacher-filter-grid">
+          <label class="teacher-filter-field search-field"><span>Search</span><input id="teacherStudentSearch" type="search" placeholder="Student name or ID" autocomplete="off"></label>
+          <label class="teacher-filter-field"><span>Board</span><select id="teacherBoardFilter"><option value="">All boards</option></select></label>
+          <label class="teacher-filter-field"><span>Medium</span><select id="teacherMediumFilter"><option value="">All media</option></select></label>
+          <label class="teacher-filter-field"><span>Performance</span><select id="teacherPerformanceFilter"><option value="">All students</option><option value="excellent">Excellent</option><option value="good">Good</option><option value="attention">Needs Attention</option><option value="critical">Critical</option><option value="no-activity">No Activity</option></select></label>
+          <label class="teacher-filter-field"><span>Trend</span><select id="teacherTrendFilter"><option value="">All trends</option><option value="improving">Improving</option><option value="stable">Stable</option><option value="declining">Declining</option></select></label>
+        </div>
+        <div id="teacherStudentList" class="teacher-student-list"><div class="teacher-empty">Loading students…</div></div>
+      </div>
+    </section>
+
+    <section id="studentDetailPanel" class="teacher-panel teacher-detail-panel" data-panel-title="Student Analytics" data-panel-subtitle="Detailed chapter progress and test history for the selected student.">
+      <button class="teacher-back-button" type="button" onclick="TeacherApp.backToStudents()">← Back to My Students</button>
+      <div id="teacherStudentDetailStatus" class="teacher-detail-status hidden" role="status" aria-live="polite"></div>
+      <div id="teacherStudentDetailContent"><div class="teacher-empty">Choose a student from My Students.</div></div>
+    </section>
+
+    <section id="chaptersPanel" class="teacher-panel" data-panel-title="Chapter Progress" data-panel-subtitle="Class-level progress and performance across assigned chapters.">
+      <div class="teacher-section-card">
+        <div class="teacher-section-heading">
+          <div><span class="teacher-card-kicker">Class analytics</span><h2>Chapter Progress</h2><p>Compare attempts, average scores, completion and students needing support by chapter.</p></div>
+          <span id="teacherChapterCountLabel" class="teacher-count-pill">0 chapters</span>
+        </div>
+        <div class="teacher-filter-grid chapter-filters">
+          <label class="teacher-filter-field search-field"><span>Search</span><input id="teacherChapterSearch" type="search" placeholder="Chapter name or ID" autocomplete="off"></label>
+          <label class="teacher-filter-field"><span>Status</span><select id="teacherChapterStatusFilter"><option value="">All statuses</option><option value="excellent">Excellent</option><option value="good">Good</option><option value="attention">Needs Attention</option><option value="critical">Critical</option><option value="no-activity">No Activity</option></select></label>
+          <label class="teacher-filter-field"><span>Sort</span><select id="teacherChapterSort"><option value="chapter">Chapter order</option><option value="weak">Most weak students</option><option value="average-low">Lowest average</option><option value="attempts">Most attempts</option></select></label>
+        </div>
+        <div id="teacherChapterAnalyticsList" class="teacher-chapter-list"><div class="teacher-empty">Loading chapter analytics…</div></div>
+      </div>
+    </section>
+
+    <section id="resultsPanel" class="teacher-panel" data-panel-title="Test Results" data-panel-subtitle="Filter the latest recorded results within your verified assignment.">
+      <div class="teacher-section-card">
+        <div class="teacher-section-heading">
+          <div><span class="teacher-card-kicker">Assessment evidence</span><h2>Test Results</h2><p>Results are read-only and restricted to assigned students and the resolved Teacher subject.</p></div>
+          <span id="teacherResultCountLabel" class="teacher-count-pill">0 results</span>
+        </div>
+        <div class="teacher-filter-grid results-filters">
+          <label class="teacher-filter-field search-field"><span>Search</span><input id="teacherResultSearch" type="search" placeholder="Student, test or topic" autocomplete="off"></label>
+          <label class="teacher-filter-field"><span>Student</span><select id="teacherResultStudentFilter"><option value="">All students</option></select></label>
+          <label class="teacher-filter-field"><span>Chapter</span><select id="teacherResultChapterFilter"><option value="">All chapters</option></select></label>
+          <label class="teacher-filter-field"><span>Score</span><select id="teacherResultScoreFilter"><option value="">All scores</option><option value="excellent">85% and above</option><option value="good">60–84%</option><option value="attention">50–59%</option><option value="critical">Below 50%</option></select></label>
+        </div>
+        <div id="teacherResultList" class="teacher-result-list"><div class="teacher-empty">Loading results…</div></div>
+      </div>
+    </section>
+
+
+
+    <section id="testMonitoringPanel" class="teacher-panel" data-panel-title="Test Monitoring" data-panel-subtitle="Monitor completion, class performance and non-attempted students for each recorded test.">
+      <div class="teacher-section-card">
+        <div class="teacher-section-heading">
+          <div><span class="teacher-card-kicker">Class assessment monitor</span><h2>Test Monitoring</h2><p>Each test is derived from scoped TEST_RESULTS evidence. Open a report to see ranking, retries and students who have not attempted.</p></div>
+          <span id="teacherTestCountLabel" class="teacher-count-pill">0 tests</span>
+        </div>
+        <div class="teacher-filter-grid test-monitor-filters">
+          <label class="teacher-filter-field search-field"><span>Search</span><input id="teacherTestSearch" type="search" placeholder="Test, topic or chapter" autocomplete="off"></label>
+          <label class="teacher-filter-field"><span>Chapter</span><select id="teacherTestChapterFilter"><option value="">All chapters</option></select></label>
+          <label class="teacher-filter-field"><span>Test type</span><select id="teacherTestTypeFilter"><option value="">All test types</option></select></label>
+          <label class="teacher-filter-field"><span>Completion</span><select id="teacherTestCompletionFilter"><option value="">All completion levels</option><option value="complete">100% complete</option><option value="partial">Partially attempted</option><option value="none">No eligible attempts</option></select></label>
+          <label class="teacher-filter-field"><span>Sort</span><select id="teacherTestSort"><option value="recent">Most recent</option><option value="completion-low">Lowest completion</option><option value="average-low">Lowest average</option><option value="non-attempted">Most non-attempted</option></select></label>
+        </div>
+        <div id="teacherTestCatalogList" class="teacher-test-list"><div class="teacher-empty">Loading recorded tests…</div></div>
+      </div>
+    </section>
+
+    <section id="testDetailPanel" class="teacher-panel teacher-detail-panel" data-panel-title="Test Report" data-panel-subtitle="Detailed class evidence for the selected test.">
+      <div class="teacher-report-toolbar no-print">
+        <button class="teacher-back-button" type="button" onclick="TeacherApp.backToTests()">← Back to Test Monitoring</button>
+        <div><button class="btn outline small" type="button" onclick="TeacherApp.downloadTestCsv()">Download CSV</button><button class="btn small" type="button" onclick="TeacherApp.printTestReport()">Print Report</button></div>
+      </div>
+      <div id="teacherTestDetailStatus" class="teacher-detail-status hidden" role="status" aria-live="polite"></div>
+      <div id="teacherTestDetailContent"><div class="teacher-empty">Choose a test from Test Monitoring.</div></div>
+    </section>
+
+    <section id="classReportsPanel" class="teacher-panel" data-panel-title="Class Reports" data-panel-subtitle="Generate a filtered, printable and downloadable report for your verified assignment.">
+      <div class="teacher-section-card teacher-class-report-shell">
+        <div class="teacher-section-heading">
+          <div><span class="teacher-card-kicker">Read-only class evidence</span><h2>Class Reports</h2><p>Apply optional filters, then print the report or download student and test summaries as CSV.</p></div>
+          <div class="teacher-report-actions no-print"><button class="btn outline small" type="button" onclick="TeacherApp.downloadClassCsv()">Download CSV</button><button class="btn small" type="button" onclick="TeacherApp.printClassReport()">Print Report</button></div>
+        </div>
+        <div class="teacher-filter-grid class-report-filters no-print">
+          <label class="teacher-filter-field"><span>Board</span><select id="teacherReportBoardFilter"><option value="">All boards</option></select></label>
+          <label class="teacher-filter-field"><span>Medium</span><select id="teacherReportMediumFilter"><option value="">All media</option></select></label>
+          <label class="teacher-filter-field"><span>Chapter</span><select id="teacherReportChapterFilter"><option value="">All chapters</option></select></label>
+          <label class="teacher-filter-field"><span>Test type</span><select id="teacherReportTestTypeFilter"><option value="">All test types</option></select></label>
+          <label class="teacher-filter-field"><span>From date</span><input id="teacherReportDateFrom" type="date"></label>
+          <label class="teacher-filter-field"><span>To date</span><input id="teacherReportDateTo" type="date"></label>
+          <button id="teacherBuildClassReport" class="btn teacher-report-build" type="button" onclick="TeacherApp.loadClassReport(true)">Build Report</button>
+        </div>
+        <div id="teacherClassReportStatus" class="teacher-detail-status hidden" role="status" aria-live="polite"></div>
+        <div id="teacherClassReportContent"><div class="teacher-empty">Build the class report to load filtered evidence.</div></div>
+      </div>
+    </section>
+
+    <section id="attentionPanel" class="teacher-panel" data-panel-title="Weak Areas" data-panel-subtitle="Students and chapters requiring teacher attention.">
+      <div class="teacher-section-card">
+        <div class="teacher-section-heading">
+          <div><span class="teacher-card-kicker">Priority support</span><h2>Weak Areas</h2><p>Signals include low average, no attempt, declining results, repeated low chapter scores and inactivity.</p></div>
+          <span id="teacherAttentionCountLabel" class="teacher-count-pill warning">0 students</span>
+        </div>
+        <div class="teacher-attention-summary" id="teacherAttentionSummary"></div>
+        <div id="teacherAttentionList" class="teacher-attention-list"><div class="teacher-empty">Loading weak-area signals…</div></div>
+      </div>
+    </section>
+
+    <section id="assignTestsPanel" class="teacher-panel" data-panel-title="Assign Tests" data-panel-subtitle="Send published tests to verified students in your assigned class and subject.">
+      <div id="teacherAssignmentGlobalStatus" class="teacher-status info" role="status" aria-live="polite">Loading published test library…</div>
+      <div class="teacher-assignment-banner">
+        <div><h3>📨 Simple Test Assignment</h3><p>Use <b>Quick Assign to All</b> for the fastest option, or choose students, due date, attempts and a short message. Only published tests in your verified teaching scope appear.</p></div>
+        <div class="teacher-assignment-banner-actions"><button class="btn outline small" type="button" onclick="WTC_TEACHER_TEST_ASSIGNMENTS.loadHub(true)">↻ Refresh</button><button class="btn small" type="button" onclick="WTC_TEACHER_TEST_ASSIGNMENTS.openPanel('sentTestsPanel')">View Sent Tests</button></div>
+      </div>
+      <div class="teacher-section-card">
+        <div class="teacher-section-heading"><div><span class="teacher-card-kicker">Published dynamic test bank</span><h2>Available Tests</h2><p>Draft, archived and rejected tests are excluded automatically.</p></div><span id="teacherAssignableCountLabel" class="teacher-count-pill">0 tests</span></div>
+        <div class="teacher-filter-grid teacher-assignment-filters">
+          <label class="teacher-filter-field search-field"><span>Search</span><input id="teacherAssignableSearch" type="search" placeholder="Test, topic or chapter"></label>
+          <label class="teacher-filter-field"><span>Chapter</span><select id="teacherAssignableChapterFilter"><option value="">All chapters</option></select></label>
+          <label class="teacher-filter-field"><span>Test type</span><select id="teacherAssignableTypeFilter"><option value="">All test types</option></select></label>
+        </div>
+        <div id="teacherAssignableTestList" class="teacher-assignable-list"><div class="teacher-empty">Loading published tests…</div></div>
+      </div>
+    </section>
+
+    <section id="sentTestsPanel" class="teacher-panel" data-panel-title="Sent Tests" data-panel-subtitle="Track completion, pending students, scores and overdue assignments.">
+      <div class="teacher-assignment-summary">
+        <article><small>Sent Groups</small><strong id="teacherSentGroupTotal">0</strong></article>
+        <article><small>Student Assignments</small><strong id="teacherSentAssignedStudents">0</strong></article>
+        <article><small>Attempted</small><strong id="teacherSentAttemptedTotal">0</strong></article>
+        <article><small>Pending</small><strong id="teacherSentPendingTotal">0</strong></article>
+        <article><small>Overdue</small><strong id="teacherSentOverdueTotal">0</strong></article>
+      </div>
+      <div class="teacher-section-card">
+        <div class="teacher-section-heading"><div><span class="teacher-card-kicker">Assignment analytics</span><h2>Sent Tests</h2><p>Each card represents one Teacher send action. Open analytics for exact assignment-linked results.</p></div><div class="teacher-report-actions"><span id="teacherSentCountLabel" class="teacher-count-pill">0 assignments</span><button class="btn small" type="button" onclick="WTC_TEACHER_TEST_ASSIGNMENTS.openPanel('assignTestsPanel')">Assign New Test</button></div></div>
+        <div class="teacher-filter-grid">
+          <label class="teacher-filter-field search-field"><span>Search</span><input id="teacherSentSearch" type="search" placeholder="Test title, ID or chapter"></label>
+          <label class="teacher-filter-field"><span>Status</span><select id="teacherSentStatusFilter"><option value="">All statuses</option><option value="ASSIGNED">Assigned</option><option value="IN_PROGRESS">In progress</option><option value="OVERDUE">Overdue</option><option value="COMPLETED">Completed</option><option value="CANCELLED">Cancelled</option></select></label>
+        </div>
+        <div id="teacherSentTestList" class="teacher-sent-list"><div class="teacher-empty">Loading sent tests…</div></div>
+      </div>
+    </section>
+
+    <section id="assignmentDetailPanel" class="teacher-panel teacher-detail-panel" data-panel-title="Assignment Report" data-panel-subtitle="Exact analytics for one sent-test group.">
+      <div class="teacher-assignment-report-head no-print">
+        <div><button class="teacher-back-button" type="button" onclick="WTC_TEACHER_TEST_ASSIGNMENTS.backToSent()">← Back to Sent Tests</button><h2 id="teacherAssignmentReportTitle">Assignment Report</h2><p id="teacherAssignmentReportMeta">Choose an assignment from Sent Tests.</p></div>
+        <div class="teacher-report-actions"><button class="btn outline small" type="button" onclick="WTC_TEACHER_TEST_ASSIGNMENTS.downloadAssignmentCsv()">Download CSV</button><button class="btn small" type="button" onclick="WTC_TEACHER_TEST_ASSIGNMENTS.printAssignmentReport()">Print Report</button></div>
+      </div>
+      <div id="teacherAssignmentReportSummary" class="teacher-assignment-report-summary"></div>
+      <div id="teacherAssignmentReportStudents"><div class="teacher-empty">Choose an assignment from Sent Tests.</div></div>
+    </section>
+
+    <section id="followUpPanel" class="teacher-panel" data-panel-title="Follow-up Centre" data-panel-subtitle="Turn verified analytics signals into a private teacher action list on this device.">
+      <div class="teacher-followup-notice"><span aria-hidden="true">🔒</span><div><b>Device-local workspace</b><p>Follow-up notes are saved only in this browser for the signed-in teacher. They are not written to Google Sheets, shared across devices or sent to students automatically.</p></div></div>
+
+      <div class="teacher-followup-summary" aria-label="Follow-up summary">
+        <article><small>Priority signals</small><strong id="teacherNotificationTotal">0</strong></article>
+        <article><small>Open follow-ups</small><strong id="teacherFollowUpOpenTotal">0</strong></article>
+        <article><small>Due today</small><strong id="teacherFollowUpTodayTotal">0</strong></article>
+        <article class="danger"><small>Overdue</small><strong id="teacherFollowUpOverdueTotal">0</strong></article>
+        <article class="success"><small>Completed</small><strong id="teacherFollowUpCompletedTotal">0</strong></article>
+      </div>
+
+      <div class="teacher-followup-grid">
+        <article class="teacher-section-card">
+          <div class="teacher-section-heading compact">
+            <div><span class="teacher-card-kicker">Analytics-derived</span><h2>Priority Notifications</h2><p>Signals update whenever the Teacher Dashboard refreshes.</p></div>
+            <span id="teacherNotificationCountLabel" class="teacher-count-pill warning">0 signals</span>
+          </div>
+          <div id="teacherNotificationList" class="teacher-notification-list"><div class="teacher-empty">Loading priority notifications…</div></div>
+        </article>
+
+        <article class="teacher-section-card teacher-followup-form-card">
+          <div class="teacher-section-heading compact"><div><span class="teacher-card-kicker">Private action note</span><h2 id="teacherFollowUpFormTitle">Add Follow-up</h2><p>Record the next academic action without changing student data.</p></div></div>
+          <form id="teacherFollowUpForm" class="teacher-followup-form">
+            <input id="teacherFollowUpEditId" type="hidden">
+            <label><span>Student</span><select id="teacherFollowUpStudent" required><option value="">Choose assigned student</option></select></label>
+            <label><span>Follow-up type</span><select id="teacherFollowUpType" required><option value="Academic support">Academic support</option><option value="Test reminder">Test reminder</option><option value="Inactivity check">Inactivity check</option><option value="Parent contact">Parent contact</option><option value="Progress review">Progress review</option><option value="Other">Other</option></select></label>
+            <label><span>Due date</span><input id="teacherFollowUpDueDate" type="date" required></label>
+            <label><span>Private note</span><textarea id="teacherFollowUpNote" rows="4" maxlength="500" required placeholder="Example: Review Chapter 3 mistakes in the next class."></textarea><small>Maximum 500 characters. Do not store passwords or sensitive personal information.</small></label>
+            <div class="teacher-followup-form-actions"><button id="teacherFollowUpSaveButton" class="btn" type="submit">Save Follow-up</button><button class="btn outline" type="button" onclick="TeacherApp.resetFollowUpForm()">Clear</button></div>
+          </form>
+        </article>
+      </div>
+
+      <article class="teacher-section-card teacher-followup-list-card">
+        <div class="teacher-section-heading">
+          <div><span class="teacher-card-kicker">Your local action list</span><h2>Saved Follow-ups</h2><p>Filter, complete, reopen, edit or export your private follow-up list.</p></div>
+          <div class="teacher-report-actions"><span id="teacherFollowUpCountLabel" class="teacher-count-pill">0 items</span><button class="btn outline small" type="button" onclick="TeacherApp.downloadFollowUpsCsv()">Download CSV</button></div>
+        </div>
+        <div class="teacher-filter-grid teacher-followup-filters">
+          <label class="teacher-filter-field search-field"><span>Search</span><input id="teacherFollowUpSearch" type="search" placeholder="Student, note or type" autocomplete="off"></label>
+          <label class="teacher-filter-field"><span>Status</span><select id="teacherFollowUpStatusFilter"><option value="">All statuses</option><option value="open">Open</option><option value="due-today">Due today</option><option value="overdue">Overdue</option><option value="completed">Completed</option></select></label>
+          <label class="teacher-filter-field"><span>Type</span><select id="teacherFollowUpTypeFilter"><option value="">All types</option><option>Academic support</option><option>Test reminder</option><option>Inactivity check</option><option>Parent contact</option><option>Progress review</option><option>Other</option></select></label>
+          <label class="teacher-filter-field"><span>Sort</span><select id="teacherFollowUpSort"><option value="due">Due date</option><option value="newest">Newest first</option><option value="student">Student name</option></select></label>
+        </div>
+        <div id="teacherFollowUpList" class="teacher-followup-list"><div class="teacher-empty">No follow-ups saved on this device.</div></div>
+      </article>
+    </section>
+
+    <section id="profilePanel" class="teacher-panel" data-panel-title="My Profile" data-panel-subtitle="Your current Teacher Master record and assignment scope.">
+      <div class="teacher-profile-grid">
+        <article class="teacher-profile-card">
+          <div class="teacher-profile-avatar" data-teacher-avatar-large aria-hidden="true">T</div>
+          <h2 data-teacher-name>Teacher</h2><p id="teacherProfileRole">Teacher</p><span id="teacherProfileStatus" class="teacher-chip active">Active</span>
+        </article>
+        <article class="teacher-card teacher-profile-details">
+          <div class="teacher-card-head"><div><span class="teacher-card-kicker">TEACHER_MASTER</span><h3>Profile Details</h3></div></div>
+          <dl class="teacher-definition-list wide">
+            <div><dt>Teacher ID</dt><dd id="teacherProfileId">—</dd></div>
+            <div><dt>Registered mobile</dt><dd id="teacherProfileMobile">—</dd></div>
+            <div><dt>Class assignment</dt><dd id="teacherProfileClass">—</dd></div>
+            <div><dt>Subject assignment</dt><dd id="teacherProfileSubject">—</dd></div>
+            <div><dt>Account status</dt><dd id="teacherProfileAccountStatus">—</dd></div>
+            <div><dt>Last updated</dt><dd id="teacherProfileUpdatedAt">—</dd></div>
+          </dl>
+          <div class="teacher-inline-note">Phase 2.5F adds only controlled published-test assignment writes. Teachers still cannot edit content, marks, student profiles or progress. Follow-up notes remain private browser-local records.</div>
+        </article>
+      </div>
+    </section>
+  </main>
+</div>
+
+<nav class="teacher-bottom-nav" aria-label="Teacher mobile navigation">
+  <button class="active" type="button" data-teacher-mobile-nav="dashboardPanel" onclick="TeacherApp.openPanel('dashboardPanel', this)"><span>⌂</span>Home</button>
+  <button type="button" data-teacher-mobile-nav="studentsPanel" onclick="TeacherApp.openPanel('studentsPanel', this)"><span>👥</span>Students</button>
+  <button type="button" data-teacher-mobile-nav="testMonitoringPanel" onclick="TeacherApp.openPanel('testMonitoringPanel', this)"><span>🧪</span>Tests</button>
+  <button type="button" data-teacher-mobile-nav="assignTestsPanel" onclick="WTC_TEACHER_TEST_ASSIGNMENTS.openPanel('assignTestsPanel')"><span>📨</span>Assign</button>
+  <button type="button" data-teacher-mobile-nav="sentTestsPanel" onclick="WTC_TEACHER_TEST_ASSIGNMENTS.openPanel('sentTestsPanel')"><span>📬</span>Sent</button>
+  <button type="button" data-teacher-mobile-nav="classReportsPanel" onclick="TeacherApp.openPanel('classReportsPanel', this)"><span>📄</span>Reports</button>
+  <button type="button" data-teacher-mobile-nav="followUpPanel" onclick="TeacherApp.openPanel('followUpPanel', this)"><span>🔔</span>Follow-up</button>
+  <button type="button" data-teacher-mobile-nav="profilePanel" onclick="TeacherApp.openPanel('profilePanel', this)"><span>🪪</span>Profile</button>
+</nav>
+
+<div id="teacherAssignmentModal" class="teacher-assignment-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="teacherAssignmentDialogTitle">
+  <div class="teacher-assignment-dialog">
+    <div class="teacher-assignment-dialog-head"><div><span class="teacher-card-kicker">Assign published test</span><h2 id="teacherAssignmentDialogTitle">Choose Test</h2><p id="teacherAssignmentDialogMeta"></p></div><button class="teacher-assignment-dialog-close" type="button" aria-label="Close" onclick="WTC_TEACHER_TEST_ASSIGNMENTS.closeDialog()">×</button></div>
+    <form id="teacherAssignmentForm" class="teacher-assignment-form">
+      <label><span>Send to</span><select id="teacherAssignmentSelectionMode"><option value="ALL">All eligible assigned students</option><option value="SELECTED">Selected students</option><option value="ATTENTION">Students needing attention</option><option value="NO_ATTEMPT">Students with no previous attempt of this test</option></select></label>
+      <div id="teacherAssignmentStudentPickerWrap" class="teacher-student-picker-wrap hidden"><div class="teacher-student-picker-head"><b>Select students</b><div><button class="btn outline small" type="button" data-select-all-assignment-students>Select all</button><button class="btn outline small" type="button" data-clear-assignment-students>Clear</button></div></div><div id="teacherAssignmentStudentPicker" class="teacher-student-picker"></div></div>
+      <div class="teacher-assignment-form-grid">
+        <label><span>Due date (optional)</span><input id="teacherAssignmentDueAt" type="date"></label>
+        <label><span>Maximum attempts</span><select id="teacherAssignmentMaxAttempts"><option value="1">1 attempt</option><option value="2">2 attempts</option><option value="3">3 attempts</option><option value="0">Unlimited</option></select></label>
+      </div>
+      <label><span>Teacher message (optional)</span><textarea id="teacherAssignmentMessage" rows="3" maxlength="300" placeholder="Example: Complete this before our next class and revise your weak topics."></textarea></label>
+      <div class="teacher-assignment-form-actions"><button class="btn outline" type="button" onclick="WTC_TEACHER_TEST_ASSIGNMENTS.closeDialog()">Cancel</button><button id="teacherAssignmentSubmit" class="btn" type="submit">Assign Test</button></div>
+    </form>
+  </div>
+</div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/auth.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/teacher.js?v=phase-2-5f-1-0"></script>
+<script src="assets/js/teacher-test-assignments.js?v=phase-2-5f-1-0"></script>
+</body>
+</html>

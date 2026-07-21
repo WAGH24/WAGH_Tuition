@@ -5,13 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Student Portal | WAGH Tuition Classes</title>
   <link rel="icon" href="assets/images/favicon.png">
-  <link rel="stylesheet" href="assets/css/student.css">
-  <link rel="stylesheet" href="assets/css/student-content.css">
+  <link rel="stylesheet" href="assets/css/student.css?v=2.3.2p-pcr1">
+  <link rel="stylesheet" href="assets/css/student-assigned-tests.css?v=phase-2-5f-1-0">
+  <link rel="stylesheet" href="assets/css/student-content.css?v=2.0">
+  <link rel="preload" href="assets/fonts/noto-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/noto-serif-gujarati-gujarati-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/dynamic-mcq.css?v=2.2.2">
+  <style>
+    #studentRestoreSplash{position:fixed;inset:0;z-index:100000;display:grid;place-items:center;padding:24px;background:linear-gradient(145deg,#eff9fb,#fff9e9);opacity:1;visibility:visible;transition:opacity .22s ease,visibility .22s ease}
+    .student-restore-card{width:min(100%,390px);display:grid;justify-items:center;gap:12px;padding:30px 24px;border:1px solid #d7e7eb;border-radius:26px;background:rgba(255,255,255,.94);box-shadow:0 24px 70px rgba(15,96,115,.16);text-align:center;color:#172033}
+    .student-restore-card img{width:70px;height:70px;object-fit:contain}
+    .student-restore-card h1{margin:2px 0 0;font:800 clamp(22px,6vw,29px)/1.2 Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+    .student-restore-card p{margin:0;color:#64748b;font:600 14px/1.5 Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+    .student-restore-spinner{width:38px;height:38px;margin-top:4px;border:4px solid #d7e9ed;border-top-color:#14798d;border-radius:50%;animation:studentRestoreSpin .75s linear infinite}
+    html.student-portal-ready #studentRestoreSplash{opacity:0;visibility:hidden;pointer-events:none}
+    @keyframes studentRestoreSpin{to{transform:rotate(360deg)}}
+    @media(prefers-reduced-motion:reduce){#studentRestoreSplash{transition:none}.student-restore-spinner{animation:none;border-top-color:#d7e9ed;background:#14798d;box-shadow:inset 0 0 0 10px #fff}}
+  </style>
 </head>
 <body>
+<div id="studentRestoreSplash" role="status" aria-live="polite" aria-label="Loading student portal">
+  <div class="student-restore-card">
+    <img src="assets/images/logo.png" alt="WAGH Tuition Classes" width="512" height="512" decoding="async">
+    <span class="student-restore-spinner" aria-hidden="true"></span>
+    <h1>Returning to your page…</h1>
+    <p>Loading your learning progress and saved position.</p>
+  </div>
+</div>
 <header class="topbar">
   <div class="topbar-inner">
-    <a class="brand" href="student.html"><img src="assets/images/logo.png" alt="WAGH Tuition Classes"><span>Student Portal</span></a>
+    <a class="brand" href="student.html"><img src="assets/images/logo.png" alt="WAGH Tuition Classes" width="512" height="512" decoding="async"><span>Student Portal</span></a>
     <div class="top-actions">
       <span class="hide-mobile" data-user-name>Student</span>
       <span class="avatar" data-user-avatar>U</span>
@@ -22,7 +45,7 @@
 
 <div class="app-shell">
   <aside class="sidebar">
-    <div class="side-title"><img src="assets/images/logo.png" alt="WTC"><span>WTC Portal</span></div>
+    <div class="side-title"><img src="assets/images/logo.png" alt="WTC" width="512" height="512" loading="lazy" decoding="async"><span>WTC Portal</span></div>
     <nav class="side-nav">
       <button class="active" data-nav="homeSection" onclick="StudentApp.show('homeSection')">🏠 Home</button>
       <button data-nav="subjectsSection" onclick="StudentApp.show('subjectsSection')">📚 Subjects</button>
@@ -44,7 +67,7 @@
         <div class="card stat-card"><small>Progress</small><b id="progressPercent">0%</b></div>
         <div class="card stat-card"><small>Subjects</small><b id="subjectCount">0</b></div>
         <div class="card stat-card"><small>Chapters</small><b id="chapterCount">0</b></div>
-        <div class="card stat-card"><small>Pending</small><b>3</b></div>
+        <div class="card stat-card"><small>Tests completed</small><b id="testsCompletedHome">0</b></div>
       </div>
 
       <div class="grid grid-2" style="margin-top:18px">
@@ -67,7 +90,7 @@
     <section id="subjectsSection" class="page-section">
       <div class="section-head">
         <div><h2>My Subjects</h2><p class="muted">Loaded according to your board, class and medium.</p></div>
-        <button class="btn outline" onclick="StudentApp.loadSubjects()">Refresh</button>
+        <button class="btn outline" onclick="StudentApp.loadSubjects(true)">Refresh</button>
       </div>
       <div id="subjectGrid" class="grid grid-3"></div>
     </section>
@@ -89,28 +112,128 @@
     </section>
 
     <section id="progressSection" class="page-section">
-      <h2>Progress</h2>
-      <div class="card">
-        <h3>Learning Progress</h3>
-        <div class="progress-track"><div id="progressFill2" class="progress-fill" style="width:0%"></div></div>
-        <p id="progressText" class="muted">Loading progress...</p>
+      <div class="section-head progress-heading">
+        <div>
+          <span class="pill">Personal learning report</span>
+          <h2><span id="progressStudentName">Student</span>’s Progress</h2>
+          <p class="muted">Scores, strengths and recommended next steps from your test attempts.</p>
+        </div>
+        <button class="btn outline" onclick="StudentApp.loadProgress(true)">↻ Refresh</button>
+      </div>
+
+      <div class="progress-hero card">
+        <div class="progress-ring" id="progressRing" style="--progress:0">
+          <strong id="progressOverall">0%</strong><span>overall</span>
+        </div>
+        <div class="progress-hero-copy">
+          <small>Personalized learning progress</small>
+          <h3 id="progressMessage">Complete your first test to begin.</h3>
+          <div class="progress-track"><div id="progressFill2" class="progress-fill" style="width:0%"></div></div>
+          <p id="progressText" class="muted">Loading progress...</p>
+        </div>
+      </div>
+
+      <div class="progress-stat-grid">
+        <div class="card progress-stat"><span>🧪</span><small>Attempts</small><b id="progressAttempts">0</b></div>
+        <div class="card progress-stat"><span>🏆</span><small>Best score</small><b id="progressBest">0%</b></div>
+        <div class="card progress-stat"><span>✅</span><small>Tests completed</small><b id="progressTests">0</b></div>
+        <div class="card progress-stat"><span>⚡</span><small>XP · Level</small><b id="progressXp">0 · 1</b></div>
+      </div>
+
+      <div class="progress-layout">
+        <div class="card progress-panel">
+          <div class="panel-title"><div><small>PERSONAL COACH</small><h3>Recommended next steps</h3></div><span>🎯</span></div>
+          <div id="progressRecommendations" class="recommendation-list"><p class="muted">Your recommendations will appear here.</p></div>
+        </div>
+        <div class="card progress-panel">
+          <div class="panel-title"><div><small>TOPIC ANALYSIS</small><h3>Strengths and focus areas</h3></div><span>📊</span></div>
+          <div id="progressSkills" class="skill-list"><p class="muted">Attempt an MCQ test to build your topic report.</p></div>
+        </div>
+      </div>
+
+      <div class="card progress-panel recent-panel">
+        <div class="panel-title"><div><small>HISTORY</small><h3>Recent test attempts</h3></div><span>🕘</span></div>
+        <div id="progressRecentAttempts" class="recent-attempts"><p class="muted">No test attempts yet.</p></div>
       </div>
     </section>
 
     <section id="profileSection" class="page-section">
-      <h2>Profile</h2>
-      <div class="card">
-        <form id="profileForm">
-          <div class="profile-grid">
-            <div class="field"><label>Name</label><input name="name"></div>
-            <div class="field"><label>Mobile</label><input name="mobile" inputmode="numeric"></div>
-            <div class="field"><label>Board</label><select name="board"><option>CBSE</option><option>GSEB</option></select></div>
-            <div class="field"><label>Class</label><select name="className"><option>Class 5</option><option>Class 6</option><option>Class 7</option><option>Class 8</option><option>Class 9</option><option>Class 10</option></select></div>
-            <div class="field"><label>Medium</label><select name="medium"><option>English Medium</option><option>Gujarati Medium</option></select></div>
-            <div class="field"><label>New Password</label><input name="password" type="password" placeholder="Optional"></div>
+      <div class="profile-section-heading">
+        <div>
+          <span class="pill">ACCOUNT SECURITY</span>
+          <h2>Profile &amp; Password</h2>
+          <p class="muted">Only your password can be changed immediately. Other account details require admin approval.</p>
+        </div>
+      </div>
+
+      <div class="card profile-summary-card">
+        <div class="profile-lock-title">
+          <div>
+            <h3>Registered Student Details</h3>
+            <p class="muted">These details are locked to protect your learning records.</p>
           </div>
-          <br>
-          <button class="btn success" type="submit">Save & Improve Profile</button>
+          <span class="profile-lock-badge">🔒 Admin controlled</span>
+        </div>
+        <div class="profile-readonly-grid">
+          <div class="profile-readonly-item"><span>Name</span><b id="profileDisplayName">Student</b></div>
+          <div class="profile-readonly-item"><span>Mobile</span><b id="profileDisplayMobile">••••••0000</b></div>
+          <div class="profile-readonly-item"><span>Board</span><b id="profileDisplayBoard">—</b></div>
+          <div class="profile-readonly-item"><span>Class</span><b id="profileDisplayClass">—</b></div>
+          <div class="profile-readonly-item"><span>Medium</span><b id="profileDisplayMedium">—</b></div>
+        </div>
+        <p class="profile-privacy-note">Your complete registered mobile number is not displayed in the student portal.</p>
+      </div>
+
+      <div class="card profile-request-card">
+        <div class="profile-lock-title">
+          <div>
+            <h3>Request a Profile Change</h3>
+            <p class="muted">Request changes to name, mobile, board, class or medium. An administrator must approve the request.</p>
+          </div>
+          <span class="profile-request-badge">Admin approval</span>
+        </div>
+
+        <div id="profileRequestStatus" class="profile-request-status">
+          <p class="muted">Loading your request status…</p>
+        </div>
+
+        <form id="profileChangeRequestForm">
+          <div class="profile-grid">
+            <div class="field"><label>Requested Name</label><input name="requestedName" autocomplete="name" required></div>
+            <div class="field">
+              <label>Requested Mobile</label>
+              <input name="requestedMobile" inputmode="numeric" maxlength="10" placeholder="Enter only when changing mobile">
+              <small>Leave blank to keep the current registered mobile.</small>
+            </div>
+            <div class="field"><label>Requested Board</label><select name="requestedBoard"><option>CBSE</option><option>GSEB</option></select></div>
+            <div class="field"><label>Requested Class</label><select name="requestedClassName"><option>Class 5</option><option>Class 6</option><option>Class 7</option><option>Class 8</option><option>Class 9</option><option>Class 10</option></select></div>
+            <div class="field"><label>Requested Medium</label><select name="requestedMedium"><option>English Medium</option><option>Gujarati Medium</option></select></div>
+            <div class="field"><label>Reason</label><textarea name="reason" rows="3" placeholder="Why should this information be changed?" required></textarea></div>
+            <div class="field"><label>Current Password</label><input name="currentPassword" type="password" autocomplete="current-password" required></div>
+          </div>
+          <div class="profile-form-actions">
+            <button class="btn" type="submit">📨 Send Request to Admin</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="card password-change-card">
+        <div class="profile-lock-title">
+          <div>
+            <h3>Change Password</h3>
+            <p class="muted">Password changes are applied immediately after your current password is verified.</p>
+          </div>
+          <span class="password-direct-badge">Direct change</span>
+        </div>
+        <form id="passwordChangeForm">
+          <div class="profile-grid">
+            <div class="field"><label>Current Password</label><input name="currentPassword" type="password" autocomplete="current-password" required></div>
+            <div class="field"><label>New Password</label><input name="newPassword" type="password" minlength="4" autocomplete="new-password" required></div>
+            <div class="field"><label>Confirm New Password</label><input name="confirmPassword" type="password" minlength="4" autocomplete="new-password" required></div>
+          </div>
+          <div class="profile-form-actions">
+            <button class="btn success" type="submit">🔐 Change Password</button>
+          </div>
         </form>
       </div>
     </section>
@@ -127,12 +250,13 @@
 <script src="assets/js/config.js"></script>
 <script src="assets/js/ui.js"></script>
 <script src="assets/js/auth.js"></script>
-<script src="assets/js/api.js"></script>
+<script src="assets/js/api.js?v=pcr1"></script>
 <script src="assets/js/assessment-config.js"></script>
-<script src="assets/js/assessment-api.js"></script>
-<script src="assets/js/student-dynamic-content.js"></script>
+<script src="assets/js/assessment-api.js?v=stage1.0"></script>
+  <script src="assets/js/student-dynamic-content.js?v=2.3.1p"></script>
 <!-- Feature Engine must load before student.js -->
-<script src="assets/js/feature-engine.js"></script>
-<script src="assets/js/student.js"></script>
+<script src="assets/js/feature-engine.js?v=stage1.0"></script>
+<script src="assets/js/student.js?v=2.3.2p-pcr1"></script>
+<script src="assets/js/student-assigned-tests.js?v=phase-2-5f-1-0"></script>
 </body>
 </html>
