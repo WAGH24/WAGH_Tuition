@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0f172a">
+  <title>Assigned Test | WAGH Tuition Classes</title>
+  <link rel="icon" href="../../assets/images/favicon.png">
+  <link rel="stylesheet" href="../../assets/css/assigned-mcq-engine.css?v=phase-2-5f-1-0">
+</head>
+<body>
+<header class="assigned-topbar"><a href="../../student.html"><img src="../../assets/images/logo.png" alt="WTC"><span>Assigned Test</span></a><div><span id="assignedStudentName">Student</span><a class="ghost-button" href="../../student.html">Dashboard</a></div></header>
+<main class="assigned-app">
+  <section id="assignedLoading" class="assigned-loading"><div class="assigned-spinner"></div><h1>Opening your assigned test…</h1><p id="assignedLoadingText">Verifying assignment and loading published questions.</p></section>
+  <section id="assignedError" class="assigned-error hidden"><h1>Test could not be opened</h1><p id="assignedErrorText"></p><a class="primary-button" href="../../student.html">Return to Student Dashboard</a></section>
+  <section id="assignedQuiz" class="hidden">
+    <div class="assigned-hero"><div><span class="eyebrow">Teacher Assigned Test</span><h1 id="assignedTestTitle">MCQ Test</h1><p id="assignedTestMeta"></p><blockquote id="assignedTeacherMessage" class="hidden"></blockquote></div><div class="assigned-timer"><small>Time</small><strong id="assignedTimer">00:00</strong></div></div>
+    <div class="assigned-progress"><div><span>Answered</span><strong><b id="assignedAnswered">0</b>/<b id="assignedTotal">0</b></strong></div><div class="assigned-progress-track"><span id="assignedProgressFill"></span></div><button id="assignedReviewButton" class="ghost-button" type="button">Review Unanswered</button></div>
+    <div class="assigned-layout"><aside class="assigned-palette-card"><h2>Questions</h2><div id="assignedPalette" class="assigned-palette"></div><div class="assigned-legend"><span><i class="answered"></i>Answered</span><span><i></i>Unanswered</span></div></aside><section id="assignedQuestionList" class="assigned-question-list"></section></div>
+    <div id="assignedResult" class="assigned-result hidden"></div>
+    <div class="assigned-bottom-actions"><button id="assignedSubmitButton" class="primary-button" type="button">Submit Test</button><button id="assignedRetryButton" class="ghost-button hidden" type="button">Retry Test</button><a class="ghost-button" href="../../student.html">Back to Dashboard</a></div>
+  </section>
+</main>
+<script src="../../assets/js/config.js"></script>
+<script src="../../assets/js/ui.js"></script>
+<script src="../../assets/js/auth.js"></script>
+<script src="../../assets/js/api.js"></script>
+<script src="../../assets/js/assessment-config.js"></script>
+<script src="../../assets/js/assessment-api.js"></script>
+<script src="../../assets/js/assigned-mcq-engine.js?v=phase-2-5f-1-0"></script>
+</body>
+</html>
