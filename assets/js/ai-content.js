@@ -88,7 +88,7 @@ const WTC_AI_CONTENT_ADMIN = (() => {
       showStatus('Generating lesson, MCQ, worksheet and solutions...', 'info');
       const res = await WTC_ASSESSMENT_API.call({ action: 'generateAIContent', uploadId });
       if (!res.success) throw new Error(res.message || 'Generation failed');
-      showStatus('Generated and published to feature map.', 'success');
+      showStatus('Generated as Draft. Review it before publishing.', 'success');
       preview('Generated Content IDs', JSON.stringify(res, null, 2));
       await refreshQueue();
     } catch (err) { showStatus(err.message, 'error'); }
@@ -102,7 +102,7 @@ const WTC_AI_CONTENT_ADMIN = (() => {
       showStatus('Running full OCR + extraction + generation pipeline...', 'info');
       const res = await WTC_ASSESSMENT_API.call({ action: 'fullExtractAndGenerate', uploadId });
       if (!res.success) throw new Error(res.message || 'Full pipeline failed');
-      showStatus('Full pipeline completed and content is mapped to student feature buttons.', 'success');
+      showStatus('Full pipeline completed as Draft. Review it before publishing.', 'success');
       preview('Pipeline Result', JSON.stringify(res, null, 2));
       await refreshQueue();
     } catch (err) { showStatus(err.message, 'error'); }
@@ -118,6 +118,32 @@ const WTC_AI_CONTENT_ADMIN = (() => {
     } catch (err) {
       box.innerHTML = `<div class="ai-empty">${escapeHTML(err.message)}</div>`;
     }
+  }
+
+  async function markUnderReview() {
+    const uploadId = getUploadId();
+    if (!uploadId) return showStatus('Upload ID missing.', 'error');
+    try {
+      showStatus('Marking content as Under Review...', 'info');
+      const res = await WTC_ASSESSMENT_API.reviewContent(uploadId);
+      if (!res.success) throw new Error(res.message || 'Review update failed');
+      showStatus('Content marked as Under Review.', 'success');
+      await refreshQueue();
+    } catch (err) { showStatus(err.message, 'error'); }
+  }
+
+  async function publishReviewed() {
+    const uploadId = getUploadId();
+    if (!uploadId) return showStatus('Upload ID missing.', 'error');
+    if (!confirm('Publish this reviewed AI content to students?')) return;
+    try {
+      showStatus('Publishing reviewed content...', 'info');
+      const res = await WTC_ASSESSMENT_API.publishContent(uploadId);
+      if (!res.success) throw new Error(res.message || 'Publish failed');
+      showStatus('Reviewed content published successfully.', 'success');
+      preview('Publish Result', JSON.stringify(res, null, 2));
+      await refreshQueue();
+    } catch (err) { showStatus(err.message, 'error'); }
   }
 
   function renderQueueTable(rows) {
@@ -171,7 +197,7 @@ const WTC_AI_CONTENT_ADMIN = (() => {
 
   function escapeHTML(s = '') { return String(s).replace(/[&<>\"]/g, m => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[m])); }
 
-  return { init, submitInput, runOCR, parseChapter, detectQuestions, generateContent, fullPipeline, refreshQueue, useUpload };
+  return { init, submitInput, runOCR, parseChapter, detectQuestions, generateContent, fullPipeline, markUnderReview, publishReviewed, refreshQueue, useUpload };
 })();
 
 document.addEventListener('DOMContentLoaded', () => {
