@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="GSEB Class 10 Science Chapter 5 MCQ practice for Life Processes in English medium."
+  />
+  <title>Chapter 5 MCQ | GSEB Class 10 Science</title>
+  <link rel="stylesheet" href="../../assets/css/static-mcq-engine.css" />
+</head>
+<body>
+  <div class="wtc-mcq-app">
+    <header class="hero-card">
+      <div class="hero-left">
+        <p class="eyebrow">WAGH Tuition Classes • Static MCQ Engine v1.1</p>
+        <h1 id="testTitle">MCQ Practice</h1>
+        <p id="testMeta" class="meta"></p>
+      </div>
+
+      <div class="hero-score">
+        <div class="ring" id="progressRing">
+          <span id="answeredCount">0</span>
+        </div>
+        <small>Answered</small>
+      </div>
+    </header>
+
+    <section class="sticky-dashboard">
+      <div class="dash-item">
+        <span>Student</span>
+        <b id="studentName">Checking login...</b>
+      </div>
+      <div class="dash-item">
+        <span>Time</span>
+        <b id="timer">00:00</b>
+      </div>
+      <div class="dash-item">
+        <span>Questions</span>
+        <b id="questionCount">0</b>
+      </div>
+      <button
+        id="themeBtn"
+        class="ghost-btn"
+        type="button"
+        aria-label="Change theme"
+      >🌙</button>
+      <button id="reviewBtn" class="ghost-btn" type="button">Review</button>
+    </section>
+
+    <section class="notice-card">
+      Select one option for each question. After submit, correct answers and
+      explanations will open. Your result will be saved for progress report.
+    </section>
+
+    <main class="layout-grid">
+      <aside class="question-palette" aria-label="Question palette">
+        <h3>Question Palette</h3>
+        <div id="paletteGrid" class="palette-grid"></div>
+      </aside>
+
+      <section id="questionList" class="question-list"></section>
+    </main>
+
+    <section id="resultBox" class="result-box hidden"></section>
+
+    <div class="bottom-action-bar">
+      <button id="submitBtn" class="primary-btn" type="button">
+        Submit Test
+      </button>
+      <button id="retryBtn" class="secondary-btn hidden" type="button">
+        Choose Another Test
+      </button>
+      <button id="topBtn" class="secondary-btn" type="button">Top</button>
+    </div>
+  </div>
+
+  <!-- Keep this exact loading order. -->
+  <script src="../../assets/js/config.js"></script>
+  <script src="../../assets/js/auth.js"></script>
+  <script src="../../assets/js/api.js"></script>
+
+  <script>
+    window.WTC_STATIC_MCQ = {
+  "pageTitle": "Chapter 5: Life Processes - MCQ Practice",
+  "selectorDescription": "Choose a topic-wise test or a full-length chapter test covering life processes, autotrophic and heterotrophic nutrition, respiration, transportation and excretion.",
+  "board": "GSEB",
+  "className": "Class 10",
+  "medium": "English Medium",
+  "subjectId": "SCI10E",
+  "subjectName": "Science",
+  "chapterId": "SCI10ECH05",
+  "chapterName": "Life Processes",
+  "instructions": "Select one option for each question. After submit, correct answers and explanations will open. Progress saves automatically.",
+  "questionBank": [
+    {
+      "id": "SCI10ECH05-Q001",
+      "topic": "Life Processes and Autotrophic Nutrition",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which statement best describes life processes?",
+      "options": {
+        "A": "Processes used only for reproduction",
+        "B": "Maintenance processes necessary to keep an organism alive",
+        "C": "Movements visible only in animals",
+        "D": "Changes that occur only during growth"
+      },
+      "correct": "B",
+      "explanation": "Life processes are the maintenance activities that keep living organisms alive, such as nutrition, respiration, transportation and excretion."
+    },
+    {
+      "id": "SCI10ECH05-Q002",
+      "topic": "Life Processes and Autotrophic Nutrition",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Why is simple diffusion insufficient to supply oxygen to all cells of a large multicellular organism?",
+      "options": {
+        "A": "Oxygen cannot dissolve in body fluids",
+        "B": "All cells are directly exposed to the environment",
+        "C": "Many cells are far from the body surface and have high oxygen requirements",
+        "D": "Diffusion occurs only in plants"
+      },
+      "correct": "C",
+      "explanation": "In large multicellular organisms, most cells are not in direct contact with the environment. The distances are too great for diffusion alone to meet the oxygen needs of every cell."
+    },
+    {
+      "id": "SCI10ECH05-Q003",
+      "topic": "Life Processes and Autotrophic Nutrition",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Autotrophs mainly obtain the raw materials for making food from:",
+      "options": {
+        "A": "carbon dioxide and water",
+        "B": "proteins and fats",
+        "C": "oxygen and glucose",
+        "D": "urea and minerals only"
+      },
+      "correct": "A",
+      "explanation": "Autotrophs use carbon dioxide and water to synthesise carbohydrates in the presence of sunlight and chlorophyll."
+    },
+    {
+      "id": "SCI10ECH05-Q004",
+      "topic": "Life Processes and Autotrophic Nutrition",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which cell organelle contains chlorophyll and carries out photosynthesis?",
+      "options": {
+        "A": "Mitochondrion",
+        "B": "Chloroplast",
+        "C": "Nucleus",
+        "D": "Ribosome"
+      },
+      "correct": "B",
+      "explanation": "Chloroplasts contain chlorophyll, the pigment that absorbs light energy for photosynthesis."
+    },
+    {
+      "id": "SCI10ECH05-Q005",
+      "topic": "Life Processes and Autotrophic Nutrition",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which event is part of photosynthesis?",
+      "options": {
+        "A": "Conversion of chemical energy into light energy",
+        "B": "Reduction of carbon dioxide to carbohydrates",
+        "C": "Breakdown of glucose into pyruvate",
+        "D": "Conversion of proteins into amino acids"
+      },
+      "correct": "B",
+      "explanation": "During photosynthesis, carbon dioxide is reduced to carbohydrates. Light energy is absorbed and converted to chemical energy, and water molecules are split."
+    },
+    {
+      "id": "SCI10ECH05-Q006",
+      "topic": "Life Processes and Autotrophic Nutrition",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What happens to a stomatal pore when water enters the guard cells?",
+      "options": {
+        "A": "The guard cells shrink and the pore closes",
+        "B": "The guard cells swell and the pore opens",
+        "C": "The guard cells burst and the pore disappears",
+        "D": "The pore remains permanently closed"
+      },
+      "correct": "B",
+      "explanation": "When guard cells take in water, they swell and open the stomatal pore. When they lose water and shrink, the pore closes."
+    },
+    {
+      "id": "SCI10ECH05-Q007",
+      "topic": "Life Processes and Autotrophic Nutrition",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Why is potassium hydroxide placed in one bell jar during the experiment on photosynthesis?",
+      "options": {
+        "A": "To release oxygen",
+        "B": "To absorb carbon dioxide",
+        "C": "To provide chlorophyll",
+        "D": "To produce starch"
+      },
+      "correct": "B",
+      "explanation": "Potassium hydroxide absorbs carbon dioxide. The experiment shows that carbon dioxide is necessary for the formation of starch during photosynthesis."
+    },
+    {
+      "id": "SCI10ECH05-Q008",
+      "topic": "Life Processes and Autotrophic Nutrition",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "How is unused carbohydrate commonly stored in plants and in human beings, respectively?",
+      "options": {
+        "A": "Glycogen in plants and starch in humans",
+        "B": "Starch in plants and glycogen in humans",
+        "C": "Cellulose in plants and glucose in humans",
+        "D": "Protein in plants and fat in humans"
+      },
+      "correct": "B",
+      "explanation": "Plants commonly store unused carbohydrate as starch, while human beings store some of the energy derived from food as glycogen."
+    },
+    {
+      "id": "SCI10ECH05-Q009",
+      "topic": "Heterotrophic and Human Nutrition",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which organism digests food outside its body and then absorbs the simpler substances?",
+      "options": {
+        "A": "Amoeba",
+        "B": "Bread mould",
+        "C": "Paramecium",
+        "D": "Human being"
+      },
+      "correct": "B",
+      "explanation": "Fungi such as bread mould, yeast and mushrooms secrete digestive substances outside the body and absorb the simpler products."
+    },
+    {
+      "id": "SCI10ECH05-Q010",
+      "topic": "Heterotrophic and Human Nutrition",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Amoeba captures food using temporary finger-like extensions called:",
+      "options": {
+        "A": "cilia",
+        "B": "villi",
+        "C": "pseudopodia",
+        "D": "alveoli"
+      },
+      "correct": "C",
+      "explanation": "Amoeba extends pseudopodia around a food particle and encloses it inside a food vacuole."
+    },
+    {
+      "id": "SCI10ECH05-Q011",
+      "topic": "Heterotrophic and Human Nutrition",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "How is food moved to the fixed ingestion spot in Paramecium?",
+      "options": {
+        "A": "By the movement of cilia",
+        "B": "By muscular legs",
+        "C": "By pseudopodia",
+        "D": "By blood circulation"
+      },
+      "correct": "A",
+      "explanation": "Paramecium has a definite shape. Cilia covering its surface move food toward a specific spot where it is taken in."
+    },
+    {
+      "id": "SCI10ECH05-Q012",
+      "topic": "Heterotrophic and Human Nutrition",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Salivary amylase begins the digestion of:",
+      "options": {
+        "A": "proteins",
+        "B": "fats",
+        "C": "starch",
+        "D": "vitamins"
+      },
+      "correct": "C",
+      "explanation": "Salivary amylase breaks down starch, a complex carbohydrate, into simpler sugars."
+    },
+    {
+      "id": "SCI10ECH05-Q013",
+      "topic": "Heterotrophic and Human Nutrition",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The rhythmic contractions that push food along the alimentary canal are called:",
+      "options": {
+        "A": "translocation",
+        "B": "peristaltic movements",
+        "C": "filtration",
+        "D": "transpiration"
+      },
+      "correct": "B",
+      "explanation": "Muscles in the wall of the alimentary canal contract rhythmically to move food forward. These movements are called peristalsis."
+    },
+    {
+      "id": "SCI10ECH05-Q014",
+      "topic": "Heterotrophic and Human Nutrition",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What is an important function of hydrochloric acid in the stomach?",
+      "options": {
+        "A": "It makes the medium alkaline for lipase",
+        "B": "It provides an acidic medium for pepsin and helps kill germs",
+        "C": "It converts fats directly into glucose",
+        "D": "It absorbs digested food into blood"
+      },
+      "correct": "B",
+      "explanation": "Hydrochloric acid creates the acidic conditions needed for pepsin to act and also helps destroy many microbes entering with food."
+    },
+    {
+      "id": "SCI10ECH05-Q015",
+      "topic": "Heterotrophic and Human Nutrition",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What is the main role of bile salts in fat digestion?",
+      "options": {
+        "A": "They convert proteins into amino acids",
+        "B": "They break large fat globules into smaller droplets",
+        "C": "They digest starch into sugar",
+        "D": "They absorb water in the large intestine"
+      },
+      "correct": "B",
+      "explanation": "Bile salts emulsify fats by breaking large globules into smaller droplets, increasing the surface area available for lipase."
+    },
+    {
+      "id": "SCI10ECH05-Q016",
+      "topic": "Heterotrophic and Human Nutrition",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Why does the inner lining of the small intestine contain numerous villi?",
+      "options": {
+        "A": "To decrease the time available for digestion",
+        "B": "To increase the surface area for absorption of digested food",
+        "C": "To produce hydrochloric acid",
+        "D": "To prevent blood from reaching the intestine"
+      },
+      "correct": "B",
+      "explanation": "Villi greatly increase the absorptive surface area. Their rich blood supply carries absorbed nutrients to the cells of the body."
+    },
+    {
+      "id": "SCI10ECH05-Q017",
+      "topic": "Respiration",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The first step in the breakdown of glucose during respiration produces pyruvate in the:",
+      "options": {
+        "A": "nucleus",
+        "B": "cytoplasm",
+        "C": "chloroplast",
+        "D": "vacuole"
+      },
+      "correct": "B",
+      "explanation": "Glucose, a six-carbon molecule, is first broken down into the three-carbon molecule pyruvate in the cytoplasm."
+    },
+    {
+      "id": "SCI10ECH05-Q018",
+      "topic": "Respiration",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "During anaerobic respiration in yeast, pyruvate is converted into:",
+      "options": {
+        "A": "lactic acid only",
+        "B": "ethanol and carbon dioxide",
+        "C": "carbon dioxide and water",
+        "D": "glucose and oxygen"
+      },
+      "correct": "B",
+      "explanation": "In yeast fermentation, pyruvate is converted into ethanol and carbon dioxide in the absence of oxygen."
+    },
+    {
+      "id": "SCI10ECH05-Q019",
+      "topic": "Respiration",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Complete aerobic breakdown of pyruvate occurs mainly in the:",
+      "options": {
+        "A": "mitochondria",
+        "B": "cytoplasm only",
+        "C": "Golgi apparatus",
+        "D": "lysosome"
+      },
+      "correct": "A",
+      "explanation": "In the presence of oxygen, pyruvate is broken down in the mitochondria to form carbon dioxide and water, releasing much more energy."
+    },
+    {
+      "id": "SCI10ECH05-Q020",
+      "topic": "Respiration",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The accumulation of which substance in muscle cells during vigorous activity can cause cramps?",
+      "options": {
+        "A": "Ethanol",
+        "B": "Lactic acid",
+        "C": "Urea",
+        "D": "Starch"
+      },
+      "correct": "B",
+      "explanation": "When oxygen is insufficient, muscle cells convert pyruvate into lactic acid. Its accumulation during sudden activity can cause cramps."
+    },
+    {
+      "id": "SCI10ECH05-Q021",
+      "topic": "Respiration",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which molecule is known as the energy currency of the cell?",
+      "options": {
+        "A": "DNA",
+        "B": "ATP",
+        "C": "Urea",
+        "D": "Chlorophyll"
+      },
+      "correct": "B",
+      "explanation": "Energy released during respiration is used to form ATP. Cells use ATP to power muscular contraction, protein synthesis and other activities."
+    },
+    {
+      "id": "SCI10ECH05-Q022",
+      "topic": "Respiration",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Fine hairs and mucus in the nasal passage mainly help to:",
+      "options": {
+        "A": "produce carbon dioxide",
+        "B": "filter inhaled air",
+        "C": "pump blood to the lungs",
+        "D": "digest food"
+      },
+      "correct": "B",
+      "explanation": "Fine hairs and mucus trap dust and other particles from inhaled air before it passes deeper into the respiratory system."
+    },
+    {
+      "id": "SCI10ECH05-Q023",
+      "topic": "Respiration",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Which combination makes alveoli efficient surfaces for gas exchange?",
+      "options": {
+        "A": "Thick walls and poor blood supply",
+        "B": "Small total area and dry surfaces",
+        "C": "Large surface area, thin walls and a rich capillary network",
+        "D": "Cartilage rings and muscular valves"
+      },
+      "correct": "C",
+      "explanation": "Numerous alveoli provide a very large surface area. Their thin walls and extensive blood-vessel network allow rapid exchange of oxygen and carbon dioxide."
+    },
+    {
+      "id": "SCI10ECH05-Q024",
+      "topic": "Respiration",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Which statement about gas transport in human blood is correct?",
+      "options": {
+        "A": "Oxygen is mainly carried by plasma and carbon dioxide by platelets",
+        "B": "Oxygen is carried by haemoglobin, while much carbon dioxide is transported dissolved in blood",
+        "C": "Both gases are carried only by white blood cells",
+        "D": "Carbon dioxide is carried by chlorophyll"
+      },
+      "correct": "B",
+      "explanation": "Haemoglobin in red blood corpuscles has a high affinity for oxygen. Carbon dioxide is more soluble in water and is mostly transported in dissolved form."
+    },
+    {
+      "id": "SCI10ECH05-Q025",
+      "topic": "Transportation in Humans and Plants",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which component of blood transports dissolved food, carbon dioxide and nitrogenous wastes?",
+      "options": {
+        "A": "Plasma",
+        "B": "Platelets",
+        "C": "Red blood corpuscles only",
+        "D": "Haemoglobin only"
+      },
+      "correct": "A",
+      "explanation": "Plasma is the fluid part of blood. It transports dissolved food, carbon dioxide, nitrogenous wastes, salts and other substances."
+    },
+    {
+      "id": "SCI10ECH05-Q026",
+      "topic": "Transportation in Humans and Plants",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Oxygen-rich blood returning from the lungs first enters the:",
+      "options": {
+        "A": "right atrium",
+        "B": "right ventricle",
+        "C": "left atrium",
+        "D": "left ventricle"
+      },
+      "correct": "C",
+      "explanation": "Oxygenated blood from the lungs enters the left atrium and then passes into the left ventricle, which pumps it to the body."
+    },
+    {
+      "id": "SCI10ECH05-Q027",
+      "topic": "Transportation in Humans and Plants",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Why are the walls of the ventricles thicker than those of the atria?",
+      "options": {
+        "A": "Ventricles store urine",
+        "B": "Ventricles must pump blood out of the heart with greater force",
+        "C": "Atria contain no muscles",
+        "D": "Ventricles receive air directly from the lungs"
+      },
+      "correct": "B",
+      "explanation": "Ventricles pump blood to the lungs or the rest of the body, so they require thicker muscular walls than the atria."
+    },
+    {
+      "id": "SCI10ECH05-Q028",
+      "topic": "Transportation in Humans and Plants",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "What is the function of valves in the heart?",
+      "options": {
+        "A": "To mix oxygenated and deoxygenated blood",
+        "B": "To prevent the backward flow of blood",
+        "C": "To produce blood cells",
+        "D": "To filter nitrogenous wastes"
+      },
+      "correct": "B",
+      "explanation": "Heart valves ensure one-way movement of blood and prevent it from flowing backward when chambers contract."
+    },
+    {
+      "id": "SCI10ECH05-Q029",
+      "topic": "Transportation in Humans and Plants",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which statement correctly compares arteries and veins?",
+      "options": {
+        "A": "Arteries have thin walls, while veins have no valves",
+        "B": "Arteries have thick elastic walls, while veins commonly contain valves",
+        "C": "Both always carry oxygen-rich blood",
+        "D": "Veins carry blood away from the heart under high pressure"
+      },
+      "correct": "B",
+      "explanation": "Arteries carry blood away from the heart under high pressure and have thick elastic walls. Veins return blood at lower pressure and have valves to prevent backflow."
+    },
+    {
+      "id": "SCI10ECH05-Q030",
+      "topic": "Transportation in Humans and Plants",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Why are capillary walls only one cell thick?",
+      "options": {
+        "A": "To prevent any exchange with tissues",
+        "B": "To allow exchange of materials between blood and surrounding cells",
+        "C": "To withstand the highest blood pressure",
+        "D": "To pump blood like the heart"
+      },
+      "correct": "B",
+      "explanation": "The very thin walls of capillaries allow oxygen, nutrients, carbon dioxide and other materials to move between blood and tissue cells."
+    },
+    {
+      "id": "SCI10ECH05-Q031",
+      "topic": "Transportation in Humans and Plants",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which tissues transport water and food in plants, respectively?",
+      "options": {
+        "A": "Phloem and xylem",
+        "B": "Xylem and phloem",
+        "C": "Epidermis and stomata",
+        "D": "Cambium and cortex"
+      },
+      "correct": "B",
+      "explanation": "Xylem transports water and minerals from the roots, while phloem transports soluble products of photosynthesis to other parts."
+    },
+    {
+      "id": "SCI10ECH05-Q032",
+      "topic": "Transportation in Humans and Plants",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Which statement about phloem translocation is correct?",
+      "options": {
+        "A": "It carries only water upward and requires no energy",
+        "B": "It moves food in both directions and uses energy from ATP",
+        "C": "It occurs only through dead cells",
+        "D": "It is driven only by evaporation from leaves"
+      },
+      "correct": "B",
+      "explanation": "Phloem transports sucrose, amino acids and other substances upward or downward according to need. Loading material into phloem requires energy from ATP."
+    },
+    {
+      "id": "SCI10ECH05-Q033",
+      "topic": "Excretion in Humans and Plants",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Excretion is the biological process of removing:",
+      "options": {
+        "A": "useful nutrients from food",
+        "B": "harmful metabolic wastes from the body",
+        "C": "oxygen from the lungs",
+        "D": "undigested food only"
+      },
+      "correct": "B",
+      "explanation": "Excretion removes harmful metabolic wastes, including nitrogenous substances, from the body."
+    },
+    {
+      "id": "SCI10ECH05-Q034",
+      "topic": "Excretion in Humans and Plants",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which set correctly lists the main organs of the human excretory system?",
+      "options": {
+        "A": "Kidneys, ureters, urinary bladder and urethra",
+        "B": "Lungs, trachea, bronchi and alveoli",
+        "C": "Stomach, liver, pancreas and intestine",
+        "D": "Heart, arteries, veins and capillaries"
+      },
+      "correct": "A",
+      "explanation": "The human excretory system includes a pair of kidneys, a pair of ureters, a urinary bladder and a urethra."
+    },
+    {
+      "id": "SCI10ECH05-Q035",
+      "topic": "Excretion in Humans and Plants",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The basic filtration unit of a kidney is the:",
+      "options": {
+        "A": "alveolus",
+        "B": "nephron",
+        "C": "villus",
+        "D": "platelet"
+      },
+      "correct": "B",
+      "explanation": "Each kidney contains a large number of nephrons, which filter blood and help form urine."
+    },
+    {
+      "id": "SCI10ECH05-Q036",
+      "topic": "Excretion in Humans and Plants",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What is the role of Bowman’s capsule in a nephron?",
+      "options": {
+        "A": "It pumps urine into the ureter",
+        "B": "It collects the filtrate from a cluster of blood capillaries",
+        "C": "It stores urine until urination",
+        "D": "It produces red blood cells"
+      },
+      "correct": "B",
+      "explanation": "Bowman’s capsule is the cup-shaped end of the nephron tubule. It receives the filtrate formed from blood in the associated capillary cluster."
+    },
+    {
+      "id": "SCI10ECH05-Q037",
+      "topic": "Excretion in Humans and Plants",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which substances are normally selectively reabsorbed from the initial kidney filtrate?",
+      "options": {
+        "A": "Only urea and uric acid",
+        "B": "Glucose, amino acids, salts and much of the water",
+        "C": "Only carbon dioxide",
+        "D": "All wastes without any water"
+      },
+      "correct": "B",
+      "explanation": "Useful substances such as glucose, amino acids and required salts, along with most water, are selectively reabsorbed as the filtrate passes through the nephron tubule."
+    },
+    {
+      "id": "SCI10ECH05-Q038",
+      "topic": "Excretion in Humans and Plants",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which is the correct pathway of urine after it is formed in the kidneys?",
+      "options": {
+        "A": "Kidneys → urethra → ureters → bladder",
+        "B": "Kidneys → ureters → urinary bladder → urethra",
+        "C": "Kidneys → bladder → ureters → urethra",
+        "D": "Kidneys → arteries → bladder → veins"
+      },
+      "correct": "B",
+      "explanation": "Urine passes from each kidney through a ureter to the urinary bladder and is finally released through the urethra."
+    },
+    {
+      "id": "SCI10ECH05-Q039",
+      "topic": "Excretion in Humans and Plants",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Why is the dialysing fluid used in an artificial kidney free of nitrogenous wastes?",
+      "options": {
+        "A": "So that nitrogenous wastes can diffuse from the blood into the fluid",
+        "B": "So that glucose moves from the fluid into the blood",
+        "C": "So that blood cells are destroyed",
+        "D": "So that the fluid has no water"
+      },
+      "correct": "A",
+      "explanation": "The dialysing fluid has similar osmotic pressure to blood but lacks nitrogenous wastes. This concentration difference allows wastes to diffuse out of the blood."
+    },
+    {
+      "id": "SCI10ECH05-Q040",
+      "topic": "Excretion in Humans and Plants",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Which is a valid method by which plants remove or store wastes?",
+      "options": {
+        "A": "Pumping all wastes through a urinary bladder",
+        "B": "Storing wastes in vacuoles, old leaves, resins or gums",
+        "C": "Filtering blood through nephrons",
+        "D": "Converting every waste product into starch"
+      },
+      "correct": "B",
+      "explanation": "Plants may store wastes in vacuoles or leaves that later fall, deposit wastes as resins and gums in old xylem, release excess water by transpiration, or excrete substances into the soil."
+    }
+  ],
+  "tests": [
+    {
+      "testId": "SCI10ECH05-T01",
+      "testTitle": "Topic Test 1: Life Processes and Autotrophic Nutrition",
+      "testType": "TOPIC_TEST",
+      "topic": "Life Processes and Autotrophic Nutrition",
+      "questionLabel": "Related questions: Q1-Q8 • Life processes, photosynthesis, stomata and storage of food",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10ECH05-Q001",
+        "SCI10ECH05-Q002",
+        "SCI10ECH05-Q003",
+        "SCI10ECH05-Q004",
+        "SCI10ECH05-Q005",
+        "SCI10ECH05-Q006",
+        "SCI10ECH05-Q007",
+        "SCI10ECH05-Q008"
+      ]
+    },
+    {
+      "testId": "SCI10ECH05-T02",
+      "testTitle": "Topic Test 2: Heterotrophic and Human Nutrition",
+      "testType": "TOPIC_TEST",
+      "topic": "Heterotrophic and Human Nutrition",
+      "questionLabel": "Related questions: Q9-Q16 • Heterotrophic nutrition, digestion, enzymes, bile and absorption",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10ECH05-Q009",
+        "SCI10ECH05-Q010",
+        "SCI10ECH05-Q011",
+        "SCI10ECH05-Q012",
+        "SCI10ECH05-Q013",
+        "SCI10ECH05-Q014",
+        "SCI10ECH05-Q015",
+        "SCI10ECH05-Q016"
+      ]
+    },
+    {
+      "testId": "SCI10ECH05-T03",
+      "testTitle": "Topic Test 3: Respiration",
+      "testType": "TOPIC_TEST",
+      "topic": "Respiration",
+      "questionLabel": "Related questions: Q17-Q24 • Cellular respiration, ATP, breathing and gas exchange",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10ECH05-Q017",
+        "SCI10ECH05-Q018",
+        "SCI10ECH05-Q019",
+        "SCI10ECH05-Q020",
+        "SCI10ECH05-Q021",
+        "SCI10ECH05-Q022",
+        "SCI10ECH05-Q023",
+        "SCI10ECH05-Q024"
+      ]
+    },
+    {
+      "testId": "SCI10ECH05-T04",
+      "testTitle": "Topic Test 4: Transportation",
+      "testType": "TOPIC_TEST",
+      "topic": "Transportation in Humans and Plants",
+      "questionLabel": "Related questions: Q25-Q32 • Blood circulation, vessels, xylem, phloem and translocation",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10ECH05-Q025",
+        "SCI10ECH05-Q026",
+        "SCI10ECH05-Q027",
+        "SCI10ECH05-Q028",
+        "SCI10ECH05-Q029",
+        "SCI10ECH05-Q030",
+        "SCI10ECH05-Q031",
+        "SCI10ECH05-Q032"
+      ]
+    },
+    {
+      "testId": "SCI10ECH05-T05",
+      "testTitle": "Topic Test 5: Excretion",
+      "testType": "TOPIC_TEST",
+      "topic": "Excretion in Humans and Plants",
+      "questionLabel": "Related questions: Q33-Q40 • Human excretory system, nephrons, dialysis and plant excretion",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10ECH05-Q033",
+        "SCI10ECH05-Q034",
+        "SCI10ECH05-Q035",
+        "SCI10ECH05-Q036",
+        "SCI10ECH05-Q037",
+        "SCI10ECH05-Q038",
+        "SCI10ECH05-Q039",
+        "SCI10ECH05-Q040"
+      ]
+    },
+    {
+      "testId": "SCI10ECH05-FLT01",
+      "testTitle": "Full-Length Test 1",
+      "testType": "FULL_LENGTH",
+      "topic": "Complete Chapter",
+      "questionLabel": "20 balanced questions from all five topics",
+      "instructions": "20 questions • 1 mark each • Full chapter assessment • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10ECH05-Q001",
+        "SCI10ECH05-Q002",
+        "SCI10ECH05-Q003",
+        "SCI10ECH05-Q004",
+        "SCI10ECH05-Q009",
+        "SCI10ECH05-Q010",
+        "SCI10ECH05-Q011",
+        "SCI10ECH05-Q012",
+        "SCI10ECH05-Q017",
+        "SCI10ECH05-Q018",
+        "SCI10ECH05-Q019",
+        "SCI10ECH05-Q020",
+        "SCI10ECH05-Q025",
+        "SCI10ECH05-Q026",
+        "SCI10ECH05-Q027",
+        "SCI10ECH05-Q028",
+        "SCI10ECH05-Q033",
+        "SCI10ECH05-Q034",
+        "SCI10ECH05-Q035",
+        "SCI10ECH05-Q036"
+      ]
+    },
+    {
+      "testId": "SCI10ECH05-FLT02",
+      "testTitle": "Full-Length Test 2",
+      "testType": "FULL_LENGTH",
+      "topic": "Complete Chapter",
+      "questionLabel": "20 different balanced questions from all five topics",
+      "instructions": "20 questions • 1 mark each • Full chapter assessment • No overlap with Full-Length Test 1 • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10ECH05-Q005",
+        "SCI10ECH05-Q006",
+        "SCI10ECH05-Q007",
+        "SCI10ECH05-Q008",
+        "SCI10ECH05-Q013",
+        "SCI10ECH05-Q014",
+        "SCI10ECH05-Q015",
+        "SCI10ECH05-Q016",
+        "SCI10ECH05-Q021",
+        "SCI10ECH05-Q022",
+        "SCI10ECH05-Q023",
+        "SCI10ECH05-Q024",
+        "SCI10ECH05-Q029",
+        "SCI10ECH05-Q030",
+        "SCI10ECH05-Q031",
+        "SCI10ECH05-Q032",
+        "SCI10ECH05-Q037",
+        "SCI10ECH05-Q038",
+        "SCI10ECH05-Q039",
+        "SCI10ECH05-Q040"
+      ]
+    }
+  ]
+};
+  </script>
+
+  <script src="../../assets/js/static-mcq-engine.js"></script>
+</body>
+</html>

@@ -18,35 +18,23 @@
         <h1 id="testTitle">MCQ Practice</h1>
         <p id="testMeta" class="meta"></p>
       </div>
-
       <div class="hero-score">
-        <div class="ring" id="progressRing">
-          <span id="answeredCount">0</span>
-        </div>
+        <div class="ring" id="progressRing"><span id="answeredCount">0</span></div>
         <small>Answered</small>
       </div>
     </header>
 
     <section class="sticky-dashboard">
-      <div class="dash-item">
-        <span>Student</span>
-        <b id="studentName">Checking login...</b>
-      </div>
-      <div class="dash-item">
-        <span>Time</span>
-        <b id="timer">00:00</b>
-      </div>
-      <div class="dash-item">
-        <span>Questions</span>
-        <b id="questionCount">0</b>
-      </div>
-      <button id="themeBtn" class="ghost-btn" type="button">🌙</button>
+      <div class="dash-item"><span>Student</span><b id="studentName">Checking login...</b></div>
+      <div class="dash-item"><span>Time</span><b id="timer">00:00</b></div>
+      <div class="dash-item"><span>Questions</span><b id="questionCount">0</b></div>
+      <button id="themeBtn" class="ghost-btn" type="button" aria-label="Change theme">🌙</button>
       <button id="reviewBtn" class="ghost-btn" type="button">Review</button>
     </section>
 
     <section class="notice-card">
-      Select one option for each question. After submit, correct answers and
-      explanations will open. Your result will be saved for progress report.
+      Select one option for each question. After submit, correct answers and explanations will open.
+      Your result will be saved for progress report.
     </section>
 
     <main class="layout-grid">
@@ -54,24 +42,18 @@
         <h3>Question Palette</h3>
         <div id="paletteGrid" class="palette-grid"></div>
       </aside>
-
       <section id="questionList" class="question-list"></section>
     </main>
 
     <section id="resultBox" class="result-box hidden"></section>
 
     <div class="bottom-action-bar">
-      <button id="submitBtn" class="primary-btn" type="button">
-        Submit Test
-      </button>
-      <button id="retryBtn" class="secondary-btn hidden" type="button">
-        Choose Another Test
-      </button>
+      <button id="submitBtn" class="primary-btn" type="button">Submit Test</button>
+      <button id="retryBtn" class="secondary-btn hidden" type="button">Choose Another Test</button>
       <button id="topBtn" class="secondary-btn" type="button">Top</button>
     </div>
   </div>
 
-  <!-- Keep this exact loading order. -->
   <script src="../../assets/js/config.js"></script>
   <script src="../../assets/js/auth.js"></script>
   <script src="../../assets/js/api.js"></script>
@@ -652,7 +634,7 @@
       "question": "The power of a concave lens of focal length -2 m is:",
       "options": {
         "A": "+2.0 D",
-        "B": -2.0,
+        "B": "-2.0 D",
         "C": "-0.5 D",
         "D": "+0.5 D"
       },

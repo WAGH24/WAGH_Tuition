@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GSEB Class 10 Science Chapter 6 MCQ practice for Control and Coordination in English medium." />
+  <title>Chapter 6 MCQ | GSEB Class 10 Science</title>
+  <link rel="stylesheet" href="../../assets/css/static-mcq-engine.css" />
+</head>
+<body>
+  <div class="wtc-mcq-app">
+    <header class="hero-card">
+      <div class="hero-left">
+        <p class="eyebrow">WAGH Tuition Classes • Static MCQ Engine v1.1</p>
+        <h1 id="testTitle">MCQ Practice</h1>
+        <p id="testMeta" class="meta"></p>
+      </div>
+      <div class="hero-score">
+        <div class="ring" id="progressRing"><span id="answeredCount">0</span></div>
+        <small>Answered</small>
+      </div>
+    </header>
+
+    <section class="sticky-dashboard">
+      <div class="dash-item"><span>Student</span><b id="studentName">Checking login...</b></div>
+      <div class="dash-item"><span>Time</span><b id="timer">00:00</b></div>
+      <div class="dash-item"><span>Questions</span><b id="questionCount">0</b></div>
+      <button id="themeBtn" class="ghost-btn" type="button" aria-label="Change theme">🌙</button>
+      <button id="reviewBtn" class="ghost-btn" type="button">Review</button>
+    </section>
+
+    <section class="notice-card">
+      Select one option for each question. After submit, correct answers and explanations will open.
+      Your result will be saved for progress report.
+    </section>
+
+    <main class="layout-grid">
+      <aside class="question-palette" aria-label="Question palette">
+        <h3>Question Palette</h3>
+        <div id="paletteGrid" class="palette-grid"></div>
+      </aside>
+      <section id="questionList" class="question-list"></section>
+    </main>
+
+    <section id="resultBox" class="result-box hidden"></section>
+
+    <div class="bottom-action-bar">
+      <button id="submitBtn" class="primary-btn" type="button">Submit Test</button>
+      <button id="retryBtn" class="secondary-btn hidden" type="button">Choose Another Test</button>
+      <button id="topBtn" class="secondary-btn" type="button">Top</button>
+    </div>
+  </div>
+
+  <script src="../../assets/js/config.js"></script>
+  <script src="../../assets/js/auth.js"></script>
+  <script src="../../assets/js/api.js"></script>
+
+  <script>
+    window.WTC_STATIC_MCQ = {
+  "pageTitle": "Chapter 6: Control and Coordination - MCQ Practice",
+  "selectorDescription": "Choose a topic-wise test or a full-length chapter test covering neurons, reflex action, the human brain, plant movements, plant hormones, animal hormones and feedback control.",
+  "board": "GSEB",
+  "className": "Class 10",
+  "medium": "English Medium",
+  "subjectId": "SCI10E",
+  "subjectName": "Science",
+  "chapterId": "SCI10ECH06",
+  "chapterName": "Control and Coordination",
+  "instructions": "Select one option for each question. After submit, correct answers and explanations will open. Progress saves automatically.",
+  "questionBank": [
+    {
+      "id": "SCI10ECH06-Q001",
+      "topic": "Neurons, Receptors and Nerve Impulses",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which structures detect changes in the environment and initiate nervous responses?",
+      "options": {
+        "A": "Receptors",
+        "B": "Effectors",
+        "C": "Hormones",
+        "D": "Platelets"
+      },
+      "correct": "A",
+      "explanation": "Receptors are specialised sensory endings that detect stimuli such as light, sound, heat, taste and smell."
+    },
+    {
+      "id": "SCI10ECH06-Q002",
+      "topic": "Neurons, Receptors and Nerve Impulses",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Gustatory receptors are mainly responsible for detecting:",
+      "options": {
+        "A": "smell",
+        "B": "taste",
+        "C": "sound",
+        "D": "pressure"
+      },
+      "correct": "B",
+      "explanation": "Gustatory receptors detect taste, while olfactory receptors detect smell."
+    },
+    {
+      "id": "SCI10ECH06-Q003",
+      "topic": "Neurons, Receptors and Nerve Impulses",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Olfactory receptors are associated with the sense of:",
+      "options": {
+        "A": "hearing",
+        "B": "balance",
+        "C": "smell",
+        "D": "touch"
+      },
+      "correct": "C",
+      "explanation": "Olfactory receptors present in the nose detect different smells."
+    },
+    {
+      "id": "SCI10ECH06-Q004",
+      "topic": "Neurons, Receptors and Nerve Impulses",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which sequence correctly shows the direction of an impulse through a neuron?",
+      "options": {
+        "A": "Axon → cell body → dendrite",
+        "B": "Dendrite → cell body → axon",
+        "C": "Cell body → dendrite → axon",
+        "D": "Synapse → dendrite → receptor"
+      },
+      "correct": "B",
+      "explanation": "A nerve impulse is received at the dendritic end, passes through the cell body and then travels along the axon."
+    },
+    {
+      "id": "SCI10ECH06-Q005",
+      "topic": "Neurons, Receptors and Nerve Impulses",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The small gap between two neurons is called a:",
+      "options": {
+        "A": "receptor",
+        "B": "synapse",
+        "C": "dendrite",
+        "D": "reflex"
+      },
+      "correct": "B",
+      "explanation": "A synapse is the tiny gap between the axon ending of one neuron and the receiving end of the next cell."
+    },
+    {
+      "id": "SCI10ECH06-Q006",
+      "topic": "Neurons, Receptors and Nerve Impulses",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What happens when an electrical impulse reaches the end of an axon?",
+      "options": {
+        "A": "It directly enters the next neuron without any gap",
+        "B": "It causes chemicals to be released across the synapse",
+        "C": "It changes permanently into a hormone",
+        "D": "It stops all activity in the receiving cell"
+      },
+      "correct": "B",
+      "explanation": "At the axon ending, the electrical impulse causes the release of chemicals that cross the synapse and start a new impulse in the next cell."
+    },
+    {
+      "id": "SCI10ECH06-Q007",
+      "topic": "Neurons, Receptors and Nerve Impulses",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Nervous tissue is specialised mainly for:",
+      "options": {
+        "A": "storing food",
+        "B": "conducting information as electrical impulses",
+        "C": "transporting oxygen in blood",
+        "D": "producing digestive enzymes"
+      },
+      "correct": "B",
+      "explanation": "Nervous tissue is an organised network of neurons specialised for rapid transmission of information through electrical impulses."
+    },
+    {
+      "id": "SCI10ECH06-Q008",
+      "topic": "Neurons, Receptors and Nerve Impulses",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "At a neuromuscular junction, a neuron transmits its message to a:",
+      "options": {
+        "A": "bone cell",
+        "B": "muscle cell",
+        "C": "red blood cell",
+        "D": "skin pigment cell"
+      },
+      "correct": "B",
+      "explanation": "A neuromuscular junction is the connection through which a motor neuron passes a signal to a muscle cell, causing muscular action."
+    },
+    {
+      "id": "SCI10ECH06-Q009",
+      "topic": "Reflex Action, Brain and Muscle Response",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "A reflex action is best described as:",
+      "options": {
+        "A": "a slow, carefully planned response",
+        "B": "a rapid and automatic response to a stimulus",
+        "C": "growth of a plant toward light",
+        "D": "release of a hormone into blood"
+      },
+      "correct": "B",
+      "explanation": "A reflex action is a quick, automatic response that protects the body or responds immediately to a stimulus."
+    },
+    {
+      "id": "SCI10ECH06-Q010",
+      "topic": "Reflex Action, Brain and Muscle Response",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Reflex arcs for many protective responses are formed mainly in the:",
+      "options": {
+        "A": "spinal cord",
+        "B": "stomach",
+        "C": "thyroid gland",
+        "D": "cerebellum only"
+      },
+      "correct": "A",
+      "explanation": "Sensory and motor nerves meet in the spinal cord, allowing a rapid response without waiting for detailed processing by the brain."
+    },
+    {
+      "id": "SCI10ECH06-Q011",
+      "topic": "Reflex Action, Brain and Muscle Response",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The central nervous system consists of the:",
+      "options": {
+        "A": "brain and spinal cord",
+        "B": "brain and endocrine glands",
+        "C": "cranial nerves and spinal nerves only",
+        "D": "heart and brain"
+      },
+      "correct": "A",
+      "explanation": "The brain and spinal cord together form the central nervous system."
+    },
+    {
+      "id": "SCI10ECH06-Q012",
+      "topic": "Reflex Action, Brain and Muscle Response",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The peripheral nervous system mainly includes:",
+      "options": {
+        "A": "the brain and skull",
+        "B": "cranial nerves and spinal nerves",
+        "C": "the spinal cord and vertebral column",
+        "D": "the pituitary and thyroid glands"
+      },
+      "correct": "B",
+      "explanation": "The peripheral nervous system connects the central nervous system to the rest of the body through cranial and spinal nerves."
+    },
+    {
+      "id": "SCI10ECH06-Q013",
+      "topic": "Reflex Action, Brain and Muscle Response",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which part of the brain is the main thinking region and interprets sensory information?",
+      "options": {
+        "A": "Forebrain",
+        "B": "Medulla",
+        "C": "Spinal cord",
+        "D": "Cerebellum"
+      },
+      "correct": "A",
+      "explanation": "The forebrain contains specialised sensory, association and motor areas and is the main thinking region of the brain."
+    },
+    {
+      "id": "SCI10ECH06-Q014",
+      "topic": "Reflex Action, Brain and Muscle Response",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which part of the hindbrain controls involuntary activities such as blood pressure, salivation and vomiting?",
+      "options": {
+        "A": "Cerebrum",
+        "B": "Medulla",
+        "C": "Pituitary",
+        "D": "Spinal nerve"
+      },
+      "correct": "B",
+      "explanation": "The medulla in the hindbrain controls several involuntary actions, including blood pressure, salivation and vomiting."
+    },
+    {
+      "id": "SCI10ECH06-Q015",
+      "topic": "Reflex Action, Brain and Muscle Response",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which part of the brain helps maintain posture, balance and precision of voluntary movements?",
+      "options": {
+        "A": "Cerebellum",
+        "B": "Thyroid",
+        "C": "Forebrain sensory area",
+        "D": "Adrenal gland"
+      },
+      "correct": "A",
+      "explanation": "The cerebellum coordinates precision of voluntary actions and helps maintain posture and balance."
+    },
+    {
+      "id": "SCI10ECH06-Q016",
+      "topic": "Reflex Action, Brain and Muscle Response",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "How do muscle cells produce movement after receiving a nerve impulse?",
+      "options": {
+        "A": "Their special proteins change shape and arrangement, shortening the cells",
+        "B": "They produce chlorophyll and grow toward light",
+        "C": "They release insulin into blood",
+        "D": "They convert all electrical signals directly into bone"
+      },
+      "correct": "A",
+      "explanation": "Special proteins in muscle cells change their shape and arrangement in response to nerve impulses, causing the muscle cells to shorten."
+    },
+    {
+      "id": "SCI10ECH06-Q017",
+      "topic": "Plant Movements and Plant Hormones",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The rapid folding of leaves in a sensitive plant after touch occurs mainly because:",
+      "options": {
+        "A": "new cells grow immediately",
+        "B": "certain cells change their water content and shape",
+        "C": "the plant develops muscles",
+        "D": "the leaves receive impulses through neurons"
+      },
+      "correct": "B",
+      "explanation": "Sensitive-plant movement is not a growth movement. Cells change their water content, swell or shrink, and thereby change shape."
+    },
+    {
+      "id": "SCI10ECH06-Q018",
+      "topic": "Plant Movements and Plant Hormones",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Why does a tendril coil around a support after touching it?",
+      "options": {
+        "A": "The touched side grows faster than the opposite side",
+        "B": "The side away from the support grows faster than the touched side",
+        "C": "All growth stops equally on both sides",
+        "D": "Water leaves every cell of the tendril"
+      },
+      "correct": "B",
+      "explanation": "The side of the tendril touching the support grows more slowly, while the opposite side grows faster, causing the tendril to bend and coil."
+    },
+    {
+      "id": "SCI10ECH06-Q019",
+      "topic": "Plant Movements and Plant Hormones",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The bending of a plant shoot toward light is an example of:",
+      "options": {
+        "A": "positive phototropism",
+        "B": "negative geotropism",
+        "C": "hydrotropism",
+        "D": "chemotropism"
+      },
+      "correct": "A",
+      "explanation": "A shoot growing toward light shows positive phototropism."
+    },
+    {
+      "id": "SCI10ECH06-Q020",
+      "topic": "Plant Movements and Plant Hormones",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which response correctly describes geotropism in a germinating seedling?",
+      "options": {
+        "A": "Roots grow upward and shoots grow downward",
+        "B": "Both roots and shoots grow toward gravity",
+        "C": "Roots grow toward gravity and shoots grow away from gravity",
+        "D": "Both roots and shoots grow away from gravity"
+      },
+      "correct": "C",
+      "explanation": "Roots generally show positive geotropism by growing downward, while shoots show negative geotropism by growing upward."
+    },
+    {
+      "id": "SCI10ECH06-Q021",
+      "topic": "Plant Movements and Plant Hormones",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The growth of a pollen tube toward an ovule is an example of:",
+      "options": {
+        "A": "phototropism",
+        "B": "chemotropism",
+        "C": "geotropism",
+        "D": "thigmotropism only"
+      },
+      "correct": "B",
+      "explanation": "The pollen tube grows toward the ovule in response to chemical signals, so the movement is chemotropic."
+    },
+    {
+      "id": "SCI10ECH06-Q022",
+      "topic": "Plant Movements and Plant Hormones",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "When light falls on a shoot from one side, auxin accumulates mainly on the:",
+      "options": {
+        "A": "illuminated side, where it prevents growth",
+        "B": "shady side, where it promotes greater cell elongation",
+        "C": "root tip, where it stops water absorption",
+        "D": "flower, where it produces pollen"
+      },
+      "correct": "B",
+      "explanation": "Auxin moves toward the shaded side of the shoot and promotes greater cell elongation there, causing the shoot to bend toward light."
+    },
+    {
+      "id": "SCI10ECH06-Q023",
+      "topic": "Plant Movements and Plant Hormones",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which plant hormone is especially associated with promotion of cell division?",
+      "options": {
+        "A": "Cytokinin",
+        "B": "Abscisic acid",
+        "C": "Insulin",
+        "D": "Adrenaline"
+      },
+      "correct": "A",
+      "explanation": "Cytokinins promote cell division and are found in greater concentration in rapidly dividing regions such as fruits and seeds."
+    },
+    {
+      "id": "SCI10ECH06-Q024",
+      "topic": "Plant Movements and Plant Hormones",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which plant hormone inhibits growth and can promote wilting of leaves?",
+      "options": {
+        "A": "Auxin",
+        "B": "Gibberellin",
+        "C": "Cytokinin",
+        "D": "Abscisic acid"
+      },
+      "correct": "D",
+      "explanation": "Abscisic acid is a growth-inhibiting plant hormone and its effects include wilting of leaves."
+    },
+    {
+      "id": "SCI10ECH06-Q025",
+      "topic": "Animal Hormones and Endocrine Glands",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Adrenaline is secreted by the:",
+      "options": {
+        "A": "adrenal glands",
+        "B": "thyroid gland",
+        "C": "pancreas",
+        "D": "pituitary gland"
+      },
+      "correct": "A",
+      "explanation": "Adrenaline is secreted by the adrenal glands and prepares the body for emergency situations."
+    },
+    {
+      "id": "SCI10ECH06-Q026",
+      "topic": "Animal Hormones and Endocrine Glands",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which change normally occurs when adrenaline is released during a frightening situation?",
+      "options": {
+        "A": "Heart rate and breathing rate decrease",
+        "B": "More blood is directed toward skeletal muscles",
+        "C": "All blood is diverted to the digestive system",
+        "D": "Blood sugar regulation stops permanently"
+      },
+      "correct": "B",
+      "explanation": "Adrenaline increases heart and breathing rates and diverts more blood toward skeletal muscles to prepare the body for action."
+    },
+    {
+      "id": "SCI10ECH06-Q027",
+      "topic": "Animal Hormones and Endocrine Glands",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Thyroxin helps regulate the metabolism of:",
+      "options": {
+        "A": "carbohydrates, proteins and fats",
+        "B": "only water",
+        "C": "only minerals",
+        "D": "only vitamins"
+      },
+      "correct": "A",
+      "explanation": "Thyroxin regulates carbohydrate, protein and fat metabolism and supports balanced growth."
+    },
+    {
+      "id": "SCI10ECH06-Q028",
+      "topic": "Animal Hormones and Endocrine Glands",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Deficiency of iodine in the diet may lead to:",
+      "options": {
+        "A": "goitre",
+        "B": "malaria",
+        "C": "night blindness",
+        "D": "scurvy"
+      },
+      "correct": "A",
+      "explanation": "Iodine is needed by the thyroid gland to make thyroxin. Iodine deficiency can cause goitre, often seen as a swollen neck."
+    },
+    {
+      "id": "SCI10ECH06-Q029",
+      "topic": "Animal Hormones and Endocrine Glands",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Deficiency of growth hormone during childhood may cause:",
+      "options": {
+        "A": "dwarfism",
+        "B": "goitre",
+        "C": "diabetes",
+        "D": "high blood pressure only"
+      },
+      "correct": "A",
+      "explanation": "Growth hormone is secreted by the pituitary gland and regulates growth. Its deficiency in childhood can lead to dwarfism."
+    },
+    {
+      "id": "SCI10ECH06-Q030",
+      "topic": "Animal Hormones and Endocrine Glands",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Testosterone is produced mainly by the:",
+      "options": {
+        "A": "testes",
+        "B": "ovaries",
+        "C": "pancreas",
+        "D": "thyroid"
+      },
+      "correct": "A",
+      "explanation": "Testosterone is produced mainly by the testes and contributes to male pubertal changes."
+    },
+    {
+      "id": "SCI10ECH06-Q031",
+      "topic": "Animal Hormones and Endocrine Glands",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Oestrogen is mainly associated with:",
+      "options": {
+        "A": "development of female secondary sexual characteristics",
+        "B": "rapid emergency response",
+        "C": "lowering all metabolic activity",
+        "D": "transmission across a synapse"
+      },
+      "correct": "A",
+      "explanation": "Oestrogen is produced mainly by the ovaries and is involved in female pubertal changes and reproductive functions."
+    },
+    {
+      "id": "SCI10ECH06-Q032",
+      "topic": "Animal Hormones and Endocrine Glands",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which hormone produced by the pancreas helps regulate blood sugar level?",
+      "options": {
+        "A": "Insulin",
+        "B": "Auxin",
+        "C": "Thyroxin",
+        "D": "Adrenaline"
+      },
+      "correct": "A",
+      "explanation": "Insulin is produced by the pancreas and helps maintain the blood glucose level within a suitable range."
+    },
+    {
+      "id": "SCI10ECH06-Q033",
+      "topic": "Integrated Control, Coordination and Feedback",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What happens through feedback control when blood sugar rises?",
+      "options": {
+        "A": "The pancreas secretes more insulin",
+        "B": "The thyroid stops producing thyroxin permanently",
+        "C": "The adrenal glands release auxin",
+        "D": "The spinal cord produces glucose"
+      },
+      "correct": "A",
+      "explanation": "A rise in blood sugar is detected by pancreatic cells, which respond by producing more insulin. As the level falls, insulin secretion is reduced."
+    },
+    {
+      "id": "SCI10ECH06-Q034",
+      "topic": "Integrated Control, Coordination and Feedback",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Which is a limitation of electrical communication in animals?",
+      "options": {
+        "A": "It can reach every cell even without nervous connections",
+        "B": "It reaches mainly cells connected by nervous tissue",
+        "C": "It is always slower than hormonal communication",
+        "D": "It can continue without any recovery time"
+      },
+      "correct": "B",
+      "explanation": "Electrical impulses travel along nervous connections, so they do not directly reach every cell. Neurons also need a short recovery time before sending another impulse."
+    },
+    {
+      "id": "SCI10ECH06-Q035",
+      "topic": "Integrated Control, Coordination and Feedback",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Compared with a nerve impulse, a hormonal signal is generally:",
+      "options": {
+        "A": "slower but capable of producing widespread and persistent effects",
+        "B": "faster and restricted to one synapse only",
+        "C": "unable to travel through blood",
+        "D": "produced only in plants"
+      },
+      "correct": "A",
+      "explanation": "Hormonal communication is generally slower than nervous communication, but hormones can reach many target cells and may act steadily for longer periods."
+    },
+    {
+      "id": "SCI10ECH06-Q036",
+      "topic": "Integrated Control, Coordination and Feedback",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Which comparison between nervous and hormonal coordination is correct?",
+      "options": {
+        "A": "Nervous responses are usually rapid and targeted; hormonal responses are often slower and longer-lasting",
+        "B": "Both systems use only electrical impulses",
+        "C": "Hormonal responses occur only in muscles",
+        "D": "Nervous responses are always slower than hormonal responses"
+      },
+      "correct": "A",
+      "explanation": "Nervous coordination uses fast electrical impulses along neurons, whereas hormonal coordination uses chemical messengers that often act more slowly and for longer durations."
+    },
+    {
+      "id": "SCI10ECH06-Q037",
+      "topic": "Integrated Control, Coordination and Feedback",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "If sensory receptors fail to work properly, the most direct problem will be:",
+      "options": {
+        "A": "stimuli may not be detected correctly",
+        "B": "all hormones will immediately disappear",
+        "C": "bones will stop protecting the brain",
+        "D": "plants will stop photosynthesising"
+      },
+      "correct": "A",
+      "explanation": "Receptors detect environmental changes. If they malfunction, the nervous system may not receive correct information and the body may fail to respond appropriately."
+    },
+    {
+      "id": "SCI10ECH06-Q038",
+      "topic": "Integrated Control, Coordination and Feedback",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "A serious spinal cord injury is most likely to disrupt:",
+      "options": {
+        "A": "only hormone production by the thyroid",
+        "B": "communication between the brain and body and some reflex pathways",
+        "C": "photosynthesis in green plants",
+        "D": "digestion of starch in the mouth only"
+      },
+      "correct": "B",
+      "explanation": "The spinal cord carries nerve impulses between the brain and much of the body and also contains many reflex arcs. Injury can disrupt both functions."
+    },
+    {
+      "id": "SCI10ECH06-Q039",
+      "topic": "Integrated Control, Coordination and Feedback",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Which statement correctly distinguishes a reflex action from an involuntary action?",
+      "options": {
+        "A": "A reflex is a rapid response to a stimulus, while involuntary actions include automatically regulated activities such as heartbeat",
+        "B": "Every involuntary action is a growth movement",
+        "C": "Reflex actions are always consciously planned",
+        "D": "Involuntary actions occur only in plants"
+      },
+      "correct": "A",
+      "explanation": "Reflex actions are rapid automatic responses to particular stimuli. Involuntary actions are automatic body activities such as heartbeat, digestion and salivation."
+    },
+    {
+      "id": "SCI10ECH06-Q040",
+      "topic": "Integrated Control, Coordination and Feedback",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Why do multicellular organisms need control and coordination systems?",
+      "options": {
+        "A": "To ensure that different organs produce suitable, integrated responses to internal and external changes",
+        "B": "To make every movement random",
+        "C": "To prevent all communication between cells",
+        "D": "To replace nutrition and respiration"
+      },
+      "correct": "A",
+      "explanation": "Control and coordination allow different tissues and organs to detect changes, exchange information and produce appropriate, organised responses."
+    }
+  ],
+  "tests": [
+    {
+      "testId": "SCI10ECH06-T01",
+      "testTitle": "Topic Test 1: Neurons, Receptors and Nerve Impulses",
+      "testType": "TOPIC_TEST",
+      "topic": "Neurons, Receptors and Nerve Impulses",
+      "questionLabel": "Related questions: Q1-Q8 • Receptors, neuron structure, synapses and transmission of impulses",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10ECH06-Q001",
+        "SCI10ECH06-Q002",
+        "SCI10ECH06-Q003",
+        "SCI10ECH06-Q004",
+        "SCI10ECH06-Q005",
+        "SCI10ECH06-Q006",
+        "SCI10ECH06-Q007",
+        "SCI10ECH06-Q008"
+      ]
+    },
+    {
+      "testId": "SCI10ECH06-T02",
+      "testTitle": "Topic Test 2: Reflex Action, Brain and Muscle Response",
+      "testType": "TOPIC_TEST",
+      "topic": "Reflex Action, Brain and Muscle Response",
+      "questionLabel": "Related questions: Q9-Q16 • Reflex arcs, nervous-system divisions, brain regions and muscle action",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10ECH06-Q009",
+        "SCI10ECH06-Q010",
+        "SCI10ECH06-Q011",
+        "SCI10ECH06-Q012",
+        "SCI10ECH06-Q013",
+        "SCI10ECH06-Q014",
+        "SCI10ECH06-Q015",
+        "SCI10ECH06-Q016"
+      ]
+    },
+    {
+      "testId": "SCI10ECH06-T03",
+      "testTitle": "Topic Test 3: Plant Movements and Plant Hormones",
+      "testType": "TOPIC_TEST",
+      "topic": "Plant Movements and Plant Hormones",
+      "questionLabel": "Related questions: Q17-Q24 • Sensitive-plant movement, tropisms, auxin, cytokinin and abscisic acid",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10ECH06-Q017",
+        "SCI10ECH06-Q018",
+        "SCI10ECH06-Q019",
+        "SCI10ECH06-Q020",
+        "SCI10ECH06-Q021",
+        "SCI10ECH06-Q022",
+        "SCI10ECH06-Q023",
+        "SCI10ECH06-Q024"
+      ]
+    },
+    {
+      "testId": "SCI10ECH06-T04",
+      "testTitle": "Topic Test 4: Animal Hormones and Endocrine Glands",
+      "testType": "TOPIC_TEST",
+      "topic": "Animal Hormones and Endocrine Glands",
+      "questionLabel": "Related questions: Q25-Q32 • Adrenaline, thyroxin, growth hormone, sex hormones and insulin",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10ECH06-Q025",
+        "SCI10ECH06-Q026",
+        "SCI10ECH06-Q027",
+        "SCI10ECH06-Q028",
+        "SCI10ECH06-Q029",
+        "SCI10ECH06-Q030",
+        "SCI10ECH06-Q031",
+        "SCI10ECH06-Q032"
+      ]
+    },
+    {
+      "testId": "SCI10ECH06-T05",
+      "testTitle": "Topic Test 5: Integrated Control and Feedback",
+      "testType": "TOPIC_TEST",
+      "topic": "Integrated Control, Coordination and Feedback",
+      "questionLabel": "Related questions: Q33-Q40 • Feedback control and comparison of nervous and hormonal coordination",
+      "instructions": "8 questions • 1 mark each • Topic-wise practice • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10ECH06-Q033",
+        "SCI10ECH06-Q034",
+        "SCI10ECH06-Q035",
+        "SCI10ECH06-Q036",
+        "SCI10ECH06-Q037",
+        "SCI10ECH06-Q038",
+        "SCI10ECH06-Q039",
+        "SCI10ECH06-Q040"
+      ]
+    },
+    {
+      "testId": "SCI10ECH06-FLT01",
+      "testTitle": "Full-Length Test 1",
+      "testType": "FULL_LENGTH",
+      "topic": "Complete Chapter",
+      "questionLabel": "20 balanced questions from all five chapter topics",
+      "instructions": "20 questions • 1 mark each • Full chapter assessment • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10ECH06-Q001",
+        "SCI10ECH06-Q002",
+        "SCI10ECH06-Q003",
+        "SCI10ECH06-Q004",
+        "SCI10ECH06-Q009",
+        "SCI10ECH06-Q010",
+        "SCI10ECH06-Q011",
+        "SCI10ECH06-Q012",
+        "SCI10ECH06-Q017",
+        "SCI10ECH06-Q018",
+        "SCI10ECH06-Q019",
+        "SCI10ECH06-Q020",
+        "SCI10ECH06-Q025",
+        "SCI10ECH06-Q026",
+        "SCI10ECH06-Q027",
+        "SCI10ECH06-Q028",
+        "SCI10ECH06-Q033",
+        "SCI10ECH06-Q034",
+        "SCI10ECH06-Q035",
+        "SCI10ECH06-Q036"
+      ]
+    },
+    {
+      "testId": "SCI10ECH06-FLT02",
+      "testTitle": "Full-Length Test 2",
+      "testType": "FULL_LENGTH",
+      "topic": "Complete Chapter",
+      "questionLabel": "20 different balanced questions from all five chapter topics",
+      "instructions": "20 questions • 1 mark each • No overlap with Full-Length Test 1 • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10ECH06-Q005",
+        "SCI10ECH06-Q006",
+        "SCI10ECH06-Q007",
+        "SCI10ECH06-Q008",
+        "SCI10ECH06-Q013",
+        "SCI10ECH06-Q014",
+        "SCI10ECH06-Q015",
+        "SCI10ECH06-Q016",
+        "SCI10ECH06-Q021",
+        "SCI10ECH06-Q022",
+        "SCI10ECH06-Q023",
+        "SCI10ECH06-Q024",
+        "SCI10ECH06-Q029",
+        "SCI10ECH06-Q030",
+        "SCI10ECH06-Q031",
+        "SCI10ECH06-Q032",
+        "SCI10ECH06-Q037",
+        "SCI10ECH06-Q038",
+        "SCI10ECH06-Q039",
+        "SCI10ECH06-Q040"
+      ]
+    }
+  ]
+};
+  </script>
+
+  <script src="../../assets/js/static-mcq-engine.js"></script>
+</body>
+</html>

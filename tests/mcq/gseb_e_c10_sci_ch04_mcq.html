@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="GSEB Class 10 Science Chapter 4 MCQ practice for Carbon and Its Compounds in English medium."
+  />
+  <title>Chapter 4 MCQ | GSEB Class 10 Science</title>
+  <link rel="stylesheet" href="../../assets/css/static-mcq-engine.css" />
+</head>
+<body>
+  <div class="wtc-mcq-app">
+    <header class="hero-card">
+      <div class="hero-left">
+        <p class="eyebrow">WAGH Tuition Classes • Static MCQ Engine v1.1</p>
+        <h1 id="testTitle">MCQ Practice</h1>
+        <p id="testMeta" class="meta"></p>
+      </div>
+
+      <div class="hero-score">
+        <div class="ring" id="progressRing">
+          <span id="answeredCount">0</span>
+        </div>
+        <small>Answered</small>
+      </div>
+    </header>
+
+    <section class="sticky-dashboard">
+      <div class="dash-item">
+        <span>Student</span>
+        <b id="studentName">Checking login...</b>
+      </div>
+      <div class="dash-item">
+        <span>Time</span>
+        <b id="timer">00:00</b>
+      </div>
+      <div class="dash-item">
+        <span>Questions</span>
+        <b id="questionCount">0</b>
+      </div>
+      <button
+        id="themeBtn"
+        class="ghost-btn"
+        type="button"
+        aria-label="Change theme"
+      >🌙</button>
+      <button id="reviewBtn" class="ghost-btn" type="button">Review</button>
+    </section>
+
+    <section class="notice-card">
+      Select one option for each question. After submit, correct answers and
+      explanations will open. Your result will be saved for progress report.
+    </section>
+
+    <main class="layout-grid">
+      <aside class="question-palette" aria-label="Question palette">
+        <h3>Question Palette</h3>
+        <div id="paletteGrid" class="palette-grid"></div>
+      </aside>
+
+      <section id="questionList" class="question-list"></section>
+    </main>
+
+    <section id="resultBox" class="result-box hidden"></section>
+
+    <div class="bottom-action-bar">
+      <button id="submitBtn" class="primary-btn" type="button">
+        Submit Test
+      </button>
+      <button id="retryBtn" class="secondary-btn hidden" type="button">
+        Choose Another Test
+      </button>
+      <button id="topBtn" class="secondary-btn" type="button">Top</button>
+    </div>
+  </div>
+
+  <!-- Keep this exact loading order. -->
+  <script src="../../assets/js/config.js"></script>
+  <script src="../../assets/js/auth.js"></script>
+  <script src="../../assets/js/api.js"></script>
+
+  <script>
+    window.WTC_STATIC_MCQ = {
+  "pageTitle": "Chapter 4: Carbon and Its Compounds - MCQ Practice",
+  "selectorDescription": "Choose a topic-wise test or a full-length chapter test covering carbon bonding, hydrocarbons, homologous series, functional groups, chemical properties, ethanol, ethanoic acid, soaps and detergents.",
+  "board": "GSEB",
+  "className": "Class 10",
+  "medium": "English Medium",
+  "subjectId": "SCI10E",
+  "subjectName": "Science",
+  "chapterId": "SCI10ECH04",
+  "chapterName": "Carbon and Its Compounds",
+  "instructions": "Select one option for each question. After submit, correct answers and explanations will open. Progress saves automatically.",
+  "questionBank": [
+    {
+      "id": "SCI10ECH04-Q001",
+      "topic": "Carbon Bonding and Covalent Compounds",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "How many valence electrons does a carbon atom have?",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "8"
+      },
+      "correct": "B",
+      "explanation": "Carbon has atomic number 6 and electronic configuration 2,4. Therefore, it has four electrons in its outermost shell."
+    },
+    {
+      "id": "SCI10ECH04-Q002",
+      "topic": "Carbon Bonding and Covalent Compounds",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Why does carbon generally not form a C⁴⁺ ion?",
+      "options": {
+        "A": "It already has a complete outer shell",
+        "B": "It has no protons in its nucleus",
+        "C": "Removing four electrons requires a very large amount of energy",
+        "D": "Carbon can accept only one electron"
+      },
+      "correct": "C",
+      "explanation": "The removal of four valence electrons from carbon would require an extremely large amount of energy, so carbon does not normally form C⁴⁺ ions."
+    },
+    {
+      "id": "SCI10ECH04-Q003",
+      "topic": "Carbon Bonding and Covalent Compounds",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Why is the formation of a C⁴⁻ ion also unfavourable?",
+      "options": {
+        "A": "A nucleus with six protons cannot easily hold ten electrons because of strong electron-electron repulsion",
+        "B": "Carbon has no valence electrons",
+        "C": "Carbon is a noble gas",
+        "D": "Carbon loses all its neutrons on gaining electrons"
+      },
+      "correct": "A",
+      "explanation": "Adding four electrons would place ten electrons around a nucleus containing only six protons. The increased electron-electron repulsion makes C⁴⁻ formation unfavourable."
+    },
+    {
+      "id": "SCI10ECH04-Q004",
+      "topic": "Carbon Bonding and Covalent Compounds",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "A covalent bond is formed by:",
+      "options": {
+        "A": "complete transfer of neutrons",
+        "B": "sharing of electron pairs between atoms",
+        "C": "transfer of protons",
+        "D": "loss of all valence electrons by both atoms"
+      },
+      "correct": "B",
+      "explanation": "A covalent bond forms when atoms share one or more pairs of electrons so that each atom can attain a stable outer shell."
+    },
+    {
+      "id": "SCI10ECH04-Q005",
+      "topic": "Carbon Bonding and Covalent Compounds",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "How many single covalent bonds are present in one molecule of methane, CH₄?",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "correct": "D",
+      "explanation": "In methane, carbon shares one electron with each of four hydrogen atoms, forming four C–H single covalent bonds."
+    },
+    {
+      "id": "SCI10ECH04-Q006",
+      "topic": "Carbon Bonding and Covalent Compounds",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "In a chlorine molecule, Cl₂, the two chlorine atoms share:",
+      "options": {
+        "A": "one pair of electrons",
+        "B": "two pairs of electrons",
+        "C": "three pairs of electrons",
+        "D": "four pairs of electrons"
+      },
+      "correct": "A",
+      "explanation": "Each chlorine atom needs one electron to complete its octet. The two atoms share one pair of electrons and form a single covalent bond."
+    },
+    {
+      "id": "SCI10ECH04-Q007",
+      "topic": "Carbon Bonding and Covalent Compounds",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Why do most covalent compounds have comparatively low melting and boiling points?",
+      "options": {
+        "A": "They contain only free ions",
+        "B": "The forces of attraction between their molecules are usually weak",
+        "C": "Their atoms have no electrons",
+        "D": "They are always gases at room temperature"
+      },
+      "correct": "B",
+      "explanation": "Although covalent bonds within molecules are strong, the intermolecular forces between molecules are generally weak, so less energy is needed to separate them."
+    },
+    {
+      "id": "SCI10ECH04-Q008",
+      "topic": "Carbon Bonding and Covalent Compounds",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Most covalent compounds are poor conductors of electricity because they:",
+      "options": {
+        "A": "are always insoluble in water",
+        "B": "have very high densities",
+        "C": "do not contain free ions or freely moving charged particles",
+        "D": "contain only metallic bonds"
+      },
+      "correct": "C",
+      "explanation": "Electrical conduction requires mobile charged particles. Covalent compounds generally do not produce free ions and therefore conduct electricity poorly."
+    },
+    {
+      "id": "SCI10ECH04-Q009",
+      "topic": "Versatile Nature of Carbon and Hydrocarbons",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which two properties chiefly explain the very large number of carbon compounds?",
+      "options": {
+        "A": "Catenation and tetravalency",
+        "B": "Radioactivity and magnetism",
+        "C": "High density and metallic character",
+        "D": "Monovalency and inertness"
+      },
+      "correct": "A",
+      "explanation": "Carbon is tetravalent and shows catenation, meaning it can form stable bonds with four atoms and also link with other carbon atoms to make chains, branches and rings."
+    },
+    {
+      "id": "SCI10ECH04-Q010",
+      "topic": "Versatile Nature of Carbon and Hydrocarbons",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The ability of carbon atoms to link with one another to form long chains is called:",
+      "options": {
+        "A": "Hydrogenation",
+        "B": "Catenation",
+        "C": "Esterification",
+        "D": "Neutralisation"
+      },
+      "correct": "B",
+      "explanation": "Catenation is the self-linking property of carbon through strong carbon-carbon covalent bonds."
+    },
+    {
+      "id": "SCI10ECH04-Q011",
+      "topic": "Versatile Nature of Carbon and Hydrocarbons",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "A hydrocarbon containing only single bonds between carbon atoms is called:",
+      "options": {
+        "A": "an unsaturated hydrocarbon",
+        "B": "a saturated hydrocarbon",
+        "C": "an alcohol",
+        "D": "a carboxylic acid"
+      },
+      "correct": "B",
+      "explanation": "Saturated hydrocarbons contain only single carbon-carbon bonds. Alkanes are saturated hydrocarbons."
+    },
+    {
+      "id": "SCI10ECH04-Q012",
+      "topic": "Versatile Nature of Carbon and Hydrocarbons",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which compound is an unsaturated hydrocarbon?",
+      "options": {
+        "A": "Ethane, C₂H₆",
+        "B": "Methane, CH₄",
+        "C": "Ethene, C₂H₄",
+        "D": "Propane, C₃H₈"
+      },
+      "correct": "C",
+      "explanation": "Ethene contains a carbon-carbon double bond, so it is an unsaturated hydrocarbon."
+    },
+    {
+      "id": "SCI10ECH04-Q013",
+      "topic": "Versatile Nature of Carbon and Hydrocarbons",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What is the general formula of open-chain saturated hydrocarbons (alkanes)?",
+      "options": {
+        "A": "CₙH₂ₙ₊₂",
+        "B": "CₙH₂ₙ",
+        "C": "CₙH₂ₙ₋₂",
+        "D": "CₙHₙ"
+      },
+      "correct": "A",
+      "explanation": "Open-chain alkanes follow the general formula CₙH₂ₙ₊₂. For example, methane is CH₄ and ethane is C₂H₆."
+    },
+    {
+      "id": "SCI10ECH04-Q014",
+      "topic": "Versatile Nature of Carbon and Hydrocarbons",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Which molecular formula represents an alkyne?",
+      "options": {
+        "A": "C₂H₆",
+        "B": "C₂H₄",
+        "C": "C₂H₂",
+        "D": "C₂H₅OH"
+      },
+      "correct": "C",
+      "explanation": "Ethylene/ethene is C₂H₄, while ethyne is C₂H₂ and contains a carbon-carbon triple bond, making it an alkyne."
+    },
+    {
+      "id": "SCI10ECH04-Q015",
+      "topic": "Versatile Nature of Carbon and Hydrocarbons",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Compounds having the same molecular formula but different structural arrangements are called:",
+      "options": {
+        "A": "homologues",
+        "B": "isomers",
+        "C": "catalysts",
+        "D": "electrolytes"
+      },
+      "correct": "B",
+      "explanation": "Structural isomers have the same molecular formula but differ in the arrangement of atoms and therefore have different structural formulae."
+    },
+    {
+      "id": "SCI10ECH04-Q016",
+      "topic": "Versatile Nature of Carbon and Hydrocarbons",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "How many structural isomers are possible for butane, C₄H₁₀?",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "correct": "B",
+      "explanation": "Butane has two structural isomers: straight-chain n-butane and branched-chain 2-methylpropane (isobutane)."
+    },
+    {
+      "id": "SCI10ECH04-Q017",
+      "topic": "Homologous Series, Functional Groups and Nomenclature",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Members of a homologous series have the same:",
+      "options": {
+        "A": "number of carbon atoms",
+        "B": "functional group and general formula",
+        "C": "molecular mass",
+        "D": "physical state at all temperatures"
+      },
+      "correct": "B",
+      "explanation": "A homologous series consists of compounds with the same functional group and general formula, resulting in similar chemical properties."
+    },
+    {
+      "id": "SCI10ECH04-Q018",
+      "topic": "Homologous Series, Functional Groups and Nomenclature",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Two successive members of a homologous series differ by:",
+      "options": {
+        "A": "CH₃ and 15 u",
+        "B": "CH₂ and 14 u",
+        "C": "CO₂ and 44 u",
+        "D": "OH and 17 u"
+      },
+      "correct": "B",
+      "explanation": "Successive homologues differ by one –CH₂– unit, which corresponds to a difference of 14 u in molecular mass."
+    },
+    {
+      "id": "SCI10ECH04-Q019",
+      "topic": "Homologous Series, Functional Groups and Nomenclature",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which functional group characterises alcohols?",
+      "options": {
+        "A": "–OH",
+        "B": "–CHO",
+        "C": "–COOH",
+        "D": "–CO–"
+      },
+      "correct": "A",
+      "explanation": "Alcohols contain the hydroxyl functional group, –OH, attached to a carbon atom."
+    },
+    {
+      "id": "SCI10ECH04-Q020",
+      "topic": "Homologous Series, Functional Groups and Nomenclature",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which functional group is present in aldehydes?",
+      "options": {
+        "A": "–COOH",
+        "B": "–OH",
+        "C": "–CHO",
+        "D": "–Cl"
+      },
+      "correct": "C",
+      "explanation": "Aldehydes contain the terminal –CHO functional group."
+    },
+    {
+      "id": "SCI10ECH04-Q021",
+      "topic": "Homologous Series, Functional Groups and Nomenclature",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "The functional group –COOH is found in:",
+      "options": {
+        "A": "ketones",
+        "B": "carboxylic acids",
+        "C": "alkenes",
+        "D": "haloalkanes"
+      },
+      "correct": "B",
+      "explanation": "The carboxyl group, –COOH, is the characteristic functional group of carboxylic acids."
+    },
+    {
+      "id": "SCI10ECH04-Q022",
+      "topic": "Homologous Series, Functional Groups and Nomenclature",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What is the IUPAC name of CH₃CH₂OH?",
+      "options": {
+        "A": "Methanol",
+        "B": "Ethanol",
+        "C": "Ethanal",
+        "D": "Ethanoic acid"
+      },
+      "correct": "B",
+      "explanation": "The molecule has two carbon atoms (eth-) and an alcohol group (-ol), so its name is ethanol."
+    },
+    {
+      "id": "SCI10ECH04-Q023",
+      "topic": "Homologous Series, Functional Groups and Nomenclature",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What is the IUPAC name of CH₃COCH₃?",
+      "options": {
+        "A": "Propanal",
+        "B": "Propanone",
+        "C": "Propanoic acid",
+        "D": "Propanol"
+      },
+      "correct": "B",
+      "explanation": "CH₃COCH₃ contains three carbon atoms and a ketone group, so it is named propanone."
+    },
+    {
+      "id": "SCI10ECH04-Q024",
+      "topic": "Homologous Series, Functional Groups and Nomenclature",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "What is the IUPAC name of CH₃CH₂COOH?",
+      "options": {
+        "A": "Propanoic acid",
+        "B": "Ethanoic acid",
+        "C": "Propanal",
+        "D": "Propanone"
+      },
+      "correct": "A",
+      "explanation": "The compound contains three carbon atoms and the carboxylic acid group, so its IUPAC name is propanoic acid."
+    },
+    {
+      "id": "SCI10ECH04-Q025",
+      "topic": "Chemical Properties, Ethanol and Ethanoic Acid",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Complete combustion of a hydrocarbon in sufficient oxygen generally produces:",
+      "options": {
+        "A": "carbon monoxide and hydrogen",
+        "B": "carbon dioxide, water, heat and light",
+        "C": "carbon and oxygen only",
+        "D": "an alcohol and a salt"
+      },
+      "correct": "B",
+      "explanation": "In complete combustion, carbon is oxidised to carbon dioxide and hydrogen to water, releasing heat and often light."
+    },
+    {
+      "id": "SCI10ECH04-Q026",
+      "topic": "Chemical Properties, Ethanol and Ethanoic Acid",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The conversion of vegetable oils into solid fats using hydrogen in the presence of nickel is called:",
+      "options": {
+        "A": "substitution",
+        "B": "hydrogenation",
+        "C": "saponification",
+        "D": "esterification"
+      },
+      "correct": "B",
+      "explanation": "Hydrogen adds across carbon-carbon double bonds in unsaturated vegetable oils in the presence of a nickel catalyst. This addition reaction is hydrogenation."
+    },
+    {
+      "id": "SCI10ECH04-Q027",
+      "topic": "Chemical Properties, Ethanol and Ethanoic Acid",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "When methane reacts with chlorine in sunlight, one hydrogen atom can be replaced by chlorine. This is a:",
+      "options": {
+        "A": "combination reaction",
+        "B": "substitution reaction",
+        "C": "neutralisation reaction",
+        "D": "decomposition reaction"
+      },
+      "correct": "B",
+      "explanation": "In a substitution reaction, one atom or group in a molecule is replaced by another. Chlorine substitutes for hydrogen in methane."
+    },
+    {
+      "id": "SCI10ECH04-Q028",
+      "topic": "Chemical Properties, Ethanol and Ethanoic Acid",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Ethanol is converted to ethanoic acid by heating it with an oxidising agent such as:",
+      "options": {
+        "A": "alkaline potassium permanganate",
+        "B": "sodium chloride",
+        "C": "calcium carbonate",
+        "D": "hydrogen gas with nickel"
+      },
+      "correct": "A",
+      "explanation": "Alkaline potassium permanganate or acidified potassium dichromate oxidises ethanol to ethanoic acid."
+    },
+    {
+      "id": "SCI10ECH04-Q029",
+      "topic": "Chemical Properties, Ethanol and Ethanoic Acid",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "What gas is released when ethanol reacts with sodium metal?",
+      "options": {
+        "A": "Oxygen",
+        "B": "Carbon dioxide",
+        "C": "Hydrogen",
+        "D": "Chlorine"
+      },
+      "correct": "C",
+      "explanation": "Ethanol reacts with sodium to form sodium ethoxide and hydrogen gas: 2C₂H₅OH + 2Na → 2C₂H₅ONa + H₂."
+    },
+    {
+      "id": "SCI10ECH04-Q030",
+      "topic": "Chemical Properties, Ethanol and Ethanoic Acid",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Ethanoic acid reacts with sodium hydrogen carbonate to form sodium ethanoate, water and:",
+      "options": {
+        "A": "hydrogen",
+        "B": "oxygen",
+        "C": "carbon dioxide",
+        "D": "methane"
+      },
+      "correct": "C",
+      "explanation": "Carboxylic acids react with hydrogen carbonates to release carbon dioxide: CH₃COOH + NaHCO₃ → CH₃COONa + CO₂ + H₂O."
+    },
+    {
+      "id": "SCI10ECH04-Q031",
+      "topic": "Chemical Properties, Ethanol and Ethanoic Acid",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "The sweet-smelling product formed when ethanol reacts with ethanoic acid in the presence of concentrated sulphuric acid is:",
+      "options": {
+        "A": "ethyl ethanoate",
+        "B": "sodium ethanoate",
+        "C": "ethanal",
+        "D": "methane"
+      },
+      "correct": "A",
+      "explanation": "Ethanol and ethanoic acid undergo esterification to form the ester ethyl ethanoate and water. Esters commonly have pleasant fruity smells."
+    },
+    {
+      "id": "SCI10ECH04-Q032",
+      "topic": "Chemical Properties, Ethanol and Ethanoic Acid",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "The alkaline hydrolysis of an ester to produce an alcohol and the salt of a carboxylic acid is called:",
+      "options": {
+        "A": "hydrogenation",
+        "B": "saponification",
+        "C": "combustion",
+        "D": "substitution"
+      },
+      "correct": "B",
+      "explanation": "Saponification is the reaction of an ester with a base. It produces an alcohol and the sodium or potassium salt of a carboxylic acid, which may be a soap."
+    },
+    {
+      "id": "SCI10ECH04-Q033",
+      "topic": "Soaps, Detergents and Micelles",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "A soap is generally the sodium or potassium salt of:",
+      "options": {
+        "A": "a long-chain carboxylic acid",
+        "B": "a mineral acid",
+        "C": "a short-chain alcohol",
+        "D": "an alkene"
+      },
+      "correct": "A",
+      "explanation": "Soaps are sodium or potassium salts of long-chain fatty acids, which are long-chain carboxylic acids."
+    },
+    {
+      "id": "SCI10ECH04-Q034",
+      "topic": "Soaps, Detergents and Micelles",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Which part of a soap molecule is attracted to water?",
+      "options": {
+        "A": "The long hydrocarbon tail",
+        "B": "The ionic end or hydrophilic head",
+        "C": "Both parts are equally repelled by water",
+        "D": "Neither part interacts with water"
+      },
+      "correct": "B",
+      "explanation": "The ionic carboxylate end of a soap molecule is hydrophilic and interacts with water, while the hydrocarbon tail is hydrophobic."
+    },
+    {
+      "id": "SCI10ECH04-Q035",
+      "topic": "Soaps, Detergents and Micelles",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "In a soap micelle formed in water, the hydrocarbon tails are generally directed:",
+      "options": {
+        "A": "outward into the water",
+        "B": "inward, away from the water",
+        "C": "towards positive ions only",
+        "D": "randomly without any arrangement"
+      },
+      "correct": "B",
+      "explanation": "The hydrophobic hydrocarbon tails cluster inward around grease, while the hydrophilic ionic heads remain on the outside in contact with water."
+    },
+    {
+      "id": "SCI10ECH04-Q036",
+      "topic": "Soaps, Detergents and Micelles",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "Why does soap form scum in hard water?",
+      "options": {
+        "A": "Soap reacts with calcium and magnesium ions to form insoluble salts",
+        "B": "Soap evaporates rapidly",
+        "C": "Hard water contains no ions",
+        "D": "Soap becomes an acid in hard water"
+      },
+      "correct": "A",
+      "explanation": "Calcium and magnesium ions in hard water react with soap to form insoluble calcium and magnesium salts, seen as scum."
+    },
+    {
+      "id": "SCI10ECH04-Q037",
+      "topic": "Soaps, Detergents and Micelles",
+      "difficulty": "Easy",
+      "marks": 1,
+      "question": "Why are synthetic detergents usually more effective than soaps in hard water?",
+      "options": {
+        "A": "They form more insoluble scum",
+        "B": "They do not form insoluble precipitates with calcium and magnesium ions",
+        "C": "They contain no hydrophobic part",
+        "D": "They work only in acidic water"
+      },
+      "correct": "B",
+      "explanation": "The salts formed by detergents with calcium and magnesium ions remain soluble, so detergents can clean effectively in hard water."
+    },
+    {
+      "id": "SCI10ECH04-Q038",
+      "topic": "Soaps, Detergents and Micelles",
+      "difficulty": "Medium",
+      "marks": 1,
+      "question": "During cleaning, grease and oily dirt are removed mainly because they become:",
+      "options": {
+        "A": "chemically converted into water",
+        "B": "trapped inside micelles and suspended in water",
+        "C": "changed into calcium carbonate",
+        "D": "evaporated by the soap"
+      },
+      "correct": "B",
+      "explanation": "The hydrophobic tails of soap or detergent molecules enter the grease, forming micelles that suspend the oily dirt in water so it can be rinsed away."
+    },
+    {
+      "id": "SCI10ECH04-Q039",
+      "topic": "Soaps, Detergents and Micelles",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Which statement correctly describes a soap molecule?",
+      "options": {
+        "A": "It has a hydrophilic hydrocarbon tail and a hydrophobic ionic head",
+        "B": "It has a hydrophobic hydrocarbon tail and a hydrophilic ionic head",
+        "C": "Both ends are hydrophobic",
+        "D": "Both ends are non-polar"
+      },
+      "correct": "B",
+      "explanation": "A soap molecule has a non-polar hydrocarbon tail that avoids water and an ionic carboxylate head that is attracted to water."
+    },
+    {
+      "id": "SCI10ECH04-Q040",
+      "topic": "Soaps, Detergents and Micelles",
+      "difficulty": "Hard",
+      "marks": 1,
+      "question": "Which observation best shows that soap is less suitable for washing with hard water?",
+      "options": {
+        "A": "It produces abundant lather immediately",
+        "B": "It forms a curdy precipitate and produces little lather",
+        "C": "It turns hard water into distilled water",
+        "D": "It releases hydrogen gas"
+      },
+      "correct": "B",
+      "explanation": "In hard water, soap reacts with calcium and magnesium ions to form a curdy insoluble precipitate. Soap is consumed in forming scum, so little lather is produced."
+    }
+  ],
+  "tests": [
+    {
+      "testId": "SCI10ECH04-T01",
+      "testTitle": "Topic Test 1: Carbon Bonding and Covalent Compounds",
+      "testType": "TOPIC_TEST",
+      "topic": "Carbon Bonding and Covalent Compounds",
+      "questionLabel": "Related questions: Q1-Q8",
+      "instructions": "8 questions • 1 mark each • Covalent bonding and properties • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10ECH04-Q001",
+        "SCI10ECH04-Q002",
+        "SCI10ECH04-Q003",
+        "SCI10ECH04-Q004",
+        "SCI10ECH04-Q005",
+        "SCI10ECH04-Q006",
+        "SCI10ECH04-Q007",
+        "SCI10ECH04-Q008"
+      ]
+    },
+    {
+      "testId": "SCI10ECH04-T02",
+      "testTitle": "Topic Test 2: Versatile Nature of Carbon",
+      "testType": "TOPIC_TEST",
+      "topic": "Versatile Nature of Carbon and Hydrocarbons",
+      "questionLabel": "Related questions: Q9-Q16",
+      "instructions": "8 questions • 1 mark each • Catenation, hydrocarbons and isomerism • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10ECH04-Q009",
+        "SCI10ECH04-Q010",
+        "SCI10ECH04-Q011",
+        "SCI10ECH04-Q012",
+        "SCI10ECH04-Q013",
+        "SCI10ECH04-Q014",
+        "SCI10ECH04-Q015",
+        "SCI10ECH04-Q016"
+      ]
+    },
+    {
+      "testId": "SCI10ECH04-T03",
+      "testTitle": "Topic Test 3: Homologous Series and Nomenclature",
+      "testType": "TOPIC_TEST",
+      "topic": "Homologous Series, Functional Groups and Nomenclature",
+      "questionLabel": "Related questions: Q17-Q24",
+      "instructions": "8 questions • 1 mark each • Functional groups and IUPAC names • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10ECH04-Q017",
+        "SCI10ECH04-Q018",
+        "SCI10ECH04-Q019",
+        "SCI10ECH04-Q020",
+        "SCI10ECH04-Q021",
+        "SCI10ECH04-Q022",
+        "SCI10ECH04-Q023",
+        "SCI10ECH04-Q024"
+      ]
+    },
+    {
+      "testId": "SCI10ECH04-T04",
+      "testTitle": "Topic Test 4: Chemical Properties and Important Compounds",
+      "testType": "TOPIC_TEST",
+      "topic": "Chemical Properties, Ethanol and Ethanoic Acid",
+      "questionLabel": "Related questions: Q25-Q32",
+      "instructions": "8 questions • 1 mark each • Reactions of carbon compounds, ethanol and ethanoic acid • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10ECH04-Q025",
+        "SCI10ECH04-Q026",
+        "SCI10ECH04-Q027",
+        "SCI10ECH04-Q028",
+        "SCI10ECH04-Q029",
+        "SCI10ECH04-Q030",
+        "SCI10ECH04-Q031",
+        "SCI10ECH04-Q032"
+      ]
+    },
+    {
+      "testId": "SCI10ECH04-T05",
+      "testTitle": "Topic Test 5: Soaps and Detergents",
+      "testType": "TOPIC_TEST",
+      "topic": "Soaps, Detergents and Micelles",
+      "questionLabel": "Related questions: Q33-Q40",
+      "instructions": "8 questions • 1 mark each • Cleaning action, micelles and hard water • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10ECH04-Q033",
+        "SCI10ECH04-Q034",
+        "SCI10ECH04-Q035",
+        "SCI10ECH04-Q036",
+        "SCI10ECH04-Q037",
+        "SCI10ECH04-Q038",
+        "SCI10ECH04-Q039",
+        "SCI10ECH04-Q040"
+      ]
+    },
+    {
+      "testId": "SCI10ECH04-FLT01",
+      "testTitle": "Full-Length Test 1",
+      "testType": "FULL_LENGTH",
+      "topic": "Complete Chapter",
+      "questionLabel": "20 balanced questions from all five topics",
+      "instructions": "20 questions • 1 mark each • Full chapter assessment • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10ECH04-Q001",
+        "SCI10ECH04-Q002",
+        "SCI10ECH04-Q003",
+        "SCI10ECH04-Q004",
+        "SCI10ECH04-Q009",
+        "SCI10ECH04-Q010",
+        "SCI10ECH04-Q011",
+        "SCI10ECH04-Q012",
+        "SCI10ECH04-Q017",
+        "SCI10ECH04-Q018",
+        "SCI10ECH04-Q019",
+        "SCI10ECH04-Q020",
+        "SCI10ECH04-Q025",
+        "SCI10ECH04-Q026",
+        "SCI10ECH04-Q027",
+        "SCI10ECH04-Q028",
+        "SCI10ECH04-Q033",
+        "SCI10ECH04-Q034",
+        "SCI10ECH04-Q035",
+        "SCI10ECH04-Q036"
+      ]
+    },
+    {
+      "testId": "SCI10ECH04-FLT02",
+      "testTitle": "Full-Length Test 2",
+      "testType": "FULL_LENGTH",
+      "topic": "Complete Chapter",
+      "questionLabel": "20 different balanced questions from all five topics",
+      "instructions": "20 questions • 1 mark each • Full chapter assessment • No overlap with Full-Length Test 1 • Progress saves automatically after submit.",
+      "questionIds": [
+        "SCI10ECH04-Q005",
+        "SCI10ECH04-Q006",
+        "SCI10ECH04-Q007",
+        "SCI10ECH04-Q008",
+        "SCI10ECH04-Q013",
+        "SCI10ECH04-Q014",
+        "SCI10ECH04-Q015",
+        "SCI10ECH04-Q016",
+        "SCI10ECH04-Q021",
+        "SCI10ECH04-Q022",
+        "SCI10ECH04-Q023",
+        "SCI10ECH04-Q024",
+        "SCI10ECH04-Q029",
+        "SCI10ECH04-Q030",
+        "SCI10ECH04-Q031",
+        "SCI10ECH04-Q032",
+        "SCI10ECH04-Q037",
+        "SCI10ECH04-Q038",
+        "SCI10ECH04-Q039",
+        "SCI10ECH04-Q040"
+      ]
+    }
+  ]
+};
+  </script>
+
+  <script src="../../assets/js/static-mcq-engine.js"></script>
+</body>
+</html>
